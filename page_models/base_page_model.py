@@ -2,6 +2,10 @@ import selenium.webdriver
 
 
 class BasePageModel:
+	'''
+	The page object pattern intends creating an object for each web page.
+	By following this technique a layer of separation between the test code and technical implementation is created.
+	'''
 
 	def __init__(self, driver: selenium.webdriver, implicit_wait_time: 0):
 
@@ -9,7 +13,7 @@ class BasePageModel:
 			raise TypeError('ERROR: wrong data type. Please set "implicit_wait_time" value as integer.')
 
 		self._driver = self._set_driver(driver)
-		
+
 		# The default value of time that can be set using Implicit wait is zero.
 		# Its unit is in seconds.
 		# Implicit wait remains associated with the web element until it gets destroyed.
