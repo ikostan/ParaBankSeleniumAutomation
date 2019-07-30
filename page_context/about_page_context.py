@@ -4,6 +4,7 @@ from page_context.base_page_context import BasePageContext
 class AboutPageContext(BasePageContext):
 
 	TITLE = BasePageContext.TITLE + 'About Us'
+
 	URL = BasePageContext.ROOT_URL + 'about.htm'
 
 	DESCRIPTION = {'title': 'ParaSoft Demo Website',
