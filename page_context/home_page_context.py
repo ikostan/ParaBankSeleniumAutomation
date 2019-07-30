@@ -6,7 +6,7 @@ class HomePageContext(BasePageContext):
 	Holds expected context values for home page items
 	'''
 
-	URL = BasePageContext.ROOT_URL + '/index.htm'
+	URL = BasePageContext.URL + '/index.htm'
 
 	TITLE = BasePageContext.TITLE + 'Welcome | Online Banking'
 
