@@ -2,7 +2,7 @@
 # Selenium Automation for Para Bank Web App
 
 <div align="center"> 
-<img width="100%" height="100%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/selenium-python-logo.png" hspace="10">
+<img width="50%" height="50%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/selenium-python-logo.png" hspace="10">
 </div>
 
 ### ParaSoft Demo Website<br/>
