@@ -23,3 +23,21 @@ class BasePageContext:
 		'about': "about.htm",
 		'contact': "contact.htm"
 	}
+
+	FOOTER = {
+		'footer_menu': {
+			'home': {'text': 'Home', 'href': "/parabank/index.htm"},
+			'about_us': {'text': 'About Us', 'href': "about.htm"},
+			'services': {'text': 'Services', 'href': "services.htm"},
+			'products': {'text': 'Products', 'href': "http://www.parasoft.com/jsp/products.jsp"},
+			'locations': {'text': 'Locations', 'href': "http://www.parasoft.com/jsp/pr/contacts.jsp"},
+			'forum': {'text': 'Forum', 'href': "https://forums.parasoft.com/"},
+			'site_map': {'text': 'Site Map', 'href': "/parabank/index.htm"},
+			'contact_us': {'text': 'Contact Us', 'href': "contact.htm"},
+		},
+		'copyright': '© Parasoft. All rights reserved.',
+		'visit': {
+			'text': 'Visit us at:www.parasoft.com',
+			'href': "http://www.parasoft.com/"
+		},
+	}
