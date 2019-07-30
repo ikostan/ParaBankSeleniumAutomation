@@ -27,8 +27,7 @@ In other words: ParaBank is not a real bank!
 3. PyCharm 2019.1.3 (Community Edition)<br/>
 4. Win 10 (64 bit)<br/>
 
-**Note:**<br/>
-    In order to instantiate webdriver I use Driver class of my own. For more info please look [here](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils).<br/>
+**Note:** In order to instantiate webdriver I use Driver class of my own. For more info please look [here](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils).<br/>
 
 ### Supported/tested browsers:
 - Chrome: v75 (64 bit)
