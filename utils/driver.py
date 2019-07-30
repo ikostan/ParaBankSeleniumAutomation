@@ -21,32 +21,34 @@ class Driver:
                             "\nOnly following browsers supported: {}".format(browser,
                                                                              ', '.join([key for key in self._driver_path.keys()])))
 
-        self.browser = browser
-        self._set_driver()
+        self._browser = browser
+        self._driver = self._set_driver()
 
     def _set_driver(self):
 
-        if self.browser == 'chrome':
+        driver = None
+
+        if self._browser == 'chrome':
             try:
-                self.driver = webdriver.Chrome()
+                driver = webdriver.Chrome()
 
             except WebDriverException as e:
                 print('\nPlease note:', e.msg)
                 path = self._get_driver_path()
                 print('Trying to look for a \'chromedriver\' under:\n{}'.format(path))
-                self.driver = webdriver.Chrome(executable_path=path)
+                driver = webdriver.Chrome(executable_path=path)
 
-        if self.browser == 'mozilla':
+        if self._browser == 'mozilla':
             try:
-                self.driver = webdriver.Firefox()
+                driver = webdriver.Firefox()
                 
             except WebDriverException as e:
                 print('\nPlease note:', e.msg)
                 path = self._get_driver_path()
                 print('Trying to look for a \'geckodriver\' under:\n{}'.format(path))
-                self.driver = webdriver.Firefox(executable_path=path)
+                driver = webdriver.Firefox(executable_path=path)
 
-        if self.browser == 'edge':
+        if self._browser == 'edge':
             '''
             Purpose:	Probe the underlying platform’s hardware, operating system,
             and interpreter version information.
@@ -62,11 +64,13 @@ class Driver:
                 print('For more info please check: {}'.format(
                     'https://blogs.windows.com/msedgedev/2018/06/14/'
                     'webdriver-w3c-recommendation-feature-on-demand/#Rg8g2hRfjBQQVRXy.97\n'))
-                self.driver = webdriver.Edge()
+                driver = webdriver.Edge()
             else:
                 path = self._get_driver_path()
                 print('Trying to look for a \'MicrosoftWebDriver\' under:\n{}'.format(path))
-                self.driver = webdriver.Edge(executable_path=path)
+                driver = webdriver.Edge(executable_path=path)
+
+        return driver
 
     @staticmethod
     def _get_root_dir():
@@ -78,7 +82,7 @@ class Driver:
         return root
 
     def _get_driver_path(self):
-        return self._get_root_dir() + self._driver_path[self.browser]
+        return self._get_root_dir() + self._driver_path[self._browser]
 
     def get_driver(self):
-        return self.driver
+        return self._driver
