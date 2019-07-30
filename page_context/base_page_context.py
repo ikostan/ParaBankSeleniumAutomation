@@ -3,7 +3,7 @@ class BasePageContext:
 	Holds expected context values for any relevant page items
 	'''
 
-	ROOT_URL = 'https://parabank.parasoft.com/parabank/'
+	URL = 'https://parabank.parasoft.com/parabank/'
 
 	TITLE = 'ParaBank | '
 
