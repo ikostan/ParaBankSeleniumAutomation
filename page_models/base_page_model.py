@@ -15,7 +15,7 @@ class BasePageModel:
 
 	_url = BasePageContext.URL
 
-	def __init__(self, driver: Driver, implicit_wait_time: 0):
+	def __init__(self, driver: Driver, implicit_wait_time=0):
 		self._driver = self._set_driver(driver)
 		self._set_implicit_wait(implicit_wait_time)
 
@@ -28,9 +28,6 @@ class BasePageModel:
 		'''
 		if type(driver) != Driver:
 			raise TypeError('\nERROR: please instantiate selenium webdriver using custom Driver class.\n')
-
-		if type(driver.get_driver()) != selenium.webdriver:
-			raise TypeError('\nERROR: driver must be of type SELENIUM.WEBDRIVER.\n')
 
 		return driver.get_driver()
 
@@ -45,18 +42,20 @@ class BasePageModel:
 		if type(implicit_wait_time) != int:
 			raise TypeError('\nERROR: wrong data type. Please set "implicit_wait_time" value as integer.\n')
 		self._driver.implicitly_wait(implicit_wait_time)
+		return None
 
 	def go(self):
 		'''
 		Opens test web page
 		:return:
 		'''
-		self._driver.get_page(self._url)
+		self._driver.get(self._url)
 		try:
-			WebDriverWait(self._driver, 10).until(EC.presence_of_element_located(By.TAG_NAME, 'html'))
+			WebDriverWait(self._driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, 'html')))
 		except TimeoutException:
 			raise Exception('\nERROR: The webpage \'{}\' is not available. Please check URL and retry.\n'.format(self._url))
 		self._driver.maximize_window()
+		return None
 
 	def quit(self):
 		'''
@@ -65,6 +64,7 @@ class BasePageModel:
 		'''
 		if self._driver:
 			self._driver.quit()
+		return None
 
 	def close(self):
 		'''
@@ -73,6 +73,7 @@ class BasePageModel:
 		'''
 		if self._driver:
 			self._driver.close()
+		return None
 
 	@property
 	def driver(self):
