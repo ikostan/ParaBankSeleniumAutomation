@@ -4,8 +4,16 @@ import selenium.webdriver
 class BaseElement:
 
 	def __init__(self, driver: selenium.webdriver, locator=None):
-		self_driver = self._set_driver(driver)
+		self._driver = self._set_driver(driver)
 		self._locator = self._set_locator(locator)
+
+	@property
+	def driver(self):
+		return self._driver
+
+	@property
+	def locator(self):
+		return self._locator
 
 	@staticmethod
 	def _set_driver(driver: selenium.webdriver):
