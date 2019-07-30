@@ -17,8 +17,8 @@ class Driver:
     def __init__(self, browser: str):
 
         if browser not in self._driver_path.keys():
-            raise NameError("Invalid browser name: {}."
-                            "\nOnly following browsers supported: {}".format(browser,
+            raise NameError("\nInvalid browser name: {}."
+                            "\nOnly following browsers supported: {}\n".format(browser,
                                                                              ', '.join([key for key in self._driver_path.keys()])))
 
         self._browser = browser
@@ -67,7 +67,7 @@ class Driver:
                 driver = webdriver.Edge()
             else:
                 path = self._get_driver_path()
-                print('Trying to look for a \'MicrosoftWebDriver\' under:\n{}'.format(path))
+                print('\nTrying to look for a \'MicrosoftWebDriver\' under:\n{}'.format(path))
                 driver = webdriver.Edge(executable_path=path)
 
         return driver
