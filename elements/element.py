@@ -19,7 +19,7 @@ class Element(BaseElement):
 			return text
 
 		except TimeoutException:
-			raise NoSuchElementException('ERROR: can not find element. The element is not present on the DOM or invisible.')
+			raise NoSuchElementException('\nERROR: can not find element. The element is not present on the DOM or invisible.\n')
 
 	def click(self):
 		'''
@@ -33,4 +33,4 @@ class Element(BaseElement):
 			return None
 
 		except TimeoutException:
-			raise InvalidElementStateException('ERROR: can not find element. The element is invisible or not clickable.')
+			raise InvalidElementStateException('\nERROR: can not find element. The element is invisible or not clickable.\n')
