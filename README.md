@@ -1,3 +1,4 @@
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 # Selenium Automation for Para Bank Web App
 
 ### ParaSoft Demo Website<br/>
