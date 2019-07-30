@@ -77,7 +77,7 @@ For more info please check [here](https://www.jetbrains.com/help/pycharm/configu
 
 - **How to fix in case .gitignore is ignored by Git:**<br/>
 
-Even if you haven't tracked the files so far, Git seems to be able to "know" about them even after you add them to .gitignore.<br/> 
+    Even if you haven't tracked the files so far, Git seems to be able to "know" about them even after you add them to .gitignore.<br/> 
 
     **NOTE:**<br/>
     - First commit your current changes, or you will lose them.<br/> 
@@ -104,29 +104,6 @@ Even if you haven't tracked the files so far, Git seems to be able to "know" abo
     
     Source: https://blogs.windows.com/msedgedev/2018/06/14/webdriver-w3c-recommendation-feature-on-demand/#Rg8g2hRfjBQQVRXy.97
     
-- **selenium.common.exceptions.WebDriverException: Message: unknown error: cannot find Opera binary**
-
-    ```python
-    from selenium.webdriver.opera.options import Options
-    
-    options = Options()
-    options.binary_location = r'<path to opera.exe>' 
-    opera_web_driver_path = r'<path to operadriver.exe>' 
-    driver = webdriver.Opera(options=options, executable_path=opera_web_driver_path)
-    driver.get(<url>)
-    driver.close()
-    ```
-    Source: https://stackoverflow.com/questions/52793537/selenium-common-exceptions-webdriverexception-message-unknown-error-cannot-fi
-
-- **Internet Explorer browser window not getting closed in Selenium Webdriver**
-
-    ```bash
-    1. Open IE browser
-    2. Go to Internet Options >>> Security
-    3. For every zone heck "Enable Protected Mode"
-    4. Restart IE
-    ```
-
 - **Test are failed due to slow performance of WebDriver**<br/>
     Explicit wait is used to specify wait condition for a particular element.<br/> 
     Here we define to wait for a certain condition to occur before proceeding further in the code.
@@ -167,24 +144,3 @@ Even if you haven't tracked the files so far, Git seems to be able to "know" abo
     
     **Note** that this solution only works for “non-JavaScript” clicks, i.e., clicks that will cause the browser to load a brand new page, and thus load a brand new HTML body element.
     <br/>Source: https://blog.codeship.com/get-selenium-to-wait-for-page-load/
-
-- **[Required Configuration - IE only](https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver):**<br/>
-    
-    1. The IEDriverServer exectuable must be downloaded and placed in your **PATH**.<br/>
-    2. On IE 7 or higher on Windows Vista or Windows 7, you must set the **Protected Mode** settings for each zone to be the same value. The value can be on or off, as long as it is the same for every zone. To set the Protected Mode settings, choose "Internet Options..." from the Tools menu, and click on the Security tab. For each zone, there will be a check box at the bottom of the tab labeled "Enable Protected Mode".<br/>
-    3. Additionally, **"Enhanced Protected Mode"** must be disabled for IE 10 and higher. This option is found in the Advanced tab of the Internet Options dialog.<br/>
-    4. The browser zoom level must be set to 100% so that the native mouse events can be set to the correct coordinates.<br/>
-    5. For Windows 10, you also need to set *"Change the size of text, apps, and other items"* to 100% in display settings.<br/>
-    6. For IE 11 only, you will need to set a registry entry on the target computer so that the driver can maintain a connection to the instance of Internet Explorer it creates. For 32-bit Windows installations, the key you must examine in the registry editor is *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE*. For 64-bit Windows installations, the key is *HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE*. Please note that the *FEATURE_BFCACHE* subkey may or may not be present, and should be created if it is not present. Important: Inside this key, create a *DWORD* value named *iexplore.exe* with the value of *0*.<br/>
-
-- **NoSuchWindowException in IE 11:**<br/>
-
-    1. IE Options --> Security Tab -> Uncheck "Enable Protected Mode".
-    2. Add http://localhost/ to your trusted sites in IE11. 
-    3. Registry keys:
-    <br/>For 64-bit Windows installations, the key is:<br/> 
-    ``` HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Internet explorer\Main\FeatureControl\FEATURE_BFCACHE```
-    <br/>For 32-bit Windows installations, the key is:<br/> 
-    ```HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BFCACHE```
-     
-    <br/>Source: https://stackoverflow.com/questions/24746777/selenium-nosuchwindowexception-in-ie-11
