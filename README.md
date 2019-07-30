@@ -14,6 +14,14 @@ In other words: ParaBank is not a real bank!
 [Demo Website](https://parabank.parasoft.com/parabank/index.htm)<br/>
 [Read more about Para Bank demo website available services](https://parabank.parasoft.com/parabank/services.htm)<br/>
 
+### Dev Environment:<br/>
+1. Python 3.7<br/>
+2. selenium 3.141.0<br/>
+3. PyCharm 2019.1.3 (Community Edition)<br/>
+4. Win 10 (64 bit)<br/>
+
+[PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html)<br/>
+
 <br/>**Setting up Python3 virtual environment on Windows machine:**<br/>
 
 1. open CMD
