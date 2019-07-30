@@ -7,7 +7,14 @@ class BasePageContext:
 
 	SLOGAN = 'Experience the difference'
 
-	LOGO = {
+	ADMIN_LOGO = {
+		'href': "/parabank/admin.htm",
+		'src': "/parabank/images/clear.gif",
+		'class': "admin"
+	}
+
+	PARA_BANK_LOGO = {
+		'href': "/parabank/index.htm",
 		'src': "/parabank/images/logo.gif",
 		'alt': "ParaBank",
 		'title': "ParaBank",
