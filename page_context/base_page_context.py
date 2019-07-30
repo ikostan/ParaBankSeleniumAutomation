@@ -9,6 +9,13 @@ class BasePageContext:
 	TITLE = 'ParaBank | Welcome | Online Banking'
 	SLOGAN = 'Experience the difference'
 
+	LOGO = {
+		'src': "/parabank/images/logo.gif",
+		'alt': "ParaBank",
+		'title': "ParaBank",
+		'class': "logo"
+	}
+
 	LEFT_MENU_ITEMS = {
 		'Solutions': None,
 		'About Us': 'about.htm',
@@ -18,7 +25,12 @@ class BasePageContext:
 		'Admin Page': 'admin.htm'
 	}
 
-	LOGIN_PANEL = {}
+	LOGIN_PANEL = {
+		'title': 'Customer Login',
+		'username title': 'Username',
+		'password title': 'Password',
+		'button label': "Log In"
+	}
 
 	REGISTER = {
 		'text': 'Register',
