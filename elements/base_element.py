@@ -9,10 +9,18 @@ class BaseElement:
 
 	@property
 	def driver(self):
+		'''
+		Returns selenium.webdriver object
+		:return:
+		'''
 		return self._driver
 
 	@property
 	def locator(self):
+		'''
+		Returns locator object (tuple)
+		:return:
+		'''
 		return self._locator
 
 	@staticmethod
