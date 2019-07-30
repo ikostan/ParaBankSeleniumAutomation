@@ -38,7 +38,7 @@ virtualenv venv --python=python
 
 For more info please check [here](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html)<br/>
 
-### Tech Issues and problems Solving:<br/>
+### Tech Issues and Problem Solving:<br/>
 
 **How to fix in case .gitignore is ignored by Git:**<br/>
 
