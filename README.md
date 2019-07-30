@@ -5,7 +5,7 @@
 <img width="50%" height="50%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/selenium-python-logo.png" hspace="10">
 </div>
 
-### ParaSoft Demo Website<br/>
+### [PARA BANK ParaSoft Demo Website](https://parabank.parasoft.com/parabank/index.htm)<br/>
 ParaBank is a demo site used for demonstration of Parasoft software solutions. 
 All materials herein are used solely for simulating a realistic online banking website.
 
