@@ -9,14 +9,30 @@ class BasePageModel:
 
 	def __init__(self, driver: selenium.webdriver, implicit_wait_time: 0):
 
+		self._driver = self._set_driver(driver)
+		self._set_implicit_wait(implicit_wait_time)
+
+	@staticmethod
+	def _set_driver(driver: selenium.webdriver):
+		'''
+		Check if driver of type: selenium.webdriver
+		:param driver:
+		:return:
+		'''
+		if type(driver) != selenium.webdriver:
+			raise TypeError('ERROR: driver must be of type SELENIUM.WEBDRIVER')
+		return driver
+
+	def _set_implicit_wait(self, implicit_wait_time: int):
+		'''
+		The default value of time that can be set using Implicit wait is zero.
+		Its unit is in seconds.
+		Implicit wait remains associated with the web element until it gets destroyed.
+		:param implicit_wait_time:
+		:return:
+		'''
 		if type(implicit_wait_time) != int:
 			raise TypeError('ERROR: wrong data type. Please set "implicit_wait_time" value as integer.')
-
-		self._driver = self._set_driver(driver)
-
-		# The default value of time that can be set using Implicit wait is zero.
-		# Its unit is in seconds.
-		# Implicit wait remains associated with the web element until it gets destroyed.
 		self._driver.implicitly_wait(implicit_wait_time)
 
 	@property
@@ -42,14 +58,3 @@ class BasePageModel:
 		:return:
 		'''
 		return self._driver.current_url
-
-	@staticmethod
-	def _set_driver(driver: selenium.webdriver):
-		'''
-		Check if driver of type: selenium.webdriver
-		:param driver:
-		:return:
-		'''
-		if type(driver) != selenium.webdriver:
-			raise TypeError('ERROR: driver must be of type SELENIUM.WEBDRIVER')
-		return driver
