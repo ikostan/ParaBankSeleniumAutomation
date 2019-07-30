@@ -1,6 +1,7 @@
 import unittest
 from utils.driver import Driver
 from page_models.home_page_model import HomePageModel
+from page_context.home_page_context import HomePageContext
 
 
 class MyTestCase(unittest.TestCase):
@@ -17,15 +18,19 @@ class MyTestCase(unittest.TestCase):
 		self.driver = None
 
 	def test_something(self):
-		self.assertEqual(True, False)
+		browser = 'chrome'
+		self.driver = Driver(browser)
+		self.page = HomePageModel(self.driver)
+		self.page.go()
+		self.assertEqual(HomePageContext.TITLE, self.page.title)
 
 	@classmethod
 	def tearDownClass(cls):
-		cls.page.quit()
+		if cls.page:
+			cls.page.quit()
 
 	def tearDown(self):
-		self.driver.stop_client()
-		self.driver.close()
+		self.page.close()
 
 
 if __name__ == '__main__':
