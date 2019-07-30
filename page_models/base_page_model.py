@@ -1,6 +1,10 @@
 import selenium.webdriver
 from utils.driver import Driver
+from selenium.webdriver.common.by import By
 from page_context.base_page_context import BasePageContext
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, NoSuchElementException, InvalidElementStateException
 
 
 class BasePageModel:
@@ -23,10 +27,10 @@ class BasePageModel:
 		:return:
 		'''
 		if type(driver) != Driver:
-			raise TypeError('ERROR: please instantiate selenium webdriver using custom Driver class.')
+			raise TypeError('\nERROR: please instantiate selenium webdriver using custom Driver class.\n')
 
 		if type(driver.get_driver()) != selenium.webdriver:
-			raise TypeError('ERROR: driver must be of type SELENIUM.WEBDRIVER.')
+			raise TypeError('\nERROR: driver must be of type SELENIUM.WEBDRIVER.\n')
 
 		return driver.get_driver()
 
@@ -39,7 +43,7 @@ class BasePageModel:
 		:return:
 		'''
 		if type(implicit_wait_time) != int:
-			raise TypeError('ERROR: wrong data type. Please set "implicit_wait_time" value as integer.')
+			raise TypeError('\nERROR: wrong data type. Please set "implicit_wait_time" value as integer.\n')
 		self._driver.implicitly_wait(implicit_wait_time)
 
 	def go(self):
@@ -47,8 +51,28 @@ class BasePageModel:
 		Opens test web page
 		:return:
 		'''
-		self.driver.get_page(self._url)
-		self.driver.maximize_window()
+		self._driver.get_page(self._url)
+		try:
+			WebDriverWait(self._driver, 10).until(EC.presence_of_element_located(By.TAG_NAME, 'html'))
+		except TimeoutException:
+			raise Exception('\nERROR: The webpage \'{}\' is not available. Please check URL and retry.\n'.format(self._url))
+		self._driver.maximize_window()
+
+	def quit(self):
+		'''
+		Close web browser window (including all opened tabs)
+		:return:
+		'''
+		if self._driver:
+			self._driver.quit()
+
+	def close(self):
+		'''
+		Close current tab
+		:return:
+		'''
+		if self._driver:
+			self._driver.close()
 
 	@property
 	def driver(self):
