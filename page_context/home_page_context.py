@@ -23,6 +23,12 @@ class HomePageContext(BasePageContext):
 	}
 
 	ONLINE_SERVICES = {
-		
+		'title': 'Online Services',
+		'Bill Pay': {'text': 'Bill Pay',
+		             'href': "services/bank?_wadl&_type=xml"},
+		'Account History': {'text': 'Account History',
+		                    'href': "services/bank?_wadl&_type=xml"},
+		'Transfer Funds': {'text': 'Transfer Funds',
+		                   'href': "services/bank?_wadl&_type=xml"}
 	}
 
