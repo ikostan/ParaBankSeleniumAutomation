@@ -16,9 +16,9 @@ class Element(BaseElement):
 		try:
 			element = WebDriverWait(super().driver, 10).until(EC.visibility_of_element_located(super().locator))
 			text = element.text
-			return text.strip()
+			return text
 
-		except TimeoutException as ec:
+		except TimeoutException:
 			raise NoSuchElementException('ERROR: can not find element. The element is not present on the DOM or invisible.')
 
 	def click(self):
@@ -32,5 +32,5 @@ class Element(BaseElement):
 			text = element.click()
 			return None
 
-		except TimeoutException as ec:
+		except TimeoutException:
 			raise InvalidElementStateException('ERROR: can not find element. The element is invisible or not clickable.')
