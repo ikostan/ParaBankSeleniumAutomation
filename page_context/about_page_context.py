@@ -5,7 +5,7 @@ class AboutPageContext(BasePageContext):
 
 	TITLE = BasePageContext.TITLE + 'About Us'
 
-	URL = BasePageContext.ROOT_URL + 'about.htm'
+	URL = BasePageContext.URL + 'about.htm'
 
 	DESCRIPTION = {'title': 'ParaSoft Demo Website',
 	               'text': ['ParaBank is a demo site used for demonstration of Parasoft software solutions.',
