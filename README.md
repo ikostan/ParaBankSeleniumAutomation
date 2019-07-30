@@ -19,6 +19,7 @@ In other words: ParaBank is not a real bank!
 - [Selenium Documentation](https://seleniumhq.github.io/selenium/docs/api/py/api.html)<br/>
 - [Full pytest documentation](http://doc.pytest.org/en/latest/contents.html)<br/>
 - ['Selenium with Python' official documentation webpage](https://selenium-python.readthedocs.io)<br/>
+- [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html)<br/>
 
 ### Dev Environment:<br/>
 1. Python 3.7<br/>
@@ -28,8 +29,6 @@ In other words: ParaBank is not a real bank!
 
 **Note:**<br/>
     In order to instantiate webdriver I use Driver class of my own. For more info please look [here](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils).<br/>
-
-[PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html)<br/>
 
 ### Supported/tested browsers:
 - Chrome: v75 (64 bit)
