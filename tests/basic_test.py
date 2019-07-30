@@ -14,7 +14,6 @@ class MyTestCase(unittest.TestCase):
 	def setUp(self):
 		if self.driver is not None:
 			self.driver.quit()
-
 		self.driver = None
 
 	def test_something(self):
@@ -30,7 +29,8 @@ class MyTestCase(unittest.TestCase):
 			cls.page.quit()
 
 	def tearDown(self):
-		self.page.close()
+		if self.page:
+			self.page.close()
 
 
 if __name__ == '__main__':
