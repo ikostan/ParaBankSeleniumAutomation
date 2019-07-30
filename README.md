@@ -16,11 +16,9 @@ In other words: ParaBank is not a real bank!
 
 ### Official Documentation:<br/>
 
-**[Selenium Documentation](https://seleniumhq.github.io/selenium/docs/api/py/api.html)**<br/>
-
-**[Full pytest documentation](http://doc.pytest.org/en/latest/contents.html)**<br/>
-
-**['Selenium with Python' official documentation webpage](https://selenium-python.readthedocs.io)**<br/>
+- [Selenium Documentation](https://seleniumhq.github.io/selenium/docs/api/py/api.html)<br/>
+- [Full pytest documentation](http://doc.pytest.org/en/latest/contents.html)<br/>
+- ['Selenium with Python' official documentation webpage](https://selenium-python.readthedocs.io)<br/>
 
 ### Dev Environment:<br/>
 1. Python 3.7<br/>
