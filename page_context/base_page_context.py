@@ -5,6 +5,8 @@ class BasePageContext:
 
 	ROOT_URL = 'https://parabank.parasoft.com/parabank'
 
+	TITLE = 'ParaBank | '
+
 	SLOGAN = 'Experience the difference'
 
 	ADMIN_LOGO = {
