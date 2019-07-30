@@ -8,7 +8,7 @@ class HomePageContext(BasePageContext):
 
 	URL = BasePageContext.ROOT_URL + '/index.htm'
 
-	TITLE = 'ParaBank | Welcome | Online Banking'
+	TITLE = BasePageContext.TITLE + 'Welcome | Online Banking'
 
 	ATM_SERVICES = {
 		'title': 'ATM Services',
@@ -31,4 +31,12 @@ class HomePageContext(BasePageContext):
 		'Transfer Funds': {'text': 'Transfer Funds',
 		                   'href': "services/bank?_wadl&_type=xml"}
 	}
+
+	READ_MORE_SERVICES = {'href': "services.htm",
+	                      'text': 'Read More'}
+
+	LATEST_NEWS = 'Latest News'
+
+	READ_MORE_NEWS = {'text': 'Read More',
+	                  "href": "news.htm"}
 
