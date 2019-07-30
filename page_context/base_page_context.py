@@ -1,12 +1,10 @@
 class BasePageContext:
 	'''
-	Holds expected context values for relevant page items
+	Holds expected context values for any relevant page items
 	'''
 
 	ROOT_URL = 'https://parabank.parasoft.com/parabank'
-	URL = ROOT_URL + '/index.htm'
 
-	TITLE = 'ParaBank | Welcome | Online Banking'
 	SLOGAN = 'Experience the difference'
 
 	LOGO = {
@@ -14,6 +12,12 @@ class BasePageContext:
 		'alt': "ParaBank",
 		'title': "ParaBank",
 		'class': "logo"
+	}
+
+	MENU_BUTTONS = {
+		'home': "/parabank/index.htm",
+		'about': "about.htm",
+		'contact': "contact.htm"
 	}
 
 	LEFT_MENU_ITEMS = {
@@ -39,12 +43,6 @@ class BasePageContext:
 	FORGOT_LOGIN = {
 		'text': 'Forgot login info?',
 		'href': "lookup.htm"
-	}
-
-	MENU_BUTTONS = {
-		'home': "/parabank/index.htm",
-		'about': "about.htm",
-		'contact': "contact.htm"
 	}
 
 	FOOTER = {
