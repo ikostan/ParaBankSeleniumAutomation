@@ -8,7 +8,6 @@ class BasePageModel:
 	'''
 
 	def __init__(self, driver: selenium.webdriver, implicit_wait_time: 0):
-
 		self._driver = self._set_driver(driver)
 		self._set_implicit_wait(implicit_wait_time)
 
