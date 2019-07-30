@@ -31,7 +31,7 @@ class BaseElement:
 		:return:
 		'''
 		if type(driver) != selenium.webdriver:
-			raise TypeError('ERROR: driver must be of type SELENIUM.WEBDRIVER')
+			raise TypeError('\nERROR: driver must be of type SELENIUM.WEBDRIVER\n')
 		return driver
 
 	@staticmethod
@@ -42,5 +42,5 @@ class BaseElement:
 		:return:
 		'''
 		if type(locator) != tuple:
-			raise TypeError('ERROR: locator must be of type TUPLE')
+			raise TypeError('\nERROR: locator must be of type TUPLE\n')
 		return locator
