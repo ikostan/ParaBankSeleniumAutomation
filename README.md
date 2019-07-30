@@ -1,6 +1,10 @@
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 # Selenium Automation for Para Bank Web App
 
+<div align="center"> 
+<img width="100%" height="100%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/selenium-python-logo.png" hspace="10">
+</div>
+
 ### ParaSoft Demo Website<br/>
 ParaBank is a demo site used for demonstration of Parasoft software solutions. 
 All materials herein are used solely for simulating a realistic online banking website.
