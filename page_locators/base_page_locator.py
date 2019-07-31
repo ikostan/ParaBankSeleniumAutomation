@@ -8,8 +8,14 @@ class BasePageLocator:
 	Separate the locator strings from the place where they are being used.
 	'''
 
-	SLOGAN = (By.XPATH, '//*[@id="topPanel"]/p')
+	SLOGAN = (By.XPATH, '//*[@id="topPanel"]/p[contains(@class,"caption")]')
 
 	ADMIN_LOGO_HREF = (By.XPATH, '//*[@id="topPanel"]/a[contains(@href,"/parabank/admin.htm")]')
-
 	ADMIN_LOGO_IMG = (By.XPATH, '//*[@id="topPanel"]/a[contains(@href,"/parabank/admin.htm")]/img')
+
+	PARA_BANK_LOGO_HREF = (By.XPATH, '//*[@id="topPanel"]/a[contains(@href,"/parabank/index.htm")]')
+	PARA_BANK_LOGO_IMG = (By.XPATH, '//*[@id="topPanel"]/'
+	                                'a[contains(@href,"/parabank/index.htm")]/'
+	                                'img[contains(@class,"logo")]')
+
+
