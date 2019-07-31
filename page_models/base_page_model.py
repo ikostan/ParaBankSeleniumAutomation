@@ -339,3 +339,23 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CONTACT_BUTTON)
 		return element.text
 
+	@property
+	def solutions_menu_text(self):
+		'''
+		Returns SOLUTIONS button text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.SOLUTIONS)
+		return element.text
+
+	@property
+	def solutions_menu_class(self):
+		'''
+		Returns SOLUTIONS button text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.SOLUTIONS)
+		return element.element_class
+
+
+
