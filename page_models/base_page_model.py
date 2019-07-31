@@ -2,6 +2,8 @@ import selenium.webdriver
 from utils.driver import Driver
 from selenium.webdriver.common.by import By
 from page_context.base_page_context import BasePageContext
+from page_locators.base_page_locator import BasePageLocator
+from elements.element import Element
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, InvalidElementStateException
@@ -98,3 +100,21 @@ class BasePageModel:
 		:return:
 		'''
 		return self._driver.current_url
+
+	@property
+	def slogan(self):
+		'''
+		Returns slogan text
+		:return:
+		'''
+		element = Element(self.driver, BasePageLocator.SLOGAN)
+		return element.text
+
+	@property
+	def admin_logo_href(self):
+		'''
+		Returns href value from "Admin Logo" element
+		:return:
+		'''
+		element = Element(self.driver, BasePageLocator.ADMIN_LOGO_HREF)
+		return element.href
