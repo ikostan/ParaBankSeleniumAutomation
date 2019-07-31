@@ -30,9 +30,30 @@ class BaseElement:
 		:param driver:
 		:return:
 		'''
-		if type(driver) != selenium.webdriver:
-			raise TypeError('\nERROR: driver must be of type SELENIUM.WEBDRIVER\n')
+		BaseElement._check_driver_type(driver)
 		return driver
+
+	@staticmethod
+	def _check_driver_type(driver):
+
+		print('\nDRIVER TYPE: {}, {}\n'.format(type(driver), driver.capabilities['browserName']))
+
+		if driver.capabilities['browserName'] == 'chrome':
+			if type(driver) != selenium.webdriver.chrome.webdriver.WebDriver:
+				raise TypeError('\nERROR: driver must be of type "selenium.webdriver.chrome.webdriver.WebDriver"\n')
+			return None
+
+		if driver.capabilities['browserName'] == 'mozilla':
+			if type(driver) != selenium.webdriver.firefox.webdriver.WebDriver:
+				raise TypeError('\nERROR: driver must be of type "selenium.webdriver.firefox.webdriver.WebDriver"\n')
+			return None
+
+		if driver.capabilities['browserName'] == 'edge':
+			if type(driver) != selenium.webdriver.edge.webdriver.WebDriver:
+				raise TypeError('\nERROR: driver must be of type "selenium.webdriver.edge.webdriver.WebDriver"\n')
+			return None
+
+		raise TypeError('\nERROR: unsupported webdriver type\n')
 
 	@staticmethod
 	def _set_locator(locator: tuple):
