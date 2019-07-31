@@ -7,6 +7,22 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException,
 class Element(BaseElement):
 
 	@property
+	def href(self):
+		'''
+		Returns href value
+		:return:
+		'''
+		try:
+			element = WebDriverWait(super().driver, 10).until(EC.presence_of_element_located(super().locator))
+			href = element.get_attribute('href')
+			return href
+
+		except TimeoutException:
+			raise NoSuchElementException(
+				'\nERROR: can not find element. The element is not present on the DOM.\n'
+				'LOCATOR: {}\n'.format(super().locator))
+
+	@property
 	def text(self):
 		'''
 		Returns inner text or NoSuchElementException
