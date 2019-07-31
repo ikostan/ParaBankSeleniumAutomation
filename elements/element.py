@@ -45,7 +45,7 @@ class Element(BaseElement):
 		'''
 		try:
 			element = WebDriverWait(super().driver, 10).until(EC.element_to_be_clickable(super().locator))
-			text = element.click()
+			element.click()
 			return None
 
 		except TimeoutException:
