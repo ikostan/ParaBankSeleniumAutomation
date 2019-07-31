@@ -10,11 +10,7 @@ class HomePageTestCase(BaseTestCase):
 
 	def test_context_base_elements_chrome(self):
 
-		# Open web page
-		browser = 'chrome'
-		driver = Driver(browser)
-		self.page = HomePageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
-		self.page.go()
+		self.open_web_browser('chrome')
 
 		# Test base context:
 		self.assertEqual(HomePageContext.URL,
@@ -54,6 +50,11 @@ class HomePageTestCase(BaseTestCase):
 
 		self.assertEqual(HomePageContext.MENU_BUTTONS['contact']['href'],
 		                 self.page.contact_button_formated_href)
-		self.assertEqual(HomePageContext.MENU_BUTTONS['about']['text'],
+		self.assertEqual(HomePageContext.MENU_BUTTONS['contact']['text'],
 		                 self.page.contact_button_text)
 
+	def open_web_browser(self, browser):
+		# Open web page
+		driver = Driver(browser)
+		self.page = HomePageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
+		self.page.go()
