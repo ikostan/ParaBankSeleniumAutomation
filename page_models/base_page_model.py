@@ -1,10 +1,10 @@
 import selenium.webdriver
 from utils.driver import Driver
+from elements.element import Element
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
 from page_context.base_page_context import BasePageContext
 from page_locators.base_page_locator import BasePageLocator
-from elements.element import Element
-from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, InvalidElementStateException
 
