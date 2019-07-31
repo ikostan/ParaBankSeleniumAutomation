@@ -34,12 +34,18 @@ class BasePageContext:
 	}
 
 	LEFT_MENU_ITEMS = {
-		'Solutions': None,
-		'About Us': 'about.htm',
-		'Services': 'services.htm',
-		'Products': 'http://www.parasoft.com/jsp/products.jsp',
-		'Locations': 'http://www.parasoft.com/jsp/pr/contacts.jsp',
-		'Admin Page': 'admin.htm'
+		'Solutions': {'class': 'Solutions',
+		              'text': 'Solutions'},
+		'About Us': {'href': 'about.htm',
+		             'text': 'About Us'},
+		'Services': {'href': 'services.htm',
+		             'text': "Services"},
+		'Products': {'href': 'http://www.parasoft.com/jsp/products.jsp',
+		             'text': 'Products'},
+		'Locations': {'href': 'http://www.parasoft.com/jsp/pr/contacts.jsp',
+		              'text': 'Locations'},
+		'Admin Page': {'href': 'admin.htm',
+		               'text': 'Admin Page'}
 	}
 
 	LOGIN_PANEL = {
