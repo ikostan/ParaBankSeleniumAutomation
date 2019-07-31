@@ -118,3 +118,14 @@ class BasePageModel:
 		'''
 		element = Element(self.driver, BasePageLocator.ADMIN_LOGO_HREF)
 		return element.href
+
+	@property
+	def admin_logo_formated_href(self):
+		'''
+		Returns href value from "Admin Logo" element
+		:return:
+		'''
+		href = self.admin_logo_href
+		href = href.replace(BasePageContext.ROOT_URL, '')
+		href = href[:href.index(';')]
+		return href
