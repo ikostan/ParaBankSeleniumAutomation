@@ -234,3 +234,30 @@ class BasePageModel:
 		'''
 		element = Element(self.driver, BasePageLocator.PARA_BANK_LOGO_IMG)
 		return element.element_title
+
+	@property
+	def _home_button_href(self):
+		'''
+		Returns non formated home button href
+		:return:
+		'''
+		element = Element(self.driver, BasePageLocator.HOME_BUTTON)
+		return element.element_href
+
+	@property
+	def home_button_formated_href(self):
+		'''
+		Returns formated home button href
+		:return:
+		'''
+		href = self._formated_url(self._home_button_href)
+		return href
+
+	@property
+	def home_button_text(self):
+		'''
+		Returns home button text
+		:return:
+		'''
+		element = Element(self.driver, BasePageLocator.HOME_BUTTON)
+		return element.text
