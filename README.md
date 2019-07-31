@@ -36,8 +36,8 @@ In other words: ParaBank is not a real bank!
 
 **PyCharm - Choosing Your Testing Framework:**<br/>
 
-1. Open the Settings/Preferences dialog, and under the node Tools, click the page Python Integrated Tools.<br/>
-2. On this page, click the Default Test Runner field.<br/>
+1. Open the Settings/Preferences dialog, and under the node Tools, click the page **Python Integrated Tools**.<br/>
+2. On this page, click the **Default Test Runner** field.<br/>
 3. Choose the desired test runner:<br/>
 
 For more info please see [Enable Pytest for you project](https://www.jetbrains.com/help/pycharm/pytest.html)
