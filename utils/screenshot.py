@@ -10,7 +10,7 @@ def take_screen_shot(driver):
     now = datetime.datetime.now()
     filename = 'screenshot-{}-{}.png'.format(driver.name, datetime.datetime.strftime(now, '%Y-%m-%d_%H-%M-%S'))
     driver.save_screenshot(filename)
-    print('\nScreenshot saved as {}'.format(filename))
+    print('\nScreenshot saved as {}. Please check your \'tests\\screenshots\' folder.\n'.format(filename))
 
 
 def screenshots_collector():
@@ -48,10 +48,9 @@ def screenshot_on_fail(browser_attr='page'):
         def with_screen_shot(self, fn, *args, **kwargs):
             """Take a Screen-shot of the drive page, when a function fails."""
 
-            print('<<<<<<<<<screenshot_on_fail>>>>>>>>>>')
-
             try:
                 return fn(self, *args, **kwargs)
+
             except Exception:
                 # This will only be reached if the test fails
                 page = getattr(self, browser_attr)
