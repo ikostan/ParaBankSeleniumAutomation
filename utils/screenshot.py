@@ -54,7 +54,12 @@ def screenshot_on_fail(browser_attr='page'):
             except Exception:
                 # This will only be reached if the test fails
                 page = getattr(self, browser_attr)
-                take_screen_shot(page.driver)
+
+                # You have to check first if page object is None
+                # otherwise you will get an Exception
+                # in case some text was marked as '@unittest.skip('N/A')'
+                if page:
+                    take_screen_shot(page.driver)
                 raise
 
         for attr, fn in cls.__dict__.items():
