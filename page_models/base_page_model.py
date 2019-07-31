@@ -17,9 +17,10 @@ class BasePageModel:
 
 	_url = BasePageContext.URL
 
-	def __init__(self, driver: Driver, implicit_wait_time=0):
+	def __init__(self, driver: Driver, implicit_wait_time=0, explicit_wait_time=0):
 		self._driver = self._set_driver(driver)
 		self._set_implicit_wait(implicit_wait_time)
+		self._explicit_wait_time = self._set_explicit_wait(explicit_wait_time)
 
 	@staticmethod
 	def _set_driver(driver: selenium.webdriver):
@@ -46,6 +47,22 @@ class BasePageModel:
 		self._driver.implicitly_wait(implicit_wait_time)
 		return None
 
+	@staticmethod
+	def _set_explicit_wait(explicit_wait_time: int):
+		'''
+		The default value of explicit wait time.
+		Its unit is in seconds.
+		:param implicit_wait_time:
+		:return:
+		'''
+		if type(explicit_wait_time) != int:
+			raise TypeError('\nERROR: wrong data type. Please set "explicit_wait_time" value as integer.\n')
+		return explicit_wait_time
+
+	@property
+	def explicit_wait_time(self):
+		return self._explicit_wait_time
+
 	def go(self):
 		'''
 		Opens test web page
@@ -53,7 +70,7 @@ class BasePageModel:
 		'''
 		self._driver.get(self._url)
 		try:
-			WebDriverWait(self._driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, 'html')))
+			WebDriverWait(self._driver, self.explicit_wait_time).until(EC.presence_of_element_located((By.TAG_NAME, 'html')))
 		except TimeoutException:
 			raise Exception('\nERROR: The webpage \'{}\' is not available. Please check URL and retry.\n'.format(self._url))
 		self._driver.maximize_window()
@@ -107,7 +124,7 @@ class BasePageModel:
 		Returns slogan text
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.SLOGAN)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.SLOGAN)
 		return element.text
 
 	@staticmethod
@@ -133,7 +150,7 @@ class BasePageModel:
 		Returns href value from "Admin Logo" element
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.ADMIN_LOGO_HREF)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ADMIN_LOGO_HREF)
 		return element.element_href
 
 	@property
@@ -151,7 +168,7 @@ class BasePageModel:
 		Returns admin logo img src value
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.ADMIN_LOGO_IMG)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ADMIN_LOGO_IMG)
 		return element.element_src
 
 	@property
@@ -169,7 +186,7 @@ class BasePageModel:
 		Returns admin logo img src value
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.ADMIN_LOGO_IMG)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ADMIN_LOGO_IMG)
 		return element.element_class
 
 	@property
@@ -178,7 +195,7 @@ class BasePageModel:
 		Returns href value from "ParBank Logo" element
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.PARA_BANK_LOGO_HREF)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PARA_BANK_LOGO_HREF)
 		return element.element_href
 
 	@property
@@ -196,7 +213,7 @@ class BasePageModel:
 		Returns ParBank logo img src value
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.PARA_BANK_LOGO_IMG)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PARA_BANK_LOGO_IMG)
 		return element.element_src
 
 	@property
@@ -214,7 +231,7 @@ class BasePageModel:
 		Returns ParBank logo img class value
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.PARA_BANK_LOGO_IMG)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PARA_BANK_LOGO_IMG)
 		return element.element_class
 
 	@property
@@ -223,7 +240,7 @@ class BasePageModel:
 		Returns ParBank logo img alt value
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.PARA_BANK_LOGO_IMG)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PARA_BANK_LOGO_IMG)
 		return element.element_alt
 
 	@property
@@ -232,7 +249,7 @@ class BasePageModel:
 		Returns ParBank logo img title value
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.PARA_BANK_LOGO_IMG)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PARA_BANK_LOGO_IMG)
 		return element.element_title
 
 	@property
@@ -241,7 +258,7 @@ class BasePageModel:
 		Returns non formated home button href
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.HOME_BUTTON)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.HOME_BUTTON)
 		return element.element_href
 
 	@property
@@ -259,7 +276,7 @@ class BasePageModel:
 		Returns home button text
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.HOME_BUTTON)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.HOME_BUTTON)
 		return element.text
 
 	@property
@@ -268,7 +285,7 @@ class BasePageModel:
 		Returns non formated about button href
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.ABOUT_BUTTON)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ABOUT_BUTTON)
 		return element.element_href
 
 	@property
@@ -289,7 +306,7 @@ class BasePageModel:
 		Returns about button text
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.ABOUT_BUTTON)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ABOUT_BUTTON)
 		return element.text
 
 	@property
@@ -298,7 +315,7 @@ class BasePageModel:
 		Returns non contact about button href
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.CONTACT_BUTTON)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CONTACT_BUTTON)
 		return element.element_href
 
 	@property
@@ -319,6 +336,6 @@ class BasePageModel:
 		Returns contact button text
 		:return:
 		'''
-		element = Element(self.driver, BasePageLocator.CONTACT_BUTTON)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CONTACT_BUTTON)
 		return element.text
 
