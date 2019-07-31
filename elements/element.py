@@ -77,7 +77,7 @@ class Element(BaseElement):
 		:return:
 		'''
 		try:
-			element = WebDriverWait(super().driver, 10).until(EC.element_to_be_clickable(super().locator))
+			element = WebDriverWait(super().driver, super().explicit_wait_time).until(EC.element_to_be_clickable(super().locator))
 			element.click()
 			return None
 
