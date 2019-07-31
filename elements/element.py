@@ -10,27 +10,45 @@ from selenium.common.exceptions import TimeoutException, \
 class Element(BaseElement):
 
 	@property
-	def img_src(self):
+	def element_src(self):
 		'''
-		Returns src value
+		Returns element_src value
 		:return:
 		'''
 		src = super().attribute('src')
 		return src
 
 	@property
-	def img_class(self):
+	def element_class(self):
 		'''
 		Returns class value
 		:return:
 		'''
-		src = super().attribute('class')
-		return src
+		cls = super().attribute('class')
+		return cls
 
 	@property
-	def href(self):
+	def element_alt(self):
 		'''
-		Returns href value
+		Returns class value
+		:return:
+		'''
+		alt = super().attribute('alt')
+		return alt
+
+	@property
+	def element_title(self):
+		'''
+		Returns class value
+		:return:
+		'''
+		alt = super().attribute('title')
+		return alt
+
+	@property
+	def element_href(self):
+		'''
+		Returns element_href value
 		:return:
 		'''
 		href = super().attribute('href')
