@@ -9,10 +9,15 @@ from selenium.common.exceptions import TimeoutException, \
 
 class BaseElement:
 
-	def __init__(self, driver: selenium.webdriver, locator=None):
+	def __init__(self, driver: selenium.webdriver, explicit_wait_time: int, locator=None):
 		self._driver = self._set_driver(driver)
+		self._explicit_wait_time = explicit_wait_time
 		self._locator = self._set_locator(locator)
 		self._element = self._find_element()
+
+	@property
+	def explicit_wait_time(self):
+		return self._explicit_wait_time
 
 	@property
 	def driver(self):
@@ -54,7 +59,7 @@ class BaseElement:
 		:return:
 		'''
 		try:
-			element = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(self.locator))
+			element = WebDriverWait(self.driver, self.explicit_wait_time).until(EC.presence_of_element_located(self.locator))
 			return element
 
 		except TimeoutException:
