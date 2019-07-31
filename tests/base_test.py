@@ -1,4 +1,5 @@
 import unittest
+from utils.screenshot import screenshots_collector
 
 
 class BaseTestCase(unittest.TestCase):
@@ -12,12 +13,11 @@ class BaseTestCase(unittest.TestCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.page = None
-		cls.driver = None
 
 	def setUp(self):
-		if self.driver is not None:
-			self.driver.quit()
-		self.driver = None
+		if self.page is not None:
+			self.page.quit()
+		self.page = None
 
 	@classmethod
 	def tearDownClass(cls):
@@ -25,6 +25,7 @@ class BaseTestCase(unittest.TestCase):
 			cls.page.quit()
 
 	def tearDown(self):
+		screenshots_collector()
 		if self.page:
 			self.page.close()
 
