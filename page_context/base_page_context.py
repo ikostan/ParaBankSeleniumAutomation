@@ -25,9 +25,12 @@ class BasePageContext:
 	}
 
 	MENU_BUTTONS = {
-		'home': "/parabank/index.htm",
-		'about': "about.htm",
-		'contact': "contact.htm"
+		'home': {'href': "/parabank/index.htm",
+		         'text': 'home'},
+		'about': {'href': "about.htm",
+		          'text': 'about'},
+		'contact': {'href': "contact.htm",
+		            'text': 'contact'}
 	}
 
 	LEFT_MENU_ITEMS = {
