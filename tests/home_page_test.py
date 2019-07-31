@@ -18,5 +18,5 @@ class MyTestCase(BaseTestCase):
 		self.assertEqual(HomePageContext.URL, self.page.url)
 		self.assertEqual(HomePageContext.SLOGAN, self.page.slogan)
 		self.assertEqual(HomePageContext.TITLE, self.page.title)
-		self.assertEqual(HomePageContext.ADMIN_LOGO['href'], self.page.admin_logo_href)
+		self.assertEqual(HomePageContext.ADMIN_LOGO['href'], self.page.admin_logo_formated_href)
 
