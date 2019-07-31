@@ -25,4 +25,15 @@ class BasePageLocator:
 	CONTACT_BUTTON = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"button")]/li[contains(@class,"contact")]/a')
 
 	# Left Menu:
+	SOLUTIONS = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[contains(@class,"Solutions")]')
+
+	ABOUT_US = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[2]')
+
+	SERVICES = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[3]')
+
+	PRODUCTS = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[4]')
+
+	LOCATIONS = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[5]')
+
+	ADMIN_PAGE = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[6]')
 
