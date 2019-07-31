@@ -11,21 +11,21 @@ class BasePageContext:
 	SLOGAN = 'Experience the difference'
 
 	ADMIN_LOGO = {
-		'href': "/parabank/admin.htm",
-		'src': "/parabank/images/clear.gif",
+		'href': "admin.htm",
+		'src': "images/clear.gif",
 		'class': "admin"
 	}
 
 	PARA_BANK_LOGO = {
-		'href': "/parabank/index.htm",
-		'src': "/parabank/images/logo.gif",
+		'href': "index.htm",
+		'src': "images/logo.gif",
 		'alt': "ParaBank",
 		'title': "ParaBank",
 		'class': "logo"
 	}
 
 	MENU_BUTTONS = {
-		'home': {'href': "/parabank/index.htm",
+		'home': {'href': "index.htm",
 		         'text': 'home'},
 		'about': {'href': "about.htm",
 		          'text': 'about'},
@@ -61,7 +61,7 @@ class BasePageContext:
 	FOOTER = {
 		'footer_menu': {
 			'home': {'text': 'Home',
-			         'href': "/parabank/index.htm"},
+			         'href': "index.htm"},
 			'about_us': {'text': 'About Us',
 			             'href': "about.htm"},
 			'services': {'text': 'Services',
@@ -73,7 +73,7 @@ class BasePageContext:
 			'forum': {'text': 'Forum',
 			          'href': "https://forums.parasoft.com/"},
 			'site_map': {'text': 'Site Map',
-			             'href': "/parabank/index.htm"},
+			             'href': "index.htm"},
 			'contact_us': {'text': 'Contact Us',
 			               'href': "contact.htm"},
 		},
