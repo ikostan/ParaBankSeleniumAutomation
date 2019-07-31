@@ -86,17 +86,18 @@ class BaseElement:
 				raise TypeError('\nERROR: driver must be of type "selenium.webdriver.chrome.webdriver.WebDriver"\n')
 			return None
 
-		if driver.capabilities['browserName'] == 'mozilla':
+		if driver.capabilities['browserName'] == 'firefox':
 			if type(driver) != selenium.webdriver.firefox.webdriver.WebDriver:
 				raise TypeError('\nERROR: driver must be of type "selenium.webdriver.firefox.webdriver.WebDriver"\n')
 			return None
 
-		if driver.capabilities['browserName'] == 'edge':
+		if driver.capabilities['browserName'] == 'MicrosoftEdge':
 			if type(driver) != selenium.webdriver.edge.webdriver.WebDriver:
 				raise TypeError('\nERROR: driver must be of type "selenium.webdriver.edge.webdriver.WebDriver"\n')
 			return None
 
-		raise TypeError('\nERROR: unsupported webdriver type\n')
+		raise TypeError('\nERROR: unsupported webdriver type: {}. Browser: {}\n'.format(type(driver),
+		                                                                                driver.capabilities['browserName']))
 
 	@staticmethod
 	def _set_locator(locator: tuple):
