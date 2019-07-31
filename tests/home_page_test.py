@@ -13,31 +13,32 @@ class HomePageTestCase(BaseTestCase):
 		self.open_web_browser('chrome')
 
 		# Test base context:
-		self.assertEqual(HomePageContext.URL,
-		                 self.page.url)
-		self.assertEqual(HomePageContext.SLOGAN,
-		                 self.page.slogan)
-		self.assertEqual(HomePageContext.TITLE,
-		                 self.page.title)
+		self.verify_page_url_title()
+		self.verify_parabank_admin_logo()
+		self.verify_parabank_logo()
+		self.verify_right_menu_buttons()
 
-		self.assertEqual(HomePageContext.ADMIN_LOGO['href'],
-		                 self.page.admin_logo_formated_href)
-		self.assertEqual(HomePageContext.ADMIN_LOGO['class'],
-		                 self.page.admin_logo_img_class)
-		self.assertEqual(HomePageContext.ADMIN_LOGO['src'],
-		                 self.page.admin_logo_formated_img_src)
+	def test_context_base_elements_edge(self):
 
-		self.assertEqual(HomePageContext.PARA_BANK_LOGO['href'],
-		                 self.page.para_bank_logo_formated_href)
-		self.assertEqual(HomePageContext.PARA_BANK_LOGO['class'],
-		                 self.page.para_bank_logo_img_class)
-		self.assertEqual(HomePageContext.PARA_BANK_LOGO['src'],
-		                 self.page.para_bank_logo_formated_img_src)
-		self.assertEqual(HomePageContext.PARA_BANK_LOGO['alt'],
-		                 self.page.para_bank_logo_img_alt)
-		self.assertEqual(HomePageContext.PARA_BANK_LOGO['title'],
-		                 self.page.para_bank_logo_img_title)
+		self.open_web_browser('edge')
 
+		# Test base context:
+		self.verify_page_url_title()
+		self.verify_parabank_admin_logo()
+		self.verify_parabank_logo()
+		self.verify_right_menu_buttons()
+
+	def test_context_base_elements_mozilla(self):
+
+		self.open_web_browser('mozilla')
+
+		# Test base context:
+		self.verify_page_url_title()
+		self.verify_parabank_admin_logo()
+		self.verify_parabank_logo()
+		self.verify_right_menu_buttons()
+
+	def verify_right_menu_buttons(self):
 		self.assertEqual(HomePageContext.MENU_BUTTONS['home']['href'],
 		                 self.page.home_button_formated_href)
 		self.assertEqual(HomePageContext.MENU_BUTTONS['home']['text'],
@@ -52,6 +53,34 @@ class HomePageTestCase(BaseTestCase):
 		                 self.page.contact_button_formated_href)
 		self.assertEqual(HomePageContext.MENU_BUTTONS['contact']['text'],
 		                 self.page.contact_button_text)
+
+	def verify_parabank_logo(self):
+		self.assertEqual(HomePageContext.SLOGAN,
+		                 self.page.slogan)
+		self.assertEqual(HomePageContext.PARA_BANK_LOGO['href'],
+		                 self.page.para_bank_logo_formated_href)
+		self.assertEqual(HomePageContext.PARA_BANK_LOGO['class'],
+		                 self.page.para_bank_logo_img_class)
+		self.assertEqual(HomePageContext.PARA_BANK_LOGO['src'],
+		                 self.page.para_bank_logo_formated_img_src)
+		self.assertEqual(HomePageContext.PARA_BANK_LOGO['alt'],
+		                 self.page.para_bank_logo_img_alt)
+		self.assertEqual(HomePageContext.PARA_BANK_LOGO['title'],
+		                 self.page.para_bank_logo_img_title)
+
+	def verify_parabank_admin_logo(self):
+		self.assertEqual(HomePageContext.ADMIN_LOGO['href'],
+		                 self.page.admin_logo_formated_href)
+		self.assertEqual(HomePageContext.ADMIN_LOGO['class'],
+		                 self.page.admin_logo_img_class)
+		self.assertEqual(HomePageContext.ADMIN_LOGO['src'],
+		                 self.page.admin_logo_formated_img_src)
+
+	def verify_page_url_title(self):
+		self.assertEqual(HomePageContext.URL,
+		                 self.page.url)
+		self.assertEqual(HomePageContext.TITLE,
+		                 self.page.title)
 
 	def open_web_browser(self, browser):
 		# Open web page
