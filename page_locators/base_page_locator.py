@@ -10,6 +10,6 @@ class BasePageLocator:
 
 	SLOGAN = (By.XPATH, '//*[@id="topPanel"]/p')
 
-	ADMIN_LOGO_HREF = (By.XPATH, '//*[@id="topPanel"]/a[contains(@href,"/parabank/admin.htm")]')  # //*[@id="topPanel"]/a[1]
+	ADMIN_LOGO_HREF = (By.XPATH, '//*[@id="topPanel"]/a[contains(@href,"/parabank/admin.htm")]')
 
-	ADMIN_LOGO_IMG = (By.XPATH, '//*[@id="topPanel"]/a[1]/img')
+	ADMIN_LOGO_IMG = (By.XPATH, '//*[@id="topPanel"]/a[contains(@href,"/parabank/admin.htm")]/img')
