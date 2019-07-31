@@ -123,7 +123,7 @@ class BasePageModel:
 		:param url:
 		:return:
 		'''
-		url = url.replace(BasePageContext.ROOT_URL, '')
+		url = url.replace(BasePageContext.URL, '')
 		url = url[:url.index(';')]
 		return url
 
@@ -261,3 +261,64 @@ class BasePageModel:
 		'''
 		element = Element(self.driver, BasePageLocator.HOME_BUTTON)
 		return element.text
+
+	@property
+	def _about_button_href(self):
+		'''
+		Returns non formated about button href
+		:return:
+		'''
+		element = Element(self.driver, BasePageLocator.ABOUT_BUTTON)
+		return element.element_href
+
+	@property
+	def about_button_formated_href(self):
+		'''
+		Returns formated about button href
+		:return:
+		'''
+		non_formated_href = self._about_button_href
+		href = self._formated_url(non_formated_href)
+		final_href = href.replace('/', '')
+		# print('\nurl: {},\nformated url: {}\n'.format(non_formated_href, href))  # debug only
+		return final_href
+
+	@property
+	def about_button_text(self):
+		'''
+		Returns about button text
+		:return:
+		'''
+		element = Element(self.driver, BasePageLocator.ABOUT_BUTTON)
+		return element.text
+
+	@property
+	def _contact_button_href(self):
+		'''
+		Returns non contact about button href
+		:return:
+		'''
+		element = Element(self.driver, BasePageLocator.CONTACT_BUTTON)
+		return element.element_href
+
+	@property
+	def contact_button_formated_href(self):
+		'''
+		Returns formated contact button href
+		:return:
+		'''
+		non_formated_href = self._contact_button_href
+		href = self._formated_url(non_formated_href)
+		final_href = href.replace('/', '')
+		# print('\nurl: {},\nformated url: {}\n'.format(non_formated_href, href))  # debug only
+		return final_href
+
+	@property
+	def contact_button_text(self):
+		'''
+		Returns contact button text
+		:return:
+		'''
+		element = Element(self.driver, BasePageLocator.CONTACT_BUTTON)
+		return element.text
+
