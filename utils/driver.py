@@ -86,3 +86,6 @@ class Driver:
 
     def get_driver(self):
         return self._driver
+
+    def get_browser(self):
+        return self._browser
