@@ -29,4 +29,6 @@ class HomePageTestCase(BaseTestCase):
 		self.assertEqual(HomePageContext.PARA_BANK_LOGO['alt'], self.page.para_bank_logo_img_alt)
 		self.assertEqual(HomePageContext.PARA_BANK_LOGO['title'], self.page.para_bank_logo_img_title)
 
+		self.assertEqual(HomePageContext.MENU_BUTTONS['home']['href'], self.page.home_button_formated_href)
+		self.assertEqual(HomePageContext.MENU_BUTTONS['home']['text'], self.page.home_button_text)
 
