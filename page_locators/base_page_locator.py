@@ -8,14 +8,21 @@ class BasePageLocator:
 	Separate the locator strings from the place where they are being used.
 	'''
 
-	SLOGAN = (By.XPATH, '//*[@id="topPanel"]/p[contains(@class,"caption")]')
-
+	# Admin Logo:
 	ADMIN_LOGO_HREF = (By.XPATH, '//*[@id="topPanel"]/a[contains(@href,"/parabank/admin.htm")]')
 	ADMIN_LOGO_IMG = (By.XPATH, '//*[@id="topPanel"]/a[contains(@href,"/parabank/admin.htm")]/img')
 
+	# ParaBank Logo:
 	PARA_BANK_LOGO_HREF = (By.XPATH, '//*[@id="topPanel"]/a[contains(@href,"/parabank/index.htm")]')
 	PARA_BANK_LOGO_IMG = (By.XPATH, '//*[@id="topPanel"]/'
 	                                'a[contains(@href,"/parabank/index.htm")]/'
 	                                'img[contains(@class,"logo")]')
+	SLOGAN = (By.XPATH, '//*[@id="topPanel"]/p[contains(@class,"caption")]')
 
+	# Menu Buttons:
+	HOME_BUTTON = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"button")]/li[contains(@class,"home")]/a')
+	ABOUT_BUTTON = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"button")]/li[contains(@class,"aboutus")]/a')
+	CONTACT_BUTTON = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"button")]/li[contains(@class,"contact")]/a')
+
+	# Left Menu:
 
