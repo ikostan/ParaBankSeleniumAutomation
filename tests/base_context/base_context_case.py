@@ -1,6 +1,4 @@
 import unittest
-from utils.driver import Driver
-from page_models.base_page_model import BasePageModel
 from utils.screenshot import screenshots_collector
 from page_context.base_page_context import BasePageContext
 
