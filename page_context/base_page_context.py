@@ -48,11 +48,19 @@ class BasePageContext:
 		               'text': 'Admin Page'}
 	}
 
-	LOGIN_PANEL = {
-		'title': 'Customer Login',
+	CUSTOMER_LOGIN = {
+		'login title': 'Customer Login',
 		'username title': 'Username',
+		'username input': {'type': "text",
+		                   'class': "input",
+		                   'name': "username"},
 		'password title': 'Password',
-		'button label': "Log In"
+		'password input': {'type': "password",
+		                   'class': "input",
+		                   'name': "password"},
+		'login button': {'value': "Log In",
+		                 'class': "button",
+		                 'type': "submit"}
 	}
 
 	REGISTER = {
