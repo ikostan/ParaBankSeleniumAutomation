@@ -11,10 +11,13 @@ class HomePageTestCase(BaseTestCase):
 
 	def test_context_base_elements_chrome(self):
 
+		# Open web browser:
 		self.open_web_browser('chrome')
 
 		# Test base context:
 		self.verify_page_url_title()
+
+		# Context base elements validation:
 		self.verify_parabank_admin_logo()
 		self.verify_parabank_logo()
 		self.verify_right_menu_buttons()
