@@ -34,6 +34,7 @@ class BaseElement:
 		'''
 		try:
 			atr = self.element.get_attribute(attribute)
+			# print('\nattribute: {}, object: {}'.format(attribute, atr))  # debug only
 			return atr
 
 		except TimeoutException:
