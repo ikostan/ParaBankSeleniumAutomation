@@ -116,7 +116,10 @@ class BasePageModel:
 		Returns current URL
 		:return:
 		'''
-		return self._driver.current_url
+		url = self._driver.current_url
+		if ';' in url:
+			url = url[:url.index(';')]
+		return url
 
 	@property
 	def slogan(self):
