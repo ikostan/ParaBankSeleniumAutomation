@@ -99,6 +99,10 @@ class BaseTestCase(unittest.TestCase):
 		self.assertEqual(BasePageContext.ADMIN_LOGO['src'],
 		                 self.page.admin_logo_formated_img_src)
 
+	def verify_customer_login(self):
+		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login title'], self.page.customer_login_title)
+		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['username title'], self.page.username_login_title)
+
 
 if __name__ == '__main__':
 	unittest.main()
