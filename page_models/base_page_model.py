@@ -682,4 +682,60 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
+	@property
+	def _footer_home_href(self):
+		'''
+		Returns non formated footer_home href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_HOME)
+		return element.element_href
 
+	@property
+	def footer_home_formated_href(self):
+		'''
+		Returns formated footer_home href
+		:return:
+		'''
+		non_formated_href = self._footer_home_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def footer_home_text(self):
+		'''
+		Returns footer_home text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_HOME)
+		txt = element.text
+		return txt
+
+	@property
+	def _footer_about_us_href(self):
+		'''
+		Returns non formated about_us href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_ABOUT_US)
+		return element.element_href
+
+	@property
+	def footer_about_us_formated_href(self):
+		'''
+		Returns formated about_us href
+		:return:
+		'''
+		non_formated_href = self._footer_about_us_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def footer_about_us_text(self):
+		'''
+		Returns about_us text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_ABOUT_US)
+		txt = element.text
+		return txt
