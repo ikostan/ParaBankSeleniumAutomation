@@ -70,6 +70,20 @@ class BasePageLocator:
 
 	# Customer Login
 	CUSTOMER_LOGIN_TITLE = (By.XPATH, '//*[@id="leftPanel"]/h2')
+	# Username
 	USERNAME_LOGIN_TITLE = (By.XPATH, '//*[@id="loginPanel"]/form/p[1]/b')
+	LOGIN_USERNAME_INPUT = (By.XPATH, '//*[@id="loginPanel"]/'
+	                                  'form/'
+	                                  'div[contains(@class, "login")]/'
+	                                  'input[contains(@name, "username")]')
+	# Password
+	PASSWORD_LOGIN_TITLE = (By.XPATH, '//*[@id="loginPanel"]/form/p[2]/b')
+	LOGIN_PASSWORD_INPUT = (By.XPATH, '//*[@id="loginPanel"]/'
+	                                  'form/'
+	                                  'div[contains(@class, "login")]/'
+	                                  'input[contains(@name, "password")]')
+	# Button
+	CUSTOMER_LOGIN_BUTTON = (By.XPATH, '//*[@id="loginPanel"]/form/div[contains(@class, "login")]/input[contains(@type, "submit")]')
+
 
 
