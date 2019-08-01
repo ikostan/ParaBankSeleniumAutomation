@@ -145,6 +145,14 @@ class BaseTestCase(unittest.TestCase):
 		self.assertEqual(BasePageContext.REGISTER['text'],
 		                 self.page.register_text)
 
+	def verify_footer_items(self):
 
-if __name__ == '__main__':
-	unittest.main()
+		self.assertEqual(BasePageContext.FOOTER['footer_menu']['home']['href'],
+		                 self.page.footer_home_formated_href)
+		self.assertEqual(BasePageContext.FOOTER['footer_menu']['home']['text'],
+		                 self.page.footer_home_text)
+
+		self.assertEqual(BasePageContext.FOOTER['footer_menu']['about us']['href'],
+		                 self.page.footer_about_us_formated_href)
+		self.assertEqual(BasePageContext.FOOTER['footer_menu']['about us']['text'],
+		                 self.page.footer_about_us_text)
