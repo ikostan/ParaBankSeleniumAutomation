@@ -12,7 +12,7 @@ class Element(BaseElement):
 	@property
 	def element_src(self):
 		'''
-		Returns element_src value
+		Returns element src value
 		:return:
 		'''
 		src = super().attribute('src')
@@ -30,7 +30,7 @@ class Element(BaseElement):
 	@property
 	def element_alt(self):
 		'''
-		Returns class value
+		Returns alt value
 		:return:
 		'''
 		alt = super().attribute('alt')
@@ -39,7 +39,7 @@ class Element(BaseElement):
 	@property
 	def element_title(self):
 		'''
-		Returns class value
+		Returns title value
 		:return:
 		'''
 		alt = super().attribute('title')
@@ -48,11 +48,38 @@ class Element(BaseElement):
 	@property
 	def element_href(self):
 		'''
-		Returns element_href value
+		Returns element href value
 		:return:
 		'''
 		href = super().attribute('href')
 		return href
+
+	@property
+	def element_type(self):
+		'''
+		Returns element type value
+		:return:
+		'''
+		atr = super().attribute('type')
+		return atr
+
+	@property
+	def element_name(self):
+		'''
+		Returns element name value
+		:return:
+		'''
+		atr = super().attribute('name')
+		return atr
+
+	@property
+	def element_value(self):
+		'''
+		Returns element value
+		:return:
+		'''
+		atr = super().attribute('value')
+		return atr
 
 	@property
 	def text(self):
