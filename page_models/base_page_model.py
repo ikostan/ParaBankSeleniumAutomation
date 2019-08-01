@@ -624,4 +624,62 @@ class BasePageModel:
 		atr = element.element_value
 		return atr
 
+	@property
+	def _forgot_login_href(self):
+		'''
+		Returns non formated forgot_login href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FORGOT_LOGIN)
+		return element.element_href
+
+	@property
+	def forgot_login_formated_href(self):
+		'''
+		Returns formated forgot_login href
+		:return:
+		'''
+		non_formated_href = self._forgot_login_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def forgot_login_text(self):
+		'''
+		Returns forgot_login text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FORGOT_LOGIN)
+		txt = element.text
+		return txt
+
+	@property
+	def _register_href(self):
+		'''
+		Returns non formated register href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.REGISTER)
+		return element.element_href
+
+	@property
+	def register_formated_href(self):
+		'''
+		Returns formated register href
+		:return:
+		'''
+		non_formated_href = self._register_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def register_text(self):
+		'''
+		Returns register text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.REGISTER)
+		txt = element.text
+		return txt
+
 
