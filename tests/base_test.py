@@ -133,6 +133,18 @@ class BaseTestCase(unittest.TestCase):
 		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login button']['value'],
 		                 self.page.login_button_value)
 
+		# Forgot Login
+		self.assertEqual(BasePageContext.FORGOT_LOGIN['href'],
+		                 self.page.forgot_login_formated_href)
+		self.assertEqual(BasePageContext.FORGOT_LOGIN['text'],
+		                 self.page.forgot_login_text)
+
+		# Register
+		self.assertEqual(BasePageContext.REGISTER['href'],
+		                 self.page.register_formated_href)
+		self.assertEqual(BasePageContext.REGISTER['text'],
+		                 self.page.register_text)
+
 
 if __name__ == '__main__':
 	unittest.main()
