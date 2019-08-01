@@ -93,7 +93,8 @@ class BasePageContext:
 		},
 		'copyright': '© Parasoft. All rights reserved.',
 		'visit': {
-			'text': 'Visit us at:www.parasoft.com',
-			'href': "http://www.parasoft.com/"
+			'text': 'Visit us at:',
+			'link': {'href': "http://www.parasoft.com/",
+			         'text': 'www.parasoft.com'}
 		},
 	}
