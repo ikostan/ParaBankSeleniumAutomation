@@ -524,3 +524,104 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
+	@property
+	def password_login_title(self):
+		'''
+		Returns password login title
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PASSWORD_LOGIN_TITLE)
+		txt = element.text
+		return txt
+
+	@property
+	def username_input_class(self):
+		'''
+		Returns Username login Input class
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOGIN_USERNAME_INPUT)
+		atr = element.element_class
+		return atr
+
+	@property
+	def username_input_type(self):
+		'''
+		Returns Username login Input type
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOGIN_USERNAME_INPUT)
+		atr = element.element_type
+		return atr
+
+	@property
+	def username_input_name(self):
+		'''
+		Returns Username login Input name
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOGIN_USERNAME_INPUT)
+		atr = element.element_name
+		return atr
+
+	@property
+	def password_input_class(self):
+		'''
+		Returns password login Input class
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOGIN_PASSWORD_INPUT)
+		atr = element.element_class
+		return atr
+
+	@property
+	def password_input_type(self):
+		'''
+		Returns password login Input type
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOGIN_PASSWORD_INPUT)
+		atr = element.element_type
+		return atr
+
+	@property
+	def password_input_name(self):
+		'''
+		Returns password login Input name
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOGIN_PASSWORD_INPUT)
+		atr = element.element_name
+		return atr
+
+	@property
+	def login_button_class(self):
+		'''
+		Returns login_button class
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CUSTOMER_LOGIN_BUTTON)
+		atr = element.element_class
+		return atr
+
+	@property
+	def login_button_type(self):
+		'''
+		Returns login_button type
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CUSTOMER_LOGIN_BUTTON)
+		atr = element.element_type
+		return atr
+
+	@property
+	def login_button_value(self):
+		'''
+		Returns login_button value
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CUSTOMER_LOGIN_BUTTON)
+		atr = element.element_value
+		return atr
+
+
