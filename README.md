@@ -23,7 +23,7 @@ In other words: ParaBank is not a real bank!
 
 ### Dev Environment:<br/>
 1. Python 3.7<br/>
-2. selenium 3.141.0<br/>
+2. Selenium 3.141.0<br/>
 3. PyCharm 2019.1.3 (Community Edition)<br/>
 4. Win 10 (64 bit)<br/>
 
