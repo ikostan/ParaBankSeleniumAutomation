@@ -1,4 +1,6 @@
 import unittest
+from utils.driver import Driver
+from page_models.base_page_model import BasePageModel
 from utils.screenshot import screenshots_collector
 from page_context.base_page_context import BasePageContext
 
@@ -29,6 +31,12 @@ class BaseTestCase(unittest.TestCase):
 		screenshots_collector()
 		if self.page:
 			self.page.close()
+
+	def open_web_browser(self, browser):
+		# Open web page
+		driver = Driver(browser)
+		self.page = BasePageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
+		self.page.go()
 
 	def verify_solutions_menu_items(self):
 		self.assertEqual(BasePageContext.LEFT_MENU_ITEMS['Solutions']['text'],
