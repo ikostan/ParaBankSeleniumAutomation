@@ -15,13 +15,13 @@ class HomePageTestCase(BaseTestCase):
 		self.open_web_browser('chrome')
 
 		# Test base context:
-		self.verify_page_url_title()
+		#self.verify_page_url_title()
 
 		# Context base elements validation:
-		self.verify_parabank_admin_logo()
-		self.verify_parabank_logo()
-		self.verify_right_menu_buttons()
-		self.verify_solutions_menu_items()
+		#self.verify_parabank_admin_logo()
+		#self.verify_parabank_logo()
+		#self.verify_right_menu_buttons()
+		#self.verify_solutions_menu_items()
 		self.verify_customer_login()
 
 	@unittest.skip('N/A')
