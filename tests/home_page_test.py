@@ -14,6 +14,27 @@ class HomePageTestCase(BaseTestCase):
 		# Open web browser:
 		self.open_web_browser('chrome')
 
+		# Context base elements validation:
+		self.base_context_verification()
+
+	#@unittest.skip('N/A')
+	def test_context_base_elements_edge(self):
+
+		self.open_web_browser('edge')
+
+		# Test base context:
+		self.base_context_verification()
+
+	#@unittest.skip('N/A')
+	def test_context_base_elements_mozilla(self):
+
+		self.open_web_browser('mozilla')
+
+		# Test base context:
+		self.base_context_verification()
+
+	def base_context_verification(self):
+
 		# Test base context:
 		self.verify_page_url_title()
 
@@ -23,28 +44,7 @@ class HomePageTestCase(BaseTestCase):
 		self.verify_right_menu_buttons()
 		self.verify_solutions_menu_items()
 		self.verify_customer_login()
-
-	#@unittest.skip('N/A')
-	def test_context_base_elements_edge(self):
-
-		self.open_web_browser('edge')
-
-		# Test base context:
-		self.verify_page_url_title()
-		self.verify_parabank_admin_logo()
-		self.verify_parabank_logo()
-		self.verify_right_menu_buttons()
-
-	#@unittest.skip('N/A')
-	def test_context_base_elements_mozilla(self):
-
-		self.open_web_browser('mozilla')
-
-		# Test base context:
-		self.verify_page_url_title()
-		self.verify_parabank_admin_logo()
-		self.verify_parabank_logo()
-		self.verify_right_menu_buttons()
+		self.verify_footer_items()
 
 	def open_web_browser(self, browser):
 		# Open web page
