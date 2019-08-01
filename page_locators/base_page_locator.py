@@ -25,15 +25,23 @@ class BasePageLocator:
 	CONTACT_BUTTON = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"button")]/li[contains(@class,"contact")]/a')
 
 	# Left Menu:
-	SOLUTIONS = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[contains(@class,"Solutions")]')
-	ABOUT_US_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[2]/a[contains(@href, "about.htm")]')
+	SOLUTIONS = (By.XPATH, '//*[@id="headerPanel"]/'
+	                       'ul[contains(@class,"leftmenu")]/'
+	                       'li[contains(@class,"Solutions")]')
+	ABOUT_US_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/'
+	                                'ul[contains(@class,"leftmenu")]/'
+	                                'li[2]/'
+	                                'a[contains(@href, "about.htm")]')
 
+	SERVICES_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/'
+	                                'ul[contains(@class,"leftmenu")]/'
+	                                'li[3]/'
+	                                'a[contains(@href, "services.htm")]')
 
-	SERVICES_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[3]/a')
+	PRODUCTS_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[4]/a[contains(@href, "http://www.parasoft.com/jsp/products.jsp")]')
+	#PRODUCTS_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[4]/a')
 
-	PRODUCTS_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[4]/a')
+	LOCATIONS_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[5]/a[contains(@href, "http://www.parasoft.com/jsp/pr/contacts.jsp")]')
 
-	LOCATIONS_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[5]/a')
-
-	ADMIN_PAGE_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[6]/a')
+	ADMIN_PAGE_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[6]/a[contains(@href, "admin.htm")]')
 
