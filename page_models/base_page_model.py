@@ -504,3 +504,23 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
+	@property
+	def customer_login_title(self):
+		'''
+		Returns customer login title
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CUSTOMER_LOGIN_TITLE)
+		txt = element.text
+		return txt
+
+	@property
+	def username_login_title(self):
+		'''
+		Returns username login title
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.USERNAME_LOGIN_TITLE)
+		txt = element.text
+		return txt
+
