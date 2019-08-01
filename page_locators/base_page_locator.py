@@ -68,3 +68,8 @@ class BasePageLocator:
 	                                  'li[6]/'
 	                                  'a[contains(@href, "admin.htm")]')
 
+	# Customer Login
+	CUSTOMER_LOGIN_TITLE = (By.XPATH, '//*[@id="leftPanel"]/h2')
+	USERNAME_LOGIN_TITLE = (By.XPATH, '//*[@id="loginPanel"]/form/p[1]/b')
+
+
