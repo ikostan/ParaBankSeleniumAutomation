@@ -100,8 +100,38 @@ class BaseTestCase(unittest.TestCase):
 		                 self.page.admin_logo_formated_img_src)
 
 	def verify_customer_login(self):
-		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login title'], self.page.customer_login_title)
-		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['username title'], self.page.username_login_title)
+
+		# Title:
+		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login title'],
+		                 self.page.customer_login_title)
+
+		# Username:
+		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['username title'],
+		                 self.page.username_login_title)
+		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['username input']['class'],
+		                 self.page.username_input_class)
+		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['username input']['type'],
+		                 self.page.username_input_type)
+		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['username input']['name'],
+		                 self.page.username_input_name)
+
+		# Password:
+		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['password title'],
+		                 self.page.password_login_title)
+		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['password input']['class'],
+		                 self.page.password_input_class)
+		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['password input']['type'],
+		                 self.page.password_input_type)
+		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['password input']['name'],
+		                 self.page.password_input_name)
+
+		# Login Button
+		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login button']['class'],
+		                 self.page.login_button_class)
+		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login button']['type'],
+		                 self.page.login_button_type)
+		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login button']['value'],
+		                 self.page.login_button_value)
 
 
 if __name__ == '__main__':
