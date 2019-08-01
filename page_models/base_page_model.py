@@ -70,9 +70,19 @@ class BasePageModel:
 		'''
 		self._driver.get(self._url)
 		try:
-			WebDriverWait(self._driver, self.explicit_wait_time).until(EC.presence_of_element_located((By.TAG_NAME, 'html')))
+			try:
+				WebDriverWait(self._driver,
+				              self.explicit_wait_time).until(EC.presence_of_element_located((By.TAG_NAME,
+				                                                                             'html')))
+			except TimeoutException:
+				self._driver.refresh()
+			finally:
+				WebDriverWait(self._driver,
+				              self.explicit_wait_time).until(EC.presence_of_element_located((By.TAG_NAME,
+				                                                                             'html')))
 		except TimeoutException:
-			raise Exception('\nERROR: The webpage \'{}\' is not available. Please check URL and retry.\n'.format(self._url))
+			raise Exception(
+				'\nERROR: The webpage \'{}\' is not available. Please check URL and retry.\n'.format(self._url))
 		self._driver.maximize_window()
 		return None
 
