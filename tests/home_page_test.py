@@ -24,7 +24,7 @@ class HomePageTestCase(BaseTestCase):
 		self.verify_solutions_menu_items()
 		self.verify_customer_login()
 
-	@unittest.skip('N/A')
+	#@unittest.skip('N/A')
 	def test_context_base_elements_edge(self):
 
 		self.open_web_browser('edge')
@@ -35,7 +35,7 @@ class HomePageTestCase(BaseTestCase):
 		self.verify_parabank_logo()
 		self.verify_right_menu_buttons()
 
-	@unittest.skip('N/A')
+	#@unittest.skip('N/A')
 	def test_context_base_elements_mozilla(self):
 
 		self.open_web_browser('mozilla')
