@@ -26,14 +26,14 @@ class BasePageLocator:
 
 	# Left Menu:
 	SOLUTIONS = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[contains(@class,"Solutions")]')
+	ABOUT_US_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[2]/a[contains(@href, "about.htm")]')
 
-	ABOUT_US = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[2]')
 
-	SERVICES = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[3]')
+	SERVICES_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[3]/a')
 
-	PRODUCTS = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[4]')
+	PRODUCTS_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[4]/a')
 
-	LOCATIONS = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[5]')
+	LOCATIONS_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[5]/a')
 
-	ADMIN_PAGE = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[6]')
+	ADMIN_PAGE_MENU_ITEM = (By.XPATH, '//*[@id="headerPanel"]/ul[contains(@class,"leftmenu")]/li[6]/a')
 
