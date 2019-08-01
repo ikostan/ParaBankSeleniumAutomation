@@ -46,12 +46,6 @@ class HomePageTestCase(BaseTestCase):
 		self.verify_customer_login()
 		self.verify_footer_items()
 
-	def open_web_browser(self, browser):
-		# Open web page
-		driver = Driver(browser)
-		self.page = HomePageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
-		self.page.go()
-
 	def verify_page_url_title(self):
 		self.assertEqual(HomePageContext.URL,
 		                 self.page.url)
