@@ -1,8 +1,5 @@
-from utils.driver import Driver
 from utils.screenshot import screenshot_on_fail
-from tests.base_items.base_context_case import BaseTestCase
-from tests.base_items.home_page_context_case import HomePageContextTestCase
-from page_models.home_page_model import HomePageModel
+from tests.base_context.home_page_context_case import HomePageContextTestCase
 
 
 @screenshot_on_fail()
