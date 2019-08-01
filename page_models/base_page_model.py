@@ -132,16 +132,23 @@ class BasePageModel:
 		'''
 		Removes following from href/url:
 
-		1. https://parabank.parasoft.com/parabank
+		1. https://parabank.parasoft.com/parabank/
 		2. ;jsessionid=1219DE07E03D513449C6E1EEA9A73C43
 
-		Result: /parabank/images/clear.gif
+		Result: images/clear.gif
 
 		:param url:
 		:return:
 		'''
 		url = url.replace(BasePageContext.URL, '')
-		url = url[:url.index(';')]
+
+		if ';' in url:
+			url = url[:url.index(';')]
+
+		if '/' in url:
+			if url.index('/') == 0:
+				url = url.replace('/', '')
+
 		return url
 
 	@property
@@ -296,9 +303,7 @@ class BasePageModel:
 		'''
 		non_formated_href = self._about_button_href
 		href = self._formated_url(non_formated_href)
-		final_href = href.replace('/', '')
-		# print('\nurl: {},\nformated url: {}\n'.format(non_formated_href, href))  # debug only
-		return final_href
+		return href
 
 	@property
 	def about_button_text(self):
@@ -326,9 +331,7 @@ class BasePageModel:
 		'''
 		non_formated_href = self._contact_button_href
 		href = self._formated_url(non_formated_href)
-		final_href = href.replace('/', '')
-		# print('\nurl: {},\nformated url: {}\n'.format(non_formated_href, href))  # debug only
-		return final_href
+		return href
 
 	@property
 	def contact_button_text(self):
@@ -360,7 +363,7 @@ class BasePageModel:
 	@property
 	def _about_usmenu_item_href(self):
 		'''
-		Returns non contact about button href
+		Returns non formated about us menu item href
 		:return:
 		'''
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ABOUT_BUTTON)
@@ -369,23 +372,135 @@ class BasePageModel:
 	@property
 	def about_us_menu_item_formated_href(self):
 		'''
-		Returns formated contact button href
+		Returns formated about us menu item href
 		:return:
 		'''
 		non_formated_href = self._about_button_href
 		href = self._formated_url(non_formated_href)
-		final_href = href.replace('/', '')
-		# print('\nurl: {},\nformated url: {}\n'.format(non_formated_href, href))  # debug only
-		return final_href
+		return href
 
 	@property
 	def about_us_menu_item_text(self):
 		'''
-		Returns contact button text
+		Returns about us menu item text
 		:return:
 		'''
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ABOUT_US_MENU_ITEM)
 		return element.text
 
+	@property
+	def _services_usmenu_item_href(self):
+		'''
+		Returns non formated services menu item href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.SERVICES_MENU_ITEM)
+		return element.element_href
 
+	@property
+	def services_us_menu_item_formated_href(self):
+		'''
+		Returns formated services menu item href
+		:return:
+		'''
+		non_formated_href = self._services_usmenu_item_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def services_us_menu_item_text(self):
+		'''
+		Returns services menu item text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.SERVICES_MENU_ITEM)
+		txt = element.text
+		return txt
+
+	@property
+	def _products_menu_item_href(self):
+		'''
+		Returns non formated products menu item href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PRODUCTS_MENU_ITEM)
+		return element.element_href
+
+	@property
+	def products_menu_item_formated_href(self):
+		'''
+		Returns formated products menu item href
+		:return:
+		'''
+		non_formated_href = self._products_menu_item_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def products_menu_item_text(self):
+		'''
+		Returns products menu item text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PRODUCTS_MENU_ITEM)
+		txt = element.text
+		return txt
+
+	@property
+	def _locations_menu_item_href(self):
+		'''
+		Returns non formated locations menu item href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOCATIONS_MENU_ITEM)
+		return element.element_href
+
+	@property
+	def locations_menu_item_formated_href(self):
+		'''
+		Returns formated locations menu item href
+		:return:
+		'''
+		non_formated_href = self._locations_menu_item_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def locations_menu_item_text(self):
+		'''
+		Returns locations menu item text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOCATIONS_MENU_ITEM)
+		txt = element.text
+		return txt
+
+	@property
+	def _admin_page_menu_item_href(self):
+		'''
+		Returns non formated admin_page menu item href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ADMIN_PAGE_MENU_ITEM)
+		return element.element_href
+
+	@property
+	def admin_page_menu_item_formated_href(self):
+		'''
+		Returns formated admin_page menu item href
+		:return:
+		'''
+		non_formated_href = self._admin_page_menu_item_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def admin_page_menu_item_text(self):
+		'''
+		Returns admin_page menu item text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ADMIN_PAGE_MENU_ITEM)
+		txt = element.text
+		return txt
 
