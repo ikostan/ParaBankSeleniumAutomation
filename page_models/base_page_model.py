@@ -357,5 +357,35 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.SOLUTIONS)
 		return element.element_class
 
+	@property
+	def _about_usmenu_item_href(self):
+		'''
+		Returns non contact about button href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ABOUT_BUTTON)
+		return element.element_href
+
+	@property
+	def about_us_menu_item_formated_href(self):
+		'''
+		Returns formated contact button href
+		:return:
+		'''
+		non_formated_href = self._about_button_href
+		href = self._formated_url(non_formated_href)
+		final_href = href.replace('/', '')
+		# print('\nurl: {},\nformated url: {}\n'.format(non_formated_href, href))  # debug only
+		return final_href
+
+	@property
+	def about_us_menu_item_text(self):
+		'''
+		Returns contact button text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ABOUT_US_MENU_ITEM)
+		return element.text
+
 
 
