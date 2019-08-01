@@ -1,6 +1,6 @@
 from utils.driver import Driver
 from utils.screenshot import screenshot_on_fail
-from tests.base_items.base_context_case import BaseTestCase
+from tests.base_context.base_context_case import BaseTestCase
 from page_models.home_page_model import HomePageModel
 from page_context.home_page_context import HomePageContext
 
