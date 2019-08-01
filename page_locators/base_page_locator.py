@@ -92,7 +92,8 @@ class BasePageLocator:
 	REGISTER = (By.XPATH, '//*[@id="loginPanel"]/p/a[contains(@href, "register.htm")]')
 
 	# Footer
-	FOOTER_HOME = (By.XPATH, '//*[@id="footerPanel"]/ul[1]/li[1]/a[contains(@href, "parabank/index.htm")]]')
+	FOOTER_HOME = (By.XPATH, '//*[@id="footerPanel"]/ul[1]/li[1]/'
+	                         'a[contains(@href, "parabank/index.htm")]')
 	FOOTER_ABOUT_US = (By.XPATH, '//*[@id="footerPanel"]/ul[1]/li[2]/a[contains(@href, "about.htm")]')
 	FOOTER_SERVICES = (By.XPATH, '//*[@id="footerPanel"]/ul[1]/li[3]/a[contains(@href, "services.htm")]')
 	FOOTER_PRODUCTS = (By.XPATH, '//*[@id="footerPanel"]/ul[1]/li[4]/a[contains(@href, "http://www.parasoft.com/jsp/products.jsp")]')
@@ -101,3 +102,6 @@ class BasePageLocator:
 	FOOTER_SITE_MAP = (By.XPATH, '//*[@id="footerPanel"]/ul[1]/li[7]/a[contains(@href, "parabank/sitemap.htm")]')
 	FOOTER_CONTACT_US = (By.XPATH, '//*[@id="footerPanel"]/ul[1]/li[8]/a[contains(@href, "contact.htm")]')
 
+	FOOTER_COPYRIGHT = (By.XPATH, '//*[@id="footerPanel"]/p[contains(@class, "copyright")]')
+	FOOTER_VISIT_US = (By.XPATH, '//*[@id="footerPanel"]/ul[contains(@class, "visit")]/li[1]')
+	FOOTER_VISIT_US_LINK = (By.XPATH, '//*[@id="footerPanel"]/ul[contains(@class, "visit")]/li/a[contains(@href, "http://www.parasoft.com/")]')
