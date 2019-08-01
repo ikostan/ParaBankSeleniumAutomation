@@ -83,7 +83,14 @@ class BasePageLocator:
 	                                  'div[contains(@class, "login")]/'
 	                                  'input[contains(@name, "password")]')
 	# Button
-	CUSTOMER_LOGIN_BUTTON = (By.XPATH, '//*[@id="loginPanel"]/form/div[contains(@class, "login")]/input[contains(@type, "submit")]')
+	CUSTOMER_LOGIN_BUTTON = (By.XPATH, '//*[@id="loginPanel"]/'
+	                                   'form/'
+	                                   'div[contains(@class, "login")]/'
+	                                   'input[contains(@type, "submit")]')
+
+	FORGOT_LOGIN = (By.XPATH, '//*[@id="loginPanel"]/p/a[contains(@href, "lookup.htm")]')
+	REGISTER = (By.XPATH, '//*[@id="loginPanel"]/p/a[contains(@href, "register.htm")]')
+
 
 
 
