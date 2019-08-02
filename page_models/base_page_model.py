@@ -141,7 +141,7 @@ class BasePageModel:
 		return element.text
 
 	@staticmethod
-	def _formated_url(url):
+	def _formated_url(url: str):
 		'''
 		Removes following from href/url:
 
@@ -165,31 +165,14 @@ class BasePageModel:
 		return url
 
 	@property
-	def _admin_logo_href(self):
-		'''
-		Returns href value from "Admin Logo" element
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ADMIN_LOGO_HREF)
-		return element.element_href
-
-	@property
 	def admin_logo_formated_href(self):
 		'''
 		Returns href value from "Admin Logo" element
 		:return:
 		'''
-		href = self._formated_url(self._admin_logo_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ADMIN_LOGO_HREF)
+		href = self._formated_url(element.element_href)
 		return href
-
-	@property
-	def _admin_logo_img_src(self):
-		'''
-		Returns admin logo img src value
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ADMIN_LOGO_IMG)
-		return element.element_src
 
 	@property
 	def admin_logo_formated_img_src(self):
@@ -197,7 +180,8 @@ class BasePageModel:
 		Returns admin logo img src value
 		:return:
 		'''
-		src = self._formated_url(self._admin_logo_img_src)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ADMIN_LOGO_IMG)
+		src = self._formated_url(element.element_src)
 		return src
 
 	@property
@@ -210,31 +194,14 @@ class BasePageModel:
 		return element.element_class
 
 	@property
-	def _para_bank_logo_href(self):
-		'''
-		Returns href value from "ParBank Logo" element
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PARA_BANK_LOGO_HREF)
-		return element.element_href
-
-	@property
 	def para_bank_logo_formated_href(self):
 		'''
 		Returns href value from "ParBank Logo" element
 		:return:
 		'''
-		href = self._formated_url(self._para_bank_logo_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PARA_BANK_LOGO_HREF)
+		href = self._formated_url(element.element_href)
 		return href
-
-	@property
-	def _para_bank_logo_img_src(self):
-		'''
-		Returns ParBank logo img src value
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PARA_BANK_LOGO_IMG)
-		return element.element_src
 
 	@property
 	def para_bank_logo_formated_img_src(self):
@@ -242,7 +209,8 @@ class BasePageModel:
 		Returns ParBank logo img src value
 		:return:
 		'''
-		src = self._formated_url(self._para_bank_logo_img_src)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PARA_BANK_LOGO_IMG)
+		src = self._formated_url(element.element_src)
 		return src
 
 	@property
@@ -273,21 +241,13 @@ class BasePageModel:
 		return element.element_title
 
 	@property
-	def _home_button_href(self):
-		'''
-		Returns non formated home button href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.HOME_BUTTON)
-		return element.element_href
-
-	@property
 	def home_button_formated_href(self):
 		'''
 		Returns formated home button href
 		:return:
 		'''
-		href = self._formated_url(self._home_button_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.HOME_BUTTON)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -300,22 +260,13 @@ class BasePageModel:
 		return element.text
 
 	@property
-	def _about_button_href(self):
-		'''
-		Returns non formated about button href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ABOUT_BUTTON)
-		return element.element_href
-
-	@property
 	def about_button_formated_href(self):
 		'''
 		Returns formated about button href
 		:return:
 		'''
-		non_formated_href = self._about_button_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ABOUT_BUTTON)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -328,22 +279,13 @@ class BasePageModel:
 		return element.text
 
 	@property
-	def _contact_button_href(self):
-		'''
-		Returns non contact about button href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CONTACT_BUTTON)
-		return element.element_href
-
-	@property
 	def contact_button_formated_href(self):
 		'''
 		Returns formated contact button href
 		:return:
 		'''
-		non_formated_href = self._contact_button_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CONTACT_BUTTON)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -374,22 +316,13 @@ class BasePageModel:
 		return element.element_class
 
 	@property
-	def _about_usmenu_item_href(self):
-		'''
-		Returns non formated about us menu item href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ABOUT_BUTTON)
-		return element.element_href
-
-	@property
 	def about_us_menu_item_formated_href(self):
 		'''
 		Returns formated about us menu item href
 		:return:
 		'''
-		non_formated_href = self._about_button_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ABOUT_BUTTON)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -402,22 +335,13 @@ class BasePageModel:
 		return element.text
 
 	@property
-	def _services_usmenu_item_href(self):
-		'''
-		Returns non formated services menu item href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.SERVICES_MENU_ITEM)
-		return element.element_href
-
-	@property
 	def services_us_menu_item_formated_href(self):
 		'''
 		Returns formated services menu item href
 		:return:
 		'''
-		non_formated_href = self._services_usmenu_item_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.SERVICES_MENU_ITEM)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -431,22 +355,13 @@ class BasePageModel:
 		return txt
 
 	@property
-	def _products_menu_item_href(self):
-		'''
-		Returns non formated products menu item href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PRODUCTS_MENU_ITEM)
-		return element.element_href
-
-	@property
 	def products_menu_item_formated_href(self):
 		'''
 		Returns formated products menu item href
 		:return:
 		'''
-		non_formated_href = self._products_menu_item_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PRODUCTS_MENU_ITEM)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -460,22 +375,13 @@ class BasePageModel:
 		return txt
 
 	@property
-	def _locations_menu_item_href(self):
-		'''
-		Returns non formated locations menu item href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOCATIONS_MENU_ITEM)
-		return element.element_href
-
-	@property
 	def locations_menu_item_formated_href(self):
 		'''
 		Returns formated locations menu item href
 		:return:
 		'''
-		non_formated_href = self._locations_menu_item_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOCATIONS_MENU_ITEM)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -489,22 +395,13 @@ class BasePageModel:
 		return txt
 
 	@property
-	def _admin_page_menu_item_href(self):
-		'''
-		Returns non formated admin_page menu item href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ADMIN_PAGE_MENU_ITEM)
-		return element.element_href
-
-	@property
 	def admin_page_menu_item_formated_href(self):
 		'''
 		Returns formated admin_page menu item href
 		:return:
 		'''
-		non_formated_href = self._admin_page_menu_item_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ADMIN_PAGE_MENU_ITEM)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -638,22 +535,13 @@ class BasePageModel:
 		return atr
 
 	@property
-	def _forgot_login_href(self):
-		'''
-		Returns non formated forgot_login href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FORGOT_LOGIN)
-		return element.element_href
-
-	@property
 	def forgot_login_formated_href(self):
 		'''
 		Returns formated forgot_login href
 		:return:
 		'''
-		non_formated_href = self._forgot_login_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FORGOT_LOGIN)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -667,22 +555,13 @@ class BasePageModel:
 		return txt
 
 	@property
-	def _register_href(self):
-		'''
-		Returns non formated register href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.REGISTER)
-		return element.element_href
-
-	@property
 	def register_formated_href(self):
 		'''
 		Returns formated register href
 		:return:
 		'''
-		non_formated_href = self._register_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.REGISTER)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -696,22 +575,13 @@ class BasePageModel:
 		return txt
 
 	@property
-	def _footer_home_href(self):
-		'''
-		Returns non formated footer_home href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_HOME)
-		return element.element_href
-
-	@property
 	def footer_home_formated_href(self):
 		'''
 		Returns formated footer_home href
 		:return:
 		'''
-		non_formated_href = self._footer_home_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_HOME)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -725,22 +595,13 @@ class BasePageModel:
 		return txt
 
 	@property
-	def _footer_about_us_href(self):
-		'''
-		Returns non formated about_us href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_ABOUT_US)
-		return element.element_href
-
-	@property
 	def footer_about_us_formated_href(self):
 		'''
 		Returns formated about_us href
 		:return:
 		'''
-		non_formated_href = self._footer_about_us_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_ABOUT_US)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -754,22 +615,13 @@ class BasePageModel:
 		return txt
 
 	@property
-	def _footer_services_href(self):
-		'''
-		Returns non formated services href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_SERVICES)
-		return element.element_href
-
-	@property
 	def footer_services_formated_href(self):
 		'''
 		Returns formated services href
 		:return:
 		'''
-		non_formated_href = self._footer_services_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_SERVICES)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -783,22 +635,13 @@ class BasePageModel:
 		return txt
 
 	@property
-	def _footer_products_href(self):
-		'''
-		Returns non formated products href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_PRODUCTS)
-		return element.element_href
-
-	@property
 	def footer_products_formated_href(self):
 		'''
 		Returns formated products href
 		:return:
 		'''
-		non_formated_href = self._footer_products_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_PRODUCTS)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -812,22 +655,13 @@ class BasePageModel:
 		return txt
 
 	@property
-	def _footer_locations_href(self):
-		'''
-		Returns non formated locations href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_LOCATIONS)
-		return element.element_href
-
-	@property
 	def footer_locations_formated_href(self):
 		'''
 		Returns formated locations href
 		:return:
 		'''
-		non_formated_href = self._footer_locations_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_LOCATIONS)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -841,22 +675,13 @@ class BasePageModel:
 		return txt
 
 	@property
-	def _footer_forum_href(self):
-		'''
-		Returns non formated forum href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_FORUM)
-		return element.element_href
-
-	@property
 	def footer_forum_formated_href(self):
 		'''
 		Returns formated forum href
 		:return:
 		'''
-		non_formated_href = self._footer_forum_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_FORUM)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -870,22 +695,13 @@ class BasePageModel:
 		return txt
 
 	@property
-	def _footer_site_map_href(self):
-		'''
-		Returns non formated site_map href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_SITE_MAP)
-		return element.element_href
-
-	@property
 	def footer_site_map_formated_href(self):
 		'''
 		Returns formated site_map href
 		:return:
 		'''
-		non_formated_href = self._footer_site_map_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_SITE_MAP)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -899,22 +715,13 @@ class BasePageModel:
 		return txt
 
 	@property
-	def _footer_contact_us_href(self):
-		'''
-		Returns non formated contact_us href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_CONTACT_US)
-		return element.element_href
-
-	@property
 	def footer_contact_us_formated_href(self):
 		'''
 		Returns formated contact_us href
 		:return:
 		'''
-		non_formated_href = self._footer_contact_us_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_CONTACT_US)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
@@ -948,22 +755,13 @@ class BasePageModel:
 		return atr
 
 	@property
-	def _footer_visit_link_href(self):
-		'''
-		Returns non formated visit link href
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_VISIT_US_LINK)
-		return element.element_href
-
-	@property
 	def footer_visit_link_formated_href(self):
 		'''
 		Returns formated visit link href
 		:return:
 		'''
-		non_formated_href = self._footer_visit_link_href
-		href = self._formated_url(non_formated_href)
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_VISIT_US_LINK)
+		href = self._formated_url(element.element_href)
 		return href
 
 	@property
