@@ -3,7 +3,7 @@ from tests.base_context.admin_page_context_case import AdminPageContextTestCase
 
 
 @screenshot_on_fail()
-class AboutPageContextTestCase(AdminPageContextTestCase):
+class AdminPageContextTestCase(AdminPageContextTestCase):
 
 	browser = 'chrome'
 
