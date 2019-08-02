@@ -752,3 +752,246 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_ABOUT_US)
 		txt = element.text
 		return txt
+
+	@property
+	def _footer_services_href(self):
+		'''
+		Returns non formated services href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_SERVICES)
+		return element.element_href
+
+	@property
+	def footer_services_formated_href(self):
+		'''
+		Returns formated services href
+		:return:
+		'''
+		non_formated_href = self._footer_services_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def footer_services_text(self):
+		'''
+		Returns services text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_SERVICES)
+		txt = element.text
+		return txt
+
+	@property
+	def _footer_products_href(self):
+		'''
+		Returns non formated products href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_PRODUCTS)
+		return element.element_href
+
+	@property
+	def footer_products_formated_href(self):
+		'''
+		Returns formated products href
+		:return:
+		'''
+		non_formated_href = self._footer_products_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def footer_products_text(self):
+		'''
+		Returns products text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_PRODUCTS)
+		txt = element.text
+		return txt
+
+	@property
+	def _footer_locations_href(self):
+		'''
+		Returns non formated locations href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_LOCATIONS)
+		return element.element_href
+
+	@property
+	def footer_locations_formated_href(self):
+		'''
+		Returns formated locations href
+		:return:
+		'''
+		non_formated_href = self._footer_locations_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def footer_locations_text(self):
+		'''
+		Returns products text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_LOCATIONS)
+		txt = element.text
+		return txt
+
+	@property
+	def _footer_forum_href(self):
+		'''
+		Returns non formated forum href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_FORUM)
+		return element.element_href
+
+	@property
+	def footer_forum_formated_href(self):
+		'''
+		Returns formated forum href
+		:return:
+		'''
+		non_formated_href = self._footer_forum_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def footer_forum_text(self):
+		'''
+		Returns forum text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_FORUM)
+		txt = element.text
+		return txt
+
+	@property
+	def _footer_site_map_href(self):
+		'''
+		Returns non formated site_map href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_SITE_MAP)
+		return element.element_href
+
+	@property
+	def footer_site_map_formated_href(self):
+		'''
+		Returns formated site_map href
+		:return:
+		'''
+		non_formated_href = self._footer_site_map_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def footer_site_map_text(self):
+		'''
+		Returns site_map text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_SITE_MAP)
+		txt = element.text
+		return txt
+
+	@property
+	def _footer_contact_us_href(self):
+		'''
+		Returns non formated contact_us href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_CONTACT_US)
+		return element.element_href
+
+	@property
+	def footer_contact_us_formated_href(self):
+		'''
+		Returns formated contact_us href
+		:return:
+		'''
+		non_formated_href = self._footer_contact_us_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def footer_contact_us_text(self):
+		'''
+		Returns contact_us text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_CONTACT_US)
+		txt = element.text
+		return txt
+
+	@property
+	def footer_copyright_text(self):
+		'''
+		Returns copyright text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_COPYRIGHT)
+		txt = element.text
+		return txt
+
+	@property
+	def footer_copyright_class(self):
+		'''
+		Returns copyright class
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_COPYRIGHT)
+		atr = element.element_class
+		return atr
+
+	@property
+	def _footer_visit_link_href(self):
+		'''
+		Returns non formated visit link href
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_VISIT_US_LINK)
+		return element.element_href
+
+	@property
+	def footer_visit_link_formated_href(self):
+		'''
+		Returns formated visit link href
+		:return:
+		'''
+		non_formated_href = self._footer_visit_link_href
+		href = self._formated_url(non_formated_href)
+		return href
+
+	@property
+	def footer_visit_link_text(self):
+		'''
+		Returns visit link text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_VISIT_US_LINK)
+		txt = element.text
+		return txt
+
+	@property
+	def footer_visit_link_target(self):
+		'''
+		Returns visit us target
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_VISIT_US_LINK)
+		atr = element.element_target
+		return atr
+
+	@property
+	def footer_visit_us_text(self):
+		'''
+		Returns visit us text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_VISIT_US)
+		txt = element.text
+		return txt
