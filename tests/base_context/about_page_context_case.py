@@ -1,8 +1,8 @@
 from utils.driver import Driver
 from utils.screenshot import screenshot_on_fail
-from tests.base_context.base_context_case import BaseTestCase
 from page_models.about_page_model import AboutPageModel
 from page_context.about_page_context import AboutPageContext
+from tests.base_context.base_context_case import BaseTestCase
 
 
 @screenshot_on_fail()
@@ -51,4 +51,15 @@ class AboutPageContextTestCase(BaseTestCase):
 		# Context base elements validation:
 		self.footer_items_test()
 
+	def verify_description_title(self):
 
+		# Context About page elements validation:
+		self.assertEqual(AboutPageContext.DESCRIPTION['title'], self.page.description_title)
+
+	def verify_description_text(self):
+
+		# Context About page elements validation:
+		self.assertEqual(AboutPageContext.DESCRIPTION['text'][0], self.page.description_first_line)
+		self.assertEqual(AboutPageContext.DESCRIPTION['text'][1], self.page.description_second_line)
+		self.assertEqual(AboutPageContext.DESCRIPTION['text'][2], self.page.description_third_line)
+		self.assertEqual(AboutPageContext.LINK, self.page.description_link)
