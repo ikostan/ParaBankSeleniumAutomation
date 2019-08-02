@@ -1,5 +1,5 @@
 from utils.screenshot import screenshot_on_fail
-from tests.base_context.about_page_context_case import AboutPageContextTestCase
+from tests.context_tests.about_page_context_case import AboutPageContextTestCase
 
 
 @screenshot_on_fail()
