@@ -73,7 +73,7 @@ class BasePageContext:
 	}
 
 	FOOTER = {
-		'footer_menu': {
+		'footer menu': {
 			'home': {'text': 'Home',
 			         'href': "index.htm"},
 			'about us': {'text': 'About Us',
@@ -85,16 +85,18 @@ class BasePageContext:
 			'locations': {'text': 'Locations',
 			              'href': "http://www.parasoft.com/jsp/pr/contacts.jsp"},
 			'forum': {'text': 'Forum',
-			          'href': "https://forums.parasoft.com/"},
+			          'href': "http://forums.parasoft.com/"},
 			'site map': {'text': 'Site Map',
-			             'href': "index.htm"},
+			             'href': "sitemap.htm"},
 			'contact us': {'text': 'Contact Us',
 			               'href': "contact.htm"},
 		},
-		'copyright': '© Parasoft. All rights reserved.',
+		'copyright': {'text': '© Parasoft. All rights reserved.',
+		              'class': 'copyright'},
 		'visit': {
 			'text': 'Visit us at:',
 			'link': {'href': "http://www.parasoft.com/",
-			         'text': 'www.parasoft.com'}
+			         'text': 'www.parasoft.com',
+			         'target': '_blank'}
 		},
 	}
