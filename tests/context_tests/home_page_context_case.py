@@ -1,3 +1,4 @@
+import  allure
 from utils.driver import Driver
 from utils.screenshot import screenshot_on_fail
 from page_models.home_page_model import HomePageModel
@@ -8,6 +9,7 @@ from tests.context_tests.base_context_case import BaseTestCase
 @screenshot_on_fail()
 class HomePageContextTestCase(BaseTestCase):
 
+	@allure.step("Open web browser on {}.".format(HomePageContext.URL))
 	def open_web_browser(self, browser):
 
 		# Open web page
@@ -91,6 +93,7 @@ class HomePageContextTestCase(BaseTestCase):
 		# Context base elements validation:
 		self.parabank_logo_test()
 
+	@allure.description("Home web page > Home button verification: href + text")
 	def verify_home_right_menu_button(self):
 
 		# Context base elements validation:
