@@ -60,7 +60,7 @@ virtualenv venv --python=python
 
 For more info please check [here](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html)<br/>
 
-**PyCharm - Choosing Your Testing Framework:**<br/>
+<br/>**PyCharm - Choosing Your Testing Framework:**<br/>
 
 1. Open the Settings/Preferences dialog, and under the node Tools, click the page **Python Integrated Tools**.<br/>
 2. On this page, click the **Default Test Runner** field.<br/>
@@ -74,7 +74,7 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
 </div>
 <br/>
 
-**Auto generate requirements.txt**<br/>
+<br/>**Auto generate requirements.txt**<br/>
 
    Any application typically has a set of dependencies that are required for that application to work. The requirements file is a way to specify and install specific set of package dependencies at once.<br/>
 
