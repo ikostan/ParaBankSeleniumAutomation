@@ -92,7 +92,8 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
 
    Source: https://www.idiotinside.com/2015/05/10/python-auto-generate-requirements-txt/<br/>
 
-<br/>### Tech Issues and Problem Solving:<br/>
+
+### Tech Issues and Problem Solving:<br/>
 
 - **How to fix in case .gitignore is ignored by Git:**<br/>
 
