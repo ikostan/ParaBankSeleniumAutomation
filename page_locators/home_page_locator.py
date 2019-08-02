@@ -35,8 +35,22 @@ class HomePageLocator(BasePageLocator):
 	                                   'ul[contains(@class, "servicestwo")]/'
 	                                   'li[contains(@class, "captiontwo")]')
 
-	BILL_PAY = (By.XPATH, '//*[@id="rightPanel"]/ul[contains(@class, "servicestwo")]/li[2]/a')
+	BILL_PAY = (By.XPATH, '//*[@id="rightPanel"]/'
+	                      'ul[contains(@class, "servicestwo")]/'
+	                      'li[2]/a')
 
-	ACCOUNT_HISTORY = (By.XPATH, '//*[@id="rightPanel"]/ul[contains(@class, "servicestwo")]/li[3]/a')
+	ACCOUNT_HISTORY = (By.XPATH, '//*[@id="rightPanel"]/'
+	                             'ul[contains(@class, "servicestwo")]/'
+	                             'li[3]/a')
 
-	ONLINE_TRANSFER_FUNDS = (By.XPATH, '//*[@id="rightPanel"]/ul[contains(@class, "servicestwo")]/li[4]/a')
+	ONLINE_TRANSFER_FUNDS = (By.XPATH, '//*[@id="rightPanel"]/'
+	                                   'ul[contains(@class, "servicestwo")]/'
+	                                   'li[4]/a')
+
+	READ_MORE_SERVICES = (By.XPATH, '//*[@id="rightPanel"]/p[1]/a')
+
+	# News Section
+	LATEST_NEWS = (By.XPATH, '//*[@id="rightPanel"]/h4')
+
+	READ_MORE_NEWS = (By.XPATH, '//*[@id="rightPanel"]/p[2]/a')
+
