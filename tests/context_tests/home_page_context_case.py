@@ -62,6 +62,12 @@ class HomePageContextTestCase(BaseTestCase):
 		self.assertEqual(HomePageContext.ONLINE_SERVICES['Transfer Funds']['href'],
 		                 self.page.online_transfer_funds_formated_href)
 
+	def verify_read_more_services_button(self):
+
+		self.assertEqual(HomePageContext.READ_MORE_SERVICES['text'],
+		                 self.page.read_more_services_title)
+		self.assertEqual(HomePageContext.READ_MORE_SERVICES['href'],
+		                 self.page.read_more_services_formated_href)
 
 	def verify_parabank_admin_logo(self):
 
