@@ -35,8 +35,8 @@ class HomePageContext(BasePageContext):
 	READ_MORE_SERVICES = {'href': "services.htm",
 	                      'text': 'READ MORE'}
 
-	LATEST_NEWS = 'Latest News'
+	LATEST_NEWS = 'LATEST NEWS'
 
-	READ_MORE_NEWS = {'text': 'Read More',
+	READ_MORE_NEWS = {'text': 'READ MORE',
 	                  "href": "news.htm"}
 
