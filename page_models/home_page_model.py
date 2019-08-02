@@ -48,7 +48,7 @@ class HomePageModel(BasePageModel):
 		Returns transfer_funds_text from ATM Services section
 		:return:
 		'''
-		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.TRANSFER_FUNDS)
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.ATM_TRANSFER_FUNDS)
 		txt = element.text
 		return txt
 
@@ -58,7 +58,78 @@ class HomePageModel(BasePageModel):
 		Returns transfer_funds_href from ATM Services section
 		:return:
 		'''
-		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.TRANSFER_FUNDS)
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.ATM_TRANSFER_FUNDS)
 		href = super()._formated_url(element.element_href)
 		return href
+
+	@property
+	def atm_check_balances_text(self):
+		'''
+		Returns check_balances_text from ATM Services section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.CHECK_BALANCES)
+		txt = element.text
+		return txt
+
+	@property
+	def atm_check_balances_formated_href(self):
+		'''
+		Returns check_balances_href from ATM Services section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.CHECK_BALANCES)
+		href = super()._formated_url(element.element_href)
+		return href
+
+	@property
+	def atm_make_deposits_text(self):
+		'''
+		Returns make_deposits_text from ATM Services section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.MAKE_DEPOSITS)
+		txt = element.text
+		return txt
+
+	@property
+	def atm_make_deposits_formated_href(self):
+		'''
+		Returns make_deposits_href from ATM Services section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.MAKE_DEPOSITS)
+		href = super()._formated_url(element.element_href)
+		return href
+
+	@property
+	def online_services_title(self):
+		'''
+		Returns title from online_services section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.ONLINE_SERVICES_TITLE)
+		txt = element.text
+		return txt
+
+	@property
+	def bill_pay_formated_href(self):
+		'''
+		Returns bill_pay href from ATM Services section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.BILL_PAY)
+		href = super()._formated_url(element.element_href)
+		return href
+
+	@property
+	def bill_pay_title(self):
+		'''
+		Returns title from bill_pay section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.BILL_PAY)
+		txt = element.text
+		return txt
+
 
