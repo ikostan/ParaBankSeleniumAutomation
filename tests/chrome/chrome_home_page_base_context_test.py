@@ -108,6 +108,7 @@ class ChromeHomePageContextTestCase(HomePageContextTestCase):
 	@allure.story("Welcome to ParaBank (Right Menu) > About button verification")
 	@allure.severity(severity_level.MINOR)
 	@allure.step("Verify Home button properties")
+	@allure.description("Home web page > Home button verification: href + text")
 	def test_right_menu_about_button(self):
 		# open web browser
 		self.open_web_browser(self.browser)
