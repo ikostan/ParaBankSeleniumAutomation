@@ -8,7 +8,7 @@ class AboutPageContext(BasePageContext):
 	URL = BasePageContext.URL + 'about.htm'
 
 	DESCRIPTION = {'title': 'ParaSoft Demo Website',
-	               'text': ['ParaBank is a demo site used for demonstration of Parasoft software solutions.',
+	               'text': ['ParaBank is a demo site used for demonstration of Parasoft software solutions.\n'
 	                        'All materials herein are used solely for simulating a realistic online banking website.',
 	                        'In other words: ParaBank is not a real bank!',
 	                        'For more information about Parasoft solutions please visit us at:\nwww.parasoft.com or '
