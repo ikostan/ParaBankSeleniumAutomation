@@ -132,4 +132,42 @@ class HomePageModel(BasePageModel):
 		txt = element.text
 		return txt
 
+	@property
+	def account_history_formated_href(self):
+		'''
+		Returns account_history href from ATM Services section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.ACCOUNT_HISTORY)
+		href = super()._formated_url(element.element_href)
+		return href
 
+	@property
+	def account_history_title(self):
+		'''
+		Returns title from account_history section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.ACCOUNT_HISTORY)
+		txt = element.text
+		return txt
+
+	@property
+	def online_transfer_funds_formated_href(self):
+		'''
+		Returns transfer_funds href from ATM Services section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.ONLINE_TRANSFER_FUNDS)
+		href = super()._formated_url(element.element_href)
+		return href
+
+	@property
+	def online_transfer_funds_title(self):
+		'''
+		Returns title from transfer_funds section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.ONLINE_TRANSFER_FUNDS)
+		txt = element.text
+		return txt
