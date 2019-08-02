@@ -69,6 +69,18 @@ class HomePageContextTestCase(BaseTestCase):
 		self.assertEqual(HomePageContext.READ_MORE_SERVICES['href'],
 		                 self.page.read_more_services_formated_href)
 
+	def verify_read_more_news_button(self):
+
+		self.assertEqual(HomePageContext.READ_MORE_NEWS['text'],
+		                 self.page.read_more_news_title)
+		self.assertEqual(HomePageContext.READ_MORE_NEWS['href'],
+		                 self.page.read_more_news_formated_href)
+
+	def verify_latest_news_title(self):
+
+		self.assertEqual(HomePageContext.LATEST_NEWS,
+		                 self.page.latest_news_title)
+
 	def verify_parabank_admin_logo(self):
 
 		# Context base elements validation:
