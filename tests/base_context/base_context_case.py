@@ -147,12 +147,59 @@ class BaseTestCase(unittest.TestCase):
 
 	def footer_items_test(self):
 
-		self.assertEqual(BasePageContext.FOOTER['footer_menu']['home']['href'],
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['home']['href'],
 		                 self.page.footer_home_formated_href)
-		self.assertEqual(BasePageContext.FOOTER['footer_menu']['home']['text'],
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['home']['text'],
 		                 self.page.footer_home_text)
 
-		self.assertEqual(BasePageContext.FOOTER['footer_menu']['about us']['href'],
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['about us']['href'],
 		                 self.page.footer_about_us_formated_href)
-		self.assertEqual(BasePageContext.FOOTER['footer_menu']['about us']['text'],
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['about us']['text'],
 		                 self.page.footer_about_us_text)
+
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['services']['href'],
+		                 self.page.footer_services_formated_href)
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['services']['text'],
+		                 self.page.footer_services_text)
+
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['products']['href'],
+		                 self.page.footer_products_formated_href)
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['products']['text'],
+		                 self.page.footer_products_text)
+
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['locations']['href'],
+		                 self.page.footer_locations_formated_href)
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['locations']['text'],
+		                 self.page.footer_locations_text)
+
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['forum']['href'],
+		                 self.page.footer_forum_formated_href)
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['forum']['text'],
+		                 self.page.footer_forum_text)
+
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['site map']['href'],
+		                 self.page.footer_site_map_formated_href)
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['site map']['text'],
+		                 self.page.footer_site_map_text)
+
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['contact us']['href'],
+		                 self.page.footer_contact_us_formated_href)
+		self.assertEqual(BasePageContext.FOOTER['footer menu']['contact us']['text'],
+		                 self.page.footer_contact_us_text)
+
+		self.assertEqual(BasePageContext.FOOTER['copyright']['class'],
+		                 self.page.footer_copyright_class)
+		self.assertEqual(BasePageContext.FOOTER['copyright']['text'],
+		                 self.page.footer_copyright_text)
+
+		self.assertEqual(BasePageContext.FOOTER['visit']['link']['href'],
+		                 self.page.footer_visit_link_formated_href)
+		self.assertEqual(BasePageContext.FOOTER['visit']['link']['text'],
+		                 self.page.footer_visit_link_text)
+		self.assertEqual(BasePageContext.FOOTER['visit']['link']['target'],
+		                 self.page.footer_visit_link_target)
+
+		self.assertEqual(BasePageContext.FOOTER['visit']['text'],
+		                 self.page.footer_visit_us_text)
+
+
