@@ -2,7 +2,7 @@ from utils.driver import Driver
 from utils.screenshot import screenshot_on_fail
 from page_models.about_page_model import AboutPageModel
 from page_context.about_page_context import AboutPageContext
-from tests.base_context.base_context_case import BaseTestCase
+from tests.context_tests.base_context_case import BaseTestCase
 
 
 @screenshot_on_fail()
