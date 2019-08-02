@@ -1,3 +1,4 @@
+import allure
 import unittest
 from utils.screenshot import screenshots_collector
 from page_context.base_page_context import BasePageContext
@@ -26,7 +27,7 @@ class BaseTestCase(unittest.TestCase):
 			cls.page.quit()
 
 	def tearDown(self):
-		screenshots_collector()
+		# screenshots_collector()
 		if self.page:
 			self.page.close()
 
@@ -61,6 +62,7 @@ class BaseTestCase(unittest.TestCase):
 		self.assertEqual(BasePageContext.LEFT_MENU_ITEMS['Admin Page']['text'],
 		                 self.page.admin_page_menu_item_text)
 
+	@allure.description("Base page > Home button verification: href + text")
 	def right_menu_home_button_test(self):
 
 		self.assertEqual(BasePageContext.MENU_BUTTONS['home']['href'],
