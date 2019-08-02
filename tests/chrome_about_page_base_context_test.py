@@ -13,6 +13,22 @@ class AboutPageContextTestCase(AboutPageContextTestCase):
 		self.open_web_browser(self.browser)
 		self.verify_page_url_title()
 
+	def test_description_title_text(self):
+
+		# open web browser
+		self.open_web_browser(self.browser)
+
+		# verify description title text
+		self.verify_description_title()
+
+	def test_description_text(self):
+
+		# open web browser
+		self.open_web_browser(self.browser)
+
+		# verify description text
+		self.verify_description_text()
+
 	def test_parabank_admin_logo(self):
 
 		# open web browser
