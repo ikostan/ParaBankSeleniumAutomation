@@ -91,10 +91,20 @@ class HomePageContextTestCase(BaseTestCase):
 		# Context base elements validation:
 		self.parabank_logo_test()
 
-	def verify_right_menu_buttons(self):
+	def verify_home_right_menu_button(self):
 
 		# Context base elements validation:
-		self.right_menu_buttons_test()
+		self.right_menu_home_button_test()
+
+	def verify_about_right_menu_button(self):
+
+		# Context base elements validation:
+		self.right_menu_about_button_test()
+
+	def verify_contact_right_menu_button(self):
+
+		# Context base elements validation:
+		self.right_menu_contact_button_test()
 
 	def verify_solutions_menu_items(self):
 
