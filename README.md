@@ -84,7 +84,7 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
     pip freeze > requirements.txt
 ```
 
-   If you save this in requirements.txt, then you can:<br/>
+   If you save this in requirements.txt, you can follow this guide: [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html), or you can:<br/>
    
    ```python
     pip install -r requirements.txt
