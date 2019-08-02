@@ -1,4 +1,6 @@
 import unittest
+import allure
+from allure import severity_level
 from utils.screenshot import screenshots_collector
 from page_context.base_page_context import BasePageContext
 
@@ -30,6 +32,9 @@ class BaseTestCase(unittest.TestCase):
 		if self.page:
 			self.page.close()
 
+	@allure.feature("Base Page Context.")
+	@allure.story("Solution menu items verification.")
+	@allure.severity(severity_level.NORMAL)
 	def solutions_menu_items_test(self):
 		self.assertEqual(BasePageContext.LEFT_MENU_ITEMS['Solutions']['text'],
 		                 self.page.solutions_menu_text)
@@ -61,6 +66,9 @@ class BaseTestCase(unittest.TestCase):
 		self.assertEqual(BasePageContext.LEFT_MENU_ITEMS['Admin Page']['text'],
 		                 self.page.admin_page_menu_item_text)
 
+	@allure.feature("Base Page Context.")
+	@allure.story("Right menu (Welcome to ParaBank) items verification")
+	@allure.severity(severity_level.NORMAL)
 	def right_menu_buttons_test(self):
 		self.assertEqual(BasePageContext.MENU_BUTTONS['home']['href'],
 		                 self.page.home_button_formated_href)
@@ -77,6 +85,9 @@ class BaseTestCase(unittest.TestCase):
 		self.assertEqual(BasePageContext.MENU_BUTTONS['contact']['text'],
 		                 self.page.contact_button_text)
 
+	@allure.feature("Base Page Context.")
+	@allure.story("ParaBank logo verification")
+	@allure.severity(severity_level.MINOR)
 	def parabank_logo_test(self):
 		self.assertEqual(BasePageContext.SLOGAN,
 		                 self.page.slogan)
@@ -91,6 +102,9 @@ class BaseTestCase(unittest.TestCase):
 		self.assertEqual(BasePageContext.PARA_BANK_LOGO['title'],
 		                 self.page.para_bank_logo_img_title)
 
+	@allure.feature("Base Page Context.")
+	@allure.story("Admin logo verification")
+	@allure.severity(severity_level.MINOR)
 	def parabank_admin_logo_test(self):
 		self.assertEqual(BasePageContext.ADMIN_LOGO['href'],
 		                 self.page.admin_logo_formated_href)
@@ -99,6 +113,9 @@ class BaseTestCase(unittest.TestCase):
 		self.assertEqual(BasePageContext.ADMIN_LOGO['src'],
 		                 self.page.admin_logo_formated_img_src)
 
+	@allure.feature("Base Page Context.")
+	@allure.story("Customer Login items verification")
+	@allure.severity(severity_level.BLOCKER)
 	def customer_login_test(self):
 
 		# Title:
@@ -145,6 +162,9 @@ class BaseTestCase(unittest.TestCase):
 		self.assertEqual(BasePageContext.REGISTER['text'],
 		                 self.page.register_text)
 
+	@allure.feature("Base Page Context.")
+	@allure.story("Footer items verification")
+	@allure.severity(severity_level.NORMAL)
 	def footer_items_test(self):
 
 		self.assertEqual(BasePageContext.FOOTER['footer menu']['home']['href'],
