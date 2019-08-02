@@ -26,10 +26,31 @@ class HomePageContextTestCase(BaseTestCase):
 
 		self.assertEqual(HomePageContext.ATM_SERVICES['title'],
 		                 self.page.atm_title)
+
 		self.assertEqual(HomePageContext.ATM_SERVICES['Withdraw Funds']['text'],
 		                 self.page.atm_withdraw_funds_text)
 		self.assertEqual(HomePageContext.ATM_SERVICES['Withdraw Funds']['href'],
 		                 self.page.atm_withdraw_funds_formated_href)
+
+		self.assertEqual(HomePageContext.ATM_SERVICES['Check Balances']['text'],
+		                 self.page.atm_check_balances_text)
+		self.assertEqual(HomePageContext.ATM_SERVICES['Check Balances']['href'],
+		                 self.page.atm_check_balances_formated_href)
+
+		self.assertEqual(HomePageContext.ATM_SERVICES['Make Deposits']['text'],
+		                 self.page.atm_make_deposits_text)
+		self.assertEqual(HomePageContext.ATM_SERVICES['Make Deposits']['href'],
+		                 self.page.atm_make_deposits_formated_href)
+
+	def verify_online_services_context(self):
+
+		self.assertEqual(HomePageContext.ONLINE_SERVICES['title'],
+		                 self.page.online_services_title)
+
+		self.assertEqual(HomePageContext.ONLINE_SERVICES['Bill Pay']['text'],
+		                 self.page.bill_pay_title)
+		self.assertEqual(HomePageContext.ONLINE_SERVICES['Bill Pay']['href'],
+		                 self.page.bill_pay_formated_href)
 
 
 	def verify_parabank_admin_logo(self):
