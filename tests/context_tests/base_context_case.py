@@ -61,16 +61,21 @@ class BaseTestCase(unittest.TestCase):
 		self.assertEqual(BasePageContext.LEFT_MENU_ITEMS['Admin Page']['text'],
 		                 self.page.admin_page_menu_item_text)
 
-	def right_menu_buttons_test(self):
+	def right_menu_home_button_test(self):
+
 		self.assertEqual(BasePageContext.MENU_BUTTONS['home']['href'],
 		                 self.page.home_button_formated_href)
 		self.assertEqual(BasePageContext.MENU_BUTTONS['home']['href'],
 		                 self.page.home_button_text)
 
+	def right_menu_about_button_test(self):
+
 		self.assertEqual(BasePageContext.MENU_BUTTONS['about']['href'],
 		                 self.page.about_button_formated_href)
 		self.assertEqual(BasePageContext.MENU_BUTTONS['about']['text'],
 		                 self.page.about_button_text)
+
+	def right_menu_contact_button_test(self):
 
 		self.assertEqual(BasePageContext.MENU_BUTTONS['contact']['href'],
 		                 self.page.contact_button_formated_href)
