@@ -13,3 +13,5 @@ class AboutPageContext(BasePageContext):
 	                        'In other words: ParaBank is not a real bank!',
 	                        'For more information about Parasoft solutions please visit us at:\nwww.parasoft.com or '
 	                        'call 888-305-0041']}
+
+	LINK = "http://www.parasoft.com/"
