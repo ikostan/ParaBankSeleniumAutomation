@@ -171,3 +171,23 @@ class HomePageModel(BasePageModel):
 		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.ONLINE_TRANSFER_FUNDS)
 		txt = element.text
 		return txt
+
+	@property
+	def read_more_services_formated_href(self):
+		'''
+		Returns read_more_services href from ATM Services section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.READ_MORE_SERVICES)
+		href = super()._formated_url(element.element_href)
+		return href
+
+	@property
+	def read_more_services_title(self):
+		'''
+		Returns title from read_more_services section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.READ_MORE_SERVICES)
+		txt = element.text
+		return txt
