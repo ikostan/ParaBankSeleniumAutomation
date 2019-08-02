@@ -156,11 +156,14 @@ class BasePageModel:
 		url = url.replace(BasePageContext.URL, '')
 
 		if ';' in url:
-			url = url[:url.index(';')]
+			if '?_wadl&_type=xml' in url:
+				url = url[:url.index(';')] + '?_wadl&_type=xml'
+			else:
+				url = url[:url.index(';')]
 
-		if '/' in url:
-			if url.index('/') == 0:
-				url = url.replace('/', '')
+		#if '/' in url:
+		#	if url.index('/') == 0:
+		#		url = url.replace('/', '')
 
 		return url
 
