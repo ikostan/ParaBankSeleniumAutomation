@@ -31,6 +31,18 @@ class HomePageContextTestCase(HomePageContextTestCase):
 		self.open_web_browser(self.browser)
 		self.verify_read_more_services_button()
 
+	def test_read_more_news_button(self):
+
+		# open web browser
+		self.open_web_browser(self.browser)
+		self.verify_read_more_news_button()
+
+	def test_latest_news_title(self):
+
+		# open web browser
+		self.open_web_browser(self.browser)
+		self.verify_latest_news_title()
+
 	def test_parabank_admin_logo(self):
 
 		# open web browser
