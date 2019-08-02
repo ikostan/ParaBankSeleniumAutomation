@@ -191,3 +191,33 @@ class HomePageModel(BasePageModel):
 		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.READ_MORE_SERVICES)
 		txt = element.text
 		return txt
+
+	@property
+	def read_more_news_formated_href(self):
+		'''
+		Returns read_more_news href from ATM Services section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.READ_MORE_NEWS)
+		href = super()._formated_url(element.element_href)
+		return href
+
+	@property
+	def read_more_news_title(self):
+		'''
+		Returns title from read_more_news section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.READ_MORE_NEWS)
+		txt = element.text
+		return txt
+
+	@property
+	def latest_news_title(self):
+		'''
+		Returns title from latest_news section
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, HomePageLocator.LATEST_NEWS)
+		txt = element.text
+		return txt
