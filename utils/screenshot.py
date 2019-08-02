@@ -21,7 +21,7 @@ def take_screen_shot(driver):
     # that can complement a test, step or fixture result.
     # Attachments can be created either with invocation of allure.attach(body, name, attachment_type, extension):
     # Source: https://docs.qameta.io/allure/
-    allure.attach.file(source=driver.get_screenshot_as_png(), name=driver.name, attachment_type=AttachmentType.PNG)
+    allure.attach(source=driver.get_screenshot_as_png(), name=driver.name, attachment_type=AttachmentType.PNG)
 
 
 def screenshots_collector():
