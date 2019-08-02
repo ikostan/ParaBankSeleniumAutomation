@@ -9,6 +9,7 @@ class HomePageLocator(BasePageLocator):
 	Separate the locator strings from the place where they are being used.
 	'''
 
+	# ATM Services
 	ATM_SERVICES_TITLE = (By.XPATH, '//*[@id="rightPanel"]/'
 	                                'ul[contains(@class, "services")]/'
 	                                'li[contains(@class, "captionone")]')
@@ -29,6 +30,7 @@ class HomePageLocator(BasePageLocator):
 	                           'ul[contains(@class, "services")]/'
 	                           'li[5]/a')
 
+	# Online Services
 	ONLINE_SERVICES_TITLE = (By.XPATH, '//*[@id="rightPanel"]/'
 	                                   'ul[contains(@class, "servicestwo")]/'
 	                                   'li[contains(@class, "captiontwo")]')
