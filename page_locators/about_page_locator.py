@@ -13,13 +13,9 @@ class AboutPageLocator(BasePageLocator):
 
 	FIRST_LINE = (By.XPATH, '//*[@id="rightPanel"]/p[1]')
 
-	FIRST_LINE = (By.XPATH, '//*[@id="rightPanel"]/p[1]')
-
 	SECOND_LINE = (By.XPATH, '//*[@id="rightPanel"]/p[2]')
 
 	THIRD_LINE = (By.XPATH, '//*[@id="rightPanel"]/p[3]')
-
-	FOURTH_LINE = (By.XPATH, '//*[@id="rightPanel"]/p[3]')
 
 	LINK = (By.XPATH, '//*[@id="rightPanel"]/p[3]/a')
 
