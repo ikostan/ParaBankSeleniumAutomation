@@ -82,6 +82,15 @@ class Element(BaseElement):
 		return atr
 
 	@property
+	def element_target(self):
+		'''
+		Returns element target
+		:return:
+		'''
+		atr = super().attribute('target')
+		return atr
+
+	@property
 	def text(self):
 		'''
 		Returns inner text or NoSuchElementException
