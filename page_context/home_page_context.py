@@ -13,13 +13,13 @@ class HomePageContext(BasePageContext):
 	ATM_SERVICES = {
 		'title': 'ATM Services',
 		'Withdraw Funds': {'text': 'Withdraw Funds',
-		                   'href': "services/ParaBank?wsdl"},
+		                   'href': "services/ParaBank"},
 		'Transfer Funds': {'text': 'Transfer Funds',
-		                   'href': "services/ParaBank?wsdl"},
+		                   'href': "services/ParaBank"},
 		'Check Balances': {'text': 'Check Balances',
-		                   'href': "services/ParaBank?wsdl"},
+		                   'href': "services/ParaBank"},
 		'Make Deposits': {'text': 'Make Deposits',
-		                  'href': "services/ParaBank?wsdl"}
+		                  'href': "services/ParaBank"}
 	}
 
 	ONLINE_SERVICES = {
