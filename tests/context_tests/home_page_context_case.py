@@ -9,6 +9,7 @@ from tests.context_tests.base_context_case import BaseTestCase
 class HomePageContextTestCase(BaseTestCase):
 
 	def open_web_browser(self, browser):
+
 		# Open web page
 		driver = Driver(browser)
 		self.page = HomePageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
@@ -20,6 +21,16 @@ class HomePageContextTestCase(BaseTestCase):
 		                 self.page.url)
 		self.assertEqual(HomePageContext.TITLE,
 		                 self.page.title)
+
+	def verify_atm_services_context(self):
+
+		self.assertEqual(HomePageContext.ATM_SERVICES['title'],
+		                 self.page.atm_title)
+		self.assertEqual(HomePageContext.ATM_SERVICES['Withdraw Funds']['text'],
+		                 self.page.atm_withdraw_funds_text)
+		self.assertEqual(HomePageContext.ATM_SERVICES['Withdraw Funds']['href'],
+		                 self.page.atm_withdraw_funds_formated_href)
+
 
 	def verify_parabank_admin_logo(self):
 
