@@ -27,26 +27,14 @@ In other words: ParaBank is not a real bank!
 3. PyCharm 2019.1.3 (Community Edition)<br/>
 4. Win 10 (64 bit)<br/>
 
+Full list of dependencies see [here.](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/requirements.txt)
+
 **Note:** In order to instantiate webdriver I use Driver class of my own. For more info please look [here](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils).<br/>
 
 ### Supported/tested browsers:
 - Chrome: v75 (64 bit)
 - Firefox: v68 (64  bit)
 - Edge: v17 and above
-
-**PyCharm - Choosing Your Testing Framework:**<br/>
-
-1. Open the Settings/Preferences dialog, and under the node Tools, click the page **Python Integrated Tools**.<br/>
-2. On this page, click the **Default Test Runner** field.<br/>
-3. Choose the desired test runner:<br/>
-
-For more info please see [Enable Pytest for you project](https://www.jetbrains.com/help/pycharm/pytest.html)
-
-<br/>   
-<div align="center"> 
-<img width="60%" height="60%" src="https://github.com/ikostan/SELENIUM_WEBDRIVER_WORKING_WITH_ELEMENTS/blob/master/testing_selenium_capabilities/img/py_choosing_test_runner.png" hspace="20">
-</div>
-<br/>
 
 <br/>**Setting up Python3 virtual environment on Windows machine:**<br/>
 
@@ -71,6 +59,38 @@ virtualenv venv --python=python
 4. The Python interpreter name specified in the **Name** field, becomes visible in the list of available interpreters. Click **OK** to apply the changes.<br/>
 
 For more info please check [here](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html)<br/>
+
+**PyCharm - Choosing Your Testing Framework:**<br/>
+
+1. Open the Settings/Preferences dialog, and under the node Tools, click the page **Python Integrated Tools**.<br/>
+2. On this page, click the **Default Test Runner** field.<br/>
+3. Choose the desired test runner:<br/>
+
+For more info please see [Enable Pytest for you project](https://www.jetbrains.com/help/pycharm/pytest.html)
+
+<br/>   
+<div align="center"> 
+<img width="60%" height="60%" src="https://github.com/ikostan/SELENIUM_WEBDRIVER_WORKING_WITH_ELEMENTS/blob/master/testing_selenium_capabilities/img/py_choosing_test_runner.png" hspace="20">
+</div>
+<br/>
+
+**Auto generate requirements.txt**<br/>
+
+   Any application typically has a set of dependencies that are required for that application to work. The requirements file is a way to specify and install specific set of package dependencies at once.<br/>
+
+   Use pip’s freeze command to generate a requirements.txt file for your project:<br/>
+
+   ```python
+    pip freeze > requirements.txt
+```
+
+   If you save this in requirements.txt, then you can:<br/>
+   
+   ```python
+    pip install -r requirements.txt
+```   
+
+   Source: https://www.idiotinside.com/2015/05/10/python-auto-generate-requirements-txt/<br/>
 
 ### Tech Issues and Problem Solving:<br/>
 
