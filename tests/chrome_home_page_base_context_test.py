@@ -13,6 +13,12 @@ class HomePageContextTestCase(HomePageContextTestCase):
 		self.open_web_browser(self.browser)
 		self.verify_page_url_title()
 
+	def test_atm_services_context(self):
+
+		# open web browser
+		self.open_web_browser(self.browser)
+		self.verify_atm_services_context()
+
 	def test_parabank_admin_logo(self):
 
 		# open web browser
