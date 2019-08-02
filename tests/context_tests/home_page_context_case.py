@@ -52,6 +52,16 @@ class HomePageContextTestCase(BaseTestCase):
 		self.assertEqual(HomePageContext.ONLINE_SERVICES['Bill Pay']['href'],
 		                 self.page.bill_pay_formated_href)
 
+		self.assertEqual(HomePageContext.ONLINE_SERVICES['Account History']['text'],
+		                 self.page.account_history_title)
+		self.assertEqual(HomePageContext.ONLINE_SERVICES['Account History']['href'],
+		                 self.page.account_history_formated_href)
+
+		self.assertEqual(HomePageContext.ONLINE_SERVICES['Transfer Funds']['text'],
+		                 self.page.online_transfer_funds_title)
+		self.assertEqual(HomePageContext.ONLINE_SERVICES['Transfer Funds']['href'],
+		                 self.page.online_transfer_funds_formated_href)
+
 
 	def verify_parabank_admin_logo(self):
 
