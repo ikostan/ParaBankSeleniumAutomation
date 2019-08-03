@@ -21,13 +21,15 @@ class TestHomePageContextCase(TestBaseContextCase):
 
 	def verify_page_url(self):
 
-		self.assertEqual(HomePageContext.URL,
-		                 self.page.url)
+		with allure.step("Verify web page URL. Expected result: {}".format(HomePageContext.URL)):
+			self.assertEqual(HomePageContext.URL,
+			                 self.page.url)
 
 	def verify_page_title(self):
 
-		self.assertEqual(HomePageContext.TITLE,
-		                 self.page.title)
+		with allure.step("Verify web page title. Expected result: {}".format(HomePageContext.TITLE)):
+			self.assertEqual(HomePageContext.TITLE,
+			                 self.page.title)
 
 	def verify_atm_services_context(self):
 
