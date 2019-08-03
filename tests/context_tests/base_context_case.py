@@ -19,7 +19,11 @@ class TestBaseContextCase(unittest.TestCase):
 		cls.page = None
 
 	def setUp(self):
-		with allure.step("Test setUp: \n1. close current browser tab. \n2. set webdriver to None."):
+		with allure.step("""
+		Test setUp: 
+			1. Close current browser tab. 
+			2. Set webdriver to None.
+		"""):
 			if self.page is not None:
 				self.page.quit()
 			self.page = None
