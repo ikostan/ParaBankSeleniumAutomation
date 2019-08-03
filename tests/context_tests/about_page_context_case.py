@@ -3,13 +3,13 @@ from utils.driver import Driver
 from utils.screenshot import screenshot_on_fail
 from page_models.about_page_model import AboutPageModel
 from page_context.about_page_context import AboutPageContext
-from tests.context_tests.base_context_case import BaseTestCase
+from tests.context_tests.base_context_case import TestBaseContextCase
 
 
 @allure.feature("About Page")
 @allure.story('About Context')
 @screenshot_on_fail()
-class AboutPageContextTestCase(BaseTestCase):
+class AboutPageContextTestCase(TestBaseContextCase):
 
 	def open_web_browser(self, browser):
 		# Open web page
