@@ -5,7 +5,7 @@ from page_context.base_page_context import BasePageContext
 
 
 @allure.feature("Base Page")
-@allure.story('Base Context')
+# @allure.story('Base Context')
 class TestBaseContextCase(unittest.TestCase):
 	"""
 	BaseTest
