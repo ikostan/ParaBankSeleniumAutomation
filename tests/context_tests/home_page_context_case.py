@@ -3,13 +3,13 @@ from utils.driver import Driver
 from utils.screenshot import screenshot_on_fail
 from page_models.home_page_model import HomePageModel
 from page_context.home_page_context import HomePageContext
-from tests.context_tests.base_context_case import BaseTestCase
+from tests.context_tests.base_context_case import TestBaseContextCase
 
 
 @allure.feature("Home Page")
 @allure.story('Home Context')
 @screenshot_on_fail()
-class HomePageContextTestCase(BaseTestCase):
+class TestHomePageContextCase(TestBaseContextCase):
 
 	def open_web_browser(self, browser):
 
@@ -19,10 +19,13 @@ class HomePageContextTestCase(BaseTestCase):
 			self.page = HomePageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
 			self.page.go()
 
-	def verify_page_url_title(self):
+	def verify_page_url(self):
 
 		self.assertEqual(HomePageContext.URL,
 		                 self.page.url)
+
+	def verify_page_title(self):
+
 		self.assertEqual(HomePageContext.TITLE,
 		                 self.page.title)
 
@@ -95,14 +98,11 @@ class HomePageContextTestCase(BaseTestCase):
 		# Context base elements validation:
 		self.parabank_logo_test()
 
-	#@allure.description("Home web page > Home button verification: href + text")
-	#@allure.title("Test Home button attributes")
 	def verify_home_right_menu_button(self):
 
 		# Context base elements validation:
 		self.right_menu_home_button_test()
 
-	#@allure.title("Test \"Home\" button attributes")
 	def verify_about_right_menu_button(self):
 
 		# Context base elements validation:
