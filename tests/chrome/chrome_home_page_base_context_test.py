@@ -1,7 +1,5 @@
 import allure
 from utils.screenshot import screenshot_on_fail
-from page_context.home_page_context import HomePageContext
-from allure_commons.types import Severity
 from tests.context_tests.home_page_context_case import HomePageContextTestCase
 
 
