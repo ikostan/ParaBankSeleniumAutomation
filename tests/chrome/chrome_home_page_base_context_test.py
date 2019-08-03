@@ -5,8 +5,8 @@ from allure_commons.types import Severity
 from tests.context_tests.home_page_context_case import HomePageContextTestCase
 
 
-@allure.epic("ParaBank Web App")
-@allure.feature("Home Page Context.")
+# @allure.epic("ParaBank Web App")
+@allure.suite("Chrome Browser Context Testing")
 @screenshot_on_fail()
 class ChromeHomePageContextTestCase(HomePageContextTestCase):
 
@@ -70,19 +70,20 @@ class ChromeHomePageContextTestCase(HomePageContextTestCase):
 		# Context base elements validation:
 		self.right_menu_home_button_test()
 
-	@allure.story("Welcome to ParaBank (Right Menu) > About button verification")
-	@allure.title("Test Home button attributes")
+	#@allure.story("Right Menu Buttons")
+	@allure.title("Test \"About\" button")
+	@allure.testcase('Test "About" button attributes')
 	def test_right_menu_about_button(self):
 		"""Context base elements validation > Home button:
 		1. Open Home web page
 		2. Do Home button verification: href + text
 		"""
 		# open web browser
-		with allure.step('Open test web page: {}.'.format(HomePageContext.URL)):
-			self.open_web_browser(self.browser)
+		# with allure.step('1. Open test web page: {}.'.format(HomePageContext.URL)):
+		self.open_web_browser(self.browser)
 		# Context base elements validation:
-		with allure.step('Do Home button verification: href + text.'):
-			self.right_menu_about_button_test()
+		# with allure.step('2. Do Home button verification: href + text.'):
+		self.right_menu_about_button_test()
 
 	def test_right_menu_contact_button(self):
 		# open web browser
