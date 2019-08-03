@@ -4,6 +4,8 @@ from utils.screenshot import screenshots_collector
 from page_context.base_page_context import BasePageContext
 
 
+@allure.feature("Base Page")
+@allure.story('Base Context')
 class BaseTestCase(unittest.TestCase):
 	"""
 	BaseTest
