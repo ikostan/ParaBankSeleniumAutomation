@@ -6,7 +6,7 @@ from page_context.base_page_context import BasePageContext
 
 @allure.feature("Base Page")
 @allure.story('Base Context')
-class BaseTestCase(unittest.TestCase):
+class TestBaseContextCase(unittest.TestCase):
 	"""
 	BaseTest
 	This class should be the parent class to each unit test.
@@ -77,7 +77,6 @@ class BaseTestCase(unittest.TestCase):
 			self.assertEqual(BasePageContext.MENU_BUTTONS['home']['text'],
 			                 self.page.home_button_text)
 
-	@allure.title("Test \"About\" button attributes")
 	def right_menu_about_button_test(self):
 		with allure.step('Do "About" button verification > verify button href. Expected: {}.'.format(
 				BasePageContext.MENU_BUTTONS['about']['href'])):
