@@ -5,7 +5,7 @@ from tests.context_tests.about_page_context_case import AboutPageContextTestCase
 
 @allure.suite("Chrome Browser Context Testing")
 @screenshot_on_fail()
-class AboutPageContextTestCase(AboutPageContextTestCase):
+class ChromeAboutPageContextTest(AboutPageContextTestCase):
 
 	browser = 'chrome'
 
