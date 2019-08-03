@@ -3,7 +3,6 @@ from utils.screenshot import screenshot_on_fail
 from tests.context_tests.about_page_context_case import AboutPageContextTestCase
 
 
-# @allure.epic("ParaBank Web App")
 @allure.suite("Chrome Browser Context Testing")
 @screenshot_on_fail()
 class AboutPageContextTestCase(AboutPageContextTestCase):
