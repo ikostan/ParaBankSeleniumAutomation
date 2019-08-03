@@ -1,7 +1,10 @@
+import allure
 from utils.screenshot import screenshot_on_fail
 from tests.context_tests.services_page_context_case import ServicesPageContextTestCase
 
 
+@allure.epic("ParaBank Web App")
+@allure.feature("Services Page Context.")
 @screenshot_on_fail()
 class ServicesPageContextTestCase(ServicesPageContextTestCase):
 
