@@ -4,6 +4,7 @@ from tests.context_tests.home_page_context_case import HomePageContextTestCase
 
 
 @allure.suite("Chrome Browser Context Testing")
+@allure.sub_suite('Chrome Home Page Context Test')
 @screenshot_on_fail()
 class ChromeHomePageContextTest(HomePageContextTestCase):
 
@@ -67,9 +68,12 @@ class ChromeHomePageContextTest(HomePageContextTestCase):
 		# Context base elements validation:
 		self.right_menu_home_button_test()
 
-	#@allure.story("Right Menu Buttons")
-	@allure.title("Test \"About\" button")
-	@allure.testcase('Test "About" button attributes')
+	@allure.description("""
+		Multiline test description.
+		That comes from the allure.description decorator.
+
+		Nothing special about it.
+		""")
 	def test_right_menu_about_button(self):
 		"""Context base elements validation > Home button:
 		1. Open Home web page
