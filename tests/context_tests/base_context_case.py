@@ -17,9 +17,10 @@ class BaseTestCase(unittest.TestCase):
 		cls.page = None
 
 	def setUp(self):
-		if self.page is not None:
-			self.page.quit()
-		self.page = None
+		with allure.step("Test setUp: \n1. close current browser tab. \n2. set webdriver to None."):
+			if self.page is not None:
+				self.page.quit()
+			self.page = None
 
 	@classmethod
 	def tearDownClass(cls):
@@ -27,9 +28,10 @@ class BaseTestCase(unittest.TestCase):
 			cls.page.quit()
 
 	def tearDown(self):
-		# screenshots_collector()
-		if self.page:
-			self.page.close()
+		with allure.step("Test tearDown: close current browser tab"):
+			# screenshots_collector()
+			if self.page:
+				self.page.close()
 
 	def solutions_menu_items_test(self):
 		self.assertEqual(BasePageContext.LEFT_MENU_ITEMS['Solutions']['text'],
@@ -62,27 +64,38 @@ class BaseTestCase(unittest.TestCase):
 		self.assertEqual(BasePageContext.LEFT_MENU_ITEMS['Admin Page']['text'],
 		                 self.page.admin_page_menu_item_text)
 
-	@allure.description("Base page > Home button verification: href + text")
 	def right_menu_home_button_test(self):
 
-		self.assertEqual(BasePageContext.MENU_BUTTONS['home']['href'],
-		                 self.page.home_button_formated_href)
-		self.assertEqual(BasePageContext.MENU_BUTTONS['home']['href'],
-		                 self.page.home_button_text)
+		with allure.step('Do "Home" button verification > verify button href. Expected: {}.'.format(
+				BasePageContext.MENU_BUTTONS['home']['href'])):
+			self.assertEqual(BasePageContext.MENU_BUTTONS['home']['href'],
+			                 self.page.home_button_formated_href)
+		with allure.step('Do "Home" button verification > verify button label. Expected: {}.'.format(
+				BasePageContext.MENU_BUTTONS['home']['text'])):
+			self.assertEqual(BasePageContext.MENU_BUTTONS['home']['text'],
+			                 self.page.home_button_text)
 
+	@allure.title("Test \"About\" button attributes")
 	def right_menu_about_button_test(self):
-
-		self.assertEqual(BasePageContext.MENU_BUTTONS['about']['href'],
-		                 self.page.about_button_formated_href)
-		self.assertEqual(BasePageContext.MENU_BUTTONS['about']['text'],
-		                 self.page.about_button_text)
+		with allure.step('Do "About" button verification > verify button href. Expected: {}.'.format(
+				BasePageContext.MENU_BUTTONS['about']['href'])):
+			self.assertEqual(BasePageContext.MENU_BUTTONS['about']['href'],
+			                 self.page.about_button_formated_href)
+		with allure.step('Do "About" button verification > verify button label. Expected: {}.'.format(
+				BasePageContext.MENU_BUTTONS['about']['text'])):
+			self.assertEqual(BasePageContext.MENU_BUTTONS['about']['text'],
+			                 self.page.about_button_text)
 
 	def right_menu_contact_button_test(self):
 
-		self.assertEqual(BasePageContext.MENU_BUTTONS['contact']['href'],
-		                 self.page.contact_button_formated_href)
-		self.assertEqual(BasePageContext.MENU_BUTTONS['contact']['text'],
-		                 self.page.contact_button_text)
+		with allure.step('Do "Contact" button verification > verify button href. Expected: {}.'.format(
+				BasePageContext.MENU_BUTTONS['contact']['href'])):
+			self.assertEqual(BasePageContext.MENU_BUTTONS['contact']['href'],
+			                 self.page.contact_button_formated_href)
+		with allure.step('Do "Contact" button verification > verify button href. Expected: {}.'.format(
+				BasePageContext.MENU_BUTTONS['contact']['text'])):
+			self.assertEqual(BasePageContext.MENU_BUTTONS['contact']['text'],
+			                 self.page.contact_button_text)
 
 	def parabank_logo_test(self):
 		self.assertEqual(BasePageContext.SLOGAN,
@@ -208,5 +221,3 @@ class BaseTestCase(unittest.TestCase):
 
 		self.assertEqual(BasePageContext.FOOTER['visit']['text'],
 		                 self.page.footer_visit_us_text)
-
-
