@@ -16,14 +16,15 @@ def take_screen_shot(driver):
     filename = 'screenshot_{}_{}.png'.format(driver.name, datetime.datetime.strftime(now, '%Y-%m-%d_%H-%M-%S'))
 
     # Old implementation
-    #driver.save_screenshot(filename)
-    #print('\nScreenshot saved as {}. Please check your \'tests\\screenshots\' folder.\n'.format(filename + '.png'))
+    # driver.save_screenshot(filename)
+    # print('\nScreenshot saved as {}. Please check your \'tests\\screenshots\' folder.\n'.format(filename + '.png'))
 
     # Allure reports can display many different types of provided attachments
     # that can complement a test, step or fixture result.
     # Attachments can be created either with invocation of allure.attach(body, name, attachment_type, extension):
     # Source: https://docs.qameta.io/allure/
     allure.attach(driver.get_screenshot_as_png(), filename, attachment_type=AttachmentType.PNG)
+    print('\nScreenshot saved as: {}.\n'.format(filename))
 
 
 def screenshots_collector():
