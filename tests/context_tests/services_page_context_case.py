@@ -1,3 +1,4 @@
+import allure
 from utils.driver import Driver
 from utils.screenshot import screenshot_on_fail
 from page_models.services_page_model import ServicesPageModel
@@ -5,6 +6,8 @@ from tests.context_tests.base_context_case import BaseTestCase
 from page_context.services_page_context import ServicesPageContext
 
 
+@allure.feature("Services Page")
+@allure.story('Services Context')
 @screenshot_on_fail()
 class ServicesPageContextTestCase(BaseTestCase):
 
