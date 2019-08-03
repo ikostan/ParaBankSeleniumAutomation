@@ -12,22 +12,25 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 
 	def test_page_url(self):
 
-		# open web browser
-		self.open_web_browser(self.browser)
-		self.verify_page_url()
-		allure.dynamic.title("Test web page URL")
 		allure.dynamic.description("""
 		Context base elements validation > Home page URL:
 			1. Open Home web page
 			2. Do URL verification
 		""")
 
+		allure.dynamic.title("Web page URL test")
+
+		# open web browser
+		self.open_web_browser(self.browser)
+		# test url
+		self.verify_page_url()
+
 	def test_page_title(self):
 
 		# open web browser
 		self.open_web_browser(self.browser)
 		self.verify_page_title()
-		allure.dynamic.title("Test web page title")
+		allure.dynamic.title("Web page title test")
 		allure.dynamic.description("""
 		Context base elements validation > Home page title:
 			1. Open Home web page
@@ -179,30 +182,33 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		""")
 
 	def test_customer_login(self):
-		# open web browser
-		self.open_web_browser(self.browser)
-
-		# Context base elements validation:
-		self.verify_customer_login()
-		allure.dynamic.title("Test 'Customer Login'")
 		allure.dynamic.description("""
 		Context base elements validation > 'Customer Login':
 			1. Open Home web page
 			2. Do 'Customer Login' items verification
 		""")
+		allure.dynamic.title("Test 'Customer Login'")
+
+		# open web browser
+		self.open_web_browser(self.browser)
+
+		# Context base elements validation:
+		self.verify_customer_login()
 
 	def test_footer_items(self):
+		allure.dynamic.description("""
+		Context base elements validation > 'Footer':
+			1. Open Home web page
+			2. Do 'Footer' items verification
+		""")
+
+		allure.dynamic.title("Test 'Footer'")
 
 		# open web browser
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
 		self.verify_footer_items()
-		allure.dynamic.title("Test 'Footer'")
-		allure.dynamic.description("""
-		Context base elements validation > 'Footer':
-			1. Open Home web page
-			2. Do 'Footer' items verification
-		""")
+
 
 
