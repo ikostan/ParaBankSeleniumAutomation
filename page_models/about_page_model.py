@@ -1,7 +1,7 @@
 from elements.element import Element
 from page_models.base_page_model import BasePageModel
-from page_context.about_page_context import AboutPageContext
 from page_locators.about_page_locator import AboutPageLocator
+from expected_results.page_context.about_page_context import AboutPageContext
 
 
 class AboutPageModel(BasePageModel):
