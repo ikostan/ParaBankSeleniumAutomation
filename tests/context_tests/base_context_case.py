@@ -200,7 +200,6 @@ class TestBaseContextCase(unittest.TestCase):
 		self.assertEqual(BasePageContext.REGISTER['text'],
 		                 self.page.register_text)
 
-	@allure.severity(allure.severity_level.TRIVIAL)
 	def footer_items_test(self):
 
 		with allure.step("Test 'Footer' items > 'Home' > href + text"):
