@@ -1,5 +1,5 @@
 from page_models.base_page_model import BasePageModel
-from page_context.admin_page_context import AdminPageContext
+from expected_results.page_context.admin_page_context import AdminPageContext
 
 
 class AdminPageModel(BasePageModel):
