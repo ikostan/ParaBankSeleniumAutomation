@@ -17,15 +17,17 @@ In other words: ParaBank is not a real bank!
 ### Official Documentation:<br/>
 
 - [Selenium Documentation](https://seleniumhq.github.io/selenium/docs/api/py/api.html)<br/>
-- [Full pytest documentation](http://doc.pytest.org/en/latest/contents.html)<br/>
+- [Full Pytest documentation](http://doc.pytest.org/en/latest/contents.html)<br/>
 - ['Selenium with Python' official documentation webpage](https://selenium-python.readthedocs.io)<br/>
 - [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html)<br/>
+- [Allure Framework](https://docs.qameta.io/allure/)<br/>
 
 ### Dev Environment:<br/>
 1. Python 3.7<br/>
 2. Selenium 3.141.0<br/>
 3. PyCharm 2019.1.3 (Community Edition)<br/>
 4. Win 10 (64 bit)<br/>
+5. Allure Framework 2.12.1<br/>
 
 Full list of dependencies see [here.](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/requirements.txt)
 
