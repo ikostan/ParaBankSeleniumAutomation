@@ -10,7 +10,7 @@ class TestChromeServicesPageContext(ServicesPageContextTestCase):
 
 	browser = 'chrome'
 
-	def test_page_url_title(self):
+	def test_page_url(self):
 		allure.dynamic.description("""
 		Context base elements validation > Services page URL:
 			1. Open Services page web page
@@ -21,9 +21,33 @@ class TestChromeServicesPageContext(ServicesPageContextTestCase):
 
 		# open web browser
 		self.open_web_browser(self.browser)
-		self.verify_page_url_title()
+
+		# Verify web page url
+		self.verify_page_url()
+
+	def test_page_title(self):
+		allure.dynamic.description("""
+		Context base elements validation > Services page title:
+			1. Open Services page web page
+			2. Do Services page title verification
+		""")
+		allure.dynamic.title("Services page title test")
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
+		# open web browser
+		self.open_web_browser(self.browser)
+
+		# Verify web page title
+		self.verify_page_title()
 
 	def test_parabank_admin_logo(self):
+		allure.dynamic.description("""
+		Context base elements validation > Admin logo:
+			1. Open Services page web page
+			2. Do Admin logo verification
+		""")
+		allure.dynamic.title("Admin logo test")
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# open web browser
 		self.open_web_browser(self.browser)
