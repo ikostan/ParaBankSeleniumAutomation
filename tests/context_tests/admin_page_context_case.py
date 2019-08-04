@@ -2,8 +2,8 @@ import allure
 from utils.driver import Driver
 from utils.screenshot import screenshot_on_fail
 from page_models.admin_page_model import AdminPageModel
-from page_context.admin_page_context import AdminPageContext
 from tests.context_tests.base_context_case import TestBaseContextCase
+from expected_results.page_context.admin_page_context import AdminPageContext
 
 
 @allure.feature("Admin Page")
