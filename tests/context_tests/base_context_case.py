@@ -9,9 +9,7 @@ from page_context.base_page_context import BasePageContext
 class TestBaseContextCase(unittest.TestCase):
 	"""
 	BaseTest
-	This class should be the parent class to each unit test.
-	It allows for instantiation of the database dynamically,
-	and makes sure that it is a new, blank database each time.
+	This class should be the parent class to each test case class.
 	"""
 
 	@classmethod
@@ -34,6 +32,7 @@ class TestBaseContextCase(unittest.TestCase):
 			cls.page.quit()
 
 	def tearDown(self):
+
 		with allure.step("tearDown: close current browser tab"):
 			# screenshots_collector()
 			if self.page:
@@ -157,103 +156,149 @@ class TestBaseContextCase(unittest.TestCase):
 	def customer_login_test(self):
 
 		# Title:
-		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login title'],
-		                 self.page.customer_login_title)
+		with allure.step("Test 'Customer Login' logo > title"):
+			self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login title'],
+			                 self.page.customer_login_title)
 
 		# Username:
-		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['username title'],
-		                 self.page.username_login_title)
-		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['username input']['class'],
-		                 self.page.username_input_class)
-		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['username input']['type'],
-		                 self.page.username_input_type)
-		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['username input']['name'],
-		                 self.page.username_input_name)
+		with allure.step("Test 'Customer Login' > Username title > title"):
+			self.assertEqual(BasePageContext.CUSTOMER_LOGIN['username title'],
+			                 self.page.username_login_title)
+		with allure.step("Test 'Customer Login' logo > Username field > class"):
+			self.assertEqual(BasePageContext.CUSTOMER_LOGIN['username input']['class'],
+			                 self.page.username_input_class)
+		with allure.step("Test 'Customer Login' logo > Username field > type"):
+			self.assertEqual(BasePageContext.CUSTOMER_LOGIN['username input']['type'],
+			                 self.page.username_input_type)
+		with allure.step("Test 'Customer Login' logo > Username field > name"):
+			self.assertEqual(BasePageContext.CUSTOMER_LOGIN['username input']['name'],
+			                 self.page.username_input_name)
 
 		# Password:
-		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['password title'],
-		                 self.page.password_login_title)
-		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['password input']['class'],
-		                 self.page.password_input_class)
-		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['password input']['type'],
-		                 self.page.password_input_type)
-		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['password input']['name'],
-		                 self.page.password_input_name)
+		with allure.step("Test 'Customer Login' > Password title > title"):
+			self.assertEqual(BasePageContext.CUSTOMER_LOGIN['password title'],
+			                 self.page.password_login_title)
+		with allure.step("Test 'Customer Login' > Password field > class"):
+			self.assertEqual(BasePageContext.CUSTOMER_LOGIN['password input']['class'],
+			                 self.page.password_input_class)
+		with allure.step("Test 'Customer Login' > Password field > type"):
+			self.assertEqual(BasePageContext.CUSTOMER_LOGIN['password input']['type'],
+			                 self.page.password_input_type)
+		with allure.step("Test 'Customer Login' > Password field > name"):
+			self.assertEqual(BasePageContext.CUSTOMER_LOGIN['password input']['name'],
+			                 self.page.password_input_name)
 
 		# Login Button
-		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login button']['class'],
-		                 self.page.login_button_class)
-		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login button']['type'],
-		                 self.page.login_button_type)
-		self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login button']['value'],
-		                 self.page.login_button_value)
+		with allure.step("Test 'Customer Login' > Login button > class"):
+			self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login button']['class'],
+			                 self.page.login_button_class)
+		with allure.step("Test 'Customer Login' > Login button > class"):
+			self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login button']['type'],
+			                 self.page.login_button_type)
+		with allure.step("Test 'Customer Login' > Login button > class"):
+			self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login button']['value'],
+			                 self.page.login_button_value)
 
 		# Forgot Login
-		self.assertEqual(BasePageContext.FORGOT_LOGIN['href'],
-		                 self.page.forgot_login_formated_href)
-		self.assertEqual(BasePageContext.FORGOT_LOGIN['text'],
-		                 self.page.forgot_login_text)
+		with allure.step("Test 'Customer Login' > Forgot Login > href"):
+			self.assertEqual(BasePageContext.FORGOT_LOGIN['href'],
+			                 self.page.forgot_login_formated_href)
+		with allure.step("Test 'Customer Login' > Forgot Login > text"):
+			self.assertEqual(BasePageContext.FORGOT_LOGIN['text'],
+			                 self.page.forgot_login_text)
 
 		# Register
-		self.assertEqual(BasePageContext.REGISTER['href'],
-		                 self.page.register_formated_href)
-		self.assertEqual(BasePageContext.REGISTER['text'],
-		                 self.page.register_text)
+		with allure.step("Test 'Customer Login' > Register > href"):
+			self.assertEqual(BasePageContext.REGISTER['href'],
+			                 self.page.register_formated_href)
+		with allure.step("Test 'Customer Login' > Register > text"):
+			self.assertEqual(BasePageContext.REGISTER['text'],
+			                 self.page.register_text)
 
 	def footer_items_test(self):
 
-		with allure.step("Test 'Footer' items > 'Home' > href + text"):
+		# Home
+		with allure.step("Test 'Footer' items > 'Home' > href"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['home']['href'],
 			                 self.page.footer_home_formated_href)
+		with allure.step("Test 'Footer' items > 'Home' > text"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['home']['text'],
 			                 self.page.footer_home_text)
 
-		self.assertEqual(BasePageContext.FOOTER['footer menu']['about us']['href'],
-		                 self.page.footer_about_us_formated_href)
-		self.assertEqual(BasePageContext.FOOTER['footer menu']['about us']['text'],
-		                 self.page.footer_about_us_text)
+		# About Us
+		with allure.step("Test 'Footer' items > 'About Us' > href"):
+			self.assertEqual(BasePageContext.FOOTER['footer menu']['about us']['href'],
+			                 self.page.footer_about_us_formated_href)
+		with allure.step("Test 'Footer' items > 'About Us' > text"):
+			self.assertEqual(BasePageContext.FOOTER['footer menu']['about us']['text'],
+			                 self.page.footer_about_us_text)
 
-		self.assertEqual(BasePageContext.FOOTER['footer menu']['services']['href'],
-		                 self.page.footer_services_formated_href)
-		self.assertEqual(BasePageContext.FOOTER['footer menu']['services']['text'],
-		                 self.page.footer_services_text)
+		# Services
+		with allure.step("Test 'Footer' items > 'Services' > href"):
+			self.assertEqual(BasePageContext.FOOTER['footer menu']['services']['href'],
+			                 self.page.footer_services_formated_href)
+		with allure.step("Test 'Footer' items > 'Services' > text"):
+			self.assertEqual(BasePageContext.FOOTER['footer menu']['services']['text'],
+			                 self.page.footer_services_text)
 
-		self.assertEqual(BasePageContext.FOOTER['footer menu']['products']['href'],
-		                 self.page.footer_products_formated_href)
-		self.assertEqual(BasePageContext.FOOTER['footer menu']['products']['text'],
-		                 self.page.footer_products_text)
+		# Products
+		with allure.step("Test 'Footer' items > 'Products' > href"):
+			self.assertEqual(BasePageContext.FOOTER['footer menu']['products']['href'],
+			                 self.page.footer_products_formated_href)
+		with allure.step("Test 'Footer' items > 'Products' > text"):
+			self.assertEqual(BasePageContext.FOOTER['footer menu']['products']['text'],
+			                 self.page.footer_products_text)
 
-		self.assertEqual(BasePageContext.FOOTER['footer menu']['locations']['href'],
-		                 self.page.footer_locations_formated_href)
-		self.assertEqual(BasePageContext.FOOTER['footer menu']['locations']['text'],
-		                 self.page.footer_locations_text)
+		# Locations
+		with allure.step("Test 'Footer' items > 'Locations' > href"):
+			self.assertEqual(BasePageContext.FOOTER['footer menu']['locations']['href'],
+			                 self.page.footer_locations_formated_href)
+		with allure.step("Test 'Footer' items > 'Locations' > text"):
+			self.assertEqual(BasePageContext.FOOTER['footer menu']['locations']['text'],
+			                 self.page.footer_locations_text)
 
-		self.assertEqual(BasePageContext.FOOTER['footer menu']['forum']['href'],
-		                 self.page.footer_forum_formated_href)
-		self.assertEqual(BasePageContext.FOOTER['footer menu']['forum']['text'],
-		                 self.page.footer_forum_text)
+		# Forum
+		with allure.step("Test 'Footer' items > 'Forum' > href"):
+			self.assertEqual(BasePageContext.FOOTER['footer menu']['forum']['href'],
+			                 self.page.footer_forum_formated_href)
+		with allure.step("Test 'Footer' items > 'Forum' > text"):
+			self.assertEqual(BasePageContext.FOOTER['footer menu']['forum']['text'],
+			                 self.page.footer_forum_text)
 
-		self.assertEqual(BasePageContext.FOOTER['footer menu']['site map']['href'],
-		                 self.page.footer_site_map_formated_href)
-		self.assertEqual(BasePageContext.FOOTER['footer menu']['site map']['text'],
-		                 self.page.footer_site_map_text)
+		# Site Map
+		with allure.step("Test 'Footer' items > 'Site Map' > href"):
+			self.assertEqual(BasePageContext.FOOTER['footer menu']['site map']['href'],
+			                 self.page.footer_site_map_formated_href)
+		with allure.step("Test 'Footer' items > 'Site Map' > text"):
+			self.assertEqual(BasePageContext.FOOTER['footer menu']['site map']['text'],
+			                 self.page.footer_site_map_text)
 
-		self.assertEqual(BasePageContext.FOOTER['footer menu']['contact us']['href'],
-		                 self.page.footer_contact_us_formated_href)
-		self.assertEqual(BasePageContext.FOOTER['footer menu']['contact us']['text'],
-		                 self.page.footer_contact_us_text)
+		# Contact Us
+		with allure.step("Test 'Footer' items > 'Contact Us' > href"):
+			self.assertEqual(BasePageContext.FOOTER['footer menu']['contact us']['href'],
+			                 self.page.footer_contact_us_formated_href)
+		with allure.step("Test 'Footer' items > 'Contact Us' > text"):
+			self.assertEqual(BasePageContext.FOOTER['footer menu']['contact us']['text'],
+			                 self.page.footer_contact_us_text)
 
-		self.assertEqual(BasePageContext.FOOTER['copyright']['class'],
-		                 self.page.footer_copyright_class)
-		self.assertEqual(BasePageContext.FOOTER['copyright']['text'],
-		                 self.page.footer_copyright_text)
+		# Copyright
+		with allure.step("Test 'Footer' items > 'Copyright' > class"):
+			self.assertEqual(BasePageContext.FOOTER['copyright']['class'],
+			                 self.page.footer_copyright_class)
+		with allure.step("Test 'Footer' items > 'Copyright' > text"):
+			self.assertEqual(BasePageContext.FOOTER['copyright']['text'],
+			                 self.page.footer_copyright_text)
 
-		self.assertEqual(BasePageContext.FOOTER['visit']['link']['href'],
-		                 self.page.footer_visit_link_formated_href)
-		self.assertEqual(BasePageContext.FOOTER['visit']['link']['text'],
-		                 self.page.footer_visit_link_text)
-		self.assertEqual(BasePageContext.FOOTER['visit']['link']['target'],
-		                 self.page.footer_visit_link_target)
-
-		self.assertEqual(BasePageContext.FOOTER['visit']['text'],
-		                 self.page.footer_visit_us_text)
+		# Visit
+		with allure.step("Test 'Footer' items > 'Visit' > link > href"):
+			self.assertEqual(BasePageContext.FOOTER['visit']['link']['href'],
+			                 self.page.footer_visit_link_formated_href)
+		with allure.step("Test 'Footer' items > 'Visit' > link > text"):
+			self.assertEqual(BasePageContext.FOOTER['visit']['link']['text'],
+			                 self.page.footer_visit_link_text)
+		with allure.step("Test 'Footer' items > 'Visit' > link > target"):
+			self.assertEqual(BasePageContext.FOOTER['visit']['link']['target'],
+			                 self.page.footer_visit_link_target)
+		with allure.step("Test 'Footer' items > 'Visit' > text"):
+			self.assertEqual(BasePageContext.FOOTER['visit']['text'],
+			                 self.page.footer_visit_us_text)
