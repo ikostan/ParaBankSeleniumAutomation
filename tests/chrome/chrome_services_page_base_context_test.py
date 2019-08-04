@@ -56,6 +56,14 @@ class TestChromeServicesPageContext(ServicesPageContextTestCase):
 		self.verify_parabank_admin_logo()
 
 	def test_parabank_logo(self):
+		allure.dynamic.description("""
+		Context base elements validation > ParaBank logo:
+			1. Open Services page web page
+			2. Do ParaBank logo verification
+		""")
+		allure.dynamic.title("ParaBank logo test")
+		allure.dynamic.severity(allure.severity_level.NORMAL)
+
 		# open web browser
 		self.open_web_browser(self.browser)
 
@@ -63,6 +71,14 @@ class TestChromeServicesPageContext(ServicesPageContextTestCase):
 		self.verify_parabank_logo()
 
 	def test_right_menu(self):
+		allure.dynamic.description("""
+		Context base elements validation > Right menu:
+			1. Open Services page web page
+			2. Do Right menu verification
+		""")
+		allure.dynamic.title("Right menu test")
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
 		# open web browser
 		self.open_web_browser(self.browser)
 
@@ -70,6 +86,14 @@ class TestChromeServicesPageContext(ServicesPageContextTestCase):
 		self.verify_right_menu_buttons()
 
 	def test_solutions_menu_items(self):
+		allure.dynamic.description("""
+		Context base elements validation > Solution menu:
+			1. Open Services page web page
+			2. Do Solution verification
+		""")
+		allure.dynamic.title("Solution menu test")
+		allure.dynamic.severity(allure.severity_level.CRITICAL)
+
 		# open web browser
 		self.open_web_browser(self.browser)
 
@@ -77,6 +101,14 @@ class TestChromeServicesPageContext(ServicesPageContextTestCase):
 		self.verify_solutions_menu_items()
 
 	def test_customer_login(self):
+		allure.dynamic.description("""
+		Context base elements validation > Customer Login:
+			1. Open Services page web page
+			2. Do Customer Login verification
+		""")
+		allure.dynamic.title("Customer Login test")
+		allure.dynamic.severity(allure.severity_level.BLOCKER)
+
 		# open web browser
 		self.open_web_browser(self.browser)
 
@@ -84,11 +116,17 @@ class TestChromeServicesPageContext(ServicesPageContextTestCase):
 		self.verify_customer_login()
 
 	def test_footer_items(self):
+		allure.dynamic.description("""
+		Context base elements validation > Footer:
+			1. Open Services page web page
+			2. Do Footer verification
+		""")
+		allure.dynamic.title("Footer test")
+		allure.dynamic.severity(allure.severity_level.NORMAL)
 
 		# open web browser
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
 		self.verify_footer_items()
-
 
