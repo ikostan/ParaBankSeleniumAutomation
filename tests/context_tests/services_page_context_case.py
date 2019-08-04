@@ -2,8 +2,8 @@ import allure
 from utils.driver import Driver
 from utils.screenshot import screenshot_on_fail
 from page_models.services_page_model import ServicesPageModel
-from page_context.services_page_context import ServicesPageContext
 from tests.context_tests.base_context_case import TestBaseContextCase
+from expected_results.page_context.services_page_context import ServicesPageContext
 
 
 @allure.feature("Services Page")
