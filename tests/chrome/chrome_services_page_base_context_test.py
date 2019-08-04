@@ -11,6 +11,13 @@ class TestChromeServicesPageContext(ServicesPageContextTestCase):
 	browser = 'chrome'
 
 	def test_page_url_title(self):
+		allure.dynamic.description("""
+		Context base elements validation > Services page URL:
+			1. Open Services page web page
+			2. Do URL verification
+		""")
+		allure.dynamic.title("Web page URL test")
+		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
 		# open web browser
 		self.open_web_browser(self.browser)
