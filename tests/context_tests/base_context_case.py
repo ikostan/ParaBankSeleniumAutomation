@@ -1,7 +1,6 @@
 import allure
 import unittest
-from utils.screenshot import screenshots_collector
-from page_context.base_page_context import BasePageContext
+from expected_results.page_context.base_page_context import BasePageContext
 
 
 @allure.feature("Base Page")
