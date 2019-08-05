@@ -22,6 +22,7 @@ class TestHomePageContextCase(TestBaseContextCase):
 
 	@allure.feature("Home Page")
 	def verify_page_url(self):
+		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		with allure.step("Verify web page URL. Expected result: {}".format(HomePageContext.URL)):
 			self.assertEqual(HomePageContext.URL,
@@ -29,6 +30,7 @@ class TestHomePageContextCase(TestBaseContextCase):
 
 	@allure.feature("Home Page")
 	def verify_page_title(self):
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		with allure.step("Verify web page title. Expected result: {}".format(HomePageContext.TITLE)):
 			self.assertEqual(HomePageContext.TITLE,
@@ -36,6 +38,7 @@ class TestHomePageContextCase(TestBaseContextCase):
 
 	@allure.feature("Home Page")
 	def verify_atm_services_context(self):
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		with allure.step("Verify ATM services title. Expected result: {}".format(
 				HomePageContext.ATM_SERVICES['title'])):
@@ -74,6 +77,7 @@ class TestHomePageContextCase(TestBaseContextCase):
 
 	@allure.feature("Home Page")
 	def verify_online_services_context(self):
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		with allure.step("Verify Online Services title. Expected result: {}".format(
 				HomePageContext.ONLINE_SERVICES['title'])):
@@ -113,6 +117,8 @@ class TestHomePageContextCase(TestBaseContextCase):
 	@allure.feature("Home Page")
 	def verify_read_more_services_button(self):
 
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
 		with allure.step("Verify Read More Services text. Expected result: {}".format(
 				HomePageContext.READ_MORE_SERVICES['text'])):
 			self.assertEqual(HomePageContext.READ_MORE_SERVICES['text'],
@@ -126,6 +132,8 @@ class TestHomePageContextCase(TestBaseContextCase):
 	@allure.feature("Home Page")
 	def verify_read_more_news_button(self):
 
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
 		with allure.step("Verify Read More News text. Expected result: {}".format(
 				HomePageContext.READ_MORE_NEWS['text'])):
 			self.assertEqual(HomePageContext.READ_MORE_NEWS['text'],
@@ -138,6 +146,8 @@ class TestHomePageContextCase(TestBaseContextCase):
 
 	@allure.feature("Home Page")
 	def verify_latest_news_title(self):
+
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		with allure.step("Verify Latest News title. Expected result: {}".format(
 				HomePageContext.LATEST_NEWS)):
