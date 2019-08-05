@@ -21,12 +21,18 @@ class AboutPageContextTestCase(TestBaseContextCase):
 
 	@allure.feature("About Page")
 	def verify_page_url(self):
+
+		allure.dynamic.severity(allure.severity_level.CRITICAL)
+
 		with allure.step("About page URL test"):
 			self.assertEqual(AboutPageContext.URL,
 			                 self.page.url)
 
 	@allure.feature("About Page")
 	def verify_page_title(self):
+
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
 		with allure.step("About page title test"):
 			self.assertEqual(AboutPageContext.TITLE,
 			                 self.page.title)
@@ -57,12 +63,18 @@ class AboutPageContextTestCase(TestBaseContextCase):
 
 	@allure.feature("About Page")
 	def verify_description_title(self):
+
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
 		# Context About page elements validation:
 		with allure.step("Description title test"):
 			self.assertEqual(AboutPageContext.DESCRIPTION['title'], self.page.description_title)
 
 	@allure.feature("About Page")
 	def verify_description_text(self):
+
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
 		# Context About page elements validation:
 		with allure.step("Description text (first paragraph) test"):
 			self.assertEqual(AboutPageContext.DESCRIPTION['text'][0], self.page.description_first_line)
