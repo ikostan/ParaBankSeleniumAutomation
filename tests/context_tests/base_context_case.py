@@ -3,8 +3,7 @@ import unittest
 from expected_results.page_context.base_page_context import BasePageContext
 
 
-@allure.feature("Base Page")
-# @allure.story('Base Context')
+# @allure.feature("Base Page")
 class TestBaseContextCase(unittest.TestCase):
 	"""
 	BaseTest
@@ -31,7 +30,6 @@ class TestBaseContextCase(unittest.TestCase):
 			cls.page.quit()
 
 	def tearDown(self):
-
 		with allure.step("tearDown: close current browser tab"):
 			# screenshots_collector()
 			if self.page:
