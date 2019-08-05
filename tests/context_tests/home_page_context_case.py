@@ -20,14 +20,14 @@ class TestHomePageContextCase(TestBaseContextCase):
 			self.page = HomePageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
 			self.page.go()
 
-	@allure.feature("Base Page")
+	@allure.feature("Home Page")
 	def verify_page_url(self):
 
 		with allure.step("Verify web page URL. Expected result: {}".format(HomePageContext.URL)):
 			self.assertEqual(HomePageContext.URL,
 			                 self.page.url)
 
-	@allure.feature("Base Page")
+	@allure.feature("Home Page")
 	def verify_page_title(self):
 
 		with allure.step("Verify web page title. Expected result: {}".format(HomePageContext.TITLE)):
