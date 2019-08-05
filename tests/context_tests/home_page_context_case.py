@@ -8,6 +8,7 @@ from expected_results.page_context.home_page_context import HomePageContext
 
 @allure.feature("Home Page")
 @allure.story('Home Context')
+@allure.suite('Home Page Context Test Suite')
 @screenshot_on_fail()
 class TestHomePageContextCase(TestBaseContextCase):
 
