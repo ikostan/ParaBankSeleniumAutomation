@@ -39,6 +39,7 @@ class TestBaseContextCase(unittest.TestCase):
 	def solutions_menu_items_test(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
+
 		with allure.step("Test 'Solutions' menu title: text + css"):
 			self.assertEqual(BasePageContext.LEFT_MENU_ITEMS['Solutions']['text'],
 			                 self.page.solutions_menu_text)
@@ -80,6 +81,7 @@ class TestBaseContextCase(unittest.TestCase):
 	def right_menu_home_button_test(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
+
 		with allure.step('Do "Home" button verification > verify button href. Expected: {}.'.format(
 				BasePageContext.MENU_BUTTONS['home']['href'])):
 			self.assertEqual(BasePageContext.MENU_BUTTONS['home']['href'],
@@ -94,6 +96,7 @@ class TestBaseContextCase(unittest.TestCase):
 	def right_menu_about_button_test(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
+
 		with allure.step('Do "About" button verification > verify button href. Expected: {}.'.format(
 				BasePageContext.MENU_BUTTONS['about']['href'])):
 			self.assertEqual(BasePageContext.MENU_BUTTONS['about']['href'],
@@ -108,7 +111,7 @@ class TestBaseContextCase(unittest.TestCase):
 	def right_menu_contact_button_test(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
-		allure.dynamic.severity(allure.severity_level.MINOR)
+
 		with allure.step('Do "Contact" button verification > verify button href. Expected: {}.'.format(
 				BasePageContext.MENU_BUTTONS['contact']['href'])):
 			self.assertEqual(BasePageContext.MENU_BUTTONS['contact']['href'],
@@ -123,6 +126,7 @@ class TestBaseContextCase(unittest.TestCase):
 	def parabank_logo_test(self):
 
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
+
 		with allure.step("Test 'ParaBank' logo > slogan"):
 			self.assertEqual(BasePageContext.SLOGAN,
 			                 self.page.slogan)
@@ -151,6 +155,7 @@ class TestBaseContextCase(unittest.TestCase):
 	def parabank_admin_logo_test(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
+
 		with allure.step("Test 'Admin' logo > href"):
 			self.assertEqual(BasePageContext.ADMIN_LOGO['href'],
 			                 self.page.admin_logo_formated_href)
@@ -167,6 +172,7 @@ class TestBaseContextCase(unittest.TestCase):
 	def customer_login_test(self):
 
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
+
 		# Title:
 		with allure.step("Test 'Customer Login' logo > title"):
 			self.assertEqual(BasePageContext.CUSTOMER_LOGIN['login title'],
@@ -231,6 +237,7 @@ class TestBaseContextCase(unittest.TestCase):
 	def footer_items_test(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
+
 		# Home
 		with allure.step("Test 'Footer' items > 'Home' > href"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['home']['href'],
