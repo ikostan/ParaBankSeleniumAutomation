@@ -10,7 +10,7 @@ class TestChromeAboutPageContext(AboutPageContextTestCase):
 
 	browser = 'chrome'
 
-	def test_page_url_title(self):
+	def test_page_url(self):
 		allure.dynamic.description("""
 		Context base elements validation > About page URL:
 			1. Open About page web page
@@ -20,7 +20,19 @@ class TestChromeAboutPageContext(AboutPageContextTestCase):
 
 		# open web browser
 		self.open_web_browser(self.browser)
-		self.verify_page_url_title()
+		self.verify_page_url()
+
+	def test_page_title(self):
+		allure.dynamic.description("""
+		Context base elements validation > About page URL:
+			1. Open About page web page
+			2. Do Title verification
+		""")
+		allure.dynamic.title("Web page title test")
+
+		# open web browser
+		self.open_web_browser(self.browser)
+		self.verify_page_title()
 
 	def test_description_title_text(self):
 		allure.dynamic.description("""
@@ -78,11 +90,11 @@ class TestChromeAboutPageContext(AboutPageContextTestCase):
 		# Context base elements validation:
 		self.verify_parabank_logo()
 
-	def test_right_menu(self):
+	def test_right_menu_home_button(self):
 		allure.dynamic.description("""
 		Context base elements validation > Right menu:
 			1. Open About page web page
-			2. Do Right menu logo verification
+			2. Do Right menu home button verification
 		""")
 		allure.dynamic.title("Right menu test")
 
@@ -90,7 +102,35 @@ class TestChromeAboutPageContext(AboutPageContextTestCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.verify_right_menu_buttons()
+		self.verify_right_menu_home_button()
+
+	def test_right_menu_contact_button(self):
+		allure.dynamic.description("""
+		Context base elements validation > Right menu:
+			1. Open About page web page
+			2. Do Right menu contact button verification
+		""")
+		allure.dynamic.title("Right menu test")
+
+		# open web browser
+		self.open_web_browser(self.browser)
+
+		# Context base elements validation:
+		self.verify_right_menu_contact_button()
+
+	def test_right_menu_about_button(self):
+		allure.dynamic.description("""
+		Context base elements validation > Right menu:
+			1. Open About page web page
+			2. Do Right menu about button verification
+		""")
+		allure.dynamic.title("Right menu test")
+
+		# open web browser
+		self.open_web_browser(self.browser)
+
+		# Context base elements validation:
+		self.verify_right_menu_about_button()
 
 	def test_solutions_menu_items(self):
 		allure.dynamic.description("""
