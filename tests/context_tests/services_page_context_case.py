@@ -42,9 +42,17 @@ class ServicesPageContextTestCase(TestBaseContextCase):
 		# Context base elements validation:
 		self.parabank_logo_test()
 
-	def verify_right_menu_buttons(self):
+	def verify_right_menu_home_button(self):
 		# Context base elements validation:
-		self.right_menu_buttons_test()
+		self.right_menu_home_button_test()
+
+	def verify_right_menu_contact_button(self):
+		# Context base elements validation:
+		self.right_menu_contact_button_test()
+
+	def verify_right_menu_about_button(self):
+		# Context base elements validation:
+		self.right_menu_about_button_test()
 
 	def verify_solutions_menu_items(self):
 		# Context base elements validation:
