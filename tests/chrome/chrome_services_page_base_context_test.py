@@ -70,20 +70,50 @@ class TestChromeServicesPageContext(ServicesPageContextTestCase):
 		# Context base elements validation:
 		self.verify_parabank_logo()
 
-	def test_right_menu(self):
+	def test_right_menu_home_button(self):
 		allure.dynamic.description("""
 		Context base elements validation > Right menu:
 			1. Open Services page web page
-			2. Do Right menu verification
+			2. Do Right menu Home button verification
 		""")
-		allure.dynamic.title("Right menu test")
+		allure.dynamic.title("Right menu Home button test")
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# open web browser
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.verify_right_menu_buttons()
+		self.verify_right_menu_home_button()
+
+	def test_right_menu_contact_button(self):
+		allure.dynamic.description("""
+		Context base elements validation > Right menu:
+			1. Open Services page web page
+			2. Do Right menu Contact button verification
+		""")
+		allure.dynamic.title("Right menu Contact button test")
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
+		# open web browser
+		self.open_web_browser(self.browser)
+
+		# Context base elements validation:
+		self.verify_right_menu_contact_button()
+
+	def test_right_menu(self):
+		allure.dynamic.description("""
+		Context base elements validation > Right menu:
+			1. Open Services page web page
+			2. Do Right menu About button verification
+		""")
+		allure.dynamic.title("Right menu About button test")
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
+		# open web browser
+		self.open_web_browser(self.browser)
+
+		# Context base elements validation:
+		self.verify_right_menu_about_button()
 
 	def test_solutions_menu_items(self):
 		allure.dynamic.description("""
