@@ -8,6 +8,7 @@ from expected_results.page_context.admin_page_context import AdminPageContext
 
 @allure.feature("Admin Page")
 @allure.story('Admin Context')
+@allure.suite('Admin Page Context Test Suite')
 @screenshot_on_fail()
 class AdminPageContextTestCase(TestBaseContextCase):
 
