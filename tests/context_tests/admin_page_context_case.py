@@ -23,12 +23,16 @@ class AdminPageContextTestCase(TestBaseContextCase):
 	@allure.feature("Admin Page")
 	def verify_page_url(self):
 
+		allure.dynamic.severity(allure.severity_level.CRITICAL)
+
 		with allure.step("Admin page URL test"):
 			self.assertEqual(AdminPageContext.URL,
 			                 self.page.url)
 
 	@allure.feature("Admin Page")
 	def verify_page_title(self):
+
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		with allure.step("Admin page title test"):
 			self.assertEqual(AdminPageContext.TITLE,
