@@ -74,45 +74,74 @@ class TestHomePageContextCase(TestBaseContextCase):
 	@allure.feature("Home Page")
 	def verify_online_services_context(self):
 
-		self.assertEqual(HomePageContext.ONLINE_SERVICES['title'],
-		                 self.page.online_services_title)
+		with allure.step("Verify Online Services title. Expected result: {}".format(
+				HomePageContext.ONLINE_SERVICES['title'])):
+			self.assertEqual(HomePageContext.ONLINE_SERVICES['title'],
+			                 self.page.online_services_title)
 
-		self.assertEqual(HomePageContext.ONLINE_SERVICES['Bill Pay']['text'],
-		                 self.page.bill_pay_title)
-		self.assertEqual(HomePageContext.ONLINE_SERVICES['Bill Pay']['href'],
-		                 self.page.bill_pay_formated_href)
+		with allure.step("Verify Bill Pay text. Expected result: {}".format(
+				HomePageContext.ONLINE_SERVICES['Bill Pay']['text'])):
+			self.assertEqual(HomePageContext.ONLINE_SERVICES['Bill Pay']['text'],
+			                 self.page.bill_pay_title)
 
-		self.assertEqual(HomePageContext.ONLINE_SERVICES['Account History']['text'],
-		                 self.page.account_history_title)
-		self.assertEqual(HomePageContext.ONLINE_SERVICES['Account History']['href'],
-		                 self.page.account_history_formated_href)
+		with allure.step("Verify Bill Pay href. Expected result: {}".format(
+				HomePageContext.ONLINE_SERVICES['Bill Pay']['href'])):
+			self.assertEqual(HomePageContext.ONLINE_SERVICES['Bill Pay']['href'],
+			                 self.page.bill_pay_formated_href)
 
-		self.assertEqual(HomePageContext.ONLINE_SERVICES['Transfer Funds']['text'],
-		                 self.page.online_transfer_funds_title)
-		self.assertEqual(HomePageContext.ONLINE_SERVICES['Transfer Funds']['href'],
-		                 self.page.online_transfer_funds_formated_href)
+		with allure.step("Verify Account History text. Expected result: {}".format(
+				HomePageContext.ONLINE_SERVICES['Account History']['text'])):
+			self.assertEqual(HomePageContext.ONLINE_SERVICES['Account History']['text'],
+			                 self.page.account_history_title)
+
+		with allure.step("Verify Account History href. Expected result: {}".format(
+				HomePageContext.ONLINE_SERVICES['Account History']['href'])):
+			self.assertEqual(HomePageContext.ONLINE_SERVICES['Account History']['href'],
+			                 self.page.account_history_formated_href)
+
+		with allure.step("Verify Transfer Funds text. Expected result: {}".format(
+				HomePageContext.ONLINE_SERVICES['Transfer Funds']['text'])):
+			self.assertEqual(HomePageContext.ONLINE_SERVICES['Transfer Funds']['text'],
+			                 self.page.online_transfer_funds_title)
+
+		with allure.step("Verify Transfer Funds href. Expected result: {}".format(
+				HomePageContext.ONLINE_SERVICES['Transfer Funds']['href'])):
+			self.assertEqual(HomePageContext.ONLINE_SERVICES['Transfer Funds']['href'],
+			                 self.page.online_transfer_funds_formated_href)
 
 	@allure.feature("Home Page")
 	def verify_read_more_services_button(self):
 
-		self.assertEqual(HomePageContext.READ_MORE_SERVICES['text'],
-		                 self.page.read_more_services_title)
-		self.assertEqual(HomePageContext.READ_MORE_SERVICES['href'],
-		                 self.page.read_more_services_formated_href)
+		with allure.step("Verify Read More Services text. Expected result: {}".format(
+				HomePageContext.READ_MORE_SERVICES['text'])):
+			self.assertEqual(HomePageContext.READ_MORE_SERVICES['text'],
+			                 self.page.read_more_services_title)
+
+		with allure.step("Verify Read More Services href. Expected result: {}".format(
+				HomePageContext.READ_MORE_SERVICES['href'])):
+			self.assertEqual(HomePageContext.READ_MORE_SERVICES['href'],
+			                 self.page.read_more_services_formated_href)
 
 	@allure.feature("Home Page")
 	def verify_read_more_news_button(self):
 
-		self.assertEqual(HomePageContext.READ_MORE_NEWS['text'],
-		                 self.page.read_more_news_title)
-		self.assertEqual(HomePageContext.READ_MORE_NEWS['href'],
-		                 self.page.read_more_news_formated_href)
+		with allure.step("Verify Read More News text. Expected result: {}".format(
+				HomePageContext.READ_MORE_NEWS['text'])):
+			self.assertEqual(HomePageContext.READ_MORE_NEWS['text'],
+			                 self.page.read_more_news_title)
+
+		with allure.step("Verify Read More News ref. Expected result: {}".format(
+				HomePageContext.READ_MORE_NEWS['href'])):
+			self.assertEqual(HomePageContext.READ_MORE_NEWS['href'],
+			                 self.page.read_more_news_formated_href)
 
 	@allure.feature("Home Page")
 	def verify_latest_news_title(self):
 
-		self.assertEqual(HomePageContext.LATEST_NEWS,
-		                 self.page.latest_news_title)
+		with allure.step("Verify Latest News title. Expected result: {}".format(
+				HomePageContext.LATEST_NEWS)):
+			self.assertEqual(HomePageContext.LATEST_NEWS,
+			                 self.page.latest_news_title)
 
 	def verify_parabank_admin_logo(self):
 
