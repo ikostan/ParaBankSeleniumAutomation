@@ -13,21 +13,20 @@ from expected_results.page_context.about_page_context import AboutPageContext
 class AboutPageContextTestCase(TestBaseContextCase):
 
 	def open_web_browser(self, browser):
-
 		# Open web page
 		with allure.step("Open web browser on: {}".format(AboutPageContext.URL)):
 			driver = Driver(browser)
 			self.page = AboutPageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
 			self.page.go()
 
+	@allure.feature("About Page")
 	def verify_page_url(self):
-
 		with allure.step("About page URL test"):
 			self.assertEqual(AboutPageContext.URL,
 			                 self.page.url)
 
+	@allure.feature("About Page")
 	def verify_page_title(self):
-
 		with allure.step("About page title test"):
 			self.assertEqual(AboutPageContext.TITLE,
 			                 self.page.title)
@@ -56,11 +55,13 @@ class AboutPageContextTestCase(TestBaseContextCase):
 		# Context base elements validation:
 		self.footer_items_test()
 
+	@allure.feature("About Page")
 	def verify_description_title(self):
 		# Context About page elements validation:
 		with allure.step("Description title test"):
 			self.assertEqual(AboutPageContext.DESCRIPTION['title'], self.page.description_title)
 
+	@allure.feature("About Page")
 	def verify_description_text(self):
 		# Context About page elements validation:
 		with allure.step("Description text (first paragraph) test"):
