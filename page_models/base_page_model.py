@@ -1,12 +1,13 @@
+import requests
 import selenium.webdriver
 from utils.driver import Driver
 from elements.element import Element
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
 from page_locators.base_page_locator import BasePageLocator
 from selenium.webdriver.support import expected_conditions as EC
 from expected_results.page_context.base_page_context import BasePageContext
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
 
 class BasePageModel:
@@ -63,26 +64,37 @@ class BasePageModel:
 	def explicit_wait_time(self):
 		return self._explicit_wait_time
 
+	def get_http_status_code(self, url):
+		'''
+		Returns HTTP status code
+		Using requests library
+
+		:param url:
+		:return:
+		'''
+		r = requests.get(self._url)
+		print("\nHTTP Status code: {}\n".format(r.status_code))
+		return r.status_code
+
 	def go(self):
 		'''
 		Opens test web page
 		:return:
 		'''
+
 		self._driver.get(self._url)
-		try:
-			try:
-				WebDriverWait(self._driver,
-				              self.explicit_wait_time).until(EC.presence_of_element_located((By.TAG_NAME,
-				                                                                             'html')))
-			except TimeoutException:
-				self._driver.refresh()
-			finally:
-				WebDriverWait(self._driver,
-				              self.explicit_wait_time).until(EC.presence_of_element_located((By.TAG_NAME,
-				                                                                             'html')))
-		except TimeoutException:
-			raise Exception(
-				'\nERROR: The webpage \'{}\' is not available. Please check URL and retry.\n'.format(self._url))
+		http_code = self.get_http_status_code(self._url)
+
+		if http_code >= 400:
+			print("\nHTTP error code: {}.\nTrying to refresh...".format(http_code))
+			self._driver.refresh()
+			http_code = self.get_http_status_code(self._url)
+
+		if http_code >= 400:
+			raise Exception('\nERROR: The webpage \'{}\' is not available (HTTP code: {}).'
+			                'Please check URL and retry.\n'.format(self._url,
+			                                                       http_code))
+
 		self._driver.maximize_window()
 		return None
 
@@ -161,7 +173,7 @@ class BasePageModel:
 			else:
 				url = url[:url.index(';')]
 
-		#if '/' in url:
+		# if '/' in url:
 		#	if url.index('/') == 0:
 		#		url = url.replace('/', '')
 
