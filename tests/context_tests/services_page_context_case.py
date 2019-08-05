@@ -8,6 +8,7 @@ from expected_results.page_context.services_page_context import ServicesPageCont
 
 @allure.feature("Services Page")
 @allure.story('Services Context')
+@allure.suite('Services Page Context Test Suite')
 @screenshot_on_fail()
 class ServicesPageContextTestCase(TestBaseContextCase):
 
