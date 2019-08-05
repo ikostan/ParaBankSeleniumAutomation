@@ -21,12 +21,15 @@ class ServicesPageContextTestCase(TestBaseContextCase):
 
 	@allure.feature("Services Page")
 	def verify_page_url(self):
+
+		allure.dynamic.severity(allure.severity_level.BLOCKER)
 		with allure.step('Verify "Services" web page URL. Expected result: {}'.format(ServicesPageContext.URL)):
 			self.assertEqual(ServicesPageContext.URL,
 			                 self.page.url)
 
 	@allure.feature("Services Page")
 	def verify_page_title(self):
+		allure.dynamic.severity(allure.severity_level.MINOR)
 		with allure.step('Verify "Services" web page title. Expected result: {}'.format(ServicesPageContext.TITLE)):
 			self.assertEqual(ServicesPageContext.TITLE,
 			                 self.page.title)
