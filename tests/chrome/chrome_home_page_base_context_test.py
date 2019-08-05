@@ -46,7 +46,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 			1. Open Home web page
 			2. Do ATM services context verification
 		""")
-		allure.dynamic.title("Test ATM services context")
+		allure.dynamic.title("ATM services context test")
 
 		# open web browser
 		self.open_web_browser(self.browser)
@@ -59,7 +59,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 			1. Open Home web page
 			2. Do Online services context verification
 		""")
-		allure.dynamic.title("Test Online services context")
+		allure.dynamic.title("Online services context test")
 
 		# open web browser
 		self.open_web_browser(self.browser)
@@ -72,7 +72,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 			1. Open Home web page
 			2. Do 'Read More' button verification
 		""")
-		allure.dynamic.title("Test 'Read More' (services) button")
+		allure.dynamic.title("'Read More' (services) button test")
 
 		# open web browser
 		self.open_web_browser(self.browser)
@@ -85,7 +85,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 			1. Open Home web page
 			2. Do 'Read More' button verification
 		""")
-		allure.dynamic.title("Test 'Read More' (news) button")
+		allure.dynamic.title("'Read More' (news) button test")
 
 		# open web browser
 		self.open_web_browser(self.browser)
@@ -98,7 +98,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 			1. Open Home web page
 			2. Do 'Latest News' title verification
 		""")
-		allure.dynamic.title("Test 'Latest News' title")
+		allure.dynamic.title("'Latest News' title test")
 
 		# open web browser
 		self.open_web_browser(self.browser)
@@ -111,7 +111,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 			1. Open Home web page
 			2. Do Admin logo verification
 		""")
-		allure.dynamic.title("Test Admin logo")
+		allure.dynamic.title("Admin logo test")
 
 		# open web browser
 		self.open_web_browser(self.browser)
@@ -126,7 +126,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 			1. Open Home web page
 			2. Do Admin logo verification
 		""")
-		allure.dynamic.title("Test 'ParaBank' logo")
+		allure.dynamic.title("'ParaBank' logo test")
 
 		# open web browser
 		self.open_web_browser(self.browser)
@@ -141,7 +141,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 			1. Open Home web page
 			2. Do 'Home' button (right menu) verification
 		""")
-		allure.dynamic.title("Test 'Home' button (right menu)")
+		allure.dynamic.title("'Home' button (right menu) test")
 
 		# open web browser
 		self.open_web_browser(self.browser)
@@ -160,7 +160,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 			1. Open Home web page
 			2. Do 'About' button (right menu) verification
 		""")
-		allure.dynamic.title("Test 'About' button (right menu)")
+		allure.dynamic.title("'About' button (right menu) test")
 
 		# open web browser
 		self.open_web_browser(self.browser)
@@ -175,7 +175,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 			1. Open Home web page
 			2. Do 'Contact' button (right menu) verification
 		""")
-		allure.dynamic.title("Test 'Contact' button (right menu)")
+		allure.dynamic.title("'Contact' button (right menu) test")
 
 		# open web browser
 		self.open_web_browser(self.browser)
@@ -190,7 +190,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 			1. Open Home web page
 			2. Do 'Solutions' menu items verification
 		""")
-		allure.dynamic.title("Test 'Solutions' menu items")
+		allure.dynamic.title("'Solutions' menu items test")
 
 		# open web browser
 		self.open_web_browser(self.browser)
@@ -205,7 +205,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 			1. Open Home web page
 			2. Do 'Customer Login' items verification
 		""")
-		allure.dynamic.title("Test 'Customer Login'")
+		allure.dynamic.title("'Customer Login' test")
 
 		# open web browser
 		self.open_web_browser(self.browser)
@@ -221,7 +221,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 			2. Do 'Footer' items verification
 		""")
 
-		allure.dynamic.title("Test 'Footer'")
+		allure.dynamic.title("'Footer' test")
 
 		# open web browser
 		self.open_web_browser(self.browser)
