@@ -10,6 +10,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 
 	browser = 'chrome'
 
+	@allure.feature("Base Page")
 	def test_page_url(self):
 
 		allure.dynamic.description("""
@@ -25,6 +26,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		# test url
 		self.verify_page_url()
 
+	@allure.feature("Base Page")
 	def test_page_title(self):
 		allure.dynamic.description("""
 		Context base elements validation > Home page title:
@@ -37,6 +39,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		self.open_web_browser(self.browser)
 		self.verify_page_title()
 
+	@allure.feature("Home Page")
 	def test_atm_services_context(self):
 		allure.dynamic.description("""
 		Home page Context elements validation > ATM services:
@@ -49,6 +52,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		self.open_web_browser(self.browser)
 		self.verify_atm_services_context()
 
+	@allure.feature("Home Page")
 	def test_online_services_context(self):
 		allure.dynamic.description("""
 		Home page Context elements validation > ATM services:
@@ -61,6 +65,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		self.open_web_browser(self.browser)
 		self.verify_online_services_context()
 
+	@allure.feature("Home Page")
 	def test_read_more_services_button(self):
 		allure.dynamic.description("""
 		Home page Context elements validation > 'Read More' (services) button:
@@ -73,6 +78,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		self.open_web_browser(self.browser)
 		self.verify_read_more_services_button()
 
+	@allure.feature("Home Page")
 	def test_read_more_news_button(self):
 		allure.dynamic.description("""
 		Home page Context elements validation > 'Read More' (news) button:
@@ -85,6 +91,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		self.open_web_browser(self.browser)
 		self.verify_read_more_news_button()
 
+	@allure.feature("Home Page")
 	def test_latest_news_title(self):
 		allure.dynamic.description("""
 		Home page Context elements validation > 'Latest News' title:
@@ -97,6 +104,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		self.open_web_browser(self.browser)
 		self.verify_latest_news_title()
 
+	@allure.feature("Base Page")
 	def test_parabank_admin_logo(self):
 		allure.dynamic.description("""
 		Context base elements validation > Admin logo:
@@ -111,6 +119,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		# Context base elements validation:
 		self.verify_parabank_admin_logo()
 
+	@allure.feature("Base Page")
 	def test_parabank_logo(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'ParaBank' logo:
@@ -125,6 +134,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		# Context base elements validation:
 		self.verify_parabank_logo()
 
+	@allure.feature("Base Page")
 	def test_right_menu_home_button(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Home' button:
@@ -139,7 +149,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		# Context base elements validation:
 		self.right_menu_home_button_test()
 
-	@allure.severity(allure.severity_level.CRITICAL)
+	@allure.feature("Base Page")
 	def test_right_menu_about_button(self):
 		"""Context base elements validation > Home button:
 		1. Open Home web page
@@ -158,6 +168,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		# Context base elements validation:
 		self.right_menu_about_button_test()
 
+	@allure.feature("Base Page")
 	def test_right_menu_contact_button(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Contact' button:
@@ -172,6 +183,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		# Context base elements validation:
 		self.right_menu_contact_button_test()
 
+	@allure.feature("Base Page")
 	def test_solutions_menu_items(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Solutions' menu items:
@@ -186,6 +198,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		# Context base elements validation:
 		self.verify_solutions_menu_items()
 
+	@allure.feature("Base Page")
 	def test_customer_login(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Customer Login':
@@ -200,6 +213,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		# Context base elements validation:
 		self.verify_customer_login()
 
+	@allure.feature("Base Page")
 	def test_footer_items(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
