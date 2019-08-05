@@ -20,12 +20,14 @@ class AdminPageContextTestCase(TestBaseContextCase):
 			self.page = AdminPageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
 			self.page.go()
 
+	@allure.feature("Admin Page")
 	def verify_page_url(self):
 
 		with allure.step("Admin page URL test"):
 			self.assertEqual(AdminPageContext.URL,
 			                 self.page.url)
 
+	@allure.feature("Admin Page")
 	def verify_page_title(self):
 
 		with allure.step("Admin page title test"):
