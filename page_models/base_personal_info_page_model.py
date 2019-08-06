@@ -51,7 +51,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		'''
 
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.FIRST_NAME_INPUT)
-		element.send_keys(first_name)
+		element.write(first_name)
 		return None
 
 	@property
@@ -73,7 +73,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		'''
 
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.LAST_NAME_INPUT)
-		element.send_keys(last_name)
+		element.write(last_name)
 		return None
 
 	@property
@@ -95,7 +95,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		'''
 
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.ADDRESS_INPUT)
-		element.send_keys(address)
+		element.write(address)
 		return None
 
 	@property
@@ -117,7 +117,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		'''
 
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.CITY_INPUT)
-		element.send_keys(city)
+		element.write(city)
 		return None
 
 	@property
@@ -139,7 +139,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		'''
 
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.STATE_INPUT)
-		element.send_keys(state)
+		element.write(state)
 		return None
 
 	@property
@@ -161,7 +161,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		'''
 
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.ZIP_CODE_INPUT)
-		element.send_keys(zip_code)
+		element.write(zip_code)
 		return None
 
 	@property
@@ -183,5 +183,5 @@ class BasePersonalInfoPageModel(BasePageModel):
 		'''
 
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.SSN_INPUT)
-		element.send_keys(ssn)
+		element.write(ssn)
 		return None
