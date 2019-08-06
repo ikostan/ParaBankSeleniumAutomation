@@ -8,6 +8,9 @@ class JohnDoe:
 	ZIP_CODE = '11235'
 	PHONE = '718-437-9185'
 
+	USERNAME = 'johndoe'
+	PASSWORD = USERNAME + ZIP_CODE
+
 	'''
 	NATIONAL ID (Social Security Number)
 	Audit(s):
