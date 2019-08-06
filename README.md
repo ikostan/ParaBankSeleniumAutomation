@@ -97,6 +97,7 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
 
 ### Tech Issues and Problem Solving:<br/>
 
+
 - **How to fix in case .gitignore is ignored by Git:**<br/>
 
     Even if you haven't tracked the files so far, Git seems to be able to "know" about them even after you add them to .gitignore.<br/> 
@@ -138,9 +139,11 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
     wait.until(ec.title_is(self.new_window_name))
     ```
 
-- **How to Get Selenium to Wait for Page Load After a Click:**<br/>
-    It turns out Selenium has a built-in condition called staleness_of, as well as its own wait-for implementation. 
-    Use them, alongside the @contextmanager decorator and the magical-but-slightly-scary yield keyword, and you get:
+<details>
+  <summary>**How to Get Selenium to Wait for Page Load After a Click:**</summary>
+  
+It turns out Selenium has a built-in condition called staleness_of, as well as its own wait-for implementation. 
+Use them, alongside the @contextmanager decorator and the magical-but-slightly-scary yield keyword, and you get:
 
     ```python
     from contextlib import contextmanager
@@ -164,5 +167,7 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
           self.browser.find_element_by_link_text('a link')
     ```
     
-    **Note** that this solution only works for “non-JavaScript” clicks, i.e., clicks that will cause the browser to load a brand new page, and thus load a brand new HTML body element.
-    <br/>Source: https://blog.codeship.com/get-selenium-to-wait-for-page-load/
+**Note** that this solution only works for “non-JavaScript” clicks, i.e., clicks that will cause the browser to load a brand new page, and thus load a brand new HTML body element.
+<br/>Source: https://blog.codeship.com/get-selenium-to-wait-for-page-load/
+
+</details>
