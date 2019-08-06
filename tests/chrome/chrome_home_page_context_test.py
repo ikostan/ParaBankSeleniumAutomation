@@ -117,7 +117,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.verify_parabank_admin_logo()
+		self.parabank_admin_logo_test()
 
 	@allure.feature("Base Page")
 	def test_parabank_logo(self):
@@ -132,7 +132,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.verify_parabank_logo()
+		self.parabank_logo_test()
 
 	@allure.feature("Base Page")
 	def test_right_menu_home_button(self):
@@ -196,7 +196,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.verify_solutions_menu_items()
+		self.solutions_menu_items_test()
 
 	@allure.feature("Base Page")
 	def test_customer_login(self):
@@ -211,7 +211,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.verify_customer_login()
+		self.customer_login_test()
 
 	@allure.feature("Base Page")
 	def test_footer_items(self):
@@ -227,7 +227,7 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.verify_footer_items()
+		self.footer_items_test()
 
 
 
