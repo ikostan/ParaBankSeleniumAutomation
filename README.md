@@ -54,8 +54,21 @@ pip install virtualenv
 virtualenv venv --python=python
 ```
 
-<br/>**Changing the project interpreter in the PyCharm project settings:**<br/>
-1. In the **Settings/Preferences dialog** (Ctrl+Alt+S), select **Project <project name> | Project Interpreter**.<br/>
+
+
+<br/>   
+<div align="center"> 
+<img width="60%" height="60%" src="https://github.com/ikostan/SELENIUM_WEBDRIVER_WORKING_WITH_ELEMENTS/blob/master/testing_selenium_capabilities/img/py_choosing_test_runner.png" hspace="20">
+</div>
+<br/>
+
+
+### Tech Issues and Problem Solving:<br/>
+
+<details>
+  <summary><b>Changing the project interpreter in the PyCharm project settings</b></summary>
+
+<br/>1. In the **Settings/Preferences dialog** (Ctrl+Alt+S), select **Project <project name> | Project Interpreter**.<br/>
 2. Expand the list of the available interpreters and click the **Show All** link.<br/>
 3. Select the target interpreter. When PyCharm stops supporting any of the outdated Python versions, the corresponding project interpreter is marked as unsupported.<br/>
 4. The Python interpreter name specified in the **Name** field, becomes visible in the list of available interpreters. Click **OK** to apply the changes.<br/>
@@ -69,15 +82,18 @@ For more info please check [here](https://www.jetbrains.com/help/pycharm/configu
 3. Choose the desired test runner:<br/>
 
 For more info please see [Enable Pytest for you project](https://www.jetbrains.com/help/pycharm/pytest.html)
-
-<br/>   
-<div align="center"> 
-<img width="60%" height="60%" src="https://github.com/ikostan/SELENIUM_WEBDRIVER_WORKING_WITH_ELEMENTS/blob/master/testing_selenium_capabilities/img/py_choosing_test_runner.png" hspace="20">
-</div>
-<br/>
+</details>
 
 
-### Tech Issues and Problem Solving:<br/>
+<details>
+  <summary><b></b></summary>
+</details>
+
+
+<details>
+  <summary><b></b></summary>
+</details>
+
 
 <details>
   <summary><b>Auto generate requirements.txt</b></summary>
