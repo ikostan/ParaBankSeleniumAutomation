@@ -7,6 +7,10 @@ class ForgotLoginInfoPageContext(BasePageContext, BasePersonalInfo):
 	Holds fields/data from "Forgot Login Info" form
 	'''
 
+	TITLE = BasePageContext.TITLE + 'Customer Lookup'
+
+	URL = BasePageContext.URL + 'lookup.htm'
+
 	HEADER = {
 		'class': "title",
 		'text': 'Customer Lookup'
