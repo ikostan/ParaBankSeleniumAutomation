@@ -13,5 +13,27 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 
 	_url = RegisterPageContext.URL
 
+	@property
+	def register_btn_label(self):
+		'''
+		Returns register button label
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.REGISTER_BUTTON)
+		txt = element.element_value
+		return txt
+
+	@property
+	def click_register_btn(self):
+		'''
+		Click on register button
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.REGISTER_BUTTON)
+		element.click()
+		return None
+
 
 
