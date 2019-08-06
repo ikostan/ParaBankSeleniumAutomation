@@ -8,7 +8,7 @@ class BasePersonalInfoPageLocator:
 	Each locator is a tuple.
 	Separate the locator strings from the place where they are being used.
 	'''
-	
+
 	HEADER = (By.XPATH, '//*[@id="rightPanel"]/h1')
 	DESCRIPTION = (By.XPATH, '//*[@id="rightPanel"]/p')
 
