@@ -38,30 +38,6 @@ Full list of dependencies see [here.](https://github.com/ikostan/ParaBankSeleniu
 - Firefox: v68 (64  bit)
 - Edge: v17 and above
 
-<br/>**Setting up Python3 virtual environment on Windows machine:**<br/>
-
-1. open CMD
-2. navigate to project directory, for example:<br/> 
-```bash
-cd C:\Users\superadmin\Desktop\Python\CodinGame
-```
-3. run following command:<br/> 
-```bash 
-pip install virtualenv
-```
-4. run following command:<br/> 
-```bash 
-virtualenv venv --python=python
-```
-
-
-
-<br/>   
-<div align="center"> 
-<img width="60%" height="60%" src="https://github.com/ikostan/SELENIUM_WEBDRIVER_WORKING_WITH_ELEMENTS/blob/master/testing_selenium_capabilities/img/py_choosing_test_runner.png" hspace="20">
-</div>
-<br/>
-
 
 ### Tech Issues and Problem Solving:<br/>
 
@@ -75,23 +51,48 @@ virtualenv venv --python=python
 
 For more info please check [here](https://www.jetbrains.com/help/pycharm/configuring-python-interpreter.html)<br/>
 
-<br/>**PyCharm - Choosing Your Testing Framework:**<br/>
+</details>
 
-1. Open the Settings/Preferences dialog, and under the node Tools, click the page **Python Integrated Tools**.<br/>
+
+<details>
+  <summary><b>PyCharm - Choosing Your Testing Framework</b></summary>
+ 
+<br/>1. Open the Settings/Preferences dialog, and under the node Tools, click the page **Python Integrated Tools**.<br/>
 2. On this page, click the **Default Test Runner** field.<br/>
 3. Choose the desired test runner:<br/>
+
+<br/>   
+<div align="center"> 
+<img width="60%" height="60%" src="https://github.com/ikostan/SELENIUM_WEBDRIVER_WORKING_WITH_ELEMENTS/blob/master/testing_selenium_capabilities/img/py_choosing_test_runner.png" hspace="20">
+</div>
+<br/>
 
 For more info please see [Enable Pytest for you project](https://www.jetbrains.com/help/pycharm/pytest.html)
 </details>
 
 
 <details>
-  <summary><b></b></summary>
-</details>
+  <summary><b>Setting up Python3 virtual environment on Windows machine</b></summary>
 
+<br/>1. open CMD
+2. navigate to project directory, for example:<br/> 
 
-<details>
-  <summary><b></b></summary>
+```bash
+cd C:\Users\superadmin\Desktop\Python\CodinGame
+```
+
+3. run following command:<br/> 
+
+```bash 
+pip install virtualenv
+```
+
+4. run following command:<br/> 
+
+```bash 
+virtualenv venv --python=python
+```
+    
 </details>
 
 
