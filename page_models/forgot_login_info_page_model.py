@@ -1,5 +1,7 @@
 from elements.element import Element
 from page_models.base_page_model import BasePageModel
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from page_models.base_personal_info_page_model import BasePersonalInfoPageModel
 from page_locators.forgot_login_info_page_locator import ForgotLoginInfoPageLocator
 from expected_results.page_context.forgot_login_info_page_context import ForgotLoginInfoPageContext
@@ -13,5 +15,25 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 
 	_url = ForgotLoginInfoPageContext.URL
 
+	@property
+	def find_info_btn_label(self):
+		'''
+		Returns "FIND MY LOGIN INFO" button label
+		:return:
+		'''
 
+		element = Element(self.driver, self.explicit_wait_time, ForgotLoginInfoPageLocator.FIND_MY_LOGIN_INFO_BUTTON)
+		txt = element.element_value
+		return txt
+
+	@property
+	def click_find_info_btn(self):
+		'''
+		Click on "FIND MY LOGIN INFO" button
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, ForgotLoginInfoPageLocator.FIND_MY_LOGIN_INFO_BUTTON)
+		element.click()
+		return None
 
