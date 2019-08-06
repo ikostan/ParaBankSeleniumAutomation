@@ -5,7 +5,7 @@ from page_locators.base_personal_info_page_locator import BasePersonalInfoPageLo
 
 class RegisterPageLocator(BasePageLocator, BasePersonalInfoPageLocator):
 	'''
-	Holds all relevant locators for 'Services' page web elements.
+	Holds all relevant locators for 'Register' page web elements.
 	Each locator is a tuple.
 	Separate the locator strings from the place where they are being used.
 	'''
