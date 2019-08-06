@@ -1,8 +1,8 @@
 from expected_results.page_context.base_page_context import BasePageContext
-from expected_results.page_context.base_personal_info import BasePersonalInfo
+from expected_results.page_context.base_personal_info_context import BasePersonalInfoContext
 
 
-class ForgotLoginInfoPageContext(BasePageContext, BasePersonalInfo):
+class ForgotLoginInfoPageContext(BasePageContext, BasePersonalInfoContext):
 	'''
 	Holds fields/data from "Forgot Login Info" form
 	'''
