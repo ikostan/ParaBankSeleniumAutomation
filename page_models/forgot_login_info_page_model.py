@@ -7,7 +7,7 @@ from page_locators.forgot_login_info_page_locator import ForgotLoginInfoPageLoca
 from expected_results.page_context.forgot_login_info_page_context import ForgotLoginInfoPageContext
 
 
-class RegisterPageModel(BasePersonalInfoPageModel):
+class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
 	'''
 	The page object pattern intends creating an object for each web page.
 	By following this technique a layer of separation between the test code and technical implementation is created.
