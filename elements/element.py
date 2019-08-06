@@ -119,3 +119,14 @@ class Element(BaseElement):
 
 		except TimeoutException:
 			raise InvalidElementStateException('\nERROR: can not find element. The element is invisible or not clickable.\n')
+
+	def write(self, text):
+		'''
+		Clear the input field
+		Writes into web element / input field
+		:param text:
+		:return:
+		'''
+		super().element.clear()
+		super().element.send_keys(text)
+		return None
