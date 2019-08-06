@@ -164,6 +164,32 @@ class BasePersonalInfoPageModel(BasePageModel):
 		return None
 
 	@property
+	def phone_title(self):
+		'''
+		Returns phone title text
+		:return:
+		'''
+
+		element = Element(self.driver,
+		                  self.explicit_wait_time,
+		                  BasePersonalInfoPageLocator.PHONE_TITLE)
+		txt = element.text
+		return txt
+
+	def type_phone(self, phone_number: str):
+		'''
+		Write text into phone input field
+		:param phone_number:
+		:return:
+		'''
+
+		element = Element(self.driver,
+		                  self.explicit_wait_time,
+		                  BasePersonalInfoPageLocator.PHONE_INPUT)
+		element.write(phone_number)
+		return None
+
+	@property
 	def ssn_title(self):
 		'''
 		Returns SSN title text
