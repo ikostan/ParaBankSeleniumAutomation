@@ -37,41 +37,8 @@ class AboutPageContextTestCase(TestBaseContextCase):
 			self.assertEqual(AboutPageContext.TITLE,
 			                 self.page.title)
 
-	def verify_parabank_admin_logo(self):
-		# Context base elements validation:
-		self.parabank_admin_logo_test()
-
-	def verify_parabank_logo(self):
-		# Context base elements validation:
-		self.parabank_logo_test()
-
-	def verify_right_menu_home_button(self):
-		# Context base elements validation:
-		self.right_menu_home_button_test()
-
-	def verify_right_menu_about_button(self):
-		# Context base elements validation:
-		self.right_menu_about_button_test()
-
-	def verify_right_menu_contact_button(self):
-		# Context base elements validation:
-		self.right_menu_contact_button_test()
-
-	def verify_solutions_menu_items(self):
-		# Context base elements validation:
-		self.solutions_menu_items_test()
-
-	def verify_customer_login(self):
-		# Context base elements validation:
-		self.customer_login_test()
-
-	def verify_footer_items(self):
-		# Context base elements validation:
-		self.footer_items_test()
-
 	@allure.feature("About Page")
 	def verify_description_title(self):
-
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# Context About page elements validation:
@@ -80,7 +47,6 @@ class AboutPageContextTestCase(TestBaseContextCase):
 
 	@allure.feature("About Page")
 	def verify_description_text(self):
-
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# Context About page elements validation:
@@ -95,3 +61,4 @@ class AboutPageContextTestCase(TestBaseContextCase):
 
 		with allure.step("Description text (fourth paragraph) test"):
 			self.assertEqual(AboutPageContext.LINK, self.page.description_link)
+
