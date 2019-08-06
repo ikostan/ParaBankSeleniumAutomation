@@ -28,6 +28,7 @@ In other words: ParaBank is not a real bank!
 3. PyCharm 2019.1.3 (Community Edition)<br/>
 4. Win 10 (64 bit)<br/>
 5. Allure Framework 2.12.1<br/>
+6. PyTest 5.0.0<br/>
 
 Full list of dependencies see [here.](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/requirements.txt)
 
