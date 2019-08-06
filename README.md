@@ -76,26 +76,26 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
 </div>
 <br/>
 
-<br/>**Auto generate requirements.txt**<br/>
 
-   Any application typically has a set of dependencies that are required for that application to work. The requirements file is a way to specify and install specific set of package dependencies at once.<br/>
+### Tech Issues and Problem Solving:<br/>
 
-   Use pip’s freeze command to generate a requirements.txt file for your project:<br/>
+<details>
+  <summary><b>Auto generate requirements.txt</b></summary>
+
+<br/>Any application typically has a set of dependencies that are required for that application to work. The requirements file is a way to specify and install specific set of package dependencies at once.<br/>
+Use pip’s freeze command to generate a requirements.txt file for your project:<br/>
 
    ```python
     pip freeze > requirements.txt
 ```
 
-   If you save this in requirements.txt, you can follow this guide: [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html), or you can:<br/>
+If you save this in requirements.txt, you can follow this guide: [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html), or you can:<br/>
    
    ```python
     pip install -r requirements.txt
 ```   
-
-   Source: https://www.idiotinside.com/2015/05/10/python-auto-generate-requirements-txt/<br/>
-
-
-### Tech Issues and Problem Solving:<br/>
+Source: https://www.idiotinside.com/2015/05/10/python-auto-generate-requirements-txt/<br/>
+</details>
 
 <details>
   <summary><b>How to fix in case .gitignore is ignored by Git</b></summary>
