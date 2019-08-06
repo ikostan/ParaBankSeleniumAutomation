@@ -97,35 +97,47 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
 
 ### Tech Issues and Problem Solving:<br/>
 
+<details>
+  <summary><b>How to fix in case .gitignore is ignored by Git</b></summary>
 
-- **How to fix in case .gitignore is ignored by Git:**<br/>
+<br/>Even if you haven't tracked the files so far, Git seems to be able to "know" about them even after you add them to .gitignore.<br/> 
 
-    Even if you haven't tracked the files so far, Git seems to be able to "know" about them even after you add them to .gitignore.<br/> 
-
-    **NOTE:**<br/>
+**NOTE:**<br/>
     - First commit your current changes, or you will lose them.<br/> 
     - Then run the following commands from the top folder of your Git repository:<br/> 
-    ```bash 
+    
+   ```bash 
     git rm -r --cached .
     git add .
     git commit -m "fixed untracked files"
-    ```
-
-- **[How to fix common Selenium errors?](https://www.ultimateqa.com/common-selenium-webdriver-errors-fix/)**<br/>
-
-- **Microsoft webdriver for edge 18 and above:**<br/>
-    MS made WebDriver a Windows Feature on Demand (FoD), which ensures that it’s always up to date automatically, and enables some new ways to get Microsoft WebDriver.<br/>
+   ```
     
-    The simplest way to get started is simply to enable Developer Mode. Simply open the Settings app and go to “Update & Security,” “For developers,” and select “Developer Mode.” The appropriate version of WebDriver will be automatically installed.<br/>
+</details>
+
+<details>
+  <summary><b>Common Selenium errors</b></summary>
+
+<br/>- **[How to fix common Selenium errors?](https://www.ultimateqa.com/common-selenium-webdriver-errors-fix/)**<br/>
+
+</details>
+
+
+<details>
+  <summary><b>Microsoft webdriver for edge 18 and above</b></summary>
+
+<br/>MS made WebDriver a Windows Feature on Demand (FoD), which ensures that it’s always up to date automatically, and enables some new ways to get Microsoft WebDriver.<br/>
     
-    You can also install a standalone version of WebDriver in one of two ways:<br/>
+The simplest way to get started is simply to enable Developer Mode. Simply open the Settings app and go to “Update & Security,” “For developers,” and select “Developer Mode.” The appropriate version of WebDriver will be automatically installed.<br/>
+    
+You can also install a standalone version of WebDriver in one of two ways:<br/>
     * Search “Manage optional features” from Start, then select “Add a Feature,” “WebDriver.”<br/>
     * Install via DISM by running the following command in an elevated command prompt:
     <br/>```DISM.exe /Online /Add-Capability /CapabilityName:Microsoft.WebDriver~~~~0.0.1.0```<br/>
     
-    This also means that we will no longer be providing standalone downloads for Microsoft WebDriver going forward<br/>
-    
-    Source: https://blogs.windows.com/msedgedev/2018/06/14/webdriver-w3c-recommendation-feature-on-demand/#Rg8g2hRfjBQQVRXy.97
+This also means that we will no longer be providing standalone downloads for Microsoft WebDriver going forward<br/>
+Source: https://blogs.windows.com/msedgedev/2018/06/14/webdriver-w3c-recommendation-feature-on-demand/#Rg8g2hRfjBQQVRXy.97
+
+</details>
 
 <details>
   <summary><b>Test are failed due to slow performance of WebDriver</b></summary>
@@ -145,7 +157,7 @@ Here we define to wait for a certain condition to occur before proceeding furthe
 </details>
 
 <details>
-  <summary><b>How to Get Selenium to Wait for Page Load After a Click</b>b></summary>
+  <summary><b>How to Get Selenium to Wait for Page Load After a Click</b></summary>
   
 <br/>It turns out Selenium has a built-in condition called staleness_of, as well as its own wait-for implementation. 
 Use them, alongside the @contextmanager decorator and the magical-but-slightly-scary yield keyword, and you get:
