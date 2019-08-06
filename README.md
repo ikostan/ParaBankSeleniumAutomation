@@ -133,23 +133,24 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
 <br/>Explicit wait is used to specify wait condition for a particular element.<br/> 
 Here we define to wait for a certain condition to occur before proceeding further in the code.
 
-    ```python
+   ```python
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as ec
     
     # Wait for element to appear:
     wait = WebDriverWait(self.driver, 10)
     wait.until(ec.title_is(self.new_window_name))
-    ```
+```
+
 </details>
 
 <details>
-  <summary>How to Get Selenium to Wait for Page Load After a Click</summary>
+  <summary><b>How to Get Selenium to Wait for Page Load After a Click</b>b></summary>
   
 <br/>It turns out Selenium has a built-in condition called staleness_of, as well as its own wait-for implementation. 
 Use them, alongside the @contextmanager decorator and the magical-but-slightly-scary yield keyword, and you get:
 
-    ```python
+   ```python
     from contextlib import contextmanager
     from selenium.webdriver.support.ui import WebDriverWait 
     from selenium.webdriver.support.expected_conditions import staleness_of
@@ -169,7 +170,7 @@ Use them, alongside the @contextmanager decorator and the magical-but-slightly-s
         # example use
         with self.wait_for_page_load(timeout=10):
           self.browser.find_element_by_link_text('a link')
-    ```
+```
     
 **Note** that this solution only works for “non-JavaScript” clicks, i.e., clicks that will cause the browser to load a brand new page, and thus load a brand new HTML body element.
 <br/>Source: https://blog.codeship.com/get-selenium-to-wait-for-page-load/
