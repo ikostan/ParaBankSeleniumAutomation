@@ -31,7 +31,7 @@ class BasePersonalInfoPageLocator:
 	ZIP_CODE_INPUT = (By.XPATH, '//*[@id="customer.address.zipCode"]')
 
 	PHONE_TITLE = (By.XPATH, '//*[@id="customerForm"]/table/tbody/tr[6]/td[1]/b')
-	PHONE_INPUT = (By.XPATH, '//*[@id="customer.address.zipCode"]')
+	PHONE_INPUT = (By.XPATH, '//*[@id="customer.phoneNumber"]')
 
 	SSN_TITLE = (By.XPATH, '//*[@id="customerForm"]/table/tbody/tr[6]/td[1]/b')
-	SSN_INPUT = (By.XPATH, '//*[@id="customer.address.zipCode"]')
+	SSN_INPUT = (By.XPATH, '//*[@id="customer.ssn"]')
