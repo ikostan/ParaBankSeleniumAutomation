@@ -7,6 +7,10 @@ class RegisterPageContext(BasePageContext, BasePersonalInfo):
 	Holds fields/data from "Register" form
 	'''
 
+	TITLE = BasePageContext.TITLE + 'Register for Free Online Account Access'
+
+	URL = BasePageContext.URL + 'register.htm'
+
 	HEADER = {
 		'class': "title",
 		'text': 'Signing up is easy!'
