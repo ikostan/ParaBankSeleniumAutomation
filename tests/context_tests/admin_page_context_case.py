@@ -38,6 +38,7 @@ class AdminPageContextTestCase(TestBaseContextCase):
 			self.assertEqual(AdminPageContext.TITLE,
 			                 self.page.title)
 
+'''
 	def verify_parabank_admin_logo(self):
 
 		# Context base elements validation:
@@ -78,4 +79,4 @@ class AdminPageContextTestCase(TestBaseContextCase):
 		# Context base elements validation:
 		self.footer_items_test()
 
-
+'''
