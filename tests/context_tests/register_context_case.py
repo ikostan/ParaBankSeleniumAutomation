@@ -2,7 +2,6 @@ import allure
 from utils.driver import Driver
 from utils.screenshot import screenshot_on_fail
 from page_models.register_page_model import RegisterPageModel
-from tests.context_tests.base_context_case import TestBaseContextCase
 from expected_results.page_context.register_page_context import RegisterPageContext
 from tests.context_tests.base_personal_context_case import BasePersonalInfoContextTestCase
 
@@ -11,7 +10,7 @@ from tests.context_tests.base_personal_context_case import BasePersonalInfoConte
 @allure.story('Register Context')
 @allure.suite('Register Page Context Test Suite')
 @screenshot_on_fail()
-class RegisterContextTestCase(BasePersonalInfoContextTestCase, TestBaseContextCase):
+class RegisterContextTestCase(BasePersonalInfoContextTestCase):
 
 	def open_web_browser(self, browser):
 		with allure.step('Open web browser on: {}'.format(RegisterPageContext.URL)):
