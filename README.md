@@ -126,10 +126,13 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
     This also means that we will no longer be providing standalone downloads for Microsoft WebDriver going forward<br/>
     
     Source: https://blogs.windows.com/msedgedev/2018/06/14/webdriver-w3c-recommendation-feature-on-demand/#Rg8g2hRfjBQQVRXy.97
-    
-- **Test are failed due to slow performance of WebDriver**<br/>
-    Explicit wait is used to specify wait condition for a particular element.<br/> 
-    Here we define to wait for a certain condition to occur before proceeding further in the code.
+
+<details>
+  <summary>Test are failed due to slow performance of WebDriver</summary>
+  
+Explicit wait is used to specify wait condition for a particular element.<br/> 
+Here we define to wait for a certain condition to occur before proceeding further in the code.
+
     ```python
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as ec
@@ -138,9 +141,10 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
     wait = WebDriverWait(self.driver, 10)
     wait.until(ec.title_is(self.new_window_name))
     ```
+</details>
 
 <details>
-  <summary>**How to Get Selenium to Wait for Page Load After a Click:**</summary>
+  <summary>How to Get Selenium to Wait for Page Load After a Click</summary>
   
 It turns out Selenium has a built-in condition called staleness_of, as well as its own wait-for implementation. 
 Use them, alongside the @contextmanager decorator and the magical-but-slightly-scary yield keyword, and you get:
