@@ -5,7 +5,7 @@ from page_locators.base_personal_info_page_locator import BasePersonalInfoPageLo
 
 class ForgotLoginInfoPageLocator(BasePageLocator, BasePersonalInfoPageLocator):
 	'''
-	Holds all relevant locators for 'Services' page web elements.
+	Holds all relevant locators for 'Forgot Login Info' page web elements.
 	Each locator is a tuple.
 	Separate the locator strings from the place where they are being used.
 	'''
