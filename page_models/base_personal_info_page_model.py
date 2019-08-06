@@ -1,6 +1,5 @@
 from elements.element import Element
 from page_models.base_page_model import BasePageModel
-from expected_results.page_context.base_personal_info import BasePersonalInfo
 from page_locators.base_personal_info_page_locator import BasePersonalInfoPageLocator
 
 
