@@ -14,6 +14,72 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 	_url = RegisterPageContext.URL
 
 	@property
+	def username_title(self):
+		'''
+		Returns username title text
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.USERNAME_TITLE)
+		txt = element.text
+		return txt
+
+	def type_username(self, username: str):
+		'''
+		Write text into username input field
+		:param username:
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.USERNAME_INPUT)
+		element.write(username)
+		return None
+
+	@property
+	def password_title(self):
+		'''
+		Returns password title text
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.PASSWORD_TITLE)
+		txt = element.text
+		return txt
+
+	def type_password(self, password: str):
+		'''
+		Write text into password input field
+		:param password:
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.PASSWORD_INPUT)
+		element.write(password)
+		return None
+
+	@property
+	def confirm_title(self):
+		'''
+		Returns confirm title text
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.CONFIRM_TITLE)
+		txt = element.text
+		return txt
+
+	def type_confirm(self, password: str):
+		'''
+		Write text into confirm input field
+		:param password:
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.CONFIRM_INPUT)
+		element.write(password)
+		return None
+
+	@property
 	def register_btn_label(self):
 		'''
 		Returns register button label
