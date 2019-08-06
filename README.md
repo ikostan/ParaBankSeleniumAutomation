@@ -128,9 +128,9 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
     Source: https://blogs.windows.com/msedgedev/2018/06/14/webdriver-w3c-recommendation-feature-on-demand/#Rg8g2hRfjBQQVRXy.97
 
 <details>
-  <summary>Test are failed due to slow performance of WebDriver</summary>
+  <summary><b>Test are failed due to slow performance of WebDriver</b></summary>
   
-Explicit wait is used to specify wait condition for a particular element.<br/> 
+<br/>Explicit wait is used to specify wait condition for a particular element.<br/> 
 Here we define to wait for a certain condition to occur before proceeding further in the code.
 
     ```python
@@ -146,7 +146,7 @@ Here we define to wait for a certain condition to occur before proceeding furthe
 <details>
   <summary>How to Get Selenium to Wait for Page Load After a Click</summary>
   
-It turns out Selenium has a built-in condition called staleness_of, as well as its own wait-for implementation. 
+<br/>It turns out Selenium has a built-in condition called staleness_of, as well as its own wait-for implementation. 
 Use them, alongside the @contextmanager decorator and the magical-but-slightly-scary yield keyword, and you get:
 
     ```python
