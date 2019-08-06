@@ -1,8 +1,8 @@
 from expected_results.page_context.base_page_context import BasePageContext
-from expected_results.page_context.base_personal_info import BasePersonalInfo
+from expected_results.page_context.base_personal_info_context import BasePersonalInfoContext
 
 
-class RegisterPageContext(BasePageContext, BasePersonalInfo):
+class RegisterPageContext(BasePageContext, BasePersonalInfoContext):
 	'''
 	Holds fields/data from "Register" form
 	'''
