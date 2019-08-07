@@ -1,8 +1,6 @@
 import allure
-from utils.driver import Driver
-from utils.refresh_page import refresh_page
+import pytest
 from utils.screenshot import screenshot_on_fail
-from page_models.home_page_model import HomePageModel
 from tests.context_tests.base_tests.base_context_case import BaseContextCase
 from expected_results.page_context.home_page_context import HomePageContext
 
@@ -13,22 +11,26 @@ from expected_results.page_context.home_page_context import HomePageContext
 @screenshot_on_fail()
 class HomePageContextCase(BaseContextCase):
 
-	def open_web_browser(self, browser):
+	'''
+	@staticmethod
+	def open_web_browser(browser):
 
 		# Open web page
-		with allure.step("Open web browser on {}.".format(HomePageContext.URL)):
-			driver = Driver(browser)
-			self.page = HomePageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
-			self.page.go()
-			refresh_page(HomePageContext.TITLE, self.page)
+		driver = Driver(browser)
+		# with allure.step("Open web browser on: {}".format(HomePageContext.URL)):
+		page = HomePageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
+		page.go()
+		refresh_page(HomePageContext.TITLE, page)
+		return page
+	'''
 
 	# @allure.feature("Home Page")
-	def verify_page_url(self):
-		allure.dynamic.severity(allure.severity_level.BLOCKER)
+	@pytest.mark.parametrize('expected_url', [HomePageContext.URL], ids=['Expected web page url'])
+	def verify_page_url(self, expected_url: str):
 
-		with allure.step("Verify web page URL. Expected result: {}".format(HomePageContext.URL)):
-			self.assertEqual(HomePageContext.URL,
-			                 self.page.url)
+		with allure.step("Verify web page URL. Expected result: {}".format(expected_url)):
+			actual = self.page.url
+			self.assertEqual(expected_url, actual, msg='\nExpected: {}. Actual: {}\n'.format(expected_url, actual))
 
 	# @allure.feature("Home Page")
 	def verify_page_title(self):
