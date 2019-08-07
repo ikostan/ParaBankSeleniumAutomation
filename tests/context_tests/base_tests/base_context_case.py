@@ -36,7 +36,7 @@ class BaseContextCase(unittest.TestCase):
 				self.page.close()
 
 	@allure.feature("Base Page")
-	def solutions_menu_items_test(self):
+	def verify_solutions_menu_items(self):
 
 		allure.dynamic.description("""
 		Context base elements validation > 'Solutions' menu items:
@@ -85,7 +85,7 @@ class BaseContextCase(unittest.TestCase):
 			                 self.page.admin_page_menu_item_text)
 
 	@allure.feature("Base Page")
-	def right_menu_home_button_test(self):
+	def verify_right_menu_home_button(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
@@ -100,7 +100,7 @@ class BaseContextCase(unittest.TestCase):
 			                 self.page.home_button_text)
 
 	@allure.feature("Base Page")
-	def right_menu_about_button_test(self):
+	def verify_right_menu_about_button(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
@@ -115,7 +115,7 @@ class BaseContextCase(unittest.TestCase):
 			                 self.page.about_button_text)
 
 	@allure.feature("Base Page")
-	def right_menu_contact_button_test(self):
+	def verify_right_menu_contact_button(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
@@ -130,7 +130,7 @@ class BaseContextCase(unittest.TestCase):
 			                 self.page.contact_button_text)
 
 	@allure.feature("Base Page")
-	def parabank_logo_test(self):
+	def verify_parabank_logo(self):
 
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
@@ -159,7 +159,7 @@ class BaseContextCase(unittest.TestCase):
 			                 self.page.para_bank_logo_img_title)
 
 	@allure.feature("Base Page")
-	def parabank_admin_logo_test(self):
+	def verify_parabank_admin_logo(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
@@ -176,7 +176,7 @@ class BaseContextCase(unittest.TestCase):
 			                 self.page.admin_logo_formated_img_src)
 
 	@allure.feature("Base Page")
-	def customer_login_test(self):
+	def verify_customer_login(self):
 
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
@@ -241,7 +241,7 @@ class BaseContextCase(unittest.TestCase):
 			                 self.page.register_text)
 
 	@allure.feature("Base Page")
-	def footer_items_test(self):
+	def verify_footer_items(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
