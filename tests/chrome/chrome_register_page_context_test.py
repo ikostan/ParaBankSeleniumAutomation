@@ -327,3 +327,18 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 
 		# Register web page elements validation:
 		self.verify_confirm_title()
+
+	def test_register_button(self):
+		allure.dynamic.description("""
+		Context base elements validation > Register Form:
+			1. Open Register web page
+			2. Do "Register" button verification
+		""")
+		allure.dynamic.title("\"Register\" button test")
+		allure.dynamic.severity(allure.severity_level.CRITICAL)
+
+		# open web browser
+		self.open_web_browser(self.browser)
+
+		# Register web page elements validation:
+		self.verify_register_button()
