@@ -173,4 +173,4 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		self.open_web_browser(self.browser)
 
 		# Personal Info Context base elements validation:
-		self.first_name_title_test()
+		self.verify_first_name_title()
