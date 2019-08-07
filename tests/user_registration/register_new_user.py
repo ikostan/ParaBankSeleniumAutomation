@@ -1,14 +1,14 @@
 import allure
 from utils.screenshot import screenshot_on_fail
 from expected_results.users.john_doe import JohnDoe
-from tests.context_tests.register_context_case import RegisterContextTestCase
+from tests.context_tests.register_context_case import RegisterContextCase
 
 
 @allure.feature("Register Page")
 @allure.story('A New User Registration')
 @allure.suite('Register Page Functionality')
 @screenshot_on_fail()
-class UserRegistrationTestCase(RegisterContextTestCase):
+class UserRegistrationTestCase(RegisterContextCase):
 
 	def fill_out_user_data(self, client=JohnDoe, browser='chrome'):  # TODO: remove browser after done
 
