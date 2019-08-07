@@ -10,7 +10,7 @@ class BasePersonalInfoContextCase(BaseContextCase):
 	"""
 
 	@allure.feature("Base Personal Info Context")
-	def first_name_title_test(self):
+	def verify_first_name_title(self):
 		'''
 		Validate First Name field title
 		:return:
@@ -20,7 +20,7 @@ class BasePersonalInfoContextCase(BaseContextCase):
 			self.assertEqual(BasePersonalInfoContext.FORM['first_name']['title'], self.page.first_name_title)
 
 	@allure.feature("Base Personal Info Context")
-	def last_name_title_test(self):
+	def verify_last_name_title(self):
 		'''
 		Validate Last Name field title
 		:return:
@@ -30,7 +30,7 @@ class BasePersonalInfoContextCase(BaseContextCase):
 			self.assertEqual(BasePersonalInfoContext.FORM['last_name']['title'], self.page.last_name_title)
 
 	@allure.feature("Base Personal Info Context")
-	def address_title_test(self):
+	def verify_address_title(self):
 		'''
 		Validate Address field title
 		:return:
@@ -40,7 +40,7 @@ class BasePersonalInfoContextCase(BaseContextCase):
 			self.assertEqual(BasePersonalInfoContext.FORM['address']['title'], self.page.address_title)
 
 	@allure.feature("Base Personal Info Context")
-	def city_title_test(self):
+	def verify_city_title(self):
 		'''
 		Validate city field title
 		:return:
@@ -50,7 +50,7 @@ class BasePersonalInfoContextCase(BaseContextCase):
 			self.assertEqual(BasePersonalInfoContext.FORM['city']['title'], self.page.city_title)
 
 	@allure.feature("Base Personal Info Context")
-	def state_title_test(self):
+	def verify_state_title(self):
 		'''
 		Validate state field title
 		:return:
@@ -60,7 +60,7 @@ class BasePersonalInfoContextCase(BaseContextCase):
 			self.assertEqual(BasePersonalInfoContext.FORM['state']['title'], self.page.state_title)
 
 	@allure.feature("Base Personal Info Context")
-	def zip_code_title_test(self):
+	def verify_zip_code_title(self):
 		'''
 		Validate Zip Code field title
 		:return:
@@ -70,7 +70,7 @@ class BasePersonalInfoContextCase(BaseContextCase):
 			self.assertEqual(BasePersonalInfoContext.FORM['zip_code']['title'], self.page.zip_code_title)
 
 	@allure.feature("Base Personal Info Context")
-	def phone_title_test(self):
+	def verify_phone_title(self):
 		'''
 		Validate phone field title
 		:return:
@@ -80,7 +80,7 @@ class BasePersonalInfoContextCase(BaseContextCase):
 			self.assertEqual(BasePersonalInfoContext.FORM['phone']['title'], self.page.phone_title)
 
 	@allure.feature("Base Personal Info Context")
-	def ssn_title_test(self):
+	def verify_ssn_title(self):
 		'''
 		Validate ssn field title
 		:return:
