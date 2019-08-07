@@ -2,7 +2,7 @@ import allure
 from utils.driver import Driver
 from utils.screenshot import screenshot_on_fail
 from page_models.admin_page_model import AdminPageModel
-from tests.context_tests.base_context_case import TestBaseContextCase
+from tests.context_tests.base_tests.base_context_case import BaseContextCase
 from expected_results.page_context.admin_page_context import AdminPageContext
 
 
@@ -10,7 +10,7 @@ from expected_results.page_context.admin_page_context import AdminPageContext
 @allure.story('Admin Context')
 @allure.suite('Admin Page Context Test Suite')
 @screenshot_on_fail()
-class AdminPageContextTestCase(TestBaseContextCase):
+class AdminPageContextCase(BaseContextCase):
 
 	def open_web_browser(self, browser):
 
