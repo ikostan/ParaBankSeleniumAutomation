@@ -177,6 +177,7 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		# Personal Info Context base elements validation:
 		self.verify_first_name_title()
 
+	@allure.feature("Base Personal Info Context")
 	def test_last_name_title(self):
 		allure.dynamic.description("""
 		Context base elements validation > Register Form:
@@ -192,6 +193,7 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		# Personal Info Context base elements validation:
 		self.verify_last_name_title()
 
+	@allure.feature("Base Personal Info Context")
 	def test_address_title(self):
 		allure.dynamic.description("""
 		Context base elements validation > Register Form:
@@ -207,6 +209,7 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		# Personal Info Context base elements validation:
 		self.verify_address_title()
 
+	@allure.feature("Base Personal Info Context")
 	def test_city_title(self):
 		allure.dynamic.description("""
 		Context base elements validation > Register Form:
@@ -222,6 +225,7 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		# Personal Info Context base elements validation:
 		self.verify_city_title()
 
+	@allure.feature("Base Personal Info Context")
 	def test_state_title(self):
 		allure.dynamic.description("""
 		Context base elements validation > Register Form:
@@ -237,6 +241,7 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		# Personal Info Context base elements validation:
 		self.verify_state_title()
 
+	@allure.feature("Base Personal Info Context")
 	def test_zip_code_title(self):
 		allure.dynamic.description("""
 		Context base elements validation > Register Form:
@@ -252,6 +257,7 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		# Personal Info Context base elements validation:
 		self.verify_zip_code_title()
 
+	@allure.feature("Base Personal Info Context")
 	def test_phone_title(self):
 		allure.dynamic.description("""
 		Context base elements validation > Register Form:
@@ -267,6 +273,7 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		# Personal Info Context base elements validation:
 		self.verify_phone_title()
 
+	@allure.feature("Base Personal Info Context")
 	def test_ssn_title(self):
 		allure.dynamic.description("""
 		Context base elements validation > Register Form:
@@ -283,6 +290,7 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		self.verify_ssn_title()
 
 	# Registration page context - Register web page context base elements validation
+	@allure.feature("Register Page")
 	def test_username_title(self):
 		allure.dynamic.description("""
 		Context base elements validation > Register Form:
@@ -298,6 +306,7 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		# Register web page elements validation:
 		self.verify_username_title()
 
+	@allure.feature("Register Page")
 	def test_password_title(self):
 		allure.dynamic.description("""
 		Context base elements validation > Register Form:
@@ -313,6 +322,7 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		# Register web page elements validation:
 		self.verify_password_title()
 
+	@allure.feature("Register Page")
 	def test_confirm_title(self):
 		allure.dynamic.description("""
 		Context base elements validation > Register Form:
@@ -328,6 +338,7 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		# Register web page elements validation:
 		self.verify_confirm_title()
 
+	@allure.feature("Register Page")
 	def test_register_button(self):
 		allure.dynamic.description("""
 		Context base elements validation > Register Form:
