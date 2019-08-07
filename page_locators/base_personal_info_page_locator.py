@@ -9,7 +9,7 @@ class BasePersonalInfoPageLocator:
 	Separate the locator strings from the place where they are being used.
 	'''
 
-	HEADER = (By.XPATH, '//*[@id="rightPanel"]/h1')
+	HEADER = (By.XPATH, '//*[@id="rightPanel"]/h1[@class="title"]')
 	DESCRIPTION = (By.XPATH, '//*[@id="rightPanel"]/p')
 
 	FIRST_NAME_TITLE = (By.XPATH, '//*[@id="customerForm"]/table/tbody/tr[1]/td[1]/b')
