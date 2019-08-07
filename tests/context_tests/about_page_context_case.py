@@ -1,5 +1,6 @@
 import allure
 from utils.driver import Driver
+from utils.refresh_page import refresh_page
 from utils.screenshot import screenshot_on_fail
 from page_models.about_page_model import AboutPageModel
 from tests.context_tests.base_tests.base_context_case import BaseContextCase
@@ -18,6 +19,7 @@ class AboutPageContextCase(BaseContextCase):
 			driver = Driver(browser)
 			self.page = AboutPageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
 			self.page.go()
+			refresh_page(AboutPageContext.TITLE, self.page)
 
 	@allure.feature("About Page")
 	def verify_page_url(self):
