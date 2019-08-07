@@ -24,7 +24,6 @@ class RegisterContextCase(BasePersonalInfoContextCase):
 	@allure.feature("Register Page")
 	def verify_page_url(self):
 
-		allure.dynamic.severity(allure.severity_level.BLOCKER)
 		with allure.step('Verify "Register" web page URL. Expected result: {}'.format(RegisterPageContext.URL)):
 			self.assertEqual(RegisterPageContext.URL,
 			                 self.page.url)
@@ -32,7 +31,6 @@ class RegisterContextCase(BasePersonalInfoContextCase):
 	@allure.feature("Register Page")
 	def verify_page_title(self):
 
-		allure.dynamic.severity(allure.severity_level.MINOR)
 		with allure.step('Verify "Register" web page title. Expected result: {}'.format(RegisterPageContext.TITLE)):
 			self.assertEqual(RegisterPageContext.TITLE,
 			                 self.page.title)
@@ -41,20 +39,34 @@ class RegisterContextCase(BasePersonalInfoContextCase):
 	def verify_username_title(self):
 
 		expected = RegisterPageContext.FORM['username']['title']
-		allure.dynamic.severity(allure.severity_level.MINOR)
 		with allure.step('Verify "Username" title. Expected result: {}'.format(expected)):
-			self.assertEqual(expected, self.page.title)
+			self.assertEqual(expected, self.page.username_title)
 
 	@allure.feature("Register Page")
 	def verify_password_title(self):
 		expected = RegisterPageContext.FORM['password']['title']
-		allure.dynamic.severity(allure.severity_level.MINOR)
 		with allure.step('Verify "Password" title. Expected result: {}'.format(expected)):
-			self.assertEqual(expected, self.page.title)
+			self.assertEqual(expected, self.page.password_title)
 
 	@allure.feature("Register Page")
 	def verify_confirm_title(self):
+
 		expected = RegisterPageContext.FORM['confirm']['title']
-		allure.dynamic.severity(allure.severity_level.MINOR)
 		with allure.step('Verify "Confirm" title. Expected result: {}'.format(expected)):
-			self.assertEqual(expected, self.page.title)
+			self.assertEqual(expected, self.page.confirm_title)
+
+	@allure.feature("Register Page")
+	def verify_register_button(self):
+
+		with allure.step('Verify "Register" button label. Expected result: {}'.format(
+				RegisterPageContext.REGISTER_BUTTON['value'])):
+			self.assertEqual(RegisterPageContext.REGISTER_BUTTON['value'], self.page.register_btn_label)
+
+		with allure.step('Verify "Register" button class. Expected result: {}'.format(
+				RegisterPageContext.REGISTER_BUTTON['class'])):
+			self.assertEqual(RegisterPageContext.REGISTER_BUTTON['class'], self.page.register_btn_label)
+
+		with allure.step('Verify "Register" button type. Expected result: {}'.format(
+				RegisterPageContext.REGISTER_BUTTON['type'])):
+			self.assertEqual(RegisterPageContext.REGISTER_BUTTON['type'], self.page.register_btn_label)
+
