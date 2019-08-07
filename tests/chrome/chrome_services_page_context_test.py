@@ -1,6 +1,9 @@
 import allure
 from utils.screenshot import screenshot_on_fail
+from utils.open_web_browser import open_web_browser
+from page_models.services_page_model import ServicesPageModel
 from tests.context_tests.services_page_context_case import ServicesPageContextCase
+from expected_results.page_context.services_page_context import ServicesPageContext
 
 
 @allure.suite("Chrome Browser Context Testing")
@@ -8,7 +11,22 @@ from tests.context_tests.services_page_context_case import ServicesPageContextCa
 @screenshot_on_fail()
 class TestChromeServicesPageContext(ServicesPageContextCase):
 
-	browser = 'chrome'
+	@classmethod
+	def setUpClass(cls):
+		with allure.step("Open web browser"):
+			cls.browser = 'chrome'
+			cls.page_model = ServicesPageModel
+			cls.page_context = ServicesPageContext
+			cls.page = open_web_browser(browser=cls.browser,
+			                            page_model=cls.page_model,
+			                            page_context=cls.page_context)
+
+	@classmethod
+	def tearDownClass(cls):
+		with allure.step("Close web browser"):
+			if cls.page:
+				cls.page.quit()
+				cls.page = None
 
 	@allure.feature("Services Page")
 	def test_page_url(self):
@@ -21,7 +39,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
 		# open web browser
-		self.open_web_browser(self.browser)
+		# self.open_web_browser(self.browser)
 
 		# Verify web page url
 		self.verify_page_url()
@@ -37,7 +55,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# open web browser
-		self.open_web_browser(self.browser)
+		# self.open_web_browser(self.browser)
 
 		# Verify web page title
 		self.verify_page_title()
@@ -54,7 +72,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# open web browser
-		self.open_web_browser(self.browser)
+		# self.open_web_browser(self.browser)
 
 		# Context base elements validation:
 		self.verify_parabank_admin_logo()
@@ -70,7 +88,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
 		# open web browser
-		self.open_web_browser(self.browser)
+		# self.open_web_browser(self.browser)
 
 		# Context base elements validation:
 		self.verify_parabank_logo()
@@ -86,7 +104,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# open web browser
-		self.open_web_browser(self.browser)
+		# self.open_web_browser(self.browser)
 
 		# Context base elements validation:
 		self.verify_right_menu_home_button()
@@ -102,7 +120,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# open web browser
-		self.open_web_browser(self.browser)
+		# self.open_web_browser(self.browser)
 
 		# Context base elements validation:
 		self.verify_right_menu_contact_button()
@@ -118,7 +136,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# open web browser
-		self.open_web_browser(self.browser)
+		# self.open_web_browser(self.browser)
 
 		# Context base elements validation:
 		self.verify_right_menu_about_button()
@@ -134,7 +152,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
 		# open web browser
-		self.open_web_browser(self.browser)
+		# self.open_web_browser(self.browser)
 
 		# Context base elements validation:
 		self.verify_solutions_menu_items()
@@ -150,7 +168,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		# open web browser
-		self.open_web_browser(self.browser)
+		# self.open_web_browser(self.browser)
 
 		# Context base elements validation:
 		self.verify_customer_login()
@@ -166,7 +184,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
 		# open web browser
-		self.open_web_browser(self.browser)
+		# self.open_web_browser(self.browser)
 
 		# Context base elements validation:
 		self.verify_footer_items()
