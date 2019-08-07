@@ -12,7 +12,9 @@ from tests.context_tests.base_personal_context_case import BasePersonalInfoConte
 @screenshot_on_fail()
 class RegisterContextTestCase(BasePersonalInfoContextTestCase):
 
+	# TODO: remove after done
 	def open_web_browser(self, browser):
+
 		with allure.step('Open web browser on: {}'.format(RegisterPageContext.URL)):
 			# Open web page
 			driver = Driver(browser)
@@ -29,8 +31,30 @@ class RegisterContextTestCase(BasePersonalInfoContextTestCase):
 
 	@allure.feature("Register Page")
 	def verify_page_title(self):
+
 		allure.dynamic.severity(allure.severity_level.MINOR)
 		with allure.step('Verify "Register" web page title. Expected result: {}'.format(RegisterPageContext.TITLE)):
 			self.assertEqual(RegisterPageContext.TITLE,
 			                 self.page.title)
 
+	@allure.feature("Register Page")
+	def username_title_test(self):
+
+		expected = RegisterPageContext.FORM['username']['title']
+		allure.dynamic.severity(allure.severity_level.MINOR)
+		with allure.step('Verify "Username" title. Expected result: {}'.format(expected)):
+			self.assertEqual(expected, self.page.title)
+
+	@allure.feature("Register Page")
+	def password_title_test(self):
+		expected = RegisterPageContext.FORM['password']['title']
+		allure.dynamic.severity(allure.severity_level.MINOR)
+		with allure.step('Verify "Password" title. Expected result: {}'.format(expected)):
+			self.assertEqual(expected, self.page.title)
+
+	@allure.feature("Register Page")
+	def confirm_title_test(self):
+		expected = RegisterPageContext.FORM['confirm']['title']
+		allure.dynamic.severity(allure.severity_level.MINOR)
+		with allure.step('Verify "Confirm" title. Expected result: {}'.format(expected)):
+			self.assertEqual(expected, self.page.title)
