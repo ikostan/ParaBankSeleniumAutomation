@@ -1,12 +1,12 @@
 import allure
 from utils.screenshot import screenshot_on_fail
-from tests.context_tests.admin_page_context_case import AdminPageContextTestCase
+from tests.context_tests.admin_page_context_case import AdminPageContextCase
 
 
 @allure.suite("Chrome Browser Context Testing")
 @allure.sub_suite('Chrome Admin Page Context Test')
 @screenshot_on_fail()
-class TestChromeAdminPageContext(AdminPageContextTestCase):
+class TestChromeAdminPageContext(AdminPageContextCase):
 
 	browser = 'chrome'
 
