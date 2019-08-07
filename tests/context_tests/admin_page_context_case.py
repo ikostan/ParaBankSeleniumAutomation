@@ -1,8 +1,5 @@
 import allure
-from utils.driver import Driver
-from utils.refresh_page import refresh_page
 from utils.screenshot import screenshot_on_fail
-from page_models.admin_page_model import AdminPageModel
 from tests.context_tests.base_tests.base_context_case import BaseContextCase
 from expected_results.page_context.admin_page_context import AdminPageContext
 
@@ -13,14 +10,18 @@ from expected_results.page_context.admin_page_context import AdminPageContext
 @screenshot_on_fail()
 class AdminPageContextCase(BaseContextCase):
 
-	def open_web_browser(self, browser):
+	'''
+	@staticmethod
+	def open_web_browser(browser):
 
 		# Open web page
-		with allure.step("Open web browser on: {}".format(AdminPageContext.URL)):
-			driver = Driver(browser)
-			self.page = AdminPageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
-			self.page.go()
-			refresh_page(AdminPageContext.TITLE, self.page)
+		# with allure.step("Open web browser on: {}".format(AdminPageContext.URL)):
+		driver = Driver(browser)
+		page = AdminPageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
+		page.go()
+		refresh_page(AdminPageContext.TITLE, page)
+		return page
+	'''
 
 	@allure.feature("Admin Page")
 	def verify_page_url(self):
