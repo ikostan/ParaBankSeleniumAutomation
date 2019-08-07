@@ -4,7 +4,7 @@ from expected_results.page_context.base_page_context import BasePageContext
 
 
 # @allure.feature("Base Page")
-class TestBaseContextCase(unittest.TestCase):
+class BaseContextCase(unittest.TestCase):
 	"""
 	BaseTest
 	This class should be the parent class to each test case class.
@@ -37,6 +37,13 @@ class TestBaseContextCase(unittest.TestCase):
 
 	@allure.feature("Base Page")
 	def solutions_menu_items_test(self):
+
+		allure.dynamic.description("""
+		Context base elements validation > 'Solutions' menu items:
+			1. Open Home web page
+			2. Do 'Solutions' menu items verification
+		""")
+		allure.dynamic.title("'Solutions' menu items test")
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
