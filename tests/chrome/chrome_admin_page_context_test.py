@@ -50,7 +50,7 @@ class TestChromeAdminPageContext(AdminPageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.parabank_admin_logo_test()
+		self.verify_parabank_admin_logo()
 
 	def test_parabank_logo(self):
 		allure.dynamic.description("""
@@ -64,7 +64,7 @@ class TestChromeAdminPageContext(AdminPageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.parabank_logo_test()
+		self.verify_parabank_logo()
 
 	def test_right_menu_home_button(self):
 		allure.dynamic.description("""
@@ -78,7 +78,7 @@ class TestChromeAdminPageContext(AdminPageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.right_menu_home_button_test()
+		self.verify_right_menu_home_button()
 
 	def test_right_menu_contact_button(self):
 		allure.dynamic.description("""
@@ -92,7 +92,7 @@ class TestChromeAdminPageContext(AdminPageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.right_menu_contact_button_test()
+		self.verify_right_menu_contact_button()
 
 	def test_right_menu_about_button(self):
 		allure.dynamic.description("""
@@ -106,7 +106,7 @@ class TestChromeAdminPageContext(AdminPageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.right_menu_about_button_test()
+		self.verify_right_menu_about_button()
 
 	def test_solutions_menu_items(self):
 		allure.dynamic.description("""
@@ -120,7 +120,7 @@ class TestChromeAdminPageContext(AdminPageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.solutions_menu_items_test()
+		self.verify_solutions_menu_items()
 
 	def test_customer_login(self):
 		allure.dynamic.description("""
@@ -134,7 +134,7 @@ class TestChromeAdminPageContext(AdminPageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.customer_login_test()
+		self.verify_customer_login()
 
 	def test_footer_items(self):
 		allure.dynamic.description("""
@@ -148,6 +148,6 @@ class TestChromeAdminPageContext(AdminPageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.footer_items_test()
+		self.verify_footer_items()
 
 
