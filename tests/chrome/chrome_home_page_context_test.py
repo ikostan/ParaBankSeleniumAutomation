@@ -117,7 +117,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.parabank_admin_logo_test()
+		self.verify_parabank_admin_logo()
 
 	@allure.feature("Base Page")
 	def test_parabank_logo(self):
@@ -132,7 +132,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.parabank_logo_test()
+		self.verify_parabank_logo()
 
 	@allure.feature("Base Page")
 	def test_right_menu_home_button(self):
@@ -147,7 +147,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.right_menu_home_button_test()
+		self.verify_right_menu_home_button()
 
 	@allure.feature("Base Page")
 	def test_right_menu_about_button(self):
@@ -166,7 +166,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.right_menu_about_button_test()
+		self.verify_right_menu_about_button()
 
 	@allure.feature("Base Page")
 	def test_right_menu_contact_button(self):
@@ -181,7 +181,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.right_menu_contact_button_test()
+		self.verify_right_menu_contact_button()
 
 	@allure.feature("Base Page")
 	def test_solutions_menu_items(self):
@@ -196,7 +196,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.solutions_menu_items_test()
+		self.verify_solutions_menu_items()
 
 	@allure.feature("Base Page")
 	def test_customer_login(self):
@@ -211,7 +211,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.customer_login_test()
+		self.verify_customer_login()
 
 	@allure.feature("Base Page")
 	def test_footer_items(self):
@@ -227,5 +227,5 @@ class TestChromeHomePageContext(HomePageContextCase):
 		self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.footer_items_test()
+		self.verify_footer_items()
 
