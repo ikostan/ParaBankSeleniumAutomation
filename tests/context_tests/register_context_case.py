@@ -1,5 +1,6 @@
 import allure
 from utils.driver import Driver
+from utils.refresh_page import refresh_page
 from utils.screenshot import screenshot_on_fail
 from page_models.register_page_model import RegisterPageModel
 from expected_results.page_context.register_page_context import RegisterPageContext
@@ -20,6 +21,7 @@ class RegisterContextCase(BasePersonalInfoContextCase):
 			driver = Driver(browser)
 			self.page = RegisterPageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
 			self.page.go()
+			refresh_page(RegisterPageContext.TITLE, self.page)
 
 	@allure.feature("Register Page")
 	def verify_page_url(self):
