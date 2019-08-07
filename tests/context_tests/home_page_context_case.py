@@ -7,7 +7,7 @@ from tests.context_tests.base_tests.base_context_case import BaseContextCase
 from expected_results.page_context.home_page_context import HomePageContext
 
 
-@allure.feature("Home Page")
+# @allure.feature("Home Page")
 @allure.story('Home Context')
 @allure.suite('Home Page Context Test Suite')
 @screenshot_on_fail()
@@ -22,7 +22,7 @@ class HomePageContextCase(BaseContextCase):
 			self.page.go()
 			refresh_page(HomePageContext.TITLE, self.page)
 
-	@allure.feature("Home Page")
+	# @allure.feature("Home Page")
 	def verify_page_url(self):
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
@@ -30,7 +30,7 @@ class HomePageContextCase(BaseContextCase):
 			self.assertEqual(HomePageContext.URL,
 			                 self.page.url)
 
-	@allure.feature("Home Page")
+	# @allure.feature("Home Page")
 	def verify_page_title(self):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
@@ -38,7 +38,7 @@ class HomePageContextCase(BaseContextCase):
 			self.assertEqual(HomePageContext.TITLE,
 			                 self.page.title)
 
-	@allure.feature("Home Page")
+	# @allure.feature("Home Page")
 	def verify_atm_services_context(self):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
@@ -77,7 +77,7 @@ class HomePageContextCase(BaseContextCase):
 			self.assertEqual(HomePageContext.ATM_SERVICES['Make Deposits']['href'],
 			                 self.page.atm_make_deposits_formated_href)
 
-	@allure.feature("Home Page")
+	# @allure.feature("Home Page")
 	def verify_online_services_context(self):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
@@ -116,7 +116,7 @@ class HomePageContextCase(BaseContextCase):
 			self.assertEqual(HomePageContext.ONLINE_SERVICES['Transfer Funds']['href'],
 			                 self.page.online_transfer_funds_formated_href)
 
-	@allure.feature("Home Page")
+	# @allure.feature("Home Page")
 	def verify_read_more_services_button(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
@@ -131,7 +131,7 @@ class HomePageContextCase(BaseContextCase):
 			self.assertEqual(HomePageContext.READ_MORE_SERVICES['href'],
 			                 self.page.read_more_services_formated_href)
 
-	@allure.feature("Home Page")
+	# @allure.feature("Home Page")
 	def verify_read_more_news_button(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
@@ -146,7 +146,7 @@ class HomePageContextCase(BaseContextCase):
 			self.assertEqual(HomePageContext.READ_MORE_NEWS['href'],
 			                 self.page.read_more_news_formated_href)
 
-	@allure.feature("Home Page")
+	# @allure.feature("Home Page")
 	def verify_latest_news_title(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
