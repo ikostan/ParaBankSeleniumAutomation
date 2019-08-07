@@ -88,12 +88,13 @@ class BasePageModel:
 		if http_code >= 400:
 			print("\nHTTP error code: {}.\nTrying to refresh...".format(http_code))
 			self._driver.refresh()
-			http_code = self.get_http_status_code(self._url)
 
+		'''
 		if http_code >= 400:
 			raise Exception('\nERROR: The webpage \'{}\' is not available (HTTP code: {}).'
 			                'Please check URL and retry.\n'.format(self._url,
 			                                                       http_code))
+		'''
 
 		self._driver.maximize_window()
 		return None
