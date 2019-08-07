@@ -1,12 +1,12 @@
 import allure
 from utils.screenshot import screenshot_on_fail
-from tests.context_tests.home_page_context_case import TestHomePageContextCase
+from tests.context_tests.home_page_context_case import HomePageContextCase
 
 
 @allure.suite("Chrome Browser Context Testing")
 @allure.sub_suite('Chrome Home Page Context Test')
 @screenshot_on_fail()
-class TestChromeHomePageContext(TestHomePageContextCase):
+class TestChromeHomePageContext(HomePageContextCase):
 
 	browser = 'chrome'
 
@@ -228,6 +228,4 @@ class TestChromeHomePageContext(TestHomePageContextCase):
 
 		# Context base elements validation:
 		self.footer_items_test()
-
-
 
