@@ -91,6 +91,28 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		return txt
 
 	@property
+	def register_btn_class(self):
+		'''
+		Returns register button class
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.REGISTER_BUTTON)
+		txt = element.element_class
+		return txt
+
+	@property
+	def register_btn_type(self):
+		'''
+		Returns register button type
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.REGISTER_BUTTON)
+		txt = element.element_type
+		return txt
+
+	@property
 	def click_register_btn(self):
 		'''
 		Click on register button
