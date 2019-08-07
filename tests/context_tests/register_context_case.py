@@ -66,9 +66,9 @@ class RegisterContextCase(BasePersonalInfoContextCase):
 
 		with allure.step('Verify "Register" button class. Expected result: {}'.format(
 				RegisterPageContext.REGISTER_BUTTON['class'])):
-			self.assertEqual(RegisterPageContext.REGISTER_BUTTON['class'], self.page.register_btn_label)
+			self.assertEqual(RegisterPageContext.REGISTER_BUTTON['class'], self.page.register_btn_class)
 
 		with allure.step('Verify "Register" button type. Expected result: {}'.format(
 				RegisterPageContext.REGISTER_BUTTON['type'])):
-			self.assertEqual(RegisterPageContext.REGISTER_BUTTON['type'], self.page.register_btn_label)
+			self.assertEqual(RegisterPageContext.REGISTER_BUTTON['type'], self.page.register_btn_type)
 
