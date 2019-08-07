@@ -10,10 +10,7 @@ class BaseContextCase(unittest.TestCase):
 	This class should be the parent class to each test case class.
 	"""
 
-	@classmethod
-	def setUpClass(cls):
-		cls.page = None
-
+	'''
 	def setUp(self):
 		with allure.step("""
 		setUp: 
@@ -24,16 +21,21 @@ class BaseContextCase(unittest.TestCase):
 				self.page.quit()
 			self.page = None
 
-	@classmethod
-	def tearDownClass(cls):
-		if cls.page:
-			cls.page.quit()
-
 	def tearDown(self):
 		with allure.step("tearDown: close current browser tab"):
 			# screenshots_collector()
 			if self.page:
 				self.page.close()
+				
+	@classmethod
+	def setUpClass(cls):
+		cls.page = None
+
+	@classmethod
+	def tearDownClass(cls):
+		if cls.page:
+			cls.page.quit()
+	'''
 
 	# @allure.feature("Base Page")
 	def verify_solutions_menu_items(self):
