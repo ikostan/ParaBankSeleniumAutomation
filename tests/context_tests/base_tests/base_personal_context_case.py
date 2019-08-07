@@ -3,7 +3,7 @@ from tests.context_tests.base_tests.base_context_case import BaseContextCase
 from expected_results.page_context.base_personal_info_context import BasePersonalInfoContext
 
 
-# @allure.feature("Base Personal Info Context")
+@allure.feature("Base Personal Info Context")
 class BasePersonalInfoContextCase(BaseContextCase):
 	"""
 	This class should be the parent class to each test case class.
