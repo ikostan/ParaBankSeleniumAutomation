@@ -10,6 +10,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 
 	browser = 'chrome'
 
+	@allure.feature("Services Page")
 	def test_page_url(self):
 		allure.dynamic.description("""
 		Context base elements validation > Services page URL:
@@ -25,7 +26,24 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		# Verify web page url
 		self.verify_page_url()
 
+	@allure.feature("Services Page")
+	def test_page_title(self):
+		allure.dynamic.description("""
+		Context base elements validation > Services page title:
+			1. Open Services web page
+			2. Do Services page title verification
+		""")
+		allure.dynamic.title("Services page title test")
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
+		# open web browser
+		self.open_web_browser(self.browser)
+
+		# Verify web page title
+		self.verify_page_title()
+
 	# Base Context test
+	@allure.feature("Base Page")
 	def test_parabank_admin_logo(self):
 		allure.dynamic.description("""
 		Context base elements validation > Admin logo:
@@ -41,6 +59,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		# Context base elements validation:
 		self.verify_parabank_admin_logo()
 
+	@allure.feature("Base Page")
 	def test_parabank_logo(self):
 		allure.dynamic.description("""
 		Context base elements validation > ParaBank logo:
@@ -56,6 +75,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		# Context base elements validation:
 		self.verify_parabank_logo()
 
+	@allure.feature("Base Page")
 	def test_right_menu_home_button(self):
 		allure.dynamic.description("""
 		Context base elements validation > Right menu:
@@ -71,6 +91,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		# Context base elements validation:
 		self.verify_right_menu_home_button()
 
+	@allure.feature("Base Page")
 	def test_right_menu_contact_button(self):
 		allure.dynamic.description("""
 		Context base elements validation > Right menu:
@@ -86,6 +107,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		# Context base elements validation:
 		self.verify_right_menu_contact_button()
 
+	@allure.feature("Base Page")
 	def test_right_menu_about_button(self):
 		allure.dynamic.description("""
 		Context base elements validation > Right menu:
@@ -101,6 +123,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		# Context base elements validation:
 		self.verify_right_menu_about_button()
 
+	@allure.feature("Base Page")
 	def test_solutions_menu_items(self):
 		allure.dynamic.description("""
 		Context base elements validation > Solution menu:
@@ -116,6 +139,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		# Context base elements validation:
 		self.verify_solutions_menu_items()
 
+	@allure.feature("Base Page")
 	def test_customer_login(self):
 		allure.dynamic.description("""
 		Context base elements validation > Customer Login:
@@ -131,6 +155,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		# Context base elements validation:
 		self.verify_customer_login()
 
+	@allure.feature("Base Page")
 	def test_footer_items(self):
 		allure.dynamic.description("""
 		Context base elements validation > Footer:
@@ -145,21 +170,6 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 
 		# Context base elements validation:
 		self.verify_footer_items()
-
-	def test_page_title(self):
-		allure.dynamic.description("""
-		Context base elements validation > Services page title:
-			1. Open Services web page
-			2. Do Services page title verification
-		""")
-		allure.dynamic.title("Services page title test")
-		allure.dynamic.severity(allure.severity_level.MINOR)
-
-		# open web browser
-		self.open_web_browser(self.browser)
-
-		# Verify web page title
-		self.verify_page_title()
 
 	# Services Context Testing
 
