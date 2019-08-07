@@ -25,21 +25,6 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		# Verify web page url
 		self.verify_page_url()
 
-	def test_page_title(self):
-		allure.dynamic.description("""
-		Context base elements validation > Services page title:
-			1. Open Services web page
-			2. Do Services page title verification
-		""")
-		allure.dynamic.title("Services page title test")
-		allure.dynamic.severity(allure.severity_level.MINOR)
-
-		# open web browser
-		self.open_web_browser(self.browser)
-
-		# Verify web page title
-		self.verify_page_title()
-
 	def test_parabank_admin_logo(self):
 		allure.dynamic.description("""
 		Context base elements validation > Admin logo:
@@ -159,4 +144,19 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 
 		# Context base elements validation:
 		self.verify_footer_items()
+
+	def test_page_title(self):
+		allure.dynamic.description("""
+		Context base elements validation > Services page title:
+			1. Open Services web page
+			2. Do Services page title verification
+		""")
+		allure.dynamic.title("Services page title test")
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
+		# open web browser
+		self.open_web_browser(self.browser)
+
+		# Verify web page title
+		self.verify_page_title()
 
