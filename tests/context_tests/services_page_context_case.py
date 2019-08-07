@@ -2,7 +2,7 @@ import allure
 from utils.driver import Driver
 from utils.screenshot import screenshot_on_fail
 from page_models.services_page_model import ServicesPageModel
-from tests.context_tests.base_context_case import TestBaseContextCase
+from tests.context_tests.base_tests.base_context_case import BaseContextCase
 from expected_results.page_context.services_page_context import ServicesPageContext
 
 
@@ -10,7 +10,7 @@ from expected_results.page_context.services_page_context import ServicesPageCont
 @allure.story('Services Context')
 @allure.suite('Services Page Context Test Suite')
 @screenshot_on_fail()
-class ServicesPageContextTestCase(TestBaseContextCase):
+class ServicesPageContextCase(BaseContextCase):
 
 	def open_web_browser(self, browser):
 		with allure.step('Open web browser on: {}'.format(ServicesPageContext.URL)):
