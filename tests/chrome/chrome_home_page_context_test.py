@@ -10,7 +10,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 
 	browser = 'chrome'
 
-	@allure.feature("Base Page")
+	@allure.feature("Home Page")
 	def test_page_url(self):
 
 		allure.dynamic.description("""
@@ -26,7 +26,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 		# test url
 		self.verify_page_url()
 
-	@allure.feature("Base Page")
+	@allure.feature("Home Page")
 	def test_page_title(self):
 		allure.dynamic.description("""
 		Context base elements validation > Home page title:
