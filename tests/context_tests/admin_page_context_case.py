@@ -1,5 +1,6 @@
 import allure
 from utils.driver import Driver
+from utils.refresh_page import refresh_page
 from utils.screenshot import screenshot_on_fail
 from page_models.admin_page_model import AdminPageModel
 from tests.context_tests.base_tests.base_context_case import BaseContextCase
@@ -19,6 +20,7 @@ class AdminPageContextCase(BaseContextCase):
 			driver = Driver(browser)
 			self.page = AdminPageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
 			self.page.go()
+			refresh_page(AdminPageContext.TITLE, self.page)
 
 	@allure.feature("Admin Page")
 	def verify_page_url(self):
