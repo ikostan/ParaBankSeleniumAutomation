@@ -3,7 +3,7 @@ import unittest
 from expected_results.page_context.base_page_context import BasePageContext
 
 
-# @allure.feature("Base Page")
+@allure.feature("Base Page")
 class BaseContextCase(unittest.TestCase):
 	"""
 	BaseTest
