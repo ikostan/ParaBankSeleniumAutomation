@@ -38,7 +38,7 @@ class RegisterContextCase(BasePersonalInfoContextCase):
 			                 self.page.title)
 
 	@allure.feature("Register Page")
-	def username_title_test(self):
+	def verify_username_title(self):
 
 		expected = RegisterPageContext.FORM['username']['title']
 		allure.dynamic.severity(allure.severity_level.MINOR)
@@ -46,14 +46,14 @@ class RegisterContextCase(BasePersonalInfoContextCase):
 			self.assertEqual(expected, self.page.title)
 
 	@allure.feature("Register Page")
-	def password_title_test(self):
+	def verify_password_title(self):
 		expected = RegisterPageContext.FORM['password']['title']
 		allure.dynamic.severity(allure.severity_level.MINOR)
 		with allure.step('Verify "Password" title. Expected result: {}'.format(expected)):
 			self.assertEqual(expected, self.page.title)
 
 	@allure.feature("Register Page")
-	def confirm_title_test(self):
+	def verify_confirm_title(self):
 		expected = RegisterPageContext.FORM['confirm']['title']
 		allure.dynamic.severity(allure.severity_level.MINOR)
 		with allure.step('Verify "Confirm" title. Expected result: {}'.format(expected)):
