@@ -7,7 +7,7 @@ from expected_results.page_context.register_page_context import RegisterPageCont
 from tests.context_tests.base_tests.base_personal_context_case import BasePersonalInfoContextCase
 
 
-# @allure.feature("Register Page")
+@allure.feature("Register Page")
 @allure.story('Register Context')
 @allure.suite('Register Page Context Test Suite')
 @screenshot_on_fail()
