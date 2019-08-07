@@ -25,6 +25,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		# Verify web page url
 		self.verify_page_url()
 
+	# Base Context test
 	def test_parabank_admin_logo(self):
 		allure.dynamic.description("""
 		Context base elements validation > Admin logo:
@@ -159,4 +160,6 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 
 		# Verify web page title
 		self.verify_page_title()
+
+	# Services Context Testing
 
