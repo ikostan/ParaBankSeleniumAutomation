@@ -1,8 +1,5 @@
 import allure
-from utils.driver import Driver
-from utils.refresh_page import refresh_page
 from utils.screenshot import screenshot_on_fail
-from page_models.register_page_model import RegisterPageModel
 from expected_results.page_context.register_page_context import RegisterPageContext
 from tests.context_tests.base_tests.base_personal_context_case import BasePersonalInfoContextCase
 
@@ -13,15 +10,18 @@ from tests.context_tests.base_tests.base_personal_context_case import BasePerson
 @screenshot_on_fail()
 class RegisterContextCase(BasePersonalInfoContextCase):
 
-	# TODO: remove after done
-	def open_web_browser(self, browser):
+	'''
+	@staticmethod
+	def open_web_browser(browser):
 
-		with allure.step('Open web browser on: {}'.format(RegisterPageContext.URL)):
-			# Open web page
-			driver = Driver(browser)
-			self.page = RegisterPageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
-			self.page.go()
-			refresh_page(RegisterPageContext.TITLE, self.page)
+		# with allure.step('Open web browser on: {}'.format(RegisterPageContext.URL)):
+		# Open web page
+		driver = Driver(browser)
+		page = RegisterPageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
+		page.go()
+		refresh_page(RegisterPageContext.TITLE, page)
+		return page
+	'''
 
 	# Register Page Context
 	# @allure.feature("Register Page")
