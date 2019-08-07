@@ -2,7 +2,7 @@ import allure
 from utils.driver import Driver
 from utils.screenshot import screenshot_on_fail
 from page_models.about_page_model import AboutPageModel
-from tests.context_tests.base_context_case import TestBaseContextCase
+from tests.context_tests.base_tests.base_context_case import BaseContextCase
 from expected_results.page_context.about_page_context import AboutPageContext
 
 
@@ -10,7 +10,7 @@ from expected_results.page_context.about_page_context import AboutPageContext
 @allure.story('About Context')
 @allure.suite('About Page Context Test Suite')
 @screenshot_on_fail()
-class AboutPageContextTestCase(TestBaseContextCase):
+class AboutPageContextCase(BaseContextCase):
 
 	def open_web_browser(self, browser):
 		# Open web page
