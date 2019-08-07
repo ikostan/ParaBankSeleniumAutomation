@@ -1,4 +1,5 @@
 import requests
+from requests.exceptions import ConnectionError
 import selenium.webdriver
 from utils.driver import Driver
 from elements.element import Element
@@ -72,9 +73,12 @@ class BasePageModel:
 		:param url:
 		:return:
 		'''
-		r = requests.get(self._url)
-		print("\nHTTP Status code: {}\n".format(r.status_code))
-		return r.status_code
+		try:
+			r = requests.get(self._url)
+			print("\nHTTP Status code: {}\n".format(r.status_code))
+		except ConnectionError as er:
+			print('\n{}\n'.format(er))
+		return None
 
 	def go(self):
 		'''
@@ -83,11 +87,7 @@ class BasePageModel:
 		'''
 
 		self._driver.get(self._url)
-		http_code = self.get_http_status_code(self._url)
-
-		if http_code >= 400:
-			print("\nHTTP error code: {}.\nTrying to refresh...".format(http_code))
-			self._driver.refresh()
+		self.get_http_status_code(self._url)
 
 		'''
 		if http_code >= 400:
