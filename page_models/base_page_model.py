@@ -65,16 +65,16 @@ class BasePageModel:
 	def explicit_wait_time(self):
 		return self._explicit_wait_time
 
-	def get_http_status_code(self, url):
+	@staticmethod
+	def get_http_status_code(url):
 		'''
 		Returns HTTP status code
 		Using requests library
 
-		:param url:
 		:return:
 		'''
 		try:
-			r = requests.get(self._url)
+			r = requests.get(url)
 			print("\nHTTP Status code: {}\n".format(r.status_code))
 		except ConnectionError as er:
 			print('\n{}\n'.format(er))
