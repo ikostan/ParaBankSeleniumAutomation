@@ -1,6 +1,6 @@
 import allure
 from utils.screenshot import screenshot_on_fail
-from tests.context_tests.base_tests.base_context_case import BaseContextCase
+from tests.context_tests.base_cases.base_context_case import BaseContextCase
 from expected_results.page_context.about_page_context import AboutPageContext
 
 
