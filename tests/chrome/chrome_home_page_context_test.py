@@ -6,8 +6,9 @@ from tests.context_tests.home_page_context_case import HomePageContextCase
 from expected_results.page_context.home_page_context import HomePageContext
 
 
-@allure.suite("Chrome Browser Context Testing")
-@allure.sub_suite('Chrome Home Page Context Test')
+@allure.suite("Chrome Browser")
+@allure.sub_suite('Context Test')
+@allure.feature("Home Page")
 @screenshot_on_fail()
 class TestChromeHomePageContext(HomePageContextCase):
 
@@ -28,7 +29,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 				cls.page.quit()
 				cls.page = None
 
-	@allure.feature("Home Page")
+	# @allure.feature("Home Page")
 	def test_page_url(self):
 
 		allure.dynamic.description("""
@@ -63,7 +64,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 		# Verify Page Title
 		self.verify_page_title()
 
-	@allure.feature("Home Page")
+	# @allure.feature("Home Page")
 	def test_atm_services_context(self):
 		allure.dynamic.description("""
 		Home page Context elements validation > ATM services:
@@ -79,7 +80,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 		# allure.step
 		self.verify_atm_services_context()
 
-	@allure.feature("Home Page")
+	# @allure.feature("Home Page")
 	def test_online_services_context(self):
 		allure.dynamic.description("""
 		Home page Context elements validation > ATM services:
@@ -94,7 +95,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 		# Verify Online Services Context
 		self.verify_online_services_context()
 
-	@allure.feature("Home Page")
+	# @allure.feature("Home Page")
 	def test_read_more_services_button(self):
 		allure.dynamic.description("""
 		Home page Context elements validation > 'Read More' (services) button:
@@ -109,7 +110,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 		# Verify Read More Services button
 		self.verify_read_more_services_button()
 
-	@allure.feature("Home Page")
+	# @allure.feature("Home Page")
 	def test_read_more_news_button(self):
 		allure.dynamic.description("""
 		Home page Context elements validation > 'Read More' (news) button:
@@ -123,7 +124,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 			self.verify_read_more_news_button_text()
 			self.verify_read_more_news_button_href()
 
-	@allure.feature("Home Page")
+	# @allure.feature("Home Page")
 	def test_latest_news_title(self):
 		allure.dynamic.description("""
 		Home page Context elements validation > 'Latest News' title:
