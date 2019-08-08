@@ -10,20 +10,6 @@ from expected_results.page_context.about_page_context import AboutPageContext
 @screenshot_on_fail()
 class AboutPageContextCase(BaseContextCase):
 
-	'''
-	@staticmethod
-	def open_web_browser(browser):
-
-		# Open web page
-		# with allure.step("Open web browser on: {}".format(AboutPageContext.URL)):
-		driver = Driver(browser)
-		page = AboutPageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
-		page.go()
-		refresh_page(AboutPageContext.TITLE, page)
-		return page
-	'''
-
-	@allure.feature("About Page")
 	def verify_page_url(self):
 
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
@@ -32,7 +18,6 @@ class AboutPageContextCase(BaseContextCase):
 			self.assertEqual(AboutPageContext.URL,
 			                 self.page.url)
 
-	@allure.feature("About Page")
 	def verify_page_title(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
@@ -41,7 +26,6 @@ class AboutPageContextCase(BaseContextCase):
 			self.assertEqual(AboutPageContext.TITLE,
 			                 self.page.title)
 
-	@allure.feature("About Page")
 	def verify_description_title(self):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
@@ -49,7 +33,6 @@ class AboutPageContextCase(BaseContextCase):
 		with allure.step("Description title test"):
 			self.assertEqual(AboutPageContext.DESCRIPTION['title'], self.page.description_title)
 
-	@allure.feature("About Page")
 	def verify_description_text(self):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
