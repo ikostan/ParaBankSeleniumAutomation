@@ -22,7 +22,7 @@ class AboutPageContextCase(BaseContextCase):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
-		with allure.step("About page title test"):
+		with allure.step("About Web Page Title test"):
 			self.assertEqual(AboutPageContext.TITLE,
 			                 self.page.title)
 
@@ -30,7 +30,7 @@ class AboutPageContextCase(BaseContextCase):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# Context About page elements validation:
-		with allure.step("Description title test"):
+		with allure.step("Description header test"):
 			self.assertEqual(AboutPageContext.DESCRIPTION['title'], self.page.description_title)
 
 	def verify_description_text(self):
