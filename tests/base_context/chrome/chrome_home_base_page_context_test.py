@@ -8,7 +8,7 @@ from expected_results.page_context.home_page_context import HomePageContext
 
 @allure.suite("Base Context Testing")
 @allure.sub_suite('Chrome Browser')
-@allure.feature("Base Page")
+@allure.feature("Home Base Page")
 @screenshot_on_fail()
 class TestChromeHomeBasePageContext(HomePageContextCase):
 
@@ -29,7 +29,6 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 				cls.page.quit()
 				cls.page = None
 
-	@allure.feature("Home Page")
 	def test_page_url(self):
 
 		allure.dynamic.description("""
@@ -40,16 +39,11 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 		allure.dynamic.title("Web page URL test")
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
-		# open web browser
-		# allure.step
-		# self.open_web_browser()
-
 		# test url
 		expected_url = HomePageContext.URL
 		allure.step
 		self.verify_page_url(expected_url)
 
-	@allure.feature("Home Page")
 	def test_page_title(self):
 		allure.dynamic.description("""
 		Context base elements validation > Home page title:
@@ -57,9 +51,6 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 			2. Do web page title verification
 		""")
 		allure.dynamic.title("Web page title test")
-
-		# open web browser
-		# self.open_web_browser()
 
 		# Verify Page Title
 		self.verify_page_title()
@@ -74,9 +65,6 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 		""")
 		allure.dynamic.title("Admin logo test")
 
-		# open web browser
-		# self.open_web_browser()
-
 		# Context base elements validation:
 		self.verify_parabank_admin_logo()
 
@@ -89,9 +77,6 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 		""")
 		allure.dynamic.title("'ParaBank' logo test")
 
-		# open web browser
-		# self.open_web_browser()
-
 		# Context base elements validation:
 		self.verify_parabank_logo()
 
@@ -103,9 +88,6 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 			2. Do 'Home' button (right menu) verification
 		""")
 		allure.dynamic.title("'Home' button (right menu) test")
-
-		# open web browser
-		# self.open_web_browser()
 
 		# Context base elements validation:
 		self.verify_right_menu_home_button()
@@ -123,9 +105,6 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 		""")
 		allure.dynamic.title("'About' button (right menu) test")
 
-		# open web browser
-		# self.open_web_browser()
-
 		# Context base elements validation:
 		self.verify_right_menu_about_button()
 
@@ -137,9 +116,6 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 			2. Do 'Contact' button (right menu) verification
 		""")
 		allure.dynamic.title("'Contact' button (right menu) test")
-
-		# open web browser
-		# self.open_web_browser()
 
 		# Context base elements validation:
 		self.verify_right_menu_contact_button()
@@ -153,9 +129,6 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 		""")
 		allure.dynamic.title("'Solutions' menu items test")
 
-		# open web browser
-		# self.open_web_browser()
-
 		# Context base elements validation:
 		self.verify_solutions_menu_items()
 
@@ -167,9 +140,6 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 			2. Do 'Customer Login' items verification
 		""")
 		allure.dynamic.title("'Customer Login' test")
-
-		# open web browser
-		# self.open_web_browser()
 
 		# Context base elements validation:
 		self.verify_customer_login()
@@ -183,9 +153,6 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 		""")
 
 		allure.dynamic.title("'Footer' test")
-
-		# open web browser
-		# self.open_web_browser()
 
 		# Context base elements validation:
 		self.verify_footer_items()
