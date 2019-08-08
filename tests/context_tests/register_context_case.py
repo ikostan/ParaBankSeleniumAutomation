@@ -1,7 +1,7 @@
 import allure
 from utils.screenshot import screenshot_on_fail
 from expected_results.page_context.register_page_context import RegisterPageContext
-from tests.context_tests.base_tests.base_personal_context_case import BasePersonalInfoContextCase
+from tests.context_tests.base_cases.base_personal_context_case import BasePersonalInfoContextCase
 
 
 @allure.feature("Register Page")
