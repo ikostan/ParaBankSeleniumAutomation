@@ -1,4 +1,5 @@
 import allure
+import pytest
 from utils.screenshot import screenshot_on_fail
 from tests.context_tests.base_cases.base_context_case import BaseContextCase
 from expected_results.page_context.admin_page_context import AdminPageContext
@@ -10,24 +11,10 @@ from expected_results.page_context.admin_page_context import AdminPageContext
 @screenshot_on_fail()
 class AdminPageContextCase(BaseContextCase):
 
-	'''
-	@staticmethod
-	def open_web_browser(browser):
-
-		# Open web page
-		# with allure.step("Open web browser on: {}".format(AdminPageContext.URL)):
-		driver = Driver(browser)
-		page = AdminPageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
-		page.go()
-		refresh_page(AdminPageContext.TITLE, page)
-		return page
-	'''
-
 	@allure.feature("Admin Page")
 	def verify_page_url(self):
 
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
-
 		with allure.step("Admin page URL test"):
 			self.assertEqual(AdminPageContext.URL,
 			                 self.page.url)
