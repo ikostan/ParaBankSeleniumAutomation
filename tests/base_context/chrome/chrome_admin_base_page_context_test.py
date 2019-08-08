@@ -33,7 +33,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 
 		allure.dynamic.description("""
 		Context base elements validation > Admin page URL:
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do URL verification
 		""")
 		allure.dynamic.title("Web page URL test")
@@ -45,7 +45,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_page_title(self):
 		allure.dynamic.description("""
 		Context base elements validation > Admin page title:
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do web page title verification
 		""")
 		allure.dynamic.title("Web page title test")
@@ -58,7 +58,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_parabank_admin_logo(self):
 		allure.dynamic.description("""
 		Context base elements validation > Admin logo:
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do Admin logo verification
 		""")
 		allure.dynamic.title("Admin logo test")
@@ -70,7 +70,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_parabank_logo(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'ParaBank' logo:
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do Admin logo verification
 		""")
 		allure.dynamic.title("'ParaBank' logo test")
@@ -82,7 +82,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_right_menu_home_button(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Home' button:
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'Home' button (right menu) verification
 		""")
 		allure.dynamic.title("Right menu > 'Home' button test")
@@ -98,7 +98,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 		"""
 		allure.dynamic.description("""
 		Context base elements validation > 'About' button:
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'About' button (right menu) verification
 		""")
 		allure.dynamic.title("Right menu > 'About' button test")
@@ -110,7 +110,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_right_menu_contact_button(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Contact' button:
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'Contact' button (right menu) verification
 		""")
 		allure.dynamic.title("Right menu > 'Contact' button test")
@@ -122,7 +122,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_solutions_menu_items(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Solutions' menu items:
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'Solutions' menu items verification
 		""")
 		allure.dynamic.title("'Solutions' menu items test")
@@ -134,7 +134,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_customer_login(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Customer Login':
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'Customer Login' items verification
 		""")
 		allure.dynamic.title("'Customer Login' test")
@@ -146,7 +146,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_footer_home_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'Footer' > 'Home' item verification
 		""")
 
@@ -157,7 +157,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_footer_about_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'Footer' > 'About Us' item verification
 		""")
 
@@ -168,7 +168,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_footer_services_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'Footer' > 'Services' item verification
 		""")
 
@@ -179,7 +179,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_footer_products_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'Footer' > 'Products' item verification
 		""")
 
@@ -190,7 +190,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_footer_locations_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'Footer' > 'Locations' item verification
 		""")
 
@@ -201,7 +201,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_footer_forum_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'Footer' > 'Forum' item verification
 		""")
 
@@ -212,7 +212,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_footer_site_map_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'Footer' > 'Site Map' item verification
 		""")
 
@@ -223,7 +223,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_footer_contact_us_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'Footer' > 'Contact Us' item verification
 		""")
 
@@ -234,7 +234,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_footer_copyright_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'Footer' > copyright item verification
 		""")
 
@@ -245,7 +245,7 @@ class TestChromeAdminBasePageContext(AdminPageContextCase):
 	def test_footer_visit_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open Admin web page
 			2. Do 'Footer' > 'Visit' item verification
 		""")
 
