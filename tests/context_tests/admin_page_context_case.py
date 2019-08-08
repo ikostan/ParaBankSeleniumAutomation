@@ -1,17 +1,14 @@
 import allure
-import pytest
 from utils.screenshot import screenshot_on_fail
 from tests.context_tests.base_cases.base_context_case import BaseContextCase
 from expected_results.page_context.admin_page_context import AdminPageContext
 
 
-@allure.feature("Admin Page")
 @allure.story('Admin Context')
 @allure.suite('Admin Page Context Test Suite')
 @screenshot_on_fail()
 class AdminPageContextCase(BaseContextCase):
 
-	@allure.feature("Admin Page")
 	def verify_page_url(self):
 
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
@@ -19,7 +16,6 @@ class AdminPageContextCase(BaseContextCase):
 			self.assertEqual(AdminPageContext.URL,
 			                 self.page.url)
 
-	@allure.feature("Admin Page")
 	def verify_page_title(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
