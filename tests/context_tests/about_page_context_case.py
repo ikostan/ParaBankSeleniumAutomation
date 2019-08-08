@@ -4,7 +4,7 @@ from tests.context_tests.base_cases.base_context_case import BaseContextCase
 from expected_results.page_context.about_page_context import AboutPageContext
 
 
-@allure.feature("About Page")
+# @allure.feature("About Page")
 @allure.story('About Context')
 @allure.suite('About Page Context Test Suite')
 @screenshot_on_fail()
@@ -14,7 +14,7 @@ class AboutPageContextCase(BaseContextCase):
 
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
-		with allure.step("About page URL test"):
+		with allure.step("About Web Page URL test"):
 			self.assertEqual(AboutPageContext.URL,
 			                 self.page.url)
 
