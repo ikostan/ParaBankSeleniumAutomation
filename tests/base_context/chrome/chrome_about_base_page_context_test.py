@@ -56,7 +56,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_parabank_admin_logo(self):
 		allure.dynamic.description("""
 		Context base elements validation > Admin logo:
-			1. Open Home web page
+			1. Open About web page
 			2. Do Admin logo verification
 		""")
 		allure.dynamic.title("Admin logo test")
@@ -68,7 +68,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_parabank_logo(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'ParaBank' logo:
-			1. Open Home web page
+			1. Open About web page
 			2. Do Admin logo verification
 		""")
 		allure.dynamic.title("'ParaBank' logo test")
@@ -80,7 +80,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_right_menu_home_button(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Home' button:
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'Home' button (right menu) verification
 		""")
 		allure.dynamic.title("Right menu > 'Home' button test")
@@ -91,12 +91,12 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	@allure.feature("Base Page")
 	def test_right_menu_about_button(self):
 		"""Context base elements validation > About button:
-		1. Open Home web page
+		1. Open About web page
 		2. Do About button verification: href + text
 		"""
 		allure.dynamic.description("""
 		Context base elements validation > 'About' button:
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'About' button (right menu) verification
 		""")
 		allure.dynamic.title("Right menu > 'About' button test")
@@ -108,7 +108,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_right_menu_contact_button(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Contact' button:
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'Contact' button (right menu) verification
 		""")
 		allure.dynamic.title("Right menu > 'Contact' button test")
@@ -120,7 +120,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_solutions_menu_items(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Solutions' menu items:
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'Solutions' menu items verification
 		""")
 		allure.dynamic.title("'Solutions' menu items test")
@@ -132,7 +132,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_customer_login(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Customer Login':
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'Customer Login' items verification
 		""")
 		allure.dynamic.title("'Customer Login' test")
@@ -144,7 +144,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_footer_home_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'Footer' > 'Home' item verification
 		""")
 
@@ -155,7 +155,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_footer_about_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'Footer' > 'About Us' item verification
 		""")
 
@@ -166,7 +166,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_footer_services_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'Footer' > 'Services' item verification
 		""")
 
@@ -177,7 +177,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_footer_products_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'Footer' > 'Products' item verification
 		""")
 
@@ -188,7 +188,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_footer_locations_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'Footer' > 'Locations' item verification
 		""")
 
@@ -199,7 +199,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_footer_forum_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'Footer' > 'Forum' item verification
 		""")
 
@@ -210,7 +210,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_footer_site_map_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'Footer' > 'Site Map' item verification
 		""")
 
@@ -221,7 +221,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_footer_contact_us_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'Footer' > 'Contact Us' item verification
 		""")
 
@@ -232,7 +232,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_footer_copyright_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'Footer' > copyright item verification
 		""")
 
@@ -243,7 +243,7 @@ class TestChromeAboutBasePageContext(AboutPageContextCase):
 	def test_footer_visit_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
-			1. Open Home web page
+			1. Open About web page
 			2. Do 'Footer' > 'Visit' item verification
 		""")
 
