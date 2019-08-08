@@ -6,8 +6,9 @@ from tests.context_tests.about_page_context_case import AboutPageContextCase
 from expected_results.page_context.about_page_context import AboutPageContext
 
 
-@allure.suite("Chrome Browser Context Testing")
-@allure.sub_suite('Chrome About Page Context Test')
+@allure.suite("Chrome Browser")
+@allure.sub_suite('Context Test')
+@allure.feature("About Page")
 @screenshot_on_fail()
 class TestChromeAboutPageContext(AboutPageContextCase):
 
@@ -36,9 +37,6 @@ class TestChromeAboutPageContext(AboutPageContextCase):
 		""")
 		allure.dynamic.title("Web page URL test")
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# Verify Web Page URL
 		self.verify_page_url()
 
@@ -49,9 +47,6 @@ class TestChromeAboutPageContext(AboutPageContextCase):
 			2. Do Title verification
 		""")
 		allure.dynamic.title("Web page title test")
-
-		# open web browser
-		# self.open_web_browser(self.browser)
 
 		# Verify Web Page Title
 		self.verify_page_title()
@@ -64,9 +59,6 @@ class TestChromeAboutPageContext(AboutPageContextCase):
 		""")
 		allure.dynamic.title("Web page title test")
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# verify description title text
 		self.verify_description_title()
 
@@ -78,12 +70,11 @@ class TestChromeAboutPageContext(AboutPageContextCase):
 		""")
 		allure.dynamic.title("Web page description test")
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# verify description text
 		self.verify_description_text()
 
+
+	'''
 	def test_parabank_admin_logo(self):
 		allure.dynamic.description("""
 		Context base elements validation > About page > ParaBank Admin logo:
@@ -91,9 +82,6 @@ class TestChromeAboutPageContext(AboutPageContextCase):
 			2. Do ParaBank Admin logo verification
 		""")
 		allure.dynamic.title("ParaBank Admin logo test")
-
-		# open web browser
-		# self.open_web_browser(self.browser)
 
 		# Context base elements validation:
 		self.verify_parabank_admin_logo()
@@ -106,9 +94,6 @@ class TestChromeAboutPageContext(AboutPageContextCase):
 		""")
 		allure.dynamic.title("ParaBank logo test")
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# Context base elements validation:
 		self.verify_parabank_logo()
 
@@ -119,9 +104,6 @@ class TestChromeAboutPageContext(AboutPageContextCase):
 			2. Do Right menu home button verification
 		""")
 		allure.dynamic.title("Right menu test")
-
-		# open web browser
-		# self.open_web_browser(self.browser)
 
 		# Context base elements validation:
 		self.verify_right_menu_home_button()
@@ -134,9 +116,6 @@ class TestChromeAboutPageContext(AboutPageContextCase):
 		""")
 		allure.dynamic.title("Right menu test")
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# Context base elements validation:
 		self.verify_right_menu_contact_button()
 
@@ -147,9 +126,6 @@ class TestChromeAboutPageContext(AboutPageContextCase):
 			2. Do Right menu about button verification
 		""")
 		allure.dynamic.title("Right menu test")
-
-		# open web browser
-		# self.open_web_browser(self.browser)
 
 		# Context base elements validation:
 		self.verify_right_menu_about_button()
@@ -162,9 +138,6 @@ class TestChromeAboutPageContext(AboutPageContextCase):
 		""")
 		allure.dynamic.title("Solutions menu test")
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# Context base elements validation:
 		self.verify_solutions_menu_items()
 
@@ -175,9 +148,6 @@ class TestChromeAboutPageContext(AboutPageContextCase):
 			2. Do Customer Login verification
 		""")
 		allure.dynamic.title("Customer Login test")
-
-		# open web browser
-		# self.open_web_browser(self.browser)
 
 		# Context base elements validation:
 		self.verify_customer_login()
@@ -190,10 +160,8 @@ class TestChromeAboutPageContext(AboutPageContextCase):
 		""")
 		allure.dynamic.title("Footer menu test")
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# Context base elements validation:
 		self.verify_footer_items()
 
+	'''
 
