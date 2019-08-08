@@ -1,14 +1,9 @@
-import requests
-from requests.exceptions import ConnectionError
 import selenium.webdriver
 from utils.driver import Driver
 from elements.element import Element
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
+from utils.http_status_code import get_http_status_code
 from page_locators.base_page_locator import BasePageLocator
-from selenium.webdriver.support import expected_conditions as EC
 from expected_results.page_context.base_page_context import BasePageContext
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
 
 class BasePageModel:
@@ -65,21 +60,6 @@ class BasePageModel:
 	def explicit_wait_time(self):
 		return self._explicit_wait_time
 
-	@staticmethod
-	def get_http_status_code(url):
-		'''
-		Returns HTTP status code
-		Using requests library
-
-		:return:
-		'''
-		try:
-			r = requests.get(url)
-			print("\nHTTP Status code: {}\n".format(r.status_code))
-		except ConnectionError as er:
-			print('\n{}\n'.format(er))
-		return None
-
 	def go(self):
 		'''
 		Opens test web page
@@ -87,7 +67,7 @@ class BasePageModel:
 		'''
 
 		self._driver.get(self._url)
-		self.get_http_status_code(self._url)
+		get_http_status_code(self._url)
 
 		'''
 		if http_code >= 400:
