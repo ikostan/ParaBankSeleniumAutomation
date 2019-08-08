@@ -207,7 +207,7 @@ class BaseContextCase(unittest.TestCase):
 			self.assertEqual(BasePageContext.REGISTER['text'],
 			                 self.page.register_text)
 
-	def verify_footer_items(self):
+	def verify_footer_home_item(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
@@ -215,84 +215,132 @@ class BaseContextCase(unittest.TestCase):
 		with allure.step("Test 'Footer' items > 'Home' > href"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['home']['href'],
 			                 self.page.footer_home_formated_href)
+
 		with allure.step("Test 'Footer' items > 'Home' > text"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['home']['text'],
 			                 self.page.footer_home_text)
+
+	def verify_footer_about_item(self):
+
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# About Us
 		with allure.step("Test 'Footer' items > 'About Us' > href"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['about us']['href'],
 			                 self.page.footer_about_us_formated_href)
+
 		with allure.step("Test 'Footer' items > 'About Us' > text"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['about us']['text'],
 			                 self.page.footer_about_us_text)
+
+	def verify_footer_services_item(self):
+
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# Services
 		with allure.step("Test 'Footer' items > 'Services' > href"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['services']['href'],
 			                 self.page.footer_services_formated_href)
+
 		with allure.step("Test 'Footer' items > 'Services' > text"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['services']['text'],
 			                 self.page.footer_services_text)
+
+	def verify_footer_products_item(self):
+
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# Products
 		with allure.step("Test 'Footer' items > 'Products' > href"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['products']['href'],
 			                 self.page.footer_products_formated_href)
+
 		with allure.step("Test 'Footer' items > 'Products' > text"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['products']['text'],
 			                 self.page.footer_products_text)
+
+	def verify_footer_locations_item(self):
+
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# Locations
 		with allure.step("Test 'Footer' items > 'Locations' > href"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['locations']['href'],
 			                 self.page.footer_locations_formated_href)
+
 		with allure.step("Test 'Footer' items > 'Locations' > text"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['locations']['text'],
 			                 self.page.footer_locations_text)
+
+	def verify_footer_forum_item(self):
+
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# Forum
 		with allure.step("Test 'Footer' items > 'Forum' > href"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['forum']['href'],
 			                 self.page.footer_forum_formated_href)
+
 		with allure.step("Test 'Footer' items > 'Forum' > text"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['forum']['text'],
 			                 self.page.footer_forum_text)
+
+	def verify_footer_site_map_item(self):
+
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# Site Map
 		with allure.step("Test 'Footer' items > 'Site Map' > href"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['site map']['href'],
 			                 self.page.footer_site_map_formated_href)
+
 		with allure.step("Test 'Footer' items > 'Site Map' > text"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['site map']['text'],
 			                 self.page.footer_site_map_text)
+
+	def verify_footer_contact_us_item(self):
+
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# Contact Us
 		with allure.step("Test 'Footer' items > 'Contact Us' > href"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['contact us']['href'],
 			                 self.page.footer_contact_us_formated_href)
+
 		with allure.step("Test 'Footer' items > 'Contact Us' > text"):
 			self.assertEqual(BasePageContext.FOOTER['footer menu']['contact us']['text'],
 			                 self.page.footer_contact_us_text)
+
+	def verify_footer_copyright_item(self):
+
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# Copyright
 		with allure.step("Test 'Footer' items > 'Copyright' > class"):
 			self.assertEqual(BasePageContext.FOOTER['copyright']['class'],
 			                 self.page.footer_copyright_class)
+
 		with allure.step("Test 'Footer' items > 'Copyright' > text"):
 			self.assertEqual(BasePageContext.FOOTER['copyright']['text'],
 			                 self.page.footer_copyright_text)
+
+	def verify_footer_visit_item(self):
+
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# Visit
 		with allure.step("Test 'Footer' items > 'Visit' > link > href"):
 			self.assertEqual(BasePageContext.FOOTER['visit']['link']['href'],
 			                 self.page.footer_visit_link_formated_href)
+
 		with allure.step("Test 'Footer' items > 'Visit' > link > text"):
 			self.assertEqual(BasePageContext.FOOTER['visit']['link']['text'],
 			                 self.page.footer_visit_link_text)
+
 		with allure.step("Test 'Footer' items > 'Visit' > link > target"):
 			self.assertEqual(BasePageContext.FOOTER['visit']['link']['target'],
 			                 self.page.footer_visit_link_target)
+
 		with allure.step("Test 'Footer' items > 'Visit' > text"):
 			self.assertEqual(BasePageContext.FOOTER['visit']['text'],
 			                 self.page.footer_visit_us_text)
