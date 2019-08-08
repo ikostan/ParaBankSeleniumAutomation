@@ -56,6 +56,7 @@ class TestChromeAdminPageContext(AdminPageContextCase):
 		# verify web page url
 		self.verify_page_title()
 
+	# TODO: remove all commented code
 	'''
 	def test_parabank_admin_logo(self):
 		allure.dynamic.description("""
