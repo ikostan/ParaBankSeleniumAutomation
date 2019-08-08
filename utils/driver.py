@@ -34,10 +34,13 @@ class Driver:
 
             except WebDriverException as e:
                 if self._is_debug:
-                    print('\nPlease note:', e.msg)
+                    print('\nPlease note: \n', e)
+
                 path = self._get_driver_path()
+
                 if self._is_debug:
                     print('Trying to look for a \'chromedriver\' under:\n{}'.format(path))
+
                 driver = webdriver.Chrome(executable_path=path)
 
         if self._browser == 'mozilla':
