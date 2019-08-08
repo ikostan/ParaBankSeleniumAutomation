@@ -36,6 +36,17 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		return None
 
 	@property
+	def username(self):
+		'''
+		Return value from username input field
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.USERNAME_INPUT)
+		value = element.element_value
+		return value
+
+	@property
 	def password_title(self):
 		'''
 		Returns password title text
@@ -58,6 +69,17 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		return None
 
 	@property
+	def password(self):
+		'''
+		Return value from password input field
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.PASSWORD_INPUT)
+		value = element.element_value
+		return value
+
+	@property
 	def confirm_title(self):
 		'''
 		Returns confirm title text
@@ -78,6 +100,17 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.CONFIRM_INPUT)
 		element.write(password)
 		return None
+
+	@property
+	def confirm(self):
+		'''
+		Return value from confirm input field
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.CONFIRM_INPUT)
+		value = element.element_value
+		return value
 
 	@property
 	def register_btn_label(self):
