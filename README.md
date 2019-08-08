@@ -76,8 +76,9 @@ For more info please see [Enable Pytest for you project](https://www.jetbrains.c
 
 <details>
   <summary><b>Setting up Python3 virtual environment on Windows machine</b></summary>
+<br/>
 
-<br/>1. open CMD
+1. open CMD<br/>
 2. navigate to project directory, for example:<br/> 
 
 ```bash
