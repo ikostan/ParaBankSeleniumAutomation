@@ -59,6 +59,7 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		# Verify web page title
 		self.verify_page_title()
 
+	# TODO: remove all commented code
 	'''
 	def test_parabank_admin_logo(self):
 		allure.dynamic.description("""
