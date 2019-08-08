@@ -83,7 +83,7 @@ class BaseElement:
 		# print('\nDRIVER TYPE: {}, {}\n'.format(type(driver), driver.capabilities['browserName']))  # Debug only
 		if driver.capabilities['browserName'] == 'chrome':
 			if type(driver) != selenium.webdriver.chrome.webdriver.WebDriver:
-				raise TypeError('\nERROR: driver must be of type "selenium.webdriver.chrome.webdriver.WebDriver"\n')
+				raise TypeError('\nERROR: driver must be of type "selenium.webdriver.chrome_tests.webdriver.WebDriver"\n')
 			return None
 
 		if driver.capabilities['browserName'] == 'firefox':
