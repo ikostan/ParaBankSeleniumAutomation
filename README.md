@@ -25,10 +25,12 @@ In other words: ParaBank is not a real bank!
 ### Dev Environment:<br/>
 1. Python 3.7<br/>
 2. Selenium 3.141.0<br/>
-3. PyCharm 2019.1.3 (Community Edition)<br/>
-4. Win 10 (64 bit)<br/>
-5. Allure Framework 2.12.1<br/>
-6. PyTest 5.0.0<br/>
+3. PyTest 5.0.0<br/>
+4. Allure Framework 2.12.1<br/>
+5. Win 10 (64 bit)<br/>
+6. PyCharm 2019.1.3 (Community Edition)<br/>
+7. GitHub Desktop 2.1.0<br/>
+8. GIT 2.22.0.windows.1<br/>
 
 Full list of dependencies see [here.](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/requirements.txt)
 
