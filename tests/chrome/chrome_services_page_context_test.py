@@ -62,6 +62,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 
 	# Services Context Testing
 
+	# TODO: remove all commented code
 	'''
 	# Base Context test
 	@allure.feature("Base Page")
@@ -176,7 +177,6 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		# Context base elements validation:
 		self.verify_customer_login()
 
-	# TODO: remove this one
 	@allure.feature("Base Page")
 	def test_footer_items(self):
 		allure.dynamic.description("""
