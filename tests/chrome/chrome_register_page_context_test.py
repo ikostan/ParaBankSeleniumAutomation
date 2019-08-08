@@ -59,6 +59,7 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		# Verify web page title
 		self.verify_page_title()
 
+	'''
 	def test_parabank_admin_logo(self):
 		allure.dynamic.description("""
 		Context base elements validation > Admin logo:
@@ -164,6 +165,7 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		# Context base elements validation:
 		self.verify_customer_login()
 
+	# TODO: remove this one
 	def test_footer_items(self):
 		allure.dynamic.description("""
 		Context base elements validation > Footer:
@@ -177,7 +179,9 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		# self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.verify_footer_items()
+		#self.verify_footer_items()
+		pass
+	'''
 
 	# Registration page context - Personal Info Context base elements validation
 	def test_first_name_title(self):
