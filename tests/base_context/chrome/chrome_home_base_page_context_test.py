@@ -40,9 +40,7 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		# test url
-		expected_url = HomePageContext.URL
-		allure.step
-		self.verify_page_url(expected_url)
+		self.verify_page_url()
 
 	def test_page_title(self):
 		allure.dynamic.description("""
@@ -87,14 +85,14 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 			1. Open Home web page
 			2. Do 'Home' button (right menu) verification
 		""")
-		allure.dynamic.title("'Home' button (right menu) test")
+		allure.dynamic.title("Right menu > 'Home' button test")
 
 		# Context base elements validation:
 		self.verify_right_menu_home_button()
 
 	@allure.feature("Base Page")
 	def test_right_menu_about_button(self):
-		"""Context base elements validation > Home button:
+		"""Context base elements validation > About button:
 		1. Open Home web page
 		2. Do About button verification: href + text
 		"""
@@ -103,7 +101,7 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 			1. Open Home web page
 			2. Do 'About' button (right menu) verification
 		""")
-		allure.dynamic.title("'About' button (right menu) test")
+		allure.dynamic.title("Right menu > 'About' button test")
 
 		# Context base elements validation:
 		self.verify_right_menu_about_button()
@@ -115,7 +113,7 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 			1. Open Home web page
 			2. Do 'Contact' button (right menu) verification
 		""")
-		allure.dynamic.title("'Contact' button (right menu) test")
+		allure.dynamic.title("Right menu > 'Contact' button test")
 
 		# Context base elements validation:
 		self.verify_right_menu_contact_button()
@@ -145,15 +143,111 @@ class TestChromeHomeBasePageContext(HomePageContextCase):
 		self.verify_customer_login()
 
 	@allure.feature("Base Page")
-	def test_footer_items(self):
+	def test_footer_home_item(self):
 		allure.dynamic.description("""
 		Context base elements validation > 'Footer':
 			1. Open Home web page
-			2. Do 'Footer' items verification
+			2. Do 'Footer' > 'Home' item verification
 		""")
 
-		allure.dynamic.title("'Footer' test")
+		allure.dynamic.title("'Footer' > 'Home' item test")
+		self.verify_footer_home_item()
 
-		# Context base elements validation:
-		self.verify_footer_items()
+	@allure.feature("Base Page")
+	def test_footer_about_item(self):
+		allure.dynamic.description("""
+		Context base elements validation > 'Footer':
+			1. Open Home web page
+			2. Do 'Footer' > 'About Us' item verification
+		""")
 
+		allure.dynamic.title("'Footer' > 'About Us' item test")
+		self.verify_footer_about_item()
+
+	@allure.feature("Base Page")
+	def test_footer_services_item(self):
+		allure.dynamic.description("""
+		Context base elements validation > 'Footer':
+			1. Open Home web page
+			2. Do 'Footer' > 'Services' item verification
+		""")
+
+		allure.dynamic.title("'Footer' > 'Services' test")
+		self.verify_footer_services_item()
+
+	@allure.feature("Base Page")
+	def test_footer_products_item(self):
+		allure.dynamic.description("""
+		Context base elements validation > 'Footer':
+			1. Open Home web page
+			2. Do 'Footer' > 'Products' item verification
+		""")
+
+		allure.dynamic.title("'Footer' > 'Products' item test")
+		self.verify_footer_products_item()
+
+	@allure.feature("Base Page")
+	def test_footer_locations_item(self):
+		allure.dynamic.description("""
+		Context base elements validation > 'Footer':
+			1. Open Home web page
+			2. Do 'Footer' > 'Locations' item verification
+		""")
+
+		allure.dynamic.title("'Footer' > 'Locations' item test")
+		self.verify_footer_locations_item()
+
+	@allure.feature("Base Page")
+	def test_footer_forum_item(self):
+		allure.dynamic.description("""
+		Context base elements validation > 'Footer':
+			1. Open Home web page
+			2. Do 'Footer' > 'Forum' item verification
+		""")
+
+		allure.dynamic.title("'Footer' > 'Forum' test")
+		self.verify_footer_forum_item()
+
+	@allure.feature("Base Page")
+	def test_footer_site_map_item(self):
+		allure.dynamic.description("""
+		Context base elements validation > 'Footer':
+			1. Open Home web page
+			2. Do 'Footer' > 'Site Map' item verification
+		""")
+
+		allure.dynamic.title("'Footer' > 'Site Map' item test")
+		self.verify_footer_site_map_item()
+
+	@allure.feature("Base Page")
+	def test_footer_contact_us_item(self):
+		allure.dynamic.description("""
+		Context base elements validation > 'Footer':
+			1. Open Home web page
+			2. Do 'Footer' > 'Contact Us' item verification
+		""")
+
+		allure.dynamic.title("'Footer' > 'Contact Us' item test")
+		self.verify_footer_contact_us_item()
+
+	@allure.feature("Base Page")
+	def test_footer_copyright_item(self):
+		allure.dynamic.description("""
+		Context base elements validation > 'Footer':
+			1. Open Home web page
+			2. Do 'Footer' > copyright item verification
+		""")
+
+		allure.dynamic.title("'Footer' > copyright item test")
+		self.verify_footer_copyright_item()
+
+	@allure.feature("Base Page")
+	def test_footer_visit_item(self):
+		allure.dynamic.description("""
+		Context base elements validation > 'Footer':
+			1. Open Home web page
+			2. Do 'Footer' > 'Visit' item verification
+		""")
+
+		allure.dynamic.title("'Footer' > Visit us item test")
+		self.verify_footer_visit_item()
