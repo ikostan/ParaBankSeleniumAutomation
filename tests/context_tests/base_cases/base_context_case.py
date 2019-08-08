@@ -3,41 +3,12 @@ import unittest
 from expected_results.page_context.base_page_context import BasePageContext
 
 
-# @allure.feature("Base Page")
 class BaseContextCase(unittest.TestCase):
 	"""
 	BaseTest
 	This class should be the parent class to each test case class.
 	"""
 
-	'''
-	def setUp(self):
-		with allure.step("""
-		setUp: 
-			1. Close current browser tab. 
-			2. Set webdriver to None.
-		"""):
-			if self.page is not None:
-				self.page.quit()
-			self.page = None
-
-	def tearDown(self):
-		with allure.step("tearDown: close current browser tab"):
-			# screenshots_collector()
-			if self.page:
-				self.page.close()
-				
-	@classmethod
-	def setUpClass(cls):
-		cls.page = None
-
-	@classmethod
-	def tearDownClass(cls):
-		if cls.page:
-			cls.page.quit()
-	'''
-
-	# @allure.feature("Base Page")
 	def verify_solutions_menu_items(self):
 
 		allure.dynamic.description("""
@@ -86,7 +57,6 @@ class BaseContextCase(unittest.TestCase):
 			self.assertEqual(BasePageContext.LEFT_MENU_ITEMS['Admin Page']['text'],
 			                 self.page.admin_page_menu_item_text)
 
-	# @allure.feature("Base Page")
 	def verify_right_menu_home_button(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
@@ -101,7 +71,6 @@ class BaseContextCase(unittest.TestCase):
 			self.assertEqual(BasePageContext.MENU_BUTTONS['home']['text'],
 			                 self.page.home_button_text)
 
-	# @allure.feature("Base Page")
 	def verify_right_menu_about_button(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
@@ -116,7 +85,6 @@ class BaseContextCase(unittest.TestCase):
 			self.assertEqual(BasePageContext.MENU_BUTTONS['about']['text'],
 			                 self.page.about_button_text)
 
-	# @allure.feature("Base Page")
 	def verify_right_menu_contact_button(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
@@ -131,7 +99,6 @@ class BaseContextCase(unittest.TestCase):
 			self.assertEqual(BasePageContext.MENU_BUTTONS['contact']['text'],
 			                 self.page.contact_button_text)
 
-	# @allure.feature("Base Page")
 	def verify_parabank_logo(self):
 
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
@@ -160,7 +127,6 @@ class BaseContextCase(unittest.TestCase):
 			self.assertEqual(BasePageContext.PARA_BANK_LOGO['title'],
 			                 self.page.para_bank_logo_img_title)
 
-	# @allure.feature("Base Page")
 	def verify_parabank_admin_logo(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
@@ -177,7 +143,6 @@ class BaseContextCase(unittest.TestCase):
 			self.assertEqual(BasePageContext.ADMIN_LOGO['src'],
 			                 self.page.admin_logo_formated_img_src)
 
-	# @allure.feature("Base Page")
 	def verify_customer_login(self):
 
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
@@ -242,7 +207,6 @@ class BaseContextCase(unittest.TestCase):
 			self.assertEqual(BasePageContext.REGISTER['text'],
 			                 self.page.register_text)
 
-	# @allure.feature("Base Page")
 	def verify_footer_items(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
