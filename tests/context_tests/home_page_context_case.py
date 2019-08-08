@@ -11,22 +11,10 @@ from expected_results.page_context.home_page_context import HomePageContext
 @screenshot_on_fail()
 class HomePageContextCase(BaseContextCase):
 
-	'''
-	@staticmethod
-	def open_web_browser(browser):
+	#@pytest.mark.parametrize('expected_url', [HomePageContext.URL], ids=['Expected web page url'])
+	def verify_page_url(self):
 
-		# Open web page
-		driver = Driver(browser)
-		# with allure.step("Open web browser on: {}".format(HomePageContext.URL)):
-		page = HomePageModel(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
-		page.go()
-		refresh_page(HomePageContext.TITLE, page)
-		return page
-	'''
-
-	@pytest.mark.parametrize('expected_url', [HomePageContext.URL], ids=['Expected web page url'])
-	def verify_page_url(self, expected_url: str):
-
+		expected_url = HomePageContext.URL
 		with allure.step("Verify web page URL. Expected result: {}".format(expected_url)):
 			actual = self.page.url
 			self.assertEqual(expected_url, actual, msg='\nExpected: {}. Actual: {}\n'.format(expected_url, actual))
