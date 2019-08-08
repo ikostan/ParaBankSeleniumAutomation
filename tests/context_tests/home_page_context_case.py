@@ -1,7 +1,7 @@
 import allure
 import pytest
 from utils.screenshot import screenshot_on_fail
-from tests.context_tests.base_tests.base_context_case import BaseContextCase
+from tests.context_tests.base_cases.base_context_case import BaseContextCase
 from expected_results.page_context.home_page_context import HomePageContext
 
 
@@ -134,19 +134,22 @@ class HomePageContextCase(BaseContextCase):
 			                 self.page.read_more_services_formated_href)
 
 	# @allure.feature("Home Page")
-	def verify_read_more_news_button(self):
+	def verify_read_more_news_button_text(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
-
 		with allure.step("Verify Read More News text. Expected result: {}".format(
 				HomePageContext.READ_MORE_NEWS['text'])):
 			self.assertEqual(HomePageContext.READ_MORE_NEWS['text'],
 			                 self.page.read_more_news_title)
 
-		with allure.step("Verify Read More News ref. Expected result: {}".format(
+	# @allure.feature("Home Page")
+	def verify_read_more_news_button_href(self):
+
+		allure.dynamic.severity(allure.severity_level.NORMAL)
+		with allure.step("Verify Read More News href. Expected result: {}".format(
 				HomePageContext.READ_MORE_NEWS['href'])):
 			self.assertEqual(HomePageContext.READ_MORE_NEWS['href'],
-			                 self.page.read_more_news_formated_href)
+				                self.page.read_more_news_formated_href)
 
 	# @allure.feature("Home Page")
 	def verify_latest_news_title(self):
