@@ -1,6 +1,7 @@
 import allure
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
+from utils.http_status_code import get_http_status_code
 from page_models.services_page_model import ServicesPageModel
 from tests.context_tests.services_page_context_case import ServicesPageContextCase
 from expected_results.page_context.services_page_context import ServicesPageContext
@@ -18,6 +19,7 @@ class TestChromeHomeBasePageContext(ServicesPageContextCase):
 			cls.browser = 'chrome'
 			cls.page_model = ServicesPageModel
 			cls.page_context = ServicesPageContext
+			get_http_status_code(ServicesPageContext.URL)
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
 			                            page_context=cls.page_context)
