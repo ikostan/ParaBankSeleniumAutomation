@@ -54,6 +54,17 @@ class BasePersonalInfoPageModel(BasePageModel):
 		return None
 
 	@property
+	def first_name(self):
+		'''
+		Returns first name input field value
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.FIRST_NAME_INPUT)
+		value = element.element_value
+		return value
+
+	@property
 	def last_name_title(self):
 		'''
 		Returns last name title text
@@ -74,6 +85,17 @@ class BasePersonalInfoPageModel(BasePageModel):
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.LAST_NAME_INPUT)
 		element.write(last_name)
 		return None
+
+	@property
+	def last_name(self):
+		'''
+		Returns last name input field value
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.LAST_NAME_INPUT)
+		value = element.element_value
+		return value
 
 	@property
 	def address_title(self):
@@ -98,6 +120,17 @@ class BasePersonalInfoPageModel(BasePageModel):
 		return None
 
 	@property
+	def address(self):
+		'''
+		Returns address input field value
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.ADDRESS_INPUT)
+		value = element.element_value
+		return value
+
+	@property
 	def city_title(self):
 		'''
 		Returns address title text
@@ -118,6 +151,17 @@ class BasePersonalInfoPageModel(BasePageModel):
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.CITY_INPUT)
 		element.write(city)
 		return None
+
+	@property
+	def city(self):
+		'''
+		Returns city input field value
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.CITY_INPUT)
+		value = element.element_value
+		return value
 
 	@property
 	def state_title(self):
@@ -142,6 +186,17 @@ class BasePersonalInfoPageModel(BasePageModel):
 		return None
 
 	@property
+	def state(self):
+		'''
+		Returns state input field value
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.STATE_INPUT)
+		value = element.element_value
+		return value
+
+	@property
 	def zip_code_title(self):
 		'''
 		Returns zip code title text
@@ -162,6 +217,17 @@ class BasePersonalInfoPageModel(BasePageModel):
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.ZIP_CODE_INPUT)
 		element.write(zip_code)
 		return None
+
+	@property
+	def zip_code(self):
+		'''
+		Returns zip code input field value
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.ZIP_CODE_INPUT)
+		value = element.element_value
+		return value
 
 	@property
 	def phone_title(self):
@@ -190,6 +256,17 @@ class BasePersonalInfoPageModel(BasePageModel):
 		return None
 
 	@property
+	def phone(self):
+		'''
+		Returns phone input field value
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.PHONE_INPUT)
+		value = element.element_value
+		return value
+
+	@property
 	def ssn_title(self):
 		'''
 		Returns SSN title text
@@ -210,3 +287,14 @@ class BasePersonalInfoPageModel(BasePageModel):
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.SSN_INPUT)
 		element.write(ssn)
 		return None
+
+	@property
+	def ssn(self):
+		'''
+		Returns SSN input field value
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.SSN_INPUT)
+		value = element.element_value
+		return value
