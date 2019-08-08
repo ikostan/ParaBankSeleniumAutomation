@@ -8,6 +8,7 @@ from expected_results.page_context.register_page_context import RegisterPageCont
 
 @allure.suite("Chrome Browser Context Testing")
 @allure.sub_suite('Chrome Register Page Context Test')
+@allure.feature("Register Page")
 @screenshot_on_fail()
 class TestChromeRegisterPageContext(RegisterContextCase):
 
@@ -38,9 +39,6 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		allure.dynamic.title("Web page URL test")
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# Verify web page url
 		self.verify_page_url()
 
@@ -53,136 +51,8 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		allure.dynamic.title("Register page title test")
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# Verify web page title
 		self.verify_page_title()
-
-	# TODO: remove all commented code
-	'''
-	def test_parabank_admin_logo(self):
-		allure.dynamic.description("""
-		Context base elements validation > Admin logo:
-			1. Open Register page web page
-			2. Do Admin logo verification
-		""")
-		allure.dynamic.title("Admin logo test")
-		allure.dynamic.severity(allure.severity_level.MINOR)
-
-		# open web browser
-		# self.open_web_browser(self.browser)
-
-		# Context base elements validation:
-		self.verify_parabank_admin_logo()
-
-	def test_parabank_logo(self):
-		allure.dynamic.description("""
-		Context base elements validation > ParaBank logo:
-			1. Open Register web page
-			2. Do ParaBank logo verification
-		""")
-		allure.dynamic.title("ParaBank logo test")
-		allure.dynamic.severity(allure.severity_level.NORMAL)
-
-		# open web browser
-		# self.open_web_browser(self.browser)
-
-		# Context base elements validation:
-		self.verify_parabank_logo()
-
-	def test_right_menu_home_button(self):
-		allure.dynamic.description("""
-		Context base elements validation > Right menu:
-			1. Open Register web page
-			2. Do Right menu Home button verification
-		""")
-		allure.dynamic.title("Right menu Home button test")
-		allure.dynamic.severity(allure.severity_level.MINOR)
-
-		# open web browser
-		# self.open_web_browser(self.browser)
-
-		# Context base elements validation:
-		self.verify_right_menu_home_button()
-
-	def test_right_menu_contact_button(self):
-		allure.dynamic.description("""
-		Context base elements validation > Right menu:
-			1. Open Register web page
-			2. Do Right menu Contact button verification
-		""")
-		allure.dynamic.title("Right menu Contact button test")
-		allure.dynamic.severity(allure.severity_level.MINOR)
-
-		# open web browser
-		# self.open_web_browser(self.browser)
-
-		# Context base elements validation:
-		self.verify_right_menu_contact_button()
-
-	def test_right_menu_about_button(self):
-		allure.dynamic.description("""
-		Context base elements validation > Right menu:
-			1. Open Register web page
-			2. Do Right menu About button verification
-		""")
-		allure.dynamic.title("Right menu About button test")
-		allure.dynamic.severity(allure.severity_level.MINOR)
-
-		# open web browser
-		# self.open_web_browser(self.browser)
-
-		# Context base elements validation:
-		self.verify_right_menu_about_button()
-
-	def test_solutions_menu_items(self):
-		allure.dynamic.description("""
-		Context base elements validation > Solution menu:
-			1. Open Register web page
-			2. Do Solution verification
-		""")
-		allure.dynamic.title("Solution menu test")
-		allure.dynamic.severity(allure.severity_level.CRITICAL)
-
-		# open web browser
-		# self.open_web_browser(self.browser)
-
-		# Context base elements validation:
-		self.verify_solutions_menu_items()
-
-	def test_customer_login(self):
-		allure.dynamic.description("""
-		Context base elements validation > Customer Login:
-			1. Open Register web page
-			2. Do Customer Login verification
-		""")
-		allure.dynamic.title("Customer Login test")
-		allure.dynamic.severity(allure.severity_level.BLOCKER)
-
-		# open web browser
-		# self.open_web_browser(self.browser)
-
-		# Context base elements validation:
-		self.verify_customer_login()
-
-	# TODO: remove this one
-	def test_footer_items(self):
-		allure.dynamic.description("""
-		Context base elements validation > Footer:
-			1. Open Register web page
-			2. Do Footer verification
-		""")
-		allure.dynamic.title("Footer test")
-		allure.dynamic.severity(allure.severity_level.NORMAL)
-
-		# open web browser
-		# self.open_web_browser(self.browser)
-
-		# Context base elements validation:
-		#self.verify_footer_items()
-		pass
-	'''
 
 	# Registration page context - Personal Info Context base elements validation
 	def test_first_name_title(self):
@@ -193,9 +63,6 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		""")
 		allure.dynamic.title("First Name title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
-
-		# open web browser
-		# self.open_web_browser(self.browser)
 
 		# Personal Info Context base elements validation:
 		self.verify_first_name_title()
@@ -210,9 +77,6 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		allure.dynamic.title("Last Name title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# Personal Info Context base elements validation:
 		self.verify_last_name_title()
 
@@ -225,9 +89,6 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		""")
 		allure.dynamic.title("Address title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
-
-		# open web browser
-		# self.open_web_browser(self.browser)
 
 		# Personal Info Context base elements validation:
 		self.verify_address_title()
@@ -242,9 +103,6 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		allure.dynamic.title("City title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# Personal Info Context base elements validation:
 		self.verify_city_title()
 
@@ -257,9 +115,6 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		""")
 		allure.dynamic.title("State title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
-
-		# open web browser
-		# self.open_web_browser(self.browser)
 
 		# Personal Info Context base elements validation:
 		self.verify_state_title()
@@ -274,9 +129,6 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		allure.dynamic.title("Zip Code title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# Personal Info Context base elements validation:
 		self.verify_zip_code_title()
 
@@ -290,9 +142,6 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		allure.dynamic.title("Phone title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# Personal Info Context base elements validation:
 		self.verify_phone_title()
 
@@ -305,9 +154,6 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		""")
 		allure.dynamic.title("SSN title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
-
-		# open web browser
-		# self.open_web_browser(self.browser)
 
 		# Personal Info Context base elements validation:
 		self.verify_ssn_title()
@@ -323,9 +169,6 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		allure.dynamic.title("Username title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# Register web page elements validation:
 		self.verify_username_title()
 
@@ -338,9 +181,6 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		""")
 		allure.dynamic.title("Password title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
-
-		# open web browser
-		# self.open_web_browser(self.browser)
 
 		# Register web page elements validation:
 		self.verify_password_title()
@@ -355,9 +195,6 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		allure.dynamic.title("Confirm title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
-		# open web browser
-		# self.open_web_browser(self.browser)
-
 		# Register web page elements validation:
 		self.verify_confirm_title()
 
@@ -370,9 +207,6 @@ class TestChromeRegisterPageContext(RegisterContextCase):
 		""")
 		allure.dynamic.title("\"Register\" button test")
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
-
-		# open web browser
-		# self.open_web_browser(self.browser)
 
 		# Register web page elements validation:
 		self.verify_register_button()
