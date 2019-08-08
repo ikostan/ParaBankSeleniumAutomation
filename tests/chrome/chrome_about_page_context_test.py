@@ -2,6 +2,7 @@ import allure
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from page_models.about_page_model import AboutPageModel
+from utils.http_status_code import get_http_status_code
 from tests.context_tests.about_page_context_case import AboutPageContextCase
 from expected_results.page_context.about_page_context import AboutPageContext
 
@@ -18,6 +19,7 @@ class TestChromeAboutPageContext(AboutPageContextCase):
 			cls.browser = 'chrome'
 			cls.page_model = AboutPageModel
 			cls.page_context = AboutPageContext
+			get_http_status_code(AboutPageContext.URL)
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
 			                            page_context=cls.page_context)
