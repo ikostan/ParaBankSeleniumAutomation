@@ -73,7 +73,7 @@ class TestChromeAboutPageContext(AboutPageContextCase):
 		# verify description text
 		self.verify_description_text()
 
-
+	# TODO: remove all commented code
 	'''
 	def test_parabank_admin_logo(self):
 		allure.dynamic.description("""
