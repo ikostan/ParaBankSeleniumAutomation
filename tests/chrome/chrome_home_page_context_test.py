@@ -40,9 +40,7 @@ class TestChromeHomePageContext(HomePageContextCase):
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		# test url
-		expected_url = HomePageContext.URL
-		allure.step
-		self.verify_page_url(expected_url)
+		self.verify_page_url()
 
 	def test_page_title(self):
 		allure.dynamic.description("""
