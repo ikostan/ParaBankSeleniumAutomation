@@ -19,7 +19,6 @@ class AdminPageContextCase(BaseContextCase):
 	def verify_page_title(self):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
-
 		with allure.step("Admin page title test"):
 			self.assertEqual(AdminPageContext.TITLE,
 			                 self.page.title)
