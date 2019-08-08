@@ -60,6 +60,9 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		# Verify web page title
 		self.verify_page_title()
 
+	# Services Context Testing
+
+	'''
 	# Base Context test
 	@allure.feature("Base Page")
 	def test_parabank_admin_logo(self):
@@ -173,6 +176,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		# Context base elements validation:
 		self.verify_customer_login()
 
+	# TODO: remove this one
 	@allure.feature("Base Page")
 	def test_footer_items(self):
 		allure.dynamic.description("""
@@ -187,7 +191,7 @@ class TestChromeServicesPageContext(ServicesPageContextCase):
 		# self.open_web_browser(self.browser)
 
 		# Context base elements validation:
-		self.verify_footer_items()
+		# self.verify_footer_items()
+		pass
 
-	# Services Context Testing
-
+	'''
