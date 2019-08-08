@@ -1,17 +1,15 @@
 import allure
-import pytest
 from utils.screenshot import screenshot_on_fail
 from tests.context_tests.base_cases.base_context_case import BaseContextCase
 from expected_results.page_context.home_page_context import HomePageContext
 
 
-@allure.feature("Home Page")
 @allure.story('Home Context')
 @allure.suite('Home Page Context Test Suite')
 @screenshot_on_fail()
 class HomePageContextCase(BaseContextCase):
 
-	#@pytest.mark.parametrize('expected_url', [HomePageContext.URL], ids=['Expected web page url'])
+	# @pytest.mark.parametrize('expected_url', [HomePageContext.URL], ids=['Expected web page url'])
 	def verify_page_url(self):
 
 		expected_url = HomePageContext.URL
