@@ -6,8 +6,8 @@ from tests.context_tests.home_page_context_case import HomePageContextCase
 from expected_results.page_context.home_page_context import HomePageContext
 
 
-@allure.suite("Chrome Browser Context Testing")
-@allure.sub_suite('Chrome Home Base Page Context Test')
+@allure.suite("Base Context Testing")
+@allure.sub_suite('Chrome Browser')
 @allure.feature("Base Page")
 @screenshot_on_fail()
 class TestChromeHomeBasePageContext(HomePageContextCase):
