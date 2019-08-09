@@ -145,7 +145,6 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		txt = element.element_type
 		return txt
 
-	@property
 	def click_register_btn(self):
 		'''
 		Click on register button
@@ -153,8 +152,30 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		'''
 
 		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.REGISTER_BUTTON)
-		element.click()
+		element.press_button()
 		return None
+
+	@property
+	def welcome_header(self):
+		'''
+		Returns welcome header
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.HEADER)
+		value = element.text
+		return value
+
+	@property
+	def welcome_message(self):
+		'''
+		Returns welcome message
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.DESCRIPTION)
+		value = element.text
+		return value
 
 
 
