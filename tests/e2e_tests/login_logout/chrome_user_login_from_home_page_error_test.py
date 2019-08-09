@@ -124,7 +124,6 @@ class TestChromeUserLoginFromHomePage(HomePageContextCase):
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
 
-		# TODO: Fix this one
 		with allure.step('Verify that "Account Services" menu is not present'):
 			expected = False
 			actual = self.page.account_services_menu_is_visible
