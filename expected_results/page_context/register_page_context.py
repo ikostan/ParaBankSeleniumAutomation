@@ -44,7 +44,7 @@ class RegisterPageContext(BasePageContext, BasePersonalInfoContext):
 		'value': "Register"
 	}
 
-	WELLCOME_MESSAGE = {
+	WELCOME_MESSAGE = {
 		'header': 'Welcome ',
 		'message': 'Your account was created successfully. You are now logged in.'
 	}
