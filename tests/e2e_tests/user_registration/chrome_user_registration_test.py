@@ -50,7 +50,7 @@ class TestChromeUserRegistration(UserRegistrationCase):
 			4. Verify that each data item appears in relevant field
 			5. Hit 'Register' button
 			6. Verify 'Welcome' message
-			7. Verify that "Account Services" menu is not present
+			7. Verify that "Account Services" menu is present
 			8. Log Out
 			9. Verify that "Account Services" menu is not present
 			10. Close web browser
@@ -64,7 +64,7 @@ class TestChromeUserRegistration(UserRegistrationCase):
 		with allure.step('Verify that "Account Services" menu is present'):
 			expected = True
 			actual = self.page.account_services_menu_is_visible
-			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is present',
 			                                                    expected,
 			                                                    actual))
 			self.assertEqual(expected,
@@ -90,7 +90,7 @@ class TestChromeUserRegistration(UserRegistrationCase):
 		with allure.step('Verify that "Account Services" menu is not present'):
 			expected = False
 			actual = self.page.account_services_menu_is_visible
-			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is not present',
 			                                                    expected,
 			                                                    actual))
 			self.assertEqual(expected,
