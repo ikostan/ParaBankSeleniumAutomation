@@ -16,7 +16,7 @@ class AccountServicesMenu(BasePageModel):
 		'''
 
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.WELCOME_MESSAGE)
-		txt = element.text()
+		txt = element.text
 		return txt
 
 	@property
@@ -26,7 +26,7 @@ class AccountServicesMenu(BasePageModel):
 		:return:
 		'''
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.HEADER)
-		txt = element.text()
+		txt = element.text
 		return txt
 
 	def open_new_account(self):
