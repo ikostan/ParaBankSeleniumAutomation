@@ -15,7 +15,7 @@ class Element(BaseElement):
 		Returns element src value
 		:return:
 		'''
-		src = super().attribute('src')
+		src = self.attribute('src')
 		return src
 
 	@property
@@ -24,7 +24,7 @@ class Element(BaseElement):
 		Returns class value
 		:return:
 		'''
-		cls = super().attribute('class')
+		cls = self.attribute('class')
 		return cls
 
 	@property
@@ -33,7 +33,7 @@ class Element(BaseElement):
 		Returns alt value
 		:return:
 		'''
-		alt = super().attribute('alt')
+		alt = self.attribute('alt')
 		return alt
 
 	@property
@@ -42,7 +42,7 @@ class Element(BaseElement):
 		Returns title value
 		:return:
 		'''
-		alt = super().attribute('title')
+		alt = self.attribute('title')
 		return alt
 
 	@property
@@ -51,7 +51,7 @@ class Element(BaseElement):
 		Returns element href value
 		:return:
 		'''
-		href = super().attribute('href')
+		href = self.attribute('href')
 		return href
 
 	@property
@@ -60,7 +60,7 @@ class Element(BaseElement):
 		Returns element type value
 		:return:
 		'''
-		atr = super().attribute('type')
+		atr = self.attribute('type')
 		return atr
 
 	@property
@@ -69,7 +69,7 @@ class Element(BaseElement):
 		Returns element name value
 		:return:
 		'''
-		atr = super().attribute('name')
+		atr = self.attribute('name')
 		return atr
 
 	@property
@@ -78,7 +78,7 @@ class Element(BaseElement):
 		Returns element value
 		:return:
 		'''
-		atr = super().attribute('value')
+		atr = self.attribute('value')
 		return atr
 
 	@property
@@ -87,7 +87,7 @@ class Element(BaseElement):
 		Returns element target
 		:return:
 		'''
-		atr = super().attribute('target')
+		atr = self.attribute('target')
 		return atr
 
 	@property
@@ -98,22 +98,23 @@ class Element(BaseElement):
 		:return:
 		'''
 		try:
-			text = super().element.text
+			text = self.element.text
 			return text
 
 		except TimeoutException:
 			raise NoSuchAttributeException(
 				'\nERROR: The element has no attribute "text".\n'
-				'LOCATOR: {}\n'.format(super().locator))
+				'LOCATOR: {}\n'.format(self.locator))
 
-	def click(self):
+	def press_button(self):
 		'''
 		Clicks on web element or returns InvalidElementStateException
 		in case the element is invisible or not clickable.
 		:return:
 		'''
 		try:
-			element = WebDriverWait(super().driver, super().explicit_wait_time).until(EC.element_to_be_clickable(super().locator))
+			element = WebDriverWait(self.driver,
+			                        self.explicit_wait_time).until(EC.element_to_be_clickable(self.locator))
 			element.click()
 			return None
 
@@ -127,6 +128,6 @@ class Element(BaseElement):
 		:param text:
 		:return:
 		'''
-		super().element.clear()
-		super().element.send_keys(text)
+		self.element.clear()
+		self.element.send_keys(text)
 		return None
