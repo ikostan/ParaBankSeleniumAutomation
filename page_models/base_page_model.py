@@ -441,6 +441,16 @@ class BasePageModel:
 		return atr
 
 	@property
+	def username(self):
+		'''
+		Returns Username value
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOGIN_USERNAME_INPUT)
+		value = element.element_value
+		return value
+
+	@property
 	def username_input_type(self):
 		'''
 		Returns Username login Input type
@@ -449,6 +459,15 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOGIN_USERNAME_INPUT)
 		atr = element.element_type
 		return atr
+
+	def enter_username(self, username):
+		'''
+		Type username into Username input field
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOGIN_USERNAME_INPUT)
+		element.write(username)
+		return None
 
 	@property
 	def username_input_name(self):
@@ -459,6 +478,16 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOGIN_USERNAME_INPUT)
 		atr = element.element_name
 		return atr
+
+	@property
+	def password(self):
+		'''
+		Returns Password value
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOGIN_PASSWORD_INPUT)
+		value = element.element_value
+		return value
 
 	@property
 	def password_input_class(self):
@@ -490,6 +519,15 @@ class BasePageModel:
 		atr = element.element_name
 		return atr
 
+	def enter_password(self, password):
+		'''
+		Type password into Password input field
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.LOGIN_PASSWORD_INPUT)
+		element.write(password)
+		return None
+
 	@property
 	def login_button_class(self):
 		'''
@@ -519,6 +557,15 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CUSTOMER_LOGIN_BUTTON)
 		atr = element.element_value
 		return atr
+
+	def hit_login_button(self):
+		'''
+		Click on Log In button
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CUSTOMER_LOGIN_BUTTON)
+		element.press_button()
+		return None
 
 	@property
 	def forgot_login_formated_href(self):
@@ -777,5 +824,25 @@ class BasePageModel:
 		:return:
 		'''
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FOOTER_VISIT_US)
+		txt = element.text
+		return txt
+
+	@property
+	def error_title(self):
+		'''
+		Returns error title text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ERROR_TITLE)
+		txt = element.text
+		return txt
+
+	@property
+	def error_message(self):
+		'''
+		Returns error message text
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ERROR_MESSAGE)
 		txt = element.text
 		return txt
