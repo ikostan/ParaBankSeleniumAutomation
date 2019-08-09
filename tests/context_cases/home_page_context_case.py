@@ -7,7 +7,7 @@ from expected_results.page_context.home_page_context import HomePageContext
 @allure.story('Home Context')
 @allure.suite('Home Page Context Test Suite')
 @screenshot_on_fail()
-class HomePageContextCase(BaseContextCase):  # TODO: remove AccountServicesMenu
+class HomePageContextCase(BaseContextCase):
 
 	# @pytest.mark.parametrize('expected_url', [HomePageContext.URL], ids=['Expected web page url'])
 	def verify_page_url(self):
