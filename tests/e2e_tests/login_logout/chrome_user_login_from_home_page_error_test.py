@@ -1,27 +1,31 @@
 import allure
+from utils.clean_database import clean_database
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from expected_results.users.no_such_user import NoOne
 from page_models.home_page_model import HomePageModel
 from utils.http_status_code import get_http_status_code
-from selenium.common.exceptions import NoSuchAttributeException
 from tests.context_cases.home_page_context_case import HomePageContextCase
 from expected_results.page_context.home_page_context import HomePageContext
 
 
-@allure.suite("Chrome Browser")
-@allure.sub_suite('User Login/Logout')
-@allure.feature("Home Page")
+@allure.suite("End To End")
+@allure.sub_suite('Home Page')
+@allure.feature("User Login/Logout")
 @screenshot_on_fail()
 class TestChromeUserLoginFromHomePage(HomePageContextCase):
 
 	@classmethod
 	def setUpClass(cls):
+		cls.user = NoOne
+		cls.browser = 'chrome'
+		cls.page_model = HomePageModel
+		cls.page_context = HomePageContext
+
+		with allure.step("Initial data setup > clean DB"):
+			clean_database()
+
 		with allure.step("Open web browser"):
-			cls.user = NoOne
-			cls.browser = 'chrome'
-			cls.page_model = HomePageModel
-			cls.page_context = HomePageContext
 			get_http_status_code(HomePageContext.URL)
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
@@ -36,7 +40,7 @@ class TestChromeUserLoginFromHomePage(HomePageContextCase):
 
 	def test_user_login_logout(self):
 		allure.dynamic.description("""
-				User log in validation > Negative test (no such user):
+				User Log In validation > Negative test (no such user):
 					1. Open Home web page
 					2. Do URL verification
 					3. Do Title verification
@@ -49,7 +53,7 @@ class TestChromeUserLoginFromHomePage(HomePageContextCase):
 					11. Verify web page title
 					12. Close web browser
 				""")
-		allure.dynamic.title("Web page URL test")
+		allure.dynamic.title("User Log In validation > Negative test")
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		# test url
