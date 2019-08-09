@@ -1,6 +1,7 @@
 import allure
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
+from utils.clean_database import clean_database
 from expected_results.users.jane_doe import JaneDoe
 from utils.http_status_code import get_http_status_code
 from page_models.register_page_model import RegisterPageModel
@@ -10,18 +11,19 @@ from tests.e2e_tests.user_registration.base_case.register_new_user import UserRe
 
 
 @allure.suite("End To End")
+@allure.sub_suite('User Registration Page')
 @allure.feature("User Registration")
 @screenshot_on_fail()
 class TestChromeUserRegistration(UserRegistrationCase):
 
 	@classmethod
 	def setUpClass(cls):
-		with allure.step("Initial data setup: {}, {}".format('chrome', RegisterPageContext.URL)):
-			cls.client = JaneDoe
-			cls.browser = 'chrome'
-			cls.page_model = RegisterPageModel
-			cls.page_context = RegisterPageContext
-			cls.page = None
+		cls.client = JaneDoe
+		cls.browser = 'chrome'
+		cls.page = None
+
+		with allure.step("Initial data setup > clean DB"):
+			clean_database()
 
 	@classmethod
 	def tearDownClass(cls):
@@ -31,11 +33,14 @@ class TestChromeUserRegistration(UserRegistrationCase):
 				cls.page = None
 
 	def setUp(self):
-		with allure.step("Open web browser"):
-			get_http_status_code(RegisterPageContext.URL)
-			self.page = open_web_browser(browser=self.browser,
-			                             page_model=self.page_model,
-			                             page_context=self.page_context)
+		with allure.step("Initial data setup: {}, {}".format(self.browser, RegisterPageContext.URL)):
+			self.page_model = RegisterPageModel
+			self.page_context = RegisterPageContext
+			with allure.step("Open web browser"):
+				get_http_status_code(RegisterPageContext.URL)
+				self.page = open_web_browser(browser=self.browser,
+				                             page_model=self.page_model,
+				                             page_context=self.page_context)
 
 	def tearDown(self):
 		with allure.step("Close current tab"):
