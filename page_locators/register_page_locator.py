@@ -19,4 +19,4 @@ class RegisterPageLocator(BasePageLocator, BasePersonalInfoPageLocator):
 	CONFIRM_TITLE = (By.XPATH, '//*[@id="customerForm"]/table/tbody/tr[12]/td[1]/b')
 	CONFIRM_INPUT = (By.XPATH, '//*[@id="repeatedPassword"]')
 
-	REGISTER_BUTTON = (By.XPATH, '//*[@id="customerForm"]/table/tbody/tr[13]/td[2]/input[contains(@value, "Register")]')
+	REGISTER_BUTTON = (By.XPATH, '//input[contains(@value, "Register")]')
