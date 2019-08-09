@@ -4,7 +4,6 @@ from page_locators.home_page_locator import HomePageLocator
 from expected_results.page_context.home_page_context import HomePageContext
 
 
-# TODO: remove AccountServicesMenu and replace in with BasePageModel
 class HomePageModel(BasePageModel):
 	'''
 	The page object pattern intends creating an object for each web page.
