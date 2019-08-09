@@ -2,7 +2,9 @@ import selenium.webdriver
 from utils.driver import Driver
 from elements.element import Element
 from page_locators.base_page_locator import BasePageLocator
+from selenium.common.exceptions import NoSuchElementException
 from expected_results.page_context.base_page_context import BasePageContext
+from page_locators.account_services_menu_locator import AccountServicesMenuLocator
 
 
 class BasePageModel:
@@ -846,3 +848,111 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ERROR_MESSAGE)
 		txt = element.text
 		return txt
+
+	# Account Services Menu - visible only when user logged in
+	@property
+	def welcome_message(self):
+		'''
+		Returns 'welcome' message that appears above "Account Services" menu
+		:param user:
+		:return:
+		'''
+
+		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.WELCOME_MESSAGE)
+		txt = element.text
+		return txt
+
+	@property
+	def account_services_menu_title(self):
+		'''
+		Returns "Account Services" menu header
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.ACCOUNT_SERVICES_HEADER)
+		txt = element.text
+		return txt
+
+	@property
+	def account_services_menu_is_visible(self):
+		'''
+		Returns is "Account Services" menu header visible
+		:return:
+		'''
+		try:
+			element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.ACCOUNT_SERVICES_HEADER)
+			is_visible = element.is_visible()
+			return is_visible
+		except NoSuchElementException:
+			return False
+
+	def open_new_account(self):
+		'''
+		Click on "Open New Account"
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.OPEN_NEW_ACCOUNT)
+		element.press_button()
+		return None
+
+	def accounts_overview(self):
+		'''
+		Click on "Account Overview"
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.ACCOUNTS_OVERVIEW)
+		element.press_button()
+		return None
+
+	def transfer_funds(self):
+		'''
+		Click on "Transfer Funds"
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.TRANSFER_FUNDS)
+		element.press_button()
+		return None
+
+	def bill_pay(self):
+		'''
+		Click on "Bill Pay"
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.BILL_PAY)
+		element.press_button()
+		return None
+
+	def find_transactions(self):
+		'''
+		Click on "Find Transactions"
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.FIND_TRANSACTIONS)
+		element.press_button()
+		return None
+
+	def update_contact_info(self):
+		'''
+		Click on "Update Contact Info"
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.UPDATE_CONTACT_INFO)
+		element.press_button()
+		return None
+
+	def request_loan(self):
+		'''
+		Click on "Request Loan"
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.REQUEST_LOAN)
+		element.press_button()
+		return None
+
+	def log_out(self):
+		'''
+		Click on "Log Out"
+		:return:
+		'''
+		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.LOG_OUT)
+		element.press_button()
+		return None
