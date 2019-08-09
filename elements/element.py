@@ -119,7 +119,22 @@ class Element(BaseElement):
 			return None
 
 		except TimeoutException:
-			raise InvalidElementStateException('\nERROR: can not find element. The element is invisible or not clickable.\n')
+			raise InvalidElementStateException(
+				'\nERROR: can not find element. The element is invisible or not clickable.\n')
+
+	def is_visible(self):
+		'''
+		Checks is element visible.
+		Returns True on success.
+		Returns False on failure.
+		:return:
+		'''
+		try:
+			element = WebDriverWait(self.driver,
+			                        self.explicit_wait_time).until(EC.visibility_of_element_located(self.locator))
+			return True
+		except TimeoutException:
+			return False
 
 	def write(self, text):
 		'''
