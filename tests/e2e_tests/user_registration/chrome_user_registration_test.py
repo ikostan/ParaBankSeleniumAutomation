@@ -4,9 +4,8 @@ from utils.open_web_browser import open_web_browser
 from expected_results.users.jane_doe import JaneDoe
 from utils.http_status_code import get_http_status_code
 from page_models.register_page_model import RegisterPageModel
-from selenium.common.exceptions import NoSuchAttributeException
-from expected_results.page_context.register_page_context import RegisterPageContext
 from expected_results.page_context.home_page_context import HomePageContext
+from expected_results.page_context.register_page_context import RegisterPageContext
 from tests.e2e_tests.user_registration.base_case.register_new_user import UserRegistrationCase
 
 
@@ -50,16 +49,28 @@ class TestChromeUserRegistration(UserRegistrationCase):
 			2. Fill out user personal data
 			4. Verify that each data item appears in relevant field
 			5. Hit 'Register' button
-			6. Verify success message
-			7. Log Out
+			6. Verify 'Welcome' message
+			7. Verify that "Account Services" menu is not present
+			8. Log Out
+			9. Verify that "Account Services" menu is not present
+			10. Close web browser
 		""")
 		allure.dynamic.title("User registration test")
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
 		# Register a new user:
-
 		self.register_new_user(self.client)
 
+		with allure.step('Verify that "Account Services" menu is present'):
+			expected = True
+			actual = self.page.account_services_menu_is_visible
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
+			                                                    expected,
+			                                                    actual))
+			self.assertEqual(expected,
+			                 actual,
+			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
+			                                                                                    actual))
 		# Logout
 		with allure.step('Hit "Log Out" link'):
 			self.page.log_out()
@@ -75,10 +86,14 @@ class TestChromeUserRegistration(UserRegistrationCase):
 			                 actual,
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
-		# TODO: Fix this one
-		'''
-		with allure.step('Verify that "Account Services" menu is not present'):
-			with self.assertRaises(NoSuchAttributeException):
-				title = self.page.menu_title
-		'''
 
+		with allure.step('Verify that "Account Services" menu is not present'):
+			expected = False
+			actual = self.page.account_services_menu_is_visible
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
+			                                                    expected,
+			                                                    actual))
+			self.assertEqual(expected,
+			                 actual,
+			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
+			                                                                                    actual))
