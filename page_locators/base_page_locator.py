@@ -140,3 +140,6 @@ class BasePageLocator:
 	FOOTER_VISIT_US_LINK = (By.XPATH, '//*[@id="footerPanel"]/'
 	                                  'ul[contains(@class, "visit")]/li/'
 	                                  'a[contains(@href, "http://www.parasoft.com/")]')
+
+	ERROR_TITLE = (By.XPATH, '//*[@id="rightPanel"]/h1')
+	ERROR_MESSAGE = (By.XPATH, '//*[@id="rightPanel"]/p')
