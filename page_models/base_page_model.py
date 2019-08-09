@@ -1,7 +1,6 @@
 import selenium.webdriver
 from utils.driver import Driver
 from elements.element import Element
-from utils.http_status_code import get_http_status_code
 from page_locators.base_page_locator import BasePageLocator
 from expected_results.page_context.base_page_context import BasePageContext
 
@@ -67,15 +66,6 @@ class BasePageModel:
 		'''
 
 		self._driver.get(self._url)
-		get_http_status_code(self._url)
-
-		'''
-		if http_code >= 400:
-			raise Exception('\nERROR: The webpage \'{}\' is not available (HTTP code: {}).'
-			                'Please check URL and retry.\n'.format(self._url,
-			                                                       http_code))
-		'''
-
 		self._driver.maximize_window()
 		return None
 
