@@ -34,5 +34,5 @@ class AccountServicesMenuLocator:
 	REQUEST_LOAN = (By.XPATH, '//*[@id="leftPanel"]/ul/li[7]/a[text()="{}"'.format(
 		BankAccountContext.ACCOUNT_SERVICES_MENU['menu_items']['request_loan']['text']))
 
-	LOG_OUT = (By.XPATH, '//*[@id="leftPanel"]/ul/li[8]/a[text()="{}"'.format(
+	LOG_OUT = (By.XPATH, '//a[text()="{}"]'.format(
 		BankAccountContext.ACCOUNT_SERVICES_MENU['menu_items']['log_out']['text']))
