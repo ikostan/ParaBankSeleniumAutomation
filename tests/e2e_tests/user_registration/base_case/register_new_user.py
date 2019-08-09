@@ -181,3 +181,6 @@ class UserRegistrationCase(RegisterContextCase):
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
 
+
+
+
