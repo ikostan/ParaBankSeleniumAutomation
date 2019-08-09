@@ -11,7 +11,7 @@ class AccountServicesMenuLocator:
 
 	WELCOME_MESSAGE = (By.XPATH, '//*[@id="leftPanel"]/p')
 
-	HEADER = (By.XPATH, '//*[@id="leftPanel"]/h2')
+	ACCOUNT_SERVICES_HEADER = (By.XPATH, '//h2[contains(text(),"Account Services")]')
 
 	OPEN_NEW_ACCOUNT = (By.XPATH, '//*[@id="leftPanel"]/ul/li[1]/a[text()="{}"]'.format(
 		BankAccountContext.ACCOUNT_SERVICES_MENU['menu_items']['open_new_account']['text']))
