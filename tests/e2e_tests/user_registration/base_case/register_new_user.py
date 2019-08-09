@@ -8,7 +8,7 @@ from expected_results.page_context.register_page_context import RegisterPageCont
 
 class UserRegistrationCase(RegisterContextCase):
 
-	def register_new_user(self, client):  # TODO: remove browser after done
+	def register_new_user(self, client):
 
 		with allure.step('Type first name'):
 			expected = client.FIRST_NAME
