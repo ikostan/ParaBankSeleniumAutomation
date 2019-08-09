@@ -44,12 +44,13 @@ class TestChromeUserLoginFromHomePage(HomePageContextCase):
 					4. Type username/password
 					5. Hit "Log In" button
 					6. Verify "Welcome" message
-					7. Do URL verification
-					8. Log Out
-					9. Do URL verification
-					10. Verify that "Account Services" menu is not displayed
-					11. Verify web page title
-					12. Close web browser
+					7. Verify that "Account Services" menu is present
+					8. Do URL verification
+					9. Log Out
+					10. Do URL verification
+					11. Verify that "Account Services" menu is not present
+					12. Verify web page title
+					13. Close web browser
 				""")
 		allure.dynamic.title("Web page URL test")
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
@@ -105,6 +106,17 @@ class TestChromeUserLoginFromHomePage(HomePageContextCase):
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
 
+		with allure.step('Verify that "Account Services" menu is present'):
+			expected = True
+			actual = self.page.account_services_menu_is_visible
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is present',
+			                                                    expected,
+			                                                    actual))
+			self.assertEqual(expected,
+			                 actual,
+			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
+			                                                                                    actual))
+
 		# Log Out
 		with allure.step('Hit "Log Out" link'):
 			self.page.log_out()
@@ -120,12 +132,17 @@ class TestChromeUserLoginFromHomePage(HomePageContextCase):
 			                 actual,
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
-		# TODO: Fix this one
-		'''
-		with allure.step('Verify that "Account Services" menu is not displayed'):
-			with self.assertRaises(NoSuchElementException):
-				title = self.page.menu_title
-		'''
+
+		with allure.step('Verify that "Account Services" menu is not present'):
+			expected = False
+			actual = self.page.account_services_menu_is_visible
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is not present',
+			                                                    expected,
+			                                                    actual))
+			self.assertEqual(expected,
+			                 actual,
+			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
+			                                                                                    actual))
 
 		# Verify Page Title
 		self.verify_page_title()
