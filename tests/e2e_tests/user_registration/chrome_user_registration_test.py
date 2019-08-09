@@ -4,7 +4,9 @@ from utils.open_web_browser import open_web_browser
 from expected_results.users.jane_doe import JaneDoe
 from utils.http_status_code import get_http_status_code
 from page_models.register_page_model import RegisterPageModel
+from selenium.common.exceptions import NoSuchAttributeException
 from expected_results.page_context.register_page_context import RegisterPageContext
+from expected_results.page_context.home_page_context import HomePageContext
 from tests.e2e_tests.user_registration.base_case.register_new_user import UserRegistrationCase
 
 
@@ -16,6 +18,7 @@ class TestChromeUserRegistration(UserRegistrationCase):
 	@classmethod
 	def setUpClass(cls):
 		with allure.step("Initial data setup: {}, {}".format('chrome', RegisterPageContext.URL)):
+			cls.client = JaneDoe
 			cls.browser = 'chrome'
 			cls.page_model = RegisterPageModel
 			cls.page_context = RegisterPageContext
@@ -53,7 +56,29 @@ class TestChromeUserRegistration(UserRegistrationCase):
 		allure.dynamic.title("User registration test")
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
-		client = JaneDoe
-		self.register_new_user(client)
+		# Register a new user:
 
-		# TODO: add logout
+		self.register_new_user(self.client)
+
+		# Logout
+		with allure.step('Hit "Log Out" link'):
+			self.page.log_out()
+
+		# Post Logout validation
+		with allure.step('Verify URL'):
+			expected = HomePageContext.URL
+			actual = self.page.url
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
+			                                                    expected,
+			                                                    actual))
+			self.assertEqual(expected,
+			                 actual,
+			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
+			                                                                                    actual))
+		# TODO: Fix this one
+		'''
+		with allure.step('Verify that "Account Services" menu is not present'):
+			with self.assertRaises(NoSuchAttributeException):
+				title = self.page.menu_title
+		'''
+
