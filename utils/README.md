@@ -74,7 +74,9 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
             cls.browser = browser_configuration()
             cls.page_model = AboutPageModel
             cls.page_context = AboutPageContext
-            cls.page = open_web_browser(browser=cls.browser, page_model=cls.page_model, page_context=cls.page_context)
+            cls.page = open_web_browser(browser=cls.browser, 
+                                        page_model=cls.page_model, 
+                                        page_context=cls.page_context)
 ```
 <br/>
 
