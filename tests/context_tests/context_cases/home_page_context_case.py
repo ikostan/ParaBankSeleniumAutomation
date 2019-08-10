@@ -8,8 +8,6 @@ from expected_results.page_context.home_page_context import HomePageContext
 from tests.context_tests.context_cases.base_cases.base_context_case import BaseContextCase
 
 
-@allure.story('Home Context')
-@allure.suite('Home Page Context Test Suite')
 @screenshot_on_fail()
 class HomePageContextCase(BaseContextCase):
 
