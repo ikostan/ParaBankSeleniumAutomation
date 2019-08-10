@@ -3,14 +3,16 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import allure
+
 from utils.clean_database import clean_database
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
+from utils.browser_configuration import browser_configuration
+
 from expected_results.users.no_such_user import NoOne
 from page_models.home_page_model import HomePageModel
-from utils.http_status_code import get_http_status_code
-from tests.context_tests.context_cases import HomePageContextCase
 from expected_results.page_context.home_page_context import HomePageContext
+from tests.context_tests.context_cases.home_page_context_case import HomePageContextCase
 
 
 @allure.suite("End To End")
@@ -22,7 +24,7 @@ class TestUserLoginFromHomePage(HomePageContextCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.user = NoOne
-		cls.browser = 'chrome'
+		cls.browser = browser_configuration()
 		cls.page_model = HomePageModel
 		cls.page_context = HomePageContext
 
@@ -30,7 +32,6 @@ class TestUserLoginFromHomePage(HomePageContextCase):
 			clean_database()
 
 		with allure.step("Open web browser"):
-			get_http_status_code(HomePageContext.URL)
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
 			                            page_context=cls.page_context)
