@@ -13,11 +13,14 @@ from expected_results.page_context.register_page_context import RegisterPageCont
 from tests.e2e_tests.user_registration.base_case.register_new_user import UserRegistrationCase
 
 
-@allure.suite("End To End")
-@allure.sub_suite('User Registration Page')
-@allure.feature("User Registration")
+@allure.epic('Page Functionality')
+@allure.parent_suite('End To End')
+@allure.suite("User Registration")
+@allure.sub_suite('Positive Tests')
+@allure.feature("Register Page")
+@allure.story('Register Functionality')
 @screenshot_on_fail()
-class TestChromeUserRegistration(UserRegistrationCase):
+class TestUserRegistration(UserRegistrationCase):
 
 	@classmethod
 	def setUpClass(cls):
@@ -63,7 +66,7 @@ class TestChromeUserRegistration(UserRegistrationCase):
 			9. Verify that "Account Services" menu is not present
 			10. Close web browser
 		""")
-		allure.dynamic.title("User registration test > {}".format(self.browser))
+		allure.dynamic.title("User registration > Positive test")
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
 		# Register a new user:
