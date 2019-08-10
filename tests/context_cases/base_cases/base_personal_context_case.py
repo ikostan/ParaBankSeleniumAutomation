@@ -1,3 +1,7 @@
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 import allure
 from tests.context_cases.base_cases.base_context_case import BaseContextCase
 from expected_results.page_context.base_personal_info_context import BasePersonalInfoContext

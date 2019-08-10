@@ -1,3 +1,7 @@
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 import time
 from utils.http_status_code import get_http_status_code
 from utils.open_web_browser import open_web_browser

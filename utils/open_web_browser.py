@@ -1,3 +1,7 @@
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 import allure
 from utils.driver import Driver
 from utils.refresh_page import refresh_page

@@ -1,3 +1,7 @@
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 from selenium.webdriver.common.by import By
 from page_locators.base_page_locator import BasePageLocator
 from page_locators.base_personal_info_page_locator import BasePersonalInfoPageLocator

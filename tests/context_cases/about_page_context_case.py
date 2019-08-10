@@ -1,3 +1,7 @@
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 import allure
 from utils.screenshot import screenshot_on_fail
 from tests.context_cases.base_cases.base_context_case import BaseContextCase

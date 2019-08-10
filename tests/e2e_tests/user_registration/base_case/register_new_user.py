@@ -1,9 +1,14 @@
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 import allure
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from page_locators.register_page_locator import RegisterPageLocator
 from tests.context_cases.register_page_context_case import RegisterContextCase
 from expected_results.page_context.register_page_context import RegisterPageContext
+from expected_results.page_context.home_page_context import HomePageContext
 
 
 class UserRegistrationCase(RegisterContextCase):
@@ -181,6 +186,39 @@ class UserRegistrationCase(RegisterContextCase):
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
 
+		with allure.step('Verify that "Account Services" menu is present'):
+			expected = True
+			actual = self.page.account_services_menu_is_visible
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is present',
+			                                                    expected,
+			                                                    actual))
+			self.assertEqual(expected,
+			                 actual,
+			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
+			                                                                                    actual))
+		# Logout
+		with allure.step('Hit "Log Out" link'):
+			self.page.log_out()
 
+		# Post Logout validation
+		with allure.step('Verify URL'):
+			expected = HomePageContext.URL
+			actual = self.page.url
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
+			                                                    expected,
+			                                                    actual))
+			self.assertEqual(expected,
+			                 actual,
+			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
+			                                                                                    actual))
 
-
+		with allure.step('Verify that "Account Services" menu is not present'):
+			expected = False
+			actual = self.page.account_services_menu_is_visible
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is not present',
+			                                                    expected,
+			                                                    actual))
+			self.assertEqual(expected,
+			                 actual,
+			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
+			                                                                                    actual))

@@ -1,7 +1,8 @@
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 from elements.element import Element
-from page_models.base_page_model import BasePageModel
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from page_models.base_personal_info_page_model import BasePersonalInfoPageModel
 from page_locators.forgot_login_info_page_locator import ForgotLoginInfoPageLocator
 from expected_results.page_context.forgot_login_info_page_context import ForgotLoginInfoPageContext

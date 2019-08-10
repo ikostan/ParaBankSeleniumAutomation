@@ -1,3 +1,7 @@
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 from page_models.base_page_model import BasePageModel
 from expected_results.page_context.services_page_context import ServicesPageContext
 

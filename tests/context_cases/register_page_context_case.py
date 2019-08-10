@@ -1,3 +1,7 @@
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 import allure
 from utils.screenshot import screenshot_on_fail
 from expected_results.page_context.register_page_context import RegisterPageContext

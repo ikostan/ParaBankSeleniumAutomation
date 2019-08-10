@@ -1,3 +1,7 @@
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 from selenium.webdriver.common.by import By
 from expected_results.page_context.bank_account_context import BankAccountContext
 

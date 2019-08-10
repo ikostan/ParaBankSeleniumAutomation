@@ -22,7 +22,7 @@ class TestChromeUserRegistration(UserRegistrationCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.client = JaneDoe
-		cls.browser = 'chrome'
+		cls.browser = 'mozilla'
 		cls.page = None
 
 		with allure.step("Initial data setup > clean DB"):

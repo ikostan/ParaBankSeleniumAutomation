@@ -1,3 +1,7 @@
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 class BasePersonalInfoContext:
 	'''
 	Holds shared fields/data from "Forgot Login Info" and "Register" forms

@@ -1,4 +1,7 @@
-from page_locators.base_page_locator import BasePageLocator
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 from selenium.webdriver.common.by import By
 
 

@@ -1,3 +1,7 @@
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 from elements.element import Element
 from page_locators.register_page_locator import RegisterPageLocator
 from page_models.base_personal_info_page_model import BasePersonalInfoPageModel

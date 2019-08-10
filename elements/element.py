@@ -1,8 +1,11 @@
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 from elements.base_element import BaseElement
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, \
-	NoSuchElementException, \
 	InvalidElementStateException, \
 	NoSuchAttributeException
 
