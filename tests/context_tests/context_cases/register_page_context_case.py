@@ -8,8 +8,6 @@ from expected_results.page_context.register_page_context import RegisterPageCont
 from tests.context_tests.context_cases.base_cases.base_personal_context_case import BasePersonalInfoContextCase
 
 
-@allure.story('Register Context')
-@allure.suite('Register Page Context Test Suite')
 @screenshot_on_fail()
 class RegisterPageContextCase(BasePersonalInfoContextCase):
 
