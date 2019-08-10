@@ -2,28 +2,33 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 import allure
+
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
-from utils.http_status_code import get_http_status_code
+from utils.browser_configuration import browser_configuration
+
 from page_models.register_page_model import RegisterPageModel
-from tests.context_tests.context_cases import RegisterContextCase
 from expected_results.page_context.register_page_context import RegisterPageContext
+from tests.context_tests.context_cases.register_page_context_case import RegisterPageContextCase
 
 
 @allure.suite("Base Context Testing")
 @allure.sub_suite('Chrome Browser')
 @allure.feature("Register Base Page")
 @screenshot_on_fail()
-class TestChromeRegisterBasePageContext(RegisterContextCase):
+class TestChromeRegisterBasePageContext(RegisterPageContextCase):
 
 	@classmethod
 	def setUpClass(cls):
 		with allure.step("Open web browser"):
-			cls.browser = 'chrome'
+			cls.browser = browser_configuration()
 			cls.page_model = RegisterPageModel
 			cls.page_context = RegisterPageContext
-			get_http_status_code(RegisterPageContext.URL)
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
 			                            page_context=cls.page_context)
