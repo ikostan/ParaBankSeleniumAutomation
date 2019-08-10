@@ -3,27 +3,28 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import allure
+
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
+from utils.browser_configuration import browser_configuration
+
 from page_models.about_page_model import AboutPageModel
-from utils.http_status_code import get_http_status_code
-from tests.context_tests.context_cases import AboutPageContextCase
 from expected_results.page_context.about_page_context import AboutPageContext
+from tests.context_tests.context_cases.about_page_context_case import AboutPageContextCase
 
 
 @allure.suite("Base Context Testing")
 @allure.sub_suite('Chrome Browser')
 @allure.feature("About Base Page")
 @screenshot_on_fail()
-class TestChromeAboutBasePageContext(AboutPageContextCase):
+class TestAboutBasePageContext(AboutPageContextCase):
 
 	@classmethod
 	def setUpClass(cls):
 		with allure.step("Open web browser"):
-			cls.browser = 'chrome'
+			cls.browser = browser_configuration()
 			cls.page_model = AboutPageModel
 			cls.page_context = AboutPageContext
-			get_http_status_code(AboutPageContext.URL)
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
 			                            page_context=cls.page_context)
