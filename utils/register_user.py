@@ -5,6 +5,7 @@
 import time
 from utils.http_status_code import get_http_status_code
 from utils.open_web_browser import open_web_browser
+
 from page_models.register_page_model import RegisterPageModel
 from expected_results.page_context.register_page_context import RegisterPageContext
 
@@ -23,7 +24,6 @@ def register_user(client):
 	browser = 'chrome'
 
 	print("Open web browser")
-	get_http_status_code(RegisterPageContext.URL)
 	page = open_web_browser(browser=browser,
 	                        page_model=page_model,
 	                        page_context=page_context)
