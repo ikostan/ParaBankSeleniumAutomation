@@ -17,7 +17,7 @@ from tests.context_tests.context_cases.services_page_context_case import Service
 @allure.sub_suite('Chrome Services Page Context Test')
 @allure.feature("Services Page")
 @screenshot_on_fail()
-class TestChromeServicesPageContext(ServicesPageContextCase):
+class TestServicesPageContext(ServicesPageContextCase):
 
 	@classmethod
 	def setUpClass(cls):
