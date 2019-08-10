@@ -7,7 +7,7 @@ from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from page_models.home_page_model import HomePageModel
 from utils.http_status_code import get_http_status_code
-from tests.context_cases.home_page_context_case import HomePageContextCase
+from tests.context_tests.context_cases import HomePageContextCase
 from expected_results.page_context.home_page_context import HomePageContext
 
 
