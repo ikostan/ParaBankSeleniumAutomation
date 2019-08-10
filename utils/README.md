@@ -64,7 +64,8 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
    - By default it returns 'chrome' value.<br/>
    - Provides following log (simple type function): 'Run configuration: chrome'
    - Every Test class has it by default as part of setUpClass definition. See example bellow:<br/>
-  
+<br/>
+ 
 ```python
 @classmethod
     def setUpClass(cls):
@@ -110,11 +111,12 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
   <summary><b>get_http_status_code(url) method</b></summary>
 
 <br/>
-    - Returns HTTP status code
-	- Using requests library
-	- See sample output bellow:
-	
-```python
+    - Returns HTTP status code<br/>
+	- Using requests library<br/>
+	- See sample output bellow:<br/>
+<br/>	
+
+```
     URL: https://parabank.parasoft.com/parabank/about.htm
     HTTP Status code: 200
 ```
