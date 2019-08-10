@@ -8,9 +8,6 @@ from expected_results.page_context.about_page_context import AboutPageContext
 from tests.context_tests.context_cases.base_cases.base_context_case import BaseContextCase
 
 
-# @allure.feature("About Page")
-# @allure.story('About Context')
-# @allure.suite('About Page Context Test Suite')
 @screenshot_on_fail()
 class AboutPageContextCase(BaseContextCase):
 
