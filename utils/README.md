@@ -27,9 +27,6 @@ In order to create webdriver object you just do the following:<br/>
     - Edge<br/> 
 </details>
 
-
-
-
 <details>
   <summary><b>screenshot_on_fail wrapper</b></summary>
 
@@ -58,7 +55,6 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
 <br/>
 </details>
 
-   
 <details>
   <summary><b>browser_configuration() function</b></summary>
 
@@ -103,8 +99,34 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
 		with allure.step("Initial data setup > clean DB"):
 			clean_database()
 ```
-    
+
 </details>
+
+
+<details>
+  <summary><b>get_http_status_code(url) method</b></summary>
+
+<br/>
+    - Returns HTTP status code
+	- Using requests library
+	- See sample output bellow:
+	
+```python
+
+```
+	
+<br/>
+</details>
+
+
+<details>
+  <summary><b></b></summary>
+
+<br/>
+    
+<br/>
+</details>
+
 
 <details>
   <summary><b></b></summary>
@@ -116,15 +138,6 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
 
 </details>
 
-<details>
-  <summary><b></b></summary>
-
-<br/>
-    
-<br/>
-</details>
-
-</details>
 
 <details>
   <summary><b></b></summary>
@@ -134,12 +147,3 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
 <br/>
 </details>
 
-</details>
-
-<details>
-  <summary><b></b></summary>
-
-<br/>
-    
-<br/>
-</details>
