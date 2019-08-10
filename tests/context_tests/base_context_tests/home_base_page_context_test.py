@@ -17,11 +17,14 @@ from expected_results.page_context.home_page_context import HomePageContext
 from tests.context_tests.context_cases.home_page_context_case import HomePageContextCase
 
 
-@allure.suite("Base Context Testing")
-@allure.sub_suite('Chrome Browser')
-@allure.feature("Home Base Page")
+@allure.epic('Page Context')
+@allure.parent_suite('Page Base Context')
+@allure.suite('Home Page Context')
+@allure.sub_suite("Home Page Base Context")
+@allure.feature("Base Page")
+@allure.story('Home Context')
 @screenshot_on_fail()
-class TestChromeHomeBasePageContext(HomePageContextCase):
+class TestHomeBasePageContext(HomePageContextCase):
 
 	@classmethod
 	def setUpClass(cls):
