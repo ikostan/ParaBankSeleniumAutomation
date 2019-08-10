@@ -20,7 +20,7 @@ class ServicesPageContextCase(BaseContextCase):
 
 		expected = ServicesPageContext.URL
 		actual = self.page.url
-		step_description = 'Verify "Services" web page URL. Expected result: {}'.format(ServicesPageContext.URL)
+		step_description = 'Verify "Services" web page URL'
 		severity = allure.severity_level.BLOCKER
 
 		step_definition(self, expected, actual, step_description, severity)
