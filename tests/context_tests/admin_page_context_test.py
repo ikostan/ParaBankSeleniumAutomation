@@ -13,9 +13,12 @@ from expected_results.page_context.admin_page_context import AdminPageContext
 from tests.context_tests.context_cases.admin_page_context_case import AdminPageContextCase
 
 
-@allure.suite("Chrome Browser Context Testing")
-@allure.sub_suite('Chrome Admin Page Context Test')
+@allure.epic('Page Context')
+@allure.parent_suite('Page Unique Context')
+@allure.suite('Admin Page Context')
+@allure.sub_suite("Admin Page Unique Context")
 @allure.feature("Admin Page")
+@allure.story('Admin Context')
 @screenshot_on_fail()
 class TestAdminPageContext(AdminPageContextCase):
 
