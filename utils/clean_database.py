@@ -21,7 +21,6 @@ def clean_database():
 	browser = 'chrome'
 
 	print("Open web browser")
-	get_http_status_code(AdminPageContext.URL)
 	page = open_web_browser(browser=browser,
 	                        page_model=page_model,
 	                        page_context=page_context)
