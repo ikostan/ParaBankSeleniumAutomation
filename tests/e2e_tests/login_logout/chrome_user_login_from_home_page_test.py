@@ -1,6 +1,6 @@
 import allure
-from utils.clean_database import clean_database
 from utils.register_user import register_user
+from utils.clean_database import clean_database
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from expected_results.users.jane_doe import JaneDoe
