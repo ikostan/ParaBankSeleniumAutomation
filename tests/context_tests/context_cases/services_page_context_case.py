@@ -11,8 +11,6 @@ from expected_results.page_context.services_page_context import ServicesPageCont
 from tests.context_tests.context_cases.base_cases.base_context_case import BaseContextCase
 
 
-@allure.story('Services Context')
-@allure.suite('Services Page Context Test Suite')
 @screenshot_on_fail()
 class ServicesPageContextCase(BaseContextCase):
 
