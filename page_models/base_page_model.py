@@ -19,7 +19,7 @@ class BasePageModel:
 
 	_url = BasePageContext.URL
 
-	def __init__(self, driver: Driver, implicit_wait_time=0, explicit_wait_time=0):
+	def __init__(self, driver: Driver, implicit_wait_time=5, explicit_wait_time=10):
 		self._driver = self._set_driver(driver)
 		self._set_implicit_wait(implicit_wait_time)
 		self._explicit_wait_time = self._set_explicit_wait(explicit_wait_time)
