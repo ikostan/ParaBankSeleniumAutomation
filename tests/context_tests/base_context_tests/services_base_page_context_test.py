@@ -17,9 +17,12 @@ from expected_results.page_context.services_page_context import ServicesPageCont
 from tests.context_tests.context_cases.services_page_context_case import ServicesPageContextCase
 
 
-@allure.suite("Base Context Testing")
-@allure.sub_suite('Chrome Browser')
-@allure.feature("Services Base Page")
+@allure.epic('Page Context')
+@allure.parent_suite('Page Base Context')
+@allure.suite('Services Page Context')
+@allure.sub_suite("Services Page Base Context")
+@allure.feature("Base Page")
+@allure.story('Services Context')
 @screenshot_on_fail()
 class TestServicesBasePageContext(ServicesPageContextCase):
 
