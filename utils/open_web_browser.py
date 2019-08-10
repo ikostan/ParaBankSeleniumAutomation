@@ -5,6 +5,7 @@
 import allure
 from utils.driver import Driver
 from utils.refresh_page import refresh_page
+from utils.http_status_code import get_http_status_code
 
 
 def open_web_browser(browser: str, page_model, page_context):
@@ -13,6 +14,7 @@ def open_web_browser(browser: str, page_model, page_context):
 	with allure.step("Open following web page: {}.".format(page_context.URL)):
 		driver = Driver(browser, is_debug=True)
 		page = page_model(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
+		get_http_status_code(page_context.URL)
 		page.go()
 		refresh_page(page_context.TITLE, page)
 		return page
