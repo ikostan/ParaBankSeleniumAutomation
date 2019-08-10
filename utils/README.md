@@ -62,13 +62,9 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
 
    
 <details>
-  <summary><b></b></summary>
+  <summary><b>browser_configuration() function</b></summary>
 
-<br/><br/>
-
-</details>
-
-### browser_configuration() function:
+<br/>
    Simplifies cross browser testing. By default it returns 'chrome' value. Every Test class has it by default as part of setUpClass definition. See example bellow:
   
 ```python
@@ -80,6 +76,9 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
             cls.page_context = AboutPageContext
             cls.page = open_web_browser(browser=cls.browser, page_model=cls.page_model, page_context=cls.page_context)
 ```
+<br/>
+
+</details>
 
 <details>
   <summary><b></b></summary>
