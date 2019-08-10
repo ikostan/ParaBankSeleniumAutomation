@@ -7,7 +7,7 @@ from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.http_status_code import get_http_status_code
 from page_models.register_page_model import RegisterPageModel
-from tests.context_cases.register_page_context_case import RegisterContextCase
+from tests.context_tests.context_cases import RegisterContextCase
 from expected_results.page_context.register_page_context import RegisterPageContext
 
 
