@@ -62,6 +62,7 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
    - Simplifies cross browser testing.<br/>
    - Returns browser name from from predefined dictionary.<br/>
    - By default it returns 'chrome' value.<br/>
+   - Provides following log (simple type function): 'Run configuration: chrome'
    - Every Test class has it by default as part of setUpClass definition. See example bellow:<br/>
   
 ```python
@@ -85,6 +86,8 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
     - Clean and initialise database<br/>
 	- Does not check for any errors<br/>
     - Using open_web_browser method in order to instantiate Selenium webdriver<br/>
+    - Provides following log (print function): Cleaning database...<br/>
+                                               Initializing database...<br/>
     - See example below:<br/>
     
 ```python
@@ -112,7 +115,8 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
 	- See sample output bellow:
 	
 ```python
-
+    URL: https://parabank.parasoft.com/parabank/about.htm
+    HTTP Status code: 200
 ```
 	
 <br/>
