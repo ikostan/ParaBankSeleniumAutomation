@@ -17,7 +17,7 @@ from tests.context_tests.context_cases.register_page_context_case import Registe
 @allure.sub_suite('Chrome Register Page Context Test')
 @allure.feature("Register Page")
 @screenshot_on_fail()
-class TestChromeRegisterPageContext(RegisterPageContextCase):
+class TestRegisterPageContext(RegisterPageContextCase):
 
 	@classmethod
 	def setUpClass(cls):
