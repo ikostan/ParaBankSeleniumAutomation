@@ -8,13 +8,13 @@ In order to create webdriver object you just do the following:<br/>
 from utils.driver import Driver
 
 # Chrome:
-driver = Driver('chrome').get_driver()
+driver = Driver('chrome', is_debug=True)
 
 # FireFox:
-driver = Driver('mozilla').get_driver()
+driver = Driver('mozilla', is_debug=True)
 
 # Edge:
-driver = Driver('edge').get_driver()
+driver = Driver('edge', is_debug=True)
 ```
 
 **Supported browsers:**
@@ -25,7 +25,7 @@ driver = Driver('edge').get_driver()
 ### screenshot_on_fail wrapper:
    Is a solution using a decorator that wrapps every method on a class that starts test_ with a wrapper that takes a screenshot if the method raises and Exception. The browser_attr is used to tell the decorator how to obtain the web browser (driver).
 
-```
+```python
     from utils.screenshot import screenshot_on_fail
 
     @screenshot_on_fail()
@@ -45,3 +45,16 @@ driver = Driver('edge').get_driver()
 ```
                              
 Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-test-fail-by-selenium-webdriver-in-python
+
+### browser_configuration() function:
+   Simplifies cross browser testing. By default it returns 'chrome' value. Every Test class has it by default as part of setUpClass definition. See example bellow:
+  
+```python
+@classmethod
+    def setUpClass(cls):
+        with allure.step("Open web browser"):
+            cls.browser = browser_configuration()
+            cls.page_model = AboutPageModel
+            cls.page_context = AboutPageContext
+            cls.page = open_web_browser(browser=cls.browser, page_model=cls.page_model, page_context=cls.page_context)
+```
