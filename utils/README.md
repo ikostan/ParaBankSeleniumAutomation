@@ -21,28 +21,22 @@ In order to create webdriver object you just do the following:<br/>
     driver = Driver('edge', is_debug=True)
 ```
 
-<br/>
+    <br/>**Supported browsers:**
+    - Chrome<br/> 
+    - Firefox<br/> 
+    - Edge<br/> 
+
 </details>
 
 
 
 
 <details>
-  <summary><b></b></summary>
+  <summary><b>screenshot_on_fail wrapper</b></summary>
 
-<br/><br/>
+<br/>Is a solution using a decorator that wrapps every method on a class that starts test_ with a wrapper that takes a screenshot if the method raises and Exception. The browser_attr is used to tell the decorator how to obtain the web browser (driver).
 
-</details>
-
-**Supported browsers:**
-- Chrome<br/> 
-- Firefox<br/> 
-- Edge<br/> 
-
-### screenshot_on_fail wrapper:
-   Is a solution using a decorator that wrapps every method on a class that starts test_ with a wrapper that takes a screenshot if the method raises and Exception. The browser_attr is used to tell the decorator how to obtain the web browser (driver).
-
-```python
+   ```python
     from utils.screenshot import screenshot_on_fail
 
     @screenshot_on_fail()
@@ -62,7 +56,11 @@ In order to create webdriver object you just do the following:<br/>
 ```
                              
 Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-test-fail-by-selenium-webdriver-in-python
+<br/>
 
+</details>
+
+   
 <details>
   <summary><b></b></summary>
 
