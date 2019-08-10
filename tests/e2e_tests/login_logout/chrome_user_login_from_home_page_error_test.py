@@ -97,7 +97,7 @@ class TestChromeUserLoginFromHomePage(HomePageContextCase):
 		with allure.step('Verify Error title'):
 			expected = HomePageContext.ERROR_TITLE
 			actual = self.page.error_title
-			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Welcome" message',
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Error" title',
 			                                                    expected,
 			                                                    actual))
 			self.assertEqual(expected,
@@ -108,7 +108,7 @@ class TestChromeUserLoginFromHomePage(HomePageContextCase):
 		with allure.step('Verify Error message'):
 			expected = HomePageContext.ERROR_MESSAGE
 			actual = self.page.error_message
-			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Welcome" message',
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Error" message',
 			                                                    expected,
 			                                                    actual))
 			self.assertEqual(expected,
