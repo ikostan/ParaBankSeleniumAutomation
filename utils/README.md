@@ -126,10 +126,33 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
 
 
 <details>
-  <summary><b></b></summary>
+  <summary><b>open_web_browser(browser: str, page_model, page_context) method</b></summary>
 
 <br/>
-    
+    Take care of following procedure:<br/>
+		1. Instantiate Selenium webdriver<br/>
+		2. Instantiate Page Model Object<br/>
+		3. Checks HTTP status code<br/>
+		4. Open web browser > open test web page<br/>
+		5. Refresh web browser in case test web site is not loaded<br/>
+		6. Returns page instance (Page Model Object)<br/>
+		
+   <br/>See example below:<br/><br/>
+
+```python
+    class TestAboutPageContext(AboutPageContextCase):
+
+	@classmethod
+	def setUpClass(cls):
+		with allure.step("Open web browser"):
+			cls.browser = browser_configuration()
+			cls.page_model = AboutPageModel
+			cls.page_context = AboutPageContext
+			cls.page = open_web_browser(browser=cls.browser,
+			                            page_model=cls.page_model,
+			                            page_context=cls.page_context)
+```
+	
 <br/>
 </details>
 
