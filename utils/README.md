@@ -33,7 +33,7 @@ In order to create webdriver object you just do the following:<br/>
 <details>
   <summary><b>screenshot_on_fail wrapper</b></summary>
 
-<br/>Is a solution using a decorator that wrapps every method on a class that starts test_ with a wrapper that takes a screenshot if the method raises and Exception. The browser_attr is used to tell the decorator how to obtain the web browser (driver).
+<br/>Is a solution using a decorator that wrapps every method on a class that starts test_ with a wrapper that takes a screenshot if the method raises and Exception. 
 
    ```python
     from utils.screenshot import screenshot_on_fail
