@@ -25,7 +25,6 @@ In order to create webdriver object you just do the following:<br/>
     - Chrome<br/> 
     - Firefox<br/> 
     - Edge<br/> 
-
 </details>
 
 
@@ -57,7 +56,6 @@ In order to create webdriver object you just do the following:<br/>
                              
 Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-test-fail-by-selenium-webdriver-in-python
 <br/>
-
 </details>
 
    
@@ -82,12 +80,66 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
                                         page_context=cls.page_context)
 ```
 <br/>
+</details>
+
+<details>
+  <summary><b>clean_database() method</b></summary>
+
+<br/>
+    - Clean and initialise database<br/>
+	- Does not check for any errors<br/>
+    - Using open_web_browser method in order to instantiate Selenium webdriver<br/>
+    - See example below:<br/>
+    
+```python
+    class TestUserRegistration(UserRegistrationCase):
+
+	@classmethod
+	def setUpClass(cls):
+		cls.client = JaneDoe
+		cls.browser = 'chrome'
+		cls.page = None
+
+		with allure.step("Initial data setup > clean DB"):
+			clean_database()
+```
+    
+</details>
+
+<details>
+  <summary><b></b></summary>
+
+<br/>
+    
+<br/>
+</details>
 
 </details>
 
 <details>
   <summary><b></b></summary>
 
-<br/><br/>
+<br/>
+    
+<br/>
+</details>
 
+</details>
+
+<details>
+  <summary><b></b></summary>
+
+<br/>
+    
+<br/>
+</details>
+
+</details>
+
+<details>
+  <summary><b></b></summary>
+
+<br/>
+    
+<br/>
 </details>
