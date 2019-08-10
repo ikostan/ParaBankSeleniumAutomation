@@ -17,11 +17,14 @@ from expected_results.page_context.register_page_context import RegisterPageCont
 from tests.context_tests.context_cases.register_page_context_case import RegisterPageContextCase
 
 
-@allure.suite("Base Context Testing")
-@allure.sub_suite('Chrome Browser')
-@allure.feature("Register Base Page")
+@allure.epic('Page Context')
+@allure.parent_suite('Page Base Context')
+@allure.suite('Register Page Context')
+@allure.sub_suite("Register Page Base Context")
+@allure.feature("Base Page")
+@allure.story('Register Context')
 @screenshot_on_fail()
-class TestChromeRegisterBasePageContext(RegisterPageContextCase):
+class TestRegisterBasePageContext(RegisterPageContextCase):
 
 	@classmethod
 	def setUpClass(cls):
