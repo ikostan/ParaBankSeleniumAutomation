@@ -1,21 +1,38 @@
 # Utils
 
-### Driver Class:<br/> 
+Contains a collection of various functions.
 
-The main idea behind it is to simplify working process with Selenium 'webdriver' object.
+<details>
+  <summary><b>Driver Class</b></summary>
+
+<br/>The main idea behind it is to simplify working process with Selenium 'webdriver' object.
 In order to create webdriver object you just do the following:<br/> 
+
 ```python
-from utils.driver import Driver
-
-# Chrome:
-driver = Driver('chrome', is_debug=True)
-
-# FireFox:
-driver = Driver('mozilla', is_debug=True)
-
-# Edge:
-driver = Driver('edge', is_debug=True)
+    from utils.driver import Driver
+    
+    # Chrome:
+    driver = Driver('chrome', is_debug=True)
+    
+    # FireFox:
+    driver = Driver('mozilla', is_debug=True)
+    
+    # Edge:
+    driver = Driver('edge', is_debug=True)
 ```
+
+<br/>
+</details>
+
+
+
+
+<details>
+  <summary><b></b></summary>
+
+<br/><br/>
+
+</details>
 
 **Supported browsers:**
 - Chrome<br/> 
@@ -46,6 +63,13 @@ driver = Driver('edge', is_debug=True)
                              
 Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-test-fail-by-selenium-webdriver-in-python
 
+<details>
+  <summary><b></b></summary>
+
+<br/><br/>
+
+</details>
+
 ### browser_configuration() function:
    Simplifies cross browser testing. By default it returns 'chrome' value. Every Test class has it by default as part of setUpClass definition. See example bellow:
   
@@ -58,3 +82,10 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
             cls.page_context = AboutPageContext
             cls.page = open_web_browser(browser=cls.browser, page_model=cls.page_model, page_context=cls.page_context)
 ```
+
+<details>
+  <summary><b></b></summary>
+
+<br/><br/>
+
+</details>
