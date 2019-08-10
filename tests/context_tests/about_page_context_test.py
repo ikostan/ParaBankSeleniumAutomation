@@ -50,7 +50,7 @@ class TestAboutPageContext(AboutPageContextCase):
 
 	def test_page_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > About page URL:
+		Context base elements validation > About page title:
 			1. Open About web page
 			2. Do Title verification
 		""")
@@ -61,18 +61,18 @@ class TestAboutPageContext(AboutPageContextCase):
 
 	def test_description_title_text(self):
 		allure.dynamic.description("""
-		Context base elements validation > About page title:
+		Context base elements validation > About page > description title:
 			1. Open About web page
 			2. Do URL verification
 		""")
-		allure.dynamic.title("Web page title test")
+		allure.dynamic.title("Web page description title test")
 
 		# verify description title text
 		self.verify_description_title()
 
 	def test_description_text(self):
 		allure.dynamic.description("""
-		Context base elements validation > About page description:
+		Context base elements validation > About page > description:
 			1. Open About web page
 			2. Do URL verification
 		""")
