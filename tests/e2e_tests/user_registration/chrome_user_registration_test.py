@@ -1,7 +1,7 @@
 import allure
 from utils.screenshot import screenshot_on_fail
-from utils.open_web_browser import open_web_browser
 from utils.clean_database import clean_database
+from utils.open_web_browser import open_web_browser
 from expected_results.users.jane_doe import JaneDoe
 from utils.http_status_code import get_http_status_code
 from page_models.register_page_model import RegisterPageModel
