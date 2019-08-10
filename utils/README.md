@@ -1,6 +1,6 @@
 # Utils
 
-Contains a collection of various functions.
+Contains a collection of various help classes and functions, see list bellow:
 
 <details>
   <summary><b>Driver Class</b></summary>
@@ -21,7 +21,7 @@ In order to create webdriver object you just do the following:<br/>
     driver = Driver('edge', is_debug=True)
 ```
 
-    <br/>**Supported browsers:**
+<br/>**Supported browsers:**
     - Chrome<br/> 
     - Firefox<br/> 
     - Edge<br/> 
