@@ -13,9 +13,12 @@ from expected_results.page_context.home_page_context import HomePageContext
 from tests.context_tests.context_cases.home_page_context_case import HomePageContextCase
 
 
-@allure.suite("Chrome Browser")
-@allure.sub_suite('Context Test')
+@allure.epic('Page Context')
+@allure.parent_suite('Page Unique Context')
+@allure.suite('Home Page Context')
+@allure.sub_suite("Home Page Unique Context")
 @allure.feature("Home Page")
+@allure.story('Home Context')
 @screenshot_on_fail()
 class TestHomePageContext(HomePageContextCase):
 
