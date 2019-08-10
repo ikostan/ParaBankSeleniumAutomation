@@ -15,11 +15,14 @@ from expected_results.page_context.home_page_context import HomePageContext
 from tests.context_tests.context_cases.home_page_context_case import HomePageContextCase
 
 
-@allure.suite("End To End")
-@allure.sub_suite('Home Page')
-@allure.feature("User Login/Logout")
+@allure.epic('Page Functionality')
+@allure.parent_suite('End To End')
+@allure.suite("User Login/Logout")
+@allure.sub_suite('Positive Tests')
+@allure.feature("Home Page")
+@allure.story('Login/Logout Functionality')
 @screenshot_on_fail()
-class TestUserLoginFromHomePage(HomePageContextCase):
+class TestUserLoginFromHomePageError(HomePageContextCase):
 
 	@classmethod
 	def setUpClass(cls):
