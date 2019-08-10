@@ -17,7 +17,7 @@ from tests.context_tests.context_cases.admin_page_context_case import AdminPageC
 @allure.sub_suite('Chrome Admin Page Context Test')
 @allure.feature("Admin Page")
 @screenshot_on_fail()
-class TestChromeAdminPageContext(AdminPageContextCase):
+class TestAdminPageContext(AdminPageContextCase):
 
 	@classmethod
 	def setUpClass(cls):
