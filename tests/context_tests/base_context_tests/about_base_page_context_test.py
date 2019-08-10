@@ -13,9 +13,12 @@ from expected_results.page_context.about_page_context import AboutPageContext
 from tests.context_tests.context_cases.about_page_context_case import AboutPageContextCase
 
 
-@allure.suite("Base Context Testing")
-@allure.sub_suite('Chrome Browser')
-@allure.feature("About Base Page")
+@allure.epic('Page Context')
+@allure.parent_suite('Page Base Context')
+@allure.suite('About Page Context')
+@allure.sub_suite("About Page Base Context")
+@allure.feature("Base Page")
+@allure.story('About Context')
 @screenshot_on_fail()
 class TestAboutBasePageContext(AboutPageContextCase):
 
