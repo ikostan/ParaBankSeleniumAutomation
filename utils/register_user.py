@@ -1,3 +1,4 @@
+import time
 from utils.http_status_code import get_http_status_code
 from utils.open_web_browser import open_web_browser
 from page_models.register_page_model import RegisterPageModel
@@ -48,6 +49,11 @@ def register_user(client):
 
 	print("Clicking on Register button")
 	page.click_register_btn()
+	time.sleep(3)
+
+	print("Log out")
+	page.log_out()
+	time.sleep(3)
 
 	print("\nClose web browser")
 	page.quit()
