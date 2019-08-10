@@ -17,7 +17,7 @@ from tests.context_tests.context_cases.home_page_context_case import HomePageCon
 @allure.sub_suite('Context Test')
 @allure.feature("Home Page")
 @screenshot_on_fail()
-class TestChromeHomePageContext(HomePageContextCase):
+class TestHomePageContext(HomePageContextCase):
 
 	@classmethod
 	def setUpClass(cls):
