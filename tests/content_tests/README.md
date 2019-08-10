@@ -5,7 +5,7 @@ The main objective of content testing is to validate User Experience, i.e., the 
 As content is a crucial part of understanding, learning, and getting to know the services and products provided by an organisation, it is extremely necessary for them to test it properly. With the assistance of content testing, one can gain perspective on content quality, presentation, and format.
 
 <div align="center"> 
-<img width="80%" height="80%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/Content%20Testing.png" hspace="10">
+<img width="50%" height="50%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/Content%20Testing.png" hspace="10">
 </div>
 
 **Source:** [Defining Content Testing](http://www.professionalqa.com/content-testing)
