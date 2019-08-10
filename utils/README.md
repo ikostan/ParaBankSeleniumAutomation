@@ -88,7 +88,7 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
     - Clean and initialise database<br/>
 	- Does not check for any errors<br/>
     - Using open_web_browser method in order to instantiate Selenium webdriver<br/>
-    - Provides following log (print function): 'Cleaning database...', 'Initializing database...<br/>'
+    - Provides following log (print function): 'Cleaning database...', 'Initializing database...'<br/>
     - See example below:<br/>
     
 ```python
