@@ -170,6 +170,17 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
 
 
 <details>
+  <summary><b>refresh_page(expected, page, sleep_time=3) method</b></summary>
+
+<br/>
+    1. Check if page has expected title<br/>
+	2. Trying to refresh web page in case page title dos not equal expected result<br/>
+	3. Raises exception in case page title dos not equal expected result<br/>
+<br/>
+</details>
+
+
+<details>
   <summary><b></b></summary>
 
 <br/>
