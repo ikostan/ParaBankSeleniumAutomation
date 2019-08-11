@@ -12,8 +12,9 @@ from expected_results.page_context.register_page_context import RegisterPageCont
 
 def register_user(client):
 	'''
-	Register a new user.
+	Registers a new user.
 	Does not check for any errors.
+	Using Selenium webdriver + chrome browser by default
 	:param page:
 	:param client:
 	:return:
