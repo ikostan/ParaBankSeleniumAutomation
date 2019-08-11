@@ -12,7 +12,7 @@ from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.browser_configuration import browser_configuration
 
-from page_models.admin_page_model import AdminPageModel
+from page_object_models.admin_page_model import AdminPageModel
 from expected_results.page_context.admin_page_context import AdminPageContext
 from tests.content_tests.content_cases.admin_page_content_case import AdminPageContextCase
 
