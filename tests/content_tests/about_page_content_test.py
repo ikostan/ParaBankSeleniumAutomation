@@ -8,7 +8,7 @@ from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.browser_configuration import browser_configuration
 
-from page_models.about_page_model import AboutPageModel
+from page_object_models.about_page_model import AboutPageModel
 from expected_results.page_context.about_page_context import AboutPageContext
 from tests.content_tests.content_cases.about_page_content_case import AboutPageContextCase
 
