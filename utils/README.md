@@ -21,7 +21,7 @@ In order to create webdriver object you just do the following:<br/>
     driver = Driver('edge', is_debug=True)
 ```
 
-<br/>**Supported browsers:**
+<br/>**Supported browsers:**<br/> 
     - Chrome<br/> 
     - Firefox<br/> 
     - Edge<br/> 
