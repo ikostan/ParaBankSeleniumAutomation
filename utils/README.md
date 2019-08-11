@@ -59,12 +59,13 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
   <summary><b>browser_configuration() function</b></summary>
 
 <br/>
-   - Simplifies cross browser testing.<br/>
-   - Returns browser name from from predefined dictionary.<br/>
-   - By default it returns 'chrome' value.<br/>
-   - Provides following log (simple type function): 'Run configuration: chrome'<br/>
-   - Every Test class has it by default as part of setUpClass definition.<br/>
-   - See example bellow:<br/>
+
+- Simplifies cross browser testing.<br/>
+- Returns browser name from from predefined dictionary.<br/>
+- By default it returns 'chrome' value.<br/>
+- Provides following log (simple type function): 'Run configuration: chrome'<br/>
+- Every Test class has it by default as part of setUpClass definition.<br/>
+- See example bellow:<br/>
 <br/>
  
 ```python
@@ -112,9 +113,10 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
   <summary><b>get_http_status_code(url) method</b></summary>
 
 <br/>
-    - Returns HTTP status code<br/>
-	- Using requests library<br/>
-	- See sample output bellow:<br/>
+
+- Returns HTTP status code<br/>
+- Using requests library<br/>
+- See sample output bellow:<br/>
 <br/>	
 
 ```
@@ -164,8 +166,9 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
   <summary><b>DriverPath class</b></summary>
 
 <br/>
-    - Contains local path for Selenium webdriver<br/>
-    - Used in case system has no PATH configuration<br/>
+
+- Contains local path for Selenium webdriver<br/>
+- Used in case system has no PATH configuration<br/>
 <br/>
 </details>
 
