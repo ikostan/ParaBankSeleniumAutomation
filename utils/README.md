@@ -129,13 +129,15 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
   <summary><b>open_web_browser(browser: str, page_model, page_context) method</b></summary>
 
 <br/>
-    Take care of following procedure:<br/>
-		1. Instantiate Selenium webdriver<br/>
-		2. Instantiate Page Model Object<br/>
-		3. Checks HTTP status code<br/>
-		4. Open web browser > open test web page<br/>
-		5. Refresh web browser in case test web site is not loaded<br/>
-		6. Returns page instance (Page Model Object)<br/>
+
+   **Takes care of following procedure:**<br/>
+       
+   1. Instantiate Selenium webdriver<br/>
+   2. Instantiate Page Model Object<br/>
+   3. Checks HTTP status code<br/>
+   4. Open web browser > open test web page<br/>
+   5. Refresh web browser in case test web site is not loaded<br/>
+   6. Returns page instance (Page Model Object)<br/>
 		
    <br/>See example below:<br/><br/>
 
