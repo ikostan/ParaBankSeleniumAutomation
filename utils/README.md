@@ -5,7 +5,7 @@ Contains a collection of various help classes and functions, see list bellow:
 <details>
   <summary><b>Driver Class</b></summary>
 
-<br/>The main idea behind it is to simplify working process with Selenium 'webdriver' object.
+<br/>In order to instantiate webdriver I use Driver class of my own. The main idea behind it is to simplify working process with Selenium 'webdriver' object.
 In order to create webdriver object you just do the following:<br/> 
 
 ```python
