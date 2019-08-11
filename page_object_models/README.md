@@ -49,9 +49,19 @@ There are a few best practices in using page objects, that you should make an ef
 - A page object should represent meaningful elements of a page and not necessarily a complete page<br/>
 - When you navigate you should return the a page object for the next page<br/>
 
+
+### Implementation involves following steps<br/>
+
+1. Review the overall flow of UI Screens.<br/>
+2. All page models can inherit from the Page super class.<br/>
+3. Create a Page class for every UI screen.<br/>
+4. A Page Class should return another Page class (via an operation) which represents the next screen in a flow.<br/>
+5. Create Test classes and test methods which perform operations on Page Objects.<br/>
+
+
 **Sources:**<br/>
 - [Page Object Model (POM) & Page Factory: Selenium WebDriver Tutorial](https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html)<br/>
 - [Page Object Model (POM) | Design Pattern](https://medium.com/tech-tajawal/page-object-model-pom-design-pattern-f9588630800b)<br/>
 - [Getting Started with Page Object Pattern for Your Selenium Tests](https://www.pluralsight.com/guides/getting-started-with-page-object-pattern-for-your-selenium-tests)<br/>
-
-
+- [Design Patterns - Page Object Model](https://docs.experitest.com/display/TE/Design+Patterns+-+Page+Object+Model)<br/>
+- [Page Object Model (Selenium, Python)](https://qxf2.com/blog/page-object-model-selenium-python/)
