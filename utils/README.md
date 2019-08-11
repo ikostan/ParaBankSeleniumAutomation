@@ -158,10 +158,11 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
 
 
 <details>
-  <summary><b></b></summary>
+  <summary><b>DriverPath class</b></summary>
 
 <br/>
-    
+    - Contains local path for Selenium webdriver<br/>
+    - Used in case system has no PATH configuration<br/>
 <br/>
 </details>
 
