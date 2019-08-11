@@ -27,7 +27,12 @@ In other words: ParaBank is not a real bank!
     - [ChromeDriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers/chrome)
     - [Microsoft WebDriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers/microsoft_edge)
     - [geckodriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers/mozilla_geckodriver)
-2. 
+2. [Web Element](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/elements)
+3. [Expected Results](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/expected_results)
+4. [Page/Element Locators](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_locators)
+5. [Page Object Model (POM)](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_object_models)
+6. [Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests)
+7. [Utils](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils)
 
 ### Dev Environment:<br/>
 1. Python 3.7<br/>
