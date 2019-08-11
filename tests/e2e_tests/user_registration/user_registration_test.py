@@ -8,7 +8,7 @@ from utils.clean_database import clean_database
 from utils.open_web_browser import open_web_browser
 from expected_results.users.jane_doe import JaneDoe
 from utils.http_status_code import get_http_status_code
-from page_models.register_page_model import RegisterPageModel
+from page_object_models.register_page_model import RegisterPageModel
 from expected_results.page_context.register_page_context import RegisterPageContext
 from tests.e2e_tests.user_registration.base_case.register_new_user import UserRegistrationCase
 
