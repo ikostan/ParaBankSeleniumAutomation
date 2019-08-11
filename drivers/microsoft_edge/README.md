@@ -1,4 +1,4 @@
-## WebDriver
+## Microsoft WebDriver
 
 The W3C WebDriver API is a platform and language-neutral interface and wire protocol allowing programs or scripts to control the behavior of a web browser.<br/>
 
