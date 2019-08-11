@@ -84,7 +84,9 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
 <details>
   <summary><b>clean_database() method</b></summary>
 
-<br/>- Clean and initialise database<br/>
+<br/>
+
+- Clean and initialise database<br/>
 - Does not check for any errors<br/>
 - Using open_web_browser method in order to instantiate Selenium webdriver<br/>
 - Provides following log (print function): 'Cleaning database...', 'Initializing database...'<br/>
