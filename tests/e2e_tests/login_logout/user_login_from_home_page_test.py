@@ -11,7 +11,7 @@ from utils.open_web_browser import open_web_browser
 from utils.browser_configuration import browser_configuration
 
 from expected_results.users.jane_doe import JaneDoe
-from page_models.home_page_model import HomePageModel
+from page_object_models.home_page_model import HomePageModel
 from expected_results.page_context.home_page_context import HomePageContext
 from expected_results.page_context.bank_account_context import BankAccountContext
 from tests.content_tests.content_cases.home_page_content_case import HomePageContextCase
