@@ -194,3 +194,15 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
 <br/>
 </details>
 
+
+<details>
+  <summary><b>register_user(client) method</b></summary>
+
+<br/>
+
+- Registers a new user.
+- Does not check for any errors.
+- Using Selenium webdriver + chrome browser by default
+<br/>
+
+</details>
