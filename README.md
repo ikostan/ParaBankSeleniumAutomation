@@ -22,6 +22,13 @@ In other words: ParaBank is not a real bank!
 - [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html)<br/>
 - [Allure Framework](https://docs.qameta.io/allure/)<br/>
 
+### Table of Contents:<br/>
+1. [Selenium Webdriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers):
+    - [ChromeDriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers/chrome)
+    - [Microsoft WebDriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers/microsoft_edge)
+    - [geckodriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers/mozilla_geckodriver)
+2. 
+
 ### Dev Environment:<br/>
 1. Python 3.7<br/>
 2. Selenium 3.141.0<br/>
@@ -32,6 +39,7 @@ In other words: ParaBank is not a real bank!
 7. GitHub Desktop 2.1.0<br/>
 8. GIT 2.22.0.windows.1<br/>
 
+### Prerequisites:<br/>
 Full list of dependencies see [here.](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/requirements.txt)
 
 **Note:** In order to instantiate webdriver I use Driver class of my own. For more info please look [here](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils).<br/>
