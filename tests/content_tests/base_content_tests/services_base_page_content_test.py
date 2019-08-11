@@ -12,7 +12,7 @@ from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.browser_configuration import browser_configuration
 
-from page_models.services_page_model import ServicesPageModel
+from page_object_models.services_page_model import ServicesPageModel
 from expected_results.page_context.services_page_context import ServicesPageContext
 from tests.content_tests.content_cases.services_page_content_case import ServicesPageContextCase
 
