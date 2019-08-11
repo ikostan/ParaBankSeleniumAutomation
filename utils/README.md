@@ -187,15 +187,6 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
 
 
 <details>
-  <summary><b></b></summary>
-
-<br/>
-    
-<br/>
-</details>
-
-
-<details>
   <summary><b>register_user(client) method</b></summary>
 
 <br/>
