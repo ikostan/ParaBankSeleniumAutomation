@@ -1,7 +1,7 @@
 ## Utils
 
 <div align="right"> 
-<img width="30%" height="30%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/utils.png" hspace="10">
+<img width="5%" height="5%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/utils.png" hspace="10">
 </div>
 
 Contains a collection of various help classes and functions, see list bellow:
