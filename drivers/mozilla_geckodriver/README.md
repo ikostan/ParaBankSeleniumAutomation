@@ -1,7 +1,7 @@
 ## geckodriver
 
 <div align="right"> 
-<img width="6%" height="6%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/Firefox_Logo.png" hspace="10">
+<img width="5%" height="5%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/Firefox_Logo.png" hspace="10">
 </div>
 
 WebDriver is a remote control interface that enables introspection and control of user agents. It provides a platform- and language-neutral wire protocol as a way for out-of-process programs to remotely instruct the behavior of web browsers.<br/>
