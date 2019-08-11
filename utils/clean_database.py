@@ -5,7 +5,7 @@
 import time
 from utils.http_status_code import get_http_status_code
 from utils.open_web_browser import open_web_browser
-from page_models.admin_page_model import AdminPageModel
+from page_object_models.admin_page_model import AdminPageModel
 from expected_results.page_context.admin_page_context import AdminPageContext
 
 
