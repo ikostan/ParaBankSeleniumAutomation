@@ -4,7 +4,7 @@ When expected software testing results are not defined adequately, it is often i
 
 For a test to be effective, we must define software testing correctness (expected software testing results) independently of actual results so the actual results do not unduly influence definition of the expected results. As a practical matter, we also need to define the expected results before obtaining the actual results, or our determination of the expected results probably will be influenced by the actual results. In addition, we need to document the expected results in a form that is not subject to subsequent conscious or unconscious manipulation.<br/>
 
-To describe the expected results you can refer to 3 sources (most important first):<br/>
+**To describe the expected results you can refer to 3 sources (most important first):**<br/>
 
 1. The customer’s specification: this is your bible (if you have it)! Even if you think the customer’s choice is weird (your opinion), don’t describe a different expected behaviour than the one presented in the customer’s specification. If you disagree with the customer, write a suggestion instead and explain why you think it is more user-friendly.<br/>
 2. Web standards: refer to the web standards when you don’t have the customer’s specification. Web standards means “widely spread behaviour across websites”. For example, the navigation bar is commonly at the top or on the left side. A search bar is commonly a text field with a placeholder and a magnifying glass icon at the right border. In a list, the entries are generally sorted by alphabetical order. These are not unchanging rules. They are just commonly known behaviours. Over time, they have become a user-friendly behaviours.<br/>
