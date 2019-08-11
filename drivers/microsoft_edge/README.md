@@ -1,7 +1,7 @@
 ## Microsoft WebDriver
 
 <div align="right"> 
-<img width="10%" height="10%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/edge-icon.png" hspace="10">
+<img width="5%" height="5%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/edge-icon.png" hspace="10">
 </div>
 
 The W3C WebDriver API is a platform and language-neutral interface and wire protocol allowing programs or scripts to control the behavior of a web browser.<br/>
