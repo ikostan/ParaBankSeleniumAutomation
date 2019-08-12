@@ -1,5 +1,9 @@
 ## Images/Icons
 
+<div align="right"> 
+<img width="7%" height="7%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/iconfinder_Visuals_571.png" hspace="10">
+</div>
+
 A good article is the combination of text, images, and other various multi-media elements like videos, charts, slides, etc.<br/>
 Visuals give us a better understanding of not just the message, but what’s behind the message — explained easier, faster, and clearer than just a cluster of written words.
 
