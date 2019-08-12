@@ -9,7 +9,7 @@ from utils.open_web_browser import open_web_browser
 from utils.browser_configuration import browser_configuration
 
 from page_object_models.about_page_model import AboutPageModel
-from expected_results.page_context.about_page_context import AboutPageContext
+from expected_results.page_content.about_page_content import AboutPageContent
 from tests.content_tests.content_cases.about_page_content_case import AboutPageContentCase
 
 
@@ -27,7 +27,7 @@ class TestAboutBasePageContent(AboutPageContentCase):
 		with allure.step("Open web browser"):
 			cls.browser = browser_configuration()
 			cls.page_model = AboutPageModel
-			cls.page_context = AboutPageContext
+			cls.page_context = AboutPageContent
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
 			                            page_context=cls.page_context)
