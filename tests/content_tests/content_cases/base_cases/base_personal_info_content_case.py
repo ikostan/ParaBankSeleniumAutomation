@@ -4,10 +4,10 @@
 
 import allure
 from expected_results.page_context.base_personal_info_context import BasePersonalInfoContext
-from tests.content_tests.content_cases.base_cases.base_content_case import BaseContextCase
+from tests.content_tests.content_cases.base_cases.base_content_case import BaseContentCase
 
 
-class BasePersonalInfoContextCase(BaseContextCase):
+class BasePersonalInfoContentCase(BaseContentCase):
 	"""
 	This class should be the parent class to each test case class.
 	"""
