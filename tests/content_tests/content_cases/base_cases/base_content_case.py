@@ -7,7 +7,7 @@ import unittest
 from expected_results.page_context.base_page_context import BasePageContext
 
 
-class BaseContextCase(unittest.TestCase):
+class BaseContentCase(unittest.TestCase):
 	"""
 	BaseTest
 	This class should be the parent class to each test case class.
