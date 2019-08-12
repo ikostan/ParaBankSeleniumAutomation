@@ -43,7 +43,7 @@ class TestUserLoginFromHomePage(HomePageContentCase):
 		with allure.step("Open web browser"):
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
-			                            page_context=cls.page_context)
+			                            page_content=cls.page_context)
 
 	@classmethod
 	def tearDownClass(cls):
