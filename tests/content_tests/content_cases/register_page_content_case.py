@@ -3,7 +3,9 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import allure
+
 from utils.screenshot import screenshot_on_fail
+
 from expected_results.page_content.register_page_content import RegisterPageContent
 from tests.content_tests.content_cases.base_cases.base_personal_info_content_case import BasePersonalInfoContentCase
 
