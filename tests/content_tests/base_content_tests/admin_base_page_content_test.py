@@ -24,7 +24,7 @@ from tests.content_tests.content_cases.admin_page_content_case import AdminPageC
 @allure.feature("Base Page")
 @allure.story('Admin Context')
 @screenshot_on_fail()
-class TestAdminBasePageContext(AdminPageContextCase):
+class TestAdminBasePageContent(AdminPageContextCase):
 
 	@classmethod
 	def setUpClass(cls):
