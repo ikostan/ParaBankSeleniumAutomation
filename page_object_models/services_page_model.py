@@ -3,7 +3,7 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 from page_object_models.base_page_model import BasePageModel
-from expected_results.page_context.services_page_context import ServicesPageContext
+from expected_results.page_content.services_page_content import ServicesPageContent
 
 
 class ServicesPageModel(BasePageModel):
@@ -12,6 +12,6 @@ class ServicesPageModel(BasePageModel):
 	By following this technique a layer of separation between the test code and technical implementation is created.
 	'''
 
-	_url = ServicesPageContext.URL
+	_url = ServicesPageContent.URL
 
 
