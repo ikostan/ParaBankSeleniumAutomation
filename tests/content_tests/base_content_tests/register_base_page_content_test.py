@@ -14,7 +14,7 @@ from utils.browser_configuration import browser_configuration
 
 from page_object_models.register_page_model import RegisterPageModel
 from expected_results.page_context.register_page_context import RegisterPageContext
-from tests.content_tests.content_cases.register_page_content_case import RegisterPageContextCase
+from tests.content_tests.content_cases.register_page_content_case import RegisterPageContentCase
 
 
 @allure.epic('Page Context')
@@ -24,7 +24,7 @@ from tests.content_tests.content_cases.register_page_content_case import Registe
 @allure.feature("Base Page")
 @allure.story('Register Context')
 @screenshot_on_fail()
-class TestRegisterBasePageContent(RegisterPageContextCase):
+class TestRegisterBasePageContent(RegisterPageContentCase):
 
 	@classmethod
 	def setUpClass(cls):
