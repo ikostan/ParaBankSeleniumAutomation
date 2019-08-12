@@ -20,7 +20,7 @@ from tests.content_tests.content_cases.services_page_content_case import Service
 @allure.feature("Services Page")
 @allure.story('Services Context')
 @screenshot_on_fail()
-class TestServicesPageContext(ServicesPageContentCase):
+class TestServicesPageContent(ServicesPageContentCase):
 
 	@classmethod
 	def setUpClass(cls):
