@@ -8,11 +8,11 @@ from utils.screenshot import screenshot_on_fail
 from utils.step_definition import step_definition
 
 from expected_results.page_context.services_page_context import ServicesPageContext
-from tests.content_tests.content_cases.base_cases.base_content_case import BaseContextCase
+from tests.content_tests.content_cases.base_cases.base_content_case import BaseContentCase
 
 
 @screenshot_on_fail()
-class ServicesPageContextCase(BaseContextCase):
+class ServicesPageContextCase(BaseContentCase):
 
 	def verify_page_url(self):
 
