@@ -7,8 +7,8 @@ import unittest
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from page_locators.register_page_locator import RegisterPageLocator
-from expected_results.page_context.register_page_context import RegisterPageContext
-from expected_results.page_context.home_page_context import HomePageContext
+from expected_results.page_content.register_page_content import RegisterPageContent
+from expected_results.page_content.home_page_content import HomePageContent
 
 
 class UserRegistrationCase(unittest.TestCase):
@@ -166,7 +166,7 @@ class UserRegistrationCase(unittest.TestCase):
 			              self.page.explicit_wait_time).until(EC.presence_of_element_located(RegisterPageLocator.HEADER))
 
 		with allure.step('Verify "Welcome" header'):
-			expected = RegisterPageContext.WELCOME_MESSAGE['header'] + self.client.USERNAME
+			expected = RegisterPageContent.WELCOME_MESSAGE['header'] + self.client.USERNAME
 			actual = self.page.welcome_header
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify "Welcome" header\'',
 			                                                    expected,
@@ -177,7 +177,7 @@ class UserRegistrationCase(unittest.TestCase):
 			                                                                                    actual))
 
 		with allure.step('Verify "Welcome" message'):
-			expected = RegisterPageContext.WELCOME_MESSAGE['message']
+			expected = RegisterPageContent.WELCOME_MESSAGE['message']
 			actual = self.page.welcome_message
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify "Welcome" header\'',
 			                                                    expected,
@@ -205,7 +205,7 @@ class UserRegistrationCase(unittest.TestCase):
 
 		# Post Logout validation
 		with allure.step('Verify URL'):
-			expected = HomePageContext.URL
+			expected = HomePageContent.URL
 			actual = self.page.url
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
 			                                                    expected,
