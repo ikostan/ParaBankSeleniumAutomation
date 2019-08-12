@@ -5,7 +5,7 @@
 from elements.element import Element
 from page_locators.register_page_locator import RegisterPageLocator
 from page_object_models.base_personal_info_page_model import BasePersonalInfoPageModel
-from expected_results.page_context.register_page_context import RegisterPageContext
+from expected_results.page_content.register_page_content import RegisterPageContent
 
 
 class RegisterPageModel(BasePersonalInfoPageModel):
@@ -14,7 +14,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 	By following this technique a layer of separation between the test code and technical implementation is created.
 	'''
 
-	_url = RegisterPageContext.URL
+	_url = RegisterPageContent.URL
 
 	@property
 	def username_title(self):
