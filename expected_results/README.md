@@ -1,6 +1,6 @@
 ## Expected results
 
-<div align="center"> 
+<div align="right"> 
 <img width="5%" height="5%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/iconfinder_ViewResults_46723.png" hspace="10">
 </div>
 
