@@ -24,7 +24,7 @@ from tests.content_tests.content_cases.register_page_content_case import Registe
 @allure.feature("Base Page")
 @allure.story('Register Context')
 @screenshot_on_fail()
-class TestRegisterBasePageContext(RegisterPageContextCase):
+class TestRegisterBasePageContent(RegisterPageContextCase):
 
 	@classmethod
 	def setUpClass(cls):
