@@ -20,7 +20,7 @@ from tests.content_tests.content_cases.about_page_content_case import AboutPageC
 @allure.feature("About Page")
 @allure.story('About Context')
 @screenshot_on_fail()
-class TestAboutPageContext(AboutPageContentCase):
+class TestAboutPageContent(AboutPageContentCase):
 
 	@classmethod
 	def setUpClass(cls):
