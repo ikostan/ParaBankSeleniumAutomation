@@ -42,3 +42,7 @@ class JaneDoe:
 	Source: https://www.ssn-verify.com/generate
 	'''
 	SSN = '563-04-0995'
+
+	INIT_BALANCE = 515.50
+	MIN_BALANCE = 100.00
+
