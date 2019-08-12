@@ -9,7 +9,7 @@ from utils.open_web_browser import open_web_browser
 from expected_results.users.jane_doe import JaneDoe
 from utils.http_status_code import get_http_status_code
 from page_object_models.register_page_model import RegisterPageModel
-from expected_results.page_context.register_page_context import RegisterPageContext
+from expected_results.page_content.register_page_content import RegisterPageContent
 from tests.e2e_tests.user_registration.base_case.register_new_user import UserRegistrationCase
 
 
@@ -39,11 +39,11 @@ class TestUserRegistration(UserRegistrationCase):
 				cls.page = None
 
 	def setUp(self):
-		with allure.step("Initial data setup: {}, {}".format(self.browser, RegisterPageContext.URL)):
+		with allure.step("Initial data setup: {}, {}".format(self.browser, RegisterPageContent.URL)):
 			self.page_model = RegisterPageModel
-			self.page_context = RegisterPageContext
+			self.page_context = RegisterPageContent
 			with allure.step("Open web browser"):
-				get_http_status_code(RegisterPageContext.URL)
+				get_http_status_code(RegisterPageContent.URL)
 				self.page = open_web_browser(browser=self.browser,
 				                             page_model=self.page_model,
 				                             page_context=self.page_context)
