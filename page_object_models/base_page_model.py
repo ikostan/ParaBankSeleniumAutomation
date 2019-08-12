@@ -7,7 +7,7 @@ from utils.driver import Driver
 from elements.element import Element
 from page_locators.base_page_locator import BasePageLocator
 from selenium.common.exceptions import NoSuchElementException
-from expected_results.page_context.base_page_context import BasePageContext
+from expected_results.page_content.base_page_content import BasePageContent
 from page_locators.account_services_menu_locator import AccountServicesMenuLocator
 
 
@@ -17,7 +17,7 @@ class BasePageModel:
 	By following this technique a layer of separation between the test code and technical implementation is created.
 	'''
 
-	_url = BasePageContext.URL
+	_url = BasePageContent.URL
 
 	def __init__(self, driver: Driver, implicit_wait_time=5, explicit_wait_time=10):
 		self._driver = self._set_driver(driver)
@@ -142,7 +142,7 @@ class BasePageModel:
 		:param url:
 		:return:
 		'''
-		url = url.replace(BasePageContext.URL, '')
+		url = url.replace(BasePageContent.URL, '')
 
 		if ';' in url:
 			if '?_wadl&_type=xml' in url:
