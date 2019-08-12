@@ -9,16 +9,16 @@ from utils.open_web_browser import open_web_browser
 from utils.browser_configuration import browser_configuration
 
 from page_object_models.admin_page_model import AdminPageModel
-from expected_results.page_content.admin_page_context import AdminPageContent
+from expected_results.page_content.admin_page_content import AdminPageContent
 from tests.content_tests.content_cases.admin_page_content_case import AdminPageContentCase
 
 
-@allure.epic('Page Context')
-@allure.parent_suite('Page Unique Context')
-@allure.suite('Admin Page Context')
-@allure.sub_suite("Admin Page Unique Context")
+@allure.epic('Page Content')
+@allure.parent_suite('Page Unique Content')
+@allure.suite('Admin Page Content')
+@allure.sub_suite("Admin Page Unique Content")
 @allure.feature("Admin Page")
-@allure.story('Admin Context')
+@allure.story('Admin Content')
 @screenshot_on_fail()
 class TestAdminPageContent(AdminPageContentCase):
 
@@ -27,10 +27,10 @@ class TestAdminPageContent(AdminPageContentCase):
 		with allure.step("Open web browser"):
 			cls.browser = browser_configuration()
 			cls.page_model = AdminPageModel
-			cls.page_context = AdminPageContent
+			cls.page_content = AdminPageContent
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
-			                            page_context=cls.page_context)
+			                            page_content=cls.page_content)
 
 	@classmethod
 	def tearDownClass(cls):
@@ -41,7 +41,7 @@ class TestAdminPageContent(AdminPageContentCase):
 
 	def test_page_url(self):
 		allure.dynamic.description("""
-		Context base elements validation > Admin page URL:
+		Content base elements validation > Admin page URL:
 			1. Open Admin web page
 			2. Do URL verification
 		""")
@@ -52,7 +52,7 @@ class TestAdminPageContent(AdminPageContentCase):
 
 	def test_page_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Admin page URL:
+		Content base elements validation > Admin page URL:
 			1. Open Admin web page
 			2. Do Title verification
 		""")
