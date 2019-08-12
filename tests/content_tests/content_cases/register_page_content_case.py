@@ -9,7 +9,7 @@ from tests.content_tests.content_cases.base_cases.base_personal_info_content_cas
 
 
 @screenshot_on_fail()
-class RegisterPageContextCase(BasePersonalInfoContentCase):
+class RegisterPageContentCase(BasePersonalInfoContentCase):
 
 	def verify_page_url(self):
 
