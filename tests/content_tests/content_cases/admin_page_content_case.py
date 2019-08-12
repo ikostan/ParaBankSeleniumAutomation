@@ -3,8 +3,10 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import allure
+
 from utils.screenshot import screenshot_on_fail
-from expected_results.page_content.admin_page_context import AdminPageContent
+
+from expected_results.page_content.admin_page_content import AdminPageContent
 from tests.content_tests.content_cases.base_cases.base_content_case import BaseContentCase
 
 
