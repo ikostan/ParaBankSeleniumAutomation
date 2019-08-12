@@ -47,13 +47,17 @@ In other words: ParaBank is not a real bank!
 ### Prerequisites:<br/>
 Full list of dependencies see [here.](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/requirements.txt)
 
+### Nice to have tools:
+1. [Fiddler](https://www.telerik.com/fiddler)
+2. [Kite](https://kite.com/)
+3. [ChroPath](https://chrome.google.com/webstore/detail/chropath/ljngjbnaijcbncmcnjfhigebomdlkcjo?hl=en)
+
 **Note:** In order to instantiate webdriver I use Driver class of my own. For more info please look [here](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils).<br/>
 
 ### Supported/tested browsers:
 - Chrome: v75 (64 bit)
 - Firefox: v68 (64  bit)
 - Edge: v17 and above
-
 
 ### Tech Issues and Problem Solving:<br/>
 
@@ -131,6 +135,7 @@ If you save this in requirements.txt, you can follow this guide: [PyCharm - Mana
 Source: https://www.idiotinside.com/2015/05/10/python-auto-generate-requirements-txt/<br/>
 </details>
 
+
 <details>
   <summary><b>How to fix in case .gitignore is ignored by Git</b></summary>
 
@@ -147,6 +152,7 @@ Source: https://www.idiotinside.com/2015/05/10/python-auto-generate-requirements
    ```
     
 </details>
+
 
 <details>
   <summary><b>Common Selenium errors</b></summary>
@@ -173,6 +179,7 @@ Source: https://blogs.windows.com/msedgedev/2018/06/14/webdriver-w3c-recommendat
 
 </details>
 
+
 <details>
   <summary><b>Test are failed due to slow performance of WebDriver</b></summary>
   
@@ -189,6 +196,7 @@ Here we define to wait for a certain condition to occur before proceeding furthe
 ```
 
 </details>
+
 
 <details>
   <summary><b>How to Get Selenium to Wait for Page Load After a Click</b></summary>
