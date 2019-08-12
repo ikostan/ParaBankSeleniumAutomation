@@ -13,7 +13,7 @@ from utils.open_web_browser import open_web_browser
 from utils.browser_configuration import browser_configuration
 
 from page_object_models.admin_page_model import AdminPageModel
-from expected_results.page_context.admin_page_context import AdminPageContext
+from expected_results.page_content.admin_page_context import AdminPageContent
 from tests.content_tests.content_cases.admin_page_content_case import AdminPageContentCase
 
 
@@ -31,7 +31,7 @@ class TestAdminBasePageContent(AdminPageContentCase):
 		with allure.step("Open web browser"):
 			cls.browser = browser_configuration()
 			cls.page_model = AdminPageModel
-			cls.page_context = AdminPageContext
+			cls.page_context = AdminPageContent
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
 			                            page_context=cls.page_context)
