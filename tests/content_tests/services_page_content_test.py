@@ -13,12 +13,12 @@ from expected_results.page_content.services_page_content import ServicesPageCont
 from tests.content_tests.content_cases.services_page_content_case import ServicesPageContentCase
 
 
-@allure.epic('Page Context')
-@allure.parent_suite('Page Unique Context')
-@allure.suite('Services Page Context')
-@allure.sub_suite("Services Page Unique Context")
+@allure.epic('Page Content')
+@allure.parent_suite('Page Unique Content')
+@allure.suite('Services Page Content')
+@allure.sub_suite("Services Page Unique Content")
 @allure.feature("Services Page")
-@allure.story('Services Context')
+@allure.story('Services Content')
 @screenshot_on_fail()
 class TestServicesPageContent(ServicesPageContentCase):
 
@@ -27,10 +27,10 @@ class TestServicesPageContent(ServicesPageContentCase):
 		with allure.step("Open web browser"):
 			cls.browser = browser_configuration()
 			cls.page_model = ServicesPageModel
-			cls.page_context = ServicesPageContent
+			cls.page_content = ServicesPageContent
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
-			                            page_context=cls.page_context)
+			                            page_content=cls.page_content)
 
 	@classmethod
 	def tearDownClass(cls):
@@ -42,7 +42,7 @@ class TestServicesPageContent(ServicesPageContentCase):
 	@allure.feature("Services Page")
 	def test_page_url(self):
 		allure.dynamic.description("""
-		Context base elements validation > Services page URL:
+		Content base elements validation > Services page URL:
 			1. Open Services web page
 			2. Do URL verification
 		""")
@@ -55,7 +55,7 @@ class TestServicesPageContent(ServicesPageContentCase):
 	@allure.feature("Services Page")
 	def test_page_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Services page title:
+		Content base elements validation > Services page title:
 			1. Open Services web page
 			2. Do Services page title verification
 		""")
@@ -65,5 +65,5 @@ class TestServicesPageContent(ServicesPageContentCase):
 		# Verify web page title
 		self.verify_page_title()
 
-	# Services Context Testing
+	# Services Content Testing
 
