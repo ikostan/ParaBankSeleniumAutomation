@@ -13,7 +13,7 @@ from utils.open_web_browser import open_web_browser
 from utils.browser_configuration import browser_configuration
 
 from page_object_models.services_page_model import ServicesPageModel
-from expected_results.page_context.services_page_context import ServicesPageContext
+from expected_results.page_content.services_page_content import ServicesPageContent
 from tests.content_tests.content_cases.services_page_content_case import ServicesPageContentCase
 
 
@@ -31,7 +31,7 @@ class TestServicesBasePageContent(ServicesPageContentCase):
 		with allure.step("Open web browser"):
 			cls.browser = browser_configuration()
 			cls.page_model = ServicesPageModel
-			cls.page_context = ServicesPageContext
+			cls.page_context = ServicesPageContent
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
 			                            page_context=cls.page_context)
