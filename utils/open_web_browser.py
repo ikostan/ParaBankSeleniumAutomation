@@ -8,7 +8,7 @@ from utils.refresh_page import refresh_page
 from utils.http_status_code import get_http_status_code
 
 
-def open_web_browser(browser: str, page_model, page_context):
+def open_web_browser(browser: str, page_model, page_content):
 	'''
 	Take care of following procedure:
 		1. Instantiate Selenium webdriver
@@ -19,15 +19,15 @@ def open_web_browser(browser: str, page_model, page_context):
 		6. Returns page instance (Page Model Object)
 	:param browser:
 	:param page_model:
-	:param page_context:
+	:param page_content:
 	:return:
 	'''
 
 	# Open web page
-	with allure.step("Open following web page: {}.".format(page_context.URL)):
+	with allure.step("Open following web page: {}.".format(page_content.URL)):
 		driver = Driver(browser, is_debug=True)
 		page = page_model(driver=driver, implicit_wait_time=5, explicit_wait_time=10)
-		get_http_status_code(page_context.URL)
+		get_http_status_code(page_content.URL)
 		page.go()
-		refresh_page(page_context.TITLE, page)
+		refresh_page(page_content.TITLE, page)
 		return page
