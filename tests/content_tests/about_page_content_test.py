@@ -13,12 +13,12 @@ from expected_results.page_content.about_page_content import AboutPageContent
 from tests.content_tests.content_cases.about_page_content_case import AboutPageContentCase
 
 
-@allure.epic('Page Context')
-@allure.parent_suite('Page Unique Context')
-@allure.suite('About Page Context')
-@allure.sub_suite("About Page Unique Context")
+@allure.epic('Page Content')
+@allure.parent_suite('Page Unique Content')
+@allure.suite('About Page Content')
+@allure.sub_suite("About Page Unique Content")
 @allure.feature("About Page")
-@allure.story('About Context')
+@allure.story('About Content')
 @screenshot_on_fail()
 class TestAboutPageContent(AboutPageContentCase):
 
@@ -27,10 +27,10 @@ class TestAboutPageContent(AboutPageContentCase):
 		with allure.step("Open web browser"):
 			cls.browser = browser_configuration()
 			cls.page_model = AboutPageModel
-			cls.page_context = AboutPageContent
+			cls.page_content = AboutPageContent
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
-			                            page_context=cls.page_context)
+			                            page_content=cls.page_content)
 
 	@classmethod
 	def tearDownClass(cls):
@@ -41,7 +41,7 @@ class TestAboutPageContent(AboutPageContentCase):
 
 	def test_page_url(self):
 		allure.dynamic.description("""
-		Context base elements validation > About page URL:
+		Content base elements validation > About page URL:
 			1. Open About web page
 			2. Do URL verification
 		""")
@@ -52,7 +52,7 @@ class TestAboutPageContent(AboutPageContentCase):
 
 	def test_page_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > About page title:
+		Content base elements validation > About page title:
 			1. Open About web page
 			2. Do Title verification
 		""")
@@ -63,7 +63,7 @@ class TestAboutPageContent(AboutPageContentCase):
 
 	def test_description_title_text(self):
 		allure.dynamic.description("""
-		Context base elements validation > About page > description title:
+		Content base elements validation > About page > description title:
 			1. Open About web page
 			2. Do URL verification
 		""")
@@ -74,7 +74,7 @@ class TestAboutPageContent(AboutPageContentCase):
 
 	def test_description_text(self):
 		allure.dynamic.description("""
-		Context base elements validation > About page > description:
+		Content base elements validation > About page > description:
 			1. Open About web page
 			2. Do URL verification
 		""")
