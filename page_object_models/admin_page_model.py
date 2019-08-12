@@ -5,7 +5,7 @@
 from elements.element import Element
 from page_object_models.base_page_model import BasePageModel
 from page_locators.admin_page_locator import AdminPageLocator
-from expected_results.page_content.admin_page_context import AdminPageContent
+from expected_results.page_content.admin_page_content import AdminPageContent
 
 
 class AdminPageModel(BasePageModel):
