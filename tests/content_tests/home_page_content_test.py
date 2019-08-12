@@ -20,7 +20,7 @@ from tests.content_tests.content_cases.home_page_content_case import HomePageCon
 @allure.feature("Home Page")
 @allure.story('Home Context')
 @screenshot_on_fail()
-class TestHomePageContext(HomePageContentCase):
+class TestHomePageContent(HomePageContentCase):
 
 	@classmethod
 	def setUpClass(cls):
