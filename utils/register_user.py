@@ -7,7 +7,7 @@ from utils.http_status_code import get_http_status_code
 from utils.open_web_browser import open_web_browser
 
 from page_object_models.register_page_model import RegisterPageModel
-from expected_results.page_context.register_page_context import RegisterPageContext
+from expected_results.page_content.register_page_content import RegisterPageContent
 
 
 def register_user(client):
@@ -21,7 +21,7 @@ def register_user(client):
 	'''
 
 	page_model = RegisterPageModel
-	page_context = RegisterPageContext
+	page_context = RegisterPageContent
 	browser = 'chrome'
 
 	print("Open web browser")
