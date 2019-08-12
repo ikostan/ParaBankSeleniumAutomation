@@ -5,7 +5,7 @@
 from elements.element import Element
 from page_object_models.base_page_model import BasePageModel
 from page_locators.home_page_locator import HomePageLocator
-from expected_results.page_context.home_page_context import HomePageContext
+from expected_results.page_content.home_page_content import HomePageContent
 
 
 class HomePageModel(BasePageModel):
@@ -14,7 +14,7 @@ class HomePageModel(BasePageModel):
 	By following this technique a layer of separation between the test code and technical implementation is created.
 	'''
 
-	_url = HomePageContext.URL
+	_url = HomePageContent.URL
 
 	@property
 	def atm_title(self):
