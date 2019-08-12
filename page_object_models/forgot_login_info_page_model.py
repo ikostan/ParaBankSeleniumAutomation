@@ -5,7 +5,7 @@
 from elements.element import Element
 from page_object_models.base_personal_info_page_model import BasePersonalInfoPageModel
 from page_locators.forgot_login_info_page_locator import ForgotLoginInfoPageLocator
-from expected_results.page_context.forgot_login_info_page_context import ForgotLoginInfoPageContext
+from expected_results.page_content.forgot_login_info_page_content import ForgotLoginInfoPageContent
 
 
 class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
@@ -14,7 +14,7 @@ class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
 	By following this technique a layer of separation between the test code and technical implementation is created.
 	'''
 
-	_url = ForgotLoginInfoPageContext.URL
+	_url = ForgotLoginInfoPageContent.URL
 
 	@property
 	def find_info_btn_label(self):
