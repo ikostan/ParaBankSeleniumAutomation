@@ -14,7 +14,7 @@ from utils.browser_configuration import browser_configuration
 
 from page_object_models.services_page_model import ServicesPageModel
 from expected_results.page_context.services_page_context import ServicesPageContext
-from tests.content_tests.content_cases.services_page_content_case import ServicesPageContextCase
+from tests.content_tests.content_cases.services_page_content_case import ServicesPageContentCase
 
 
 @allure.epic('Page Context')
@@ -24,7 +24,7 @@ from tests.content_tests.content_cases.services_page_content_case import Service
 @allure.feature("Base Page")
 @allure.story('Services Context')
 @screenshot_on_fail()
-class TestServicesBasePageContent(ServicesPageContextCase):
+class TestServicesBasePageContent(ServicesPageContentCase):
 
 	@classmethod
 	def setUpClass(cls):
