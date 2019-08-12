@@ -12,7 +12,7 @@ from utils.browser_configuration import browser_configuration
 
 from expected_results.users.no_such_user import NoOne
 from page_object_models.home_page_model import HomePageModel
-from expected_results.page_context.home_page_context import HomePageContext
+from expected_results.page_content.home_page_content import HomePageContent
 from tests.content_tests.content_cases.home_page_content_case import HomePageContentCase
 
 
@@ -30,7 +30,7 @@ class TestUserLoginFromHomePageError(HomePageContentCase):
 		cls.user = NoOne
 		cls.browser = browser_configuration()
 		cls.page_model = HomePageModel
-		cls.page_context = HomePageContext
+		cls.page_context = HomePageContent
 
 		with allure.step("Initial data setup > clean DB"):
 			clean_database()
@@ -115,7 +115,7 @@ class TestUserLoginFromHomePageError(HomePageContentCase):
 
 		# Verify ERROR title
 		with allure.step('Verify Error title'):
-			expected = HomePageContext.ERROR_TITLE
+			expected = HomePageContent.ERROR_TITLE
 			actual = self.page.error_title
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Error" title',
 			                                                    expected,
@@ -127,7 +127,7 @@ class TestUserLoginFromHomePageError(HomePageContentCase):
 
 		# Verify ERROR message
 		with allure.step('Verify Error message'):
-			expected = HomePageContext.ERROR_MESSAGE
+			expected = HomePageContent.ERROR_MESSAGE
 			actual = self.page.error_message
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Error" message',
 			                                                    expected,
