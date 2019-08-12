@@ -6,7 +6,7 @@ import time
 from utils.http_status_code import get_http_status_code
 from utils.open_web_browser import open_web_browser
 from page_object_models.admin_page_model import AdminPageModel
-from expected_results.page_content.admin_page_context import AdminPageContent
+from expected_results.page_content.admin_page_content import AdminPageContent
 
 
 def clean_database():
@@ -23,7 +23,7 @@ def clean_database():
 	print("Open web browser")
 	page = open_web_browser(browser=browser,
 	                        page_model=page_model,
-	                        page_context=page_context)
+	                        page_content=page_context)
 
 	print("\nCleaning database...")
 	page.hit_clean_button()
