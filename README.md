@@ -46,7 +46,7 @@ In other words: ParaBank is not a real bank!
 9. [Java SE 8](https://www.oracle.com/technetwork/java/javase/overview/index.html)
 10. [Scoop](https://scoop.sh/)
 
-### Prerequisites:<br/>
+### Python Packages:<br/>
 Full list of dependencies see [here.](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/requirements.txt)
 
 ### Nice to have tools:
