@@ -1,5 +1,9 @@
 ## Page/element Locators
 
+<div align="right"> 
+<img width="5%" height="5%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/iconfinder_Artboard_1_1790663.png" hspace="10">
+</div>
+
 ### Problem<br/>
 Increasing automation test coverage can result in unmaintainable project structure, if locators are not managed in right way. This can happen due to duplication of code or mainly due to duplicated usage of locators.
 
