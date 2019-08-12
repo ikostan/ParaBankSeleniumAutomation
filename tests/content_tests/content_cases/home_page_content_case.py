@@ -9,7 +9,7 @@ from tests.content_tests.content_cases.base_cases.base_content_case import BaseC
 
 
 @screenshot_on_fail()
-class HomePageContextCase(BaseContentCase):
+class HomePageContentCase(BaseContentCase):
 
 	# @pytest.mark.parametrize('expected_url', [HomePageContext.URL], ids=['Expected web page url'])
 	def verify_page_url(self):
