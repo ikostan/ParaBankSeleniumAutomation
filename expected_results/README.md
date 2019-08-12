@@ -1,7 +1,7 @@
 ## Expected results
 
 <div align="center"> 
-<img width="50%" height="50%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/iconfinder_ViewResults_46723.png" hspace="10">
+<img width="5%" height="5%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/iconfinder_ViewResults_46723.png" hspace="10">
 </div>
 
 When expected software testing results are not defined adequately, it is often impossible for the tester to ascertain accurately whether the actual results are right or wrong. Consider how many tests are defined in a manner similar to, "Try this function and see if it works properly." "Works properly" is a conclusion, but not a specific-enough expected result on which to base said conclusion. Yet testers often somewhat blindly take for granted that they can guess needed inputs or conditions and corresponding actual results.<br/>
