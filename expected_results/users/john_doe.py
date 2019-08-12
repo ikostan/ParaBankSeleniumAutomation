@@ -34,3 +34,7 @@ class JohnDoe:
 	Source: https://primepay.com/blog/valid-social-security-number
 	'''
 	SSN = '050–13-8035'
+
+	INIT_BALANCE = 515.50
+	MIN_BALANCE = 100.00
+
