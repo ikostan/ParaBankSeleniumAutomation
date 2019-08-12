@@ -5,11 +5,11 @@
 import allure
 from utils.screenshot import screenshot_on_fail
 from expected_results.page_context.admin_page_context import AdminPageContext
-from tests.content_tests.content_cases.base_cases.base_content_case import BaseContextCase
+from tests.content_tests.content_cases.base_cases.base_content_case import BaseContentCase
 
 
 @screenshot_on_fail()
-class AdminPageContextCase(BaseContextCase):
+class AdminPageContextCase(BaseContentCase):
 
 	def verify_page_url(self):
 
