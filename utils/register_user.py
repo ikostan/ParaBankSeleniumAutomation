@@ -27,7 +27,7 @@ def register_user(client):
 	print("Open web browser")
 	page = open_web_browser(browser=browser,
 	                        page_model=page_model,
-	                        page_context=page_context)
+	                        page_content=page_context)
 
 	print("Filling out user data...")
 	page.type_first_name(client.FIRST_NAME)
