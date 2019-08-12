@@ -22,13 +22,6 @@ class ServicesPageContentCase(BaseContentCase):
 		severity = allure.severity_level.BLOCKER
 
 		step_definition(self, expected, actual, step_description, severity)
-	'''
-	def verify_page_url(self):
-
-		allure.dynamic.severity(allure.severity_level.BLOCKER)
-		with allure.step('Verify "Services" web page URL. Expected result: {}'.format(ServicesPageContext.URL)):
-			self.assertEqual(ServicesPageContext.URL, self.page.url)
-	'''
 
 	def verify_page_title(self):
 		allure.dynamic.severity(allure.severity_level.MINOR)
