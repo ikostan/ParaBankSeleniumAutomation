@@ -1,5 +1,9 @@
 ## Expected results
 
+<div align="center"> 
+<img width="50%" height="50%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/iconfinder_ViewResults_46723.png" hspace="10">
+</div>
+
 When expected software testing results are not defined adequately, it is often impossible for the tester to ascertain accurately whether the actual results are right or wrong. Consider how many tests are defined in a manner similar to, "Try this function and see if it works properly." "Works properly" is a conclusion, but not a specific-enough expected result on which to base said conclusion. Yet testers often somewhat blindly take for granted that they can guess needed inputs or conditions and corresponding actual results.<br/>
 
 For a test to be effective, we must define software testing correctness (expected software testing results) independently of actual results so the actual results do not unduly influence definition of the expected results. As a practical matter, we also need to define the expected results before obtaining the actual results, or our determination of the expected results probably will be influenced by the actual results. In addition, we need to document the expected results in a form that is not subject to subsequent conscious or unconscious manipulation.<br/>
