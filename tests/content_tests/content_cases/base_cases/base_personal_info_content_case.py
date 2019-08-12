@@ -3,7 +3,7 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import allure
-from expected_results.page_context.base_personal_info_context import BasePersonalInfoContext
+from expected_results.page_content.base_personal_info_content import BasePersonalInfoContent
 from tests.content_tests.content_cases.base_cases.base_content_case import BaseContentCase
 
 
@@ -20,7 +20,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test First Name title"):
-			self.assertEqual(BasePersonalInfoContext.FORM['first_name']['title'], self.page.first_name_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['first_name']['title'], self.page.first_name_title)
 
 	# @allure.feature("Base Personal Info Context")
 	def verify_last_name_title(self):
@@ -30,7 +30,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test Last Name title"):
-			self.assertEqual(BasePersonalInfoContext.FORM['last_name']['title'], self.page.last_name_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['last_name']['title'], self.page.last_name_title)
 
 	# @allure.feature("Base Personal Info Context")
 	def verify_address_title(self):
@@ -40,7 +40,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test Address title"):
-			self.assertEqual(BasePersonalInfoContext.FORM['address']['title'], self.page.address_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['address']['title'], self.page.address_title)
 
 	# @allure.feature("Base Personal Info Context")
 	def verify_city_title(self):
@@ -50,7 +50,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test City title"):
-			self.assertEqual(BasePersonalInfoContext.FORM['city']['title'], self.page.city_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['city']['title'], self.page.city_title)
 
 	# @allure.feature("Base Personal Info Context")
 	def verify_state_title(self):
@@ -60,7 +60,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test State title"):
-			self.assertEqual(BasePersonalInfoContext.FORM['state']['title'], self.page.state_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['state']['title'], self.page.state_title)
 
 	# @allure.feature("Base Personal Info Context")
 	def verify_zip_code_title(self):
@@ -70,7 +70,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test Zip Code title"):
-			self.assertEqual(BasePersonalInfoContext.FORM['zip_code']['title'], self.page.zip_code_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['zip_code']['title'], self.page.zip_code_title)
 
 	# @allure.feature("Base Personal Info Context")
 	def verify_phone_title(self):
@@ -80,7 +80,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test Phone title"):
-			self.assertEqual(BasePersonalInfoContext.FORM['phone']['title'], self.page.phone_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['phone']['title'], self.page.phone_title)
 
 	# @allure.feature("Base Personal Info Context")
 	def verify_ssn_title(self):
@@ -90,5 +90,5 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test SSN title"):
-			self.assertEqual(BasePersonalInfoContext.FORM['ssn']['title'], self.page.ssn_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['ssn']['title'], self.page.ssn_title)
 
