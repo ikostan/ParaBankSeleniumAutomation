@@ -5,7 +5,7 @@
 from elements.element import Element
 from page_object_models.base_page_model import BasePageModel
 from page_locators.admin_page_locator import AdminPageLocator
-from expected_results.page_context.admin_page_context import AdminPageContext
+from expected_results.page_content.admin_page_context import AdminPageContent
 
 
 class AdminPageModel(BasePageModel):
@@ -14,7 +14,7 @@ class AdminPageModel(BasePageModel):
 	By following this technique a layer of separation between the test code and technical implementation is created.
 	'''
 
-	_url = AdminPageContext.URL
+	_url = AdminPageContent.URL
 
 	def hit_initialize_button(self):
 		'''
