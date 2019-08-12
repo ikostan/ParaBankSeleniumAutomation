@@ -35,14 +35,16 @@ In other words: ParaBank is not a real bank!
 7. [Utils](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils)<br/>
 
 ### Dev Environment:<br/>
-1. Python 3.7<br/>
-2. Selenium 3.141.0<br/>
-3. PyTest 5.0.0<br/>
-4. Allure Framework 2.12.1<br/>
-5. Win 10 (64 bit)<br/>
-6. PyCharm 2019.1.3 (Community Edition)<br/>
-7. GitHub Desktop 2.1.0<br/>
-8. GIT 2.22.0.windows.1<br/>
+1. [Python 3.7.4](https://www.python.org/downloads/release/python-374/)<br/>
+2. [Selenium 3.141.0](https://pypi.org/project/selenium/)<br/>
+3. [PyTest 5.0.0](https://pypi.org/project/pytest/)<br/>
+4. [Allure Framework 2.12.1](http://allure.qatools.ru/)<br/>
+5. [Win 10 (64 bit)](https://www.microsoft.com/en-ca/software-download/windows10)<br/>
+6. [PyCharm 2019.2 (Community Edition)](https://www.jetbrains.com/pycharm/download/#section=windows)<br/>
+7. [GitHub Desktop 2.1.0](https://desktop.github.com/)<br/>
+8. [GIT 2.22.0.windows.1](https://git-scm.com/download/win)<br/>
+9. [Java SE 8](https://www.oracle.com/technetwork/java/javase/overview/index.html)
+10. [Scoop](https://scoop.sh/)
 
 ### Prerequisites:<br/>
 Full list of dependencies see [here.](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/requirements.txt)
