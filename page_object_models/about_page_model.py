@@ -5,7 +5,7 @@
 from elements.element import Element
 from page_object_models.base_page_model import BasePageModel
 from page_locators.about_page_locator import AboutPageLocator
-from expected_results.page_context.about_page_context import AboutPageContext
+from expected_results.page_content.about_page_content import AboutPageContent
 
 
 class AboutPageModel(BasePageModel):
@@ -14,7 +14,7 @@ class AboutPageModel(BasePageModel):
 	By following this technique a layer of separation between the test code and technical implementation is created.
 	'''
 
-	_url = AboutPageContext.URL
+	_url = AboutPageContent.URL
 
 	@property
 	def description_title(self):
