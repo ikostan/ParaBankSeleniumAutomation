@@ -5,11 +5,11 @@
 import allure
 from utils.screenshot import screenshot_on_fail
 from expected_results.page_context.home_page_context import HomePageContext
-from tests.content_tests.content_cases.base_cases.base_content_case import BaseContextCase
+from tests.content_tests.content_cases.base_cases.base_content_case import BaseContentCase
 
 
 @screenshot_on_fail()
-class HomePageContextCase(BaseContextCase):
+class HomePageContextCase(BaseContentCase):
 
 	# @pytest.mark.parametrize('expected_url', [HomePageContext.URL], ids=['Expected web page url'])
 	def verify_page_url(self):
