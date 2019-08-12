@@ -46,7 +46,7 @@ class TestUserRegistration(UserRegistrationCase):
 				get_http_status_code(RegisterPageContent.URL)
 				self.page = open_web_browser(browser=self.browser,
 				                             page_model=self.page_model,
-				                             page_context=self.page_context)
+				                             page_content=self.page_context)
 
 	def tearDown(self):
 		with allure.step("Close current tab"):
