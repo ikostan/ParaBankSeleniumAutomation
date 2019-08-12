@@ -1,9 +1,11 @@
 ## Utils
 
-Contains a collection of various help classes and functions, see list bellow:
 <div align="right"> 
 <img width="7%" height="7%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/utils.png" hspace="10">
 </div>
+
+Contains a collection of various help classes and functions, see list bellow:
+
 <details>
   <summary><b>Driver Class</b></summary>
 
