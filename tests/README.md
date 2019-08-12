@@ -1,5 +1,9 @@
 ## Tests Folder
 
+<div align="right"> 
+<img width="5%" height="5%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/iconfinder_stock_task_24333.png" hspace="10">
+</div>
+
 Contains ParaBank online banking tests.
 The general guideline for the tests is based on following resources:
 
