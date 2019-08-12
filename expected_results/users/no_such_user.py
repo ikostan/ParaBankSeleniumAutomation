@@ -4,5 +4,5 @@
 
 
 class NoOne:
-	USERNAME = 'username'
-	PASSWORD = 'password'
+	USERNAME = 'noname'
+	PASSWORD = 'nopassword'
