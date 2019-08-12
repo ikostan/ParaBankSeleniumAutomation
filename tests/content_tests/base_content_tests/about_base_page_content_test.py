@@ -10,7 +10,7 @@ from utils.browser_configuration import browser_configuration
 
 from page_object_models.about_page_model import AboutPageModel
 from expected_results.page_context.about_page_context import AboutPageContext
-from tests.content_tests.content_cases.about_page_content_case import AboutPageContextCase
+from tests.content_tests.content_cases.about_page_content_case import AboutPageContentCase
 
 
 @allure.epic('Page Context')
@@ -20,7 +20,7 @@ from tests.content_tests.content_cases.about_page_content_case import AboutPageC
 @allure.feature("Base Page")
 @allure.story('About Context')
 @screenshot_on_fail()
-class TestAboutBasePageContext(AboutPageContextCase):
+class TestAboutBasePageContent(AboutPageContentCase):
 
 	@classmethod
 	def setUpClass(cls):
