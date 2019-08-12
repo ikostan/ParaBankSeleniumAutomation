@@ -14,7 +14,7 @@ from utils.browser_configuration import browser_configuration
 
 from page_object_models.admin_page_model import AdminPageModel
 from expected_results.page_context.admin_page_context import AdminPageContext
-from tests.content_tests.content_cases.admin_page_content_case import AdminPageContextCase
+from tests.content_tests.content_cases.admin_page_content_case import AdminPageContentCase
 
 
 @allure.epic('Page Context')
@@ -24,7 +24,7 @@ from tests.content_tests.content_cases.admin_page_content_case import AdminPageC
 @allure.feature("Base Page")
 @allure.story('Admin Context')
 @screenshot_on_fail()
-class TestAdminBasePageContent(AdminPageContextCase):
+class TestAdminBasePageContent(AdminPageContentCase):
 
 	@classmethod
 	def setUpClass(cls):
