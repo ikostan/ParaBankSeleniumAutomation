@@ -3,6 +3,7 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import allure
+from selenium.common.exceptions import NoSuchElementException
 
 from utils.clean_database import clean_database
 from utils.screenshot import screenshot_on_fail
@@ -101,41 +102,6 @@ class TestUserLoginFromHomePageError(HomePageContextCase):
 		with allure.step('Hit Log In button'):
 			self.page.hit_login_button()
 
-		# Verify ERROR message
-		with allure.step('Verify Error title'):
-			expected = HomePageContext.ERROR_TITLE
-			actual = self.page.error_title
-			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Error" title',
-			                                                    expected,
-			                                                    actual))
-			self.assertEqual(expected,
-			                 actual,
-			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
-			                                                                                    actual))
-
-		with allure.step('Verify Error message'):
-			expected = HomePageContext.ERROR_MESSAGE
-			actual = self.page.error_message
-			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Error" message',
-			                                                    expected,
-			                                                    actual))
-			self.assertEqual(expected,
-			                 actual,
-			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
-			                                                                                    actual))
-
-		# Post Logout validation
-		with allure.step('Do URL verification'):
-			expected = 'https://parabank.parasoft.com/parabank/login.htm'
-			actual = self.page.url
-			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
-			                                                    expected,
-			                                                    actual))
-			self.assertEqual(expected,
-			                 actual,
-			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
-			                                                                                    actual))
-
 		with allure.step('Verify that "Account Services" menu is not present'):
 			expected = False
 			actual = self.page.account_services_menu_is_visible
@@ -147,10 +113,34 @@ class TestUserLoginFromHomePageError(HomePageContextCase):
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
 
-		# Verify Page Title
-		with allure.step("Verify web page title. Expected result: {}".format(HomePageContext.TITLE)):
-			expected = 'ParaBank | Error'
-			actual = self.page.driver.title
+		# Verify ERROR title
+		with allure.step('Verify Error title'):
+			expected = HomePageContext.ERROR_TITLE
+			actual = self.page.error_title
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Error" title',
+			                                                    expected,
+			                                                    actual))
+			self.assertEqual(expected,
+			                 actual,
+			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
+			                                                                                    actual))
+
+		# Verify ERROR message
+		with allure.step('Verify Error message'):
+			expected = HomePageContext.ERROR_MESSAGE
+			actual = self.page.error_message
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Error" message',
+			                                                    expected,
+			                                                    actual))
+			self.assertEqual(expected,
+			                 actual,
+			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
+			                                                                                    actual))
+
+		# URL validation
+		with allure.step('Do URL verification'):
+			expected = 'https://parabank.parasoft.com/parabank/login.htm'
+			actual = self.page.url
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
 			                                                    expected,
 			                                                    actual))
