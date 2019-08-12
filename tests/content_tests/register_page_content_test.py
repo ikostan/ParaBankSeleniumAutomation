@@ -27,10 +27,10 @@ class TestRegisterPageContent(RegisterPageContentCase):
 		with allure.step("Open web browser"):
 			cls.browser = browser_configuration()
 			cls.page_model = RegisterPageModel
-			cls.page_context = RegisterPageContent
+			cls.page_content = RegisterPageContent
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
-			                            page_context=cls.page_context)
+			                            page_content=cls.page_content)
 
 	@classmethod
 	def tearDownClass(cls):
