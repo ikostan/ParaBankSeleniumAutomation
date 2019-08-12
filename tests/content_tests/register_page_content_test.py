@@ -20,7 +20,7 @@ from tests.content_tests.content_cases.register_page_content_case import Registe
 @allure.feature("Register Page")
 @allure.story('Register Context')
 @screenshot_on_fail()
-class TestRegisterPageContext(RegisterPageContentCase):
+class TestRegisterPageContent(RegisterPageContentCase):
 
 	@classmethod
 	def setUpClass(cls):
