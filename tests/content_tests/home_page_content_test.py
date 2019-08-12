@@ -13,12 +13,12 @@ from expected_results.page_content.home_page_content import HomePageContent
 from tests.content_tests.content_cases.home_page_content_case import HomePageContentCase
 
 
-@allure.epic('Page Context')
-@allure.parent_suite('Page Unique Context')
-@allure.suite('Home Page Context')
-@allure.sub_suite("Home Page Unique Context")
+@allure.epic('Page Content')
+@allure.parent_suite('Page Unique Content')
+@allure.suite('Home Page Content')
+@allure.sub_suite("Home Page Unique Content")
 @allure.feature("Home Page")
-@allure.story('Home Context')
+@allure.story('Home Content')
 @screenshot_on_fail()
 class TestHomePageContent(HomePageContentCase):
 
@@ -27,10 +27,10 @@ class TestHomePageContent(HomePageContentCase):
 		with allure.step("Open web browser"):
 			cls.browser = browser_configuration()
 			cls.page_model = HomePageModel
-			cls.page_context = HomePageContent
+			cls.page_content = HomePageContent
 			cls.page = open_web_browser(browser=cls.browser,
 			                            page_model=cls.page_model,
-			                            page_context=cls.page_context)
+			                            page_content=cls.page_content)
 
 	@classmethod
 	def tearDownClass(cls):
@@ -42,7 +42,7 @@ class TestHomePageContent(HomePageContentCase):
 	def test_page_url(self):
 
 		allure.dynamic.description("""
-		Context base elements validation > Home page URL:
+		Content base elements validation > Home page URL:
 			1. Open Home web page
 			2. Do URL verification
 		""")
@@ -54,7 +54,7 @@ class TestHomePageContent(HomePageContentCase):
 
 	def test_page_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Home page title:
+		Content base elements validation > Home page title:
 			1. Open Home web page
 			2. Do web page title verification
 		""")
@@ -65,30 +65,30 @@ class TestHomePageContent(HomePageContentCase):
 
 	def test_atm_services_context(self):
 		allure.dynamic.description("""
-		Home page Context elements validation > ATM services:
+		Home page Content elements validation > ATM services:
 			1. Open Home web page
 			2. Do ATM services context verification
 		""")
 		allure.dynamic.title("ATM services context test")
 
-		# Verify ATM Services Context
+		# Verify ATM Services Content
 		# allure.step
 		self.verify_atm_services_context()
 
 	def test_online_services_context(self):
 		allure.dynamic.description("""
-		Home page Context elements validation > ATM services:
+		Home page Content elements validation > ATM services:
 			1. Open Home web page
 			2. Do Online services context verification
 		""")
 		allure.dynamic.title("Online services context test")
 
-		# Verify Online Services Context
+		# Verify Online Services Content
 		self.verify_online_services_context()
 
 	def test_read_more_services_button(self):
 		allure.dynamic.description("""
-		Home page Context elements validation > 'Read More' (services) button:
+		Home page Content elements validation > 'Read More' (services) button:
 			1. Open Home web page
 			2. Do 'Read More' button verification
 		""")
@@ -99,7 +99,7 @@ class TestHomePageContent(HomePageContentCase):
 
 	def test_read_more_news_button(self):
 		allure.dynamic.description("""
-		Home page Context elements validation > 'Read More' (news) button:
+		Home page Content elements validation > 'Read More' (news) button:
 			1. Open Home web page
 			2. Do 'Read More' button verification
 		""")
@@ -112,7 +112,7 @@ class TestHomePageContent(HomePageContentCase):
 
 	def test_latest_news_title(self):
 		allure.dynamic.description("""
-		Home page Context elements validation > 'Latest News' title:
+		Home page Content elements validation > 'Latest News' title:
 			1. Open Home web page
 			2. Do 'Latest News' title verification
 		""")
