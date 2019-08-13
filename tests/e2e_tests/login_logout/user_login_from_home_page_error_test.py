@@ -3,7 +3,6 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import allure
-from selenium.common.exceptions import NoSuchElementException
 
 from utils.clean_database import clean_database
 from utils.screenshot import screenshot_on_fail
