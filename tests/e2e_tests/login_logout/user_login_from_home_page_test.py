@@ -140,6 +140,7 @@ class TestUserLoginFromHomePage(HomePageContentCase):
 
 		# Post Logout validation
 		with allure.step('Do URL verification'):
+
 			expected = 'https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC'
 			actual = self.page.url
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
