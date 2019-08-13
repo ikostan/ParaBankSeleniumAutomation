@@ -4,8 +4,10 @@
 
 import allure
 import unittest
+
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
 from page_locators.register_page_locator import RegisterPageLocator
 from expected_results.page_content.register_page_content import RegisterPageContent
 from expected_results.page_content.home_page_content import HomePageContent
@@ -16,7 +18,7 @@ class UserRegistrationCase(unittest.TestCase):
 	def register_new_user(self):
 
 		with allure.step('Type first name'):
-			expected = self.client.FIRST_NAME
+			expected = self.client.first_name
 			self.page.type_first_name(expected)
 			actual = self.page.first_name
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type first name\'',
@@ -29,7 +31,7 @@ class UserRegistrationCase(unittest.TestCase):
 				                                                                                    actual))
 
 		with allure.step('Type last name'):
-			expected = self.client.LAST_NAME
+			expected = self.client.last_name
 			self.page.type_last_name(expected)
 			actual = self.page.last_name
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type last name\'',
@@ -42,7 +44,7 @@ class UserRegistrationCase(unittest.TestCase):
 				                                                                                    actual))
 
 		with allure.step('Type address'):
-			expected = self.client.ADDRESS
+			expected = self.client.address
 			self.page.type_address(expected)
 			actual = self.page.address
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type address\'',
@@ -55,7 +57,7 @@ class UserRegistrationCase(unittest.TestCase):
 				                                                                                    actual))
 
 		with allure.step('Type city'):
-			expected = self.client.CITY
+			expected = self.client.city
 			self.page.type_city(expected)
 			actual = self.page.city
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type city\'',
@@ -68,7 +70,7 @@ class UserRegistrationCase(unittest.TestCase):
 				                                                                                    actual))
 
 		with allure.step('Type state'):
-			expected = self.client.STATE
+			expected = self.client.state
 			self.page.type_state(expected)
 			actual = self.page.state
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type state\'',
@@ -81,7 +83,7 @@ class UserRegistrationCase(unittest.TestCase):
 				                                                                                    actual))
 
 		with allure.step('Type zip code'):
-			expected = self.client.ZIP_CODE
+			expected = self.client.zip_code
 			self.page.type_zip_code(expected)
 			actual = self.page.zip_code
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type zip code\'',
@@ -94,7 +96,7 @@ class UserRegistrationCase(unittest.TestCase):
 				                                                                                    actual))
 
 		with allure.step('Type phone'):
-			expected = self.client.PHONE
+			expected = self.client.phone
 			self.page.type_phone(expected)
 			actual = self.page.phone
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type phone\'',
@@ -106,7 +108,7 @@ class UserRegistrationCase(unittest.TestCase):
 				                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 				                                                                                    actual))
 		with allure.step('Type SSN'):
-			expected = self.client.SSN
+			expected = self.client.ssn
 			self.page.type_ssn(expected)
 			actual = self.page.ssn
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type SSN\'',
@@ -119,7 +121,7 @@ class UserRegistrationCase(unittest.TestCase):
 				                                                                                    actual))
 
 		with allure.step('Type username'):
-			expected = self.client.USERNAME
+			expected = self.client.username
 			self.page.type_username(expected)
 			actual = self.page.username
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type username\'',
@@ -132,7 +134,7 @@ class UserRegistrationCase(unittest.TestCase):
 				                                                                                    actual))
 
 		with allure.step('Type password'):
-			expected = self.client.PASSWORD
+			expected = self.client.password
 			self.page.type_password(expected)
 			actual = self.page.password
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type password\'',
@@ -145,7 +147,7 @@ class UserRegistrationCase(unittest.TestCase):
 				                                                                                    actual))
 
 		with allure.step('Type confirm'):
-			expected = self.client.PASSWORD
+			expected = self.client.password
 			self.page.type_confirm(expected)
 			actual = self.page.confirm
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type confirm\'',
@@ -163,10 +165,11 @@ class UserRegistrationCase(unittest.TestCase):
 
 		with allure.step('Wait for "Welcome" message'):
 			WebDriverWait(self.page.driver,
-			              self.page.explicit_wait_time).until(EC.presence_of_element_located(RegisterPageLocator.HEADER))
+			              self.page.explicit_wait_time).until(
+				EC.presence_of_element_located(RegisterPageLocator.HEADER))
 
 		with allure.step('Verify "Welcome" header'):
-			expected = RegisterPageContent.WELCOME_MESSAGE['header'] + self.client.USERNAME
+			expected = RegisterPageContent.WELCOME_MESSAGE['header'] + self.client.username
 			actual = self.page.welcome_header
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify "Welcome" header\'',
 			                                                    expected,
