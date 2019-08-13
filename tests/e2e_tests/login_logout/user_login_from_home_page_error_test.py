@@ -13,7 +13,6 @@ from utils.browser_configuration import browser_configuration
 from expected_results.users.no_such_user import NoOne
 from page_object_models.home_page_model import HomePageModel
 from expected_results.page_content.home_page_content import HomePageContent
-from tests.content_tests.content_cases.home_page_content_case import HomePageContentCase
 
 
 @allure.epic('Page Functionality')
