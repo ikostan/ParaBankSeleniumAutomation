@@ -3,10 +3,13 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import allure
+
 from utils.screenshot import screenshot_on_fail
 from utils.clean_database import clean_database
 from utils.open_web_browser import open_web_browser
-from expected_results.users.jane_doe import JaneDoe
+
+from expected_results.users.base_user import BaseUser
+from expected_results.users.valid_users_templates.jane_doe import JaneDoe
 from utils.http_status_code import get_http_status_code
 from page_object_models.register_page_model import RegisterPageModel
 from expected_results.page_content.register_page_content import RegisterPageContent
@@ -24,7 +27,7 @@ class TestUserRegistration(UserRegistrationCase):
 
 	@classmethod
 	def setUpClass(cls):
-		cls.client = JaneDoe
+		cls.client = BaseUser(JaneDoe)
 		cls.browser = 'chrome'
 		cls.page = None
 
