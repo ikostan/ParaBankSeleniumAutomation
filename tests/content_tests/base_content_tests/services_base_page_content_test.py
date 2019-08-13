@@ -10,7 +10,7 @@ from utils.browser_configuration import browser_configuration
 
 from page_object_models.services_page_model import ServicesPageModel
 from expected_results.page_content.services_page_content import ServicesPageContent
-from tests.content_tests.content_cases.services_page_content_case import ServicesPageContentCase
+from tests.content_tests.content_cases.base_cases.base_content_case import BaseContentCase
 
 
 @allure.epic('Page Content')
@@ -20,7 +20,7 @@ from tests.content_tests.content_cases.services_page_content_case import Service
 @allure.feature("Base Page")
 @allure.story('Services Content')
 @screenshot_on_fail()
-class TestServicesBasePageContent(ServicesPageContentCase):
+class TestServicesBasePageContent(BaseContentCase):
 
 	@classmethod
 	def setUpClass(cls):
@@ -39,6 +39,7 @@ class TestServicesBasePageContent(ServicesPageContentCase):
 				cls.page.quit()
 				cls.page = None
 
+	'''
 	def test_page_url(self):
 
 		allure.dynamic.description("""
@@ -62,6 +63,7 @@ class TestServicesBasePageContent(ServicesPageContentCase):
 
 		# Verify Page Title
 		self.verify_page_title()
+	'''
 
 	# Base Page Content
 	@allure.feature("Base Page")
