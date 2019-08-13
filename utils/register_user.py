@@ -3,7 +3,6 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import time
-from utils.http_status_code import get_http_status_code
 from utils.open_web_browser import open_web_browser
 
 from page_object_models.register_page_model import RegisterPageModel
@@ -30,27 +29,27 @@ def register_user(client):
 	                        page_content=page_context)
 
 	print("Filling out user data...")
-	page.type_first_name(client.FIRST_NAME)
+	page.type_first_name(client.first_name)
 
-	page.type_last_name(client.LAST_NAME)
+	page.type_last_name(client.last_name)
 
-	page.type_address(client.ADDRESS)
+	page.type_address(client.address)
 
-	page.type_city(client.CITY)
+	page.type_city(client.city)
 
-	page.type_state(client.STATE)
+	page.type_state(client.state)
 
-	page.type_zip_code(client.ZIP_CODE)
+	page.type_zip_code(client.zip_code)
 
-	page.type_phone(client.PHONE)
+	page.type_phone(client.phone)
 
-	page.type_ssn(client.SSN)
+	page.type_ssn(client.ssn)
 
-	page.type_username(client.USERNAME)
+	page.type_username(client.username)
 
-	page.type_password(client.PASSWORD)
+	page.type_password(client.password)
 
-	page.type_confirm(client.PASSWORD)
+	page.type_confirm(client.password)
 
 	print("Clicking on Register button")
 	page.click_register_btn()
