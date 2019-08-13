@@ -1,0 +1,19 @@
+# PynSource Version 1.2
+{'type':'meta', 'info1':'Lorem ipsum dolor sit amet, consectetur adipiscing elit is latin. Comments are saved.'}
+{'type':'umlshape', 'id':'HomePageLocator', 'x':528, 'y':526, 'width':178, 'height':240, 'attrs': 'READ_MORE_NEWS|WITHDRAW_FUNDS|ONLINE_SERVICES_TITLE|BILL_PAY|ACCOUNT_HISTORY|ATM_TRANSFER_FUNDS|ONLINE_TRANSFER_FUNDS|MAKE_DEPOSITS|LATEST_NEWS|ATM_SERVICES_TITLE|READ_MORE_SERVICES|CHECK_BALANCES', 'meths': ''}
+{'type':'umlshape', 'id':'BasePageLocator', 'x':957, 'y':151, 'width':178, 'height':608, 'attrs': 'REGISTER|SERVICES_MENU_ITEM|ABOUT_US_MENU_ITEM|FORGOT_LOGIN|LOGIN_PASSWORD_INPUT|CUSTOMER_LOGIN_BUTTON|FOOTER_PRODUCTS|FOOTER_CONTACT_US|FOOTER_COPYRIGHT|HOME_BUTTON|FOOTER_ABOUT_US|FOOTER_FORUM|CONTACT_BUTTON|PARA_BANK_LOGO_HREF|PRODUCTS_MENU_ITEM|ABOUT_BUTTON|ADMIN_LOGO_IMG|PARA_BANK_LOGO_IMG|FOOTER_LOCATIONS|FOOTER_VISIT_US_LINK|SLOGAN|FOOTER_HOME|LOCATIONS_MENU_ITEM|USERNAME_LOGIN_TITLE|CUSTOMER_LOGIN_TITLE|LOGIN_USERNAME_INPUT|FOOTER_VISIT_US|ERROR_TITLE|ADMIN_PAGE_MENU_ITEM|PASSWORD_LOGIN_TITLE|FOOTER_SERVICES|ERROR_MESSAGE|FOOTER_SITE_MAP|ADMIN_LOGO_HREF|SOLUTIONS', 'meths': ''}
+{'type':'umlshape', 'id':'AboutPageLocator', 'x':1286, 'y':392, 'width':170, 'height':128, 'attrs': 'SECOND_LINE|DESCRIPTION_TITLE|FIRST_LINE|THIRD_LINE|LINK', 'meths': ''}
+{'type':'umlshape', 'id':'AccountServicesMenuLocator', 'x':1608, 'y':23, 'width':270, 'height':208, 'attrs': 'WELCOME_MESSAGE|ACCOUNT_SERVICES_HEADER|OPEN_NEW_ACCOUNT|ACCOUNTS_OVERVIEW|TRANSFER_FUNDS|BILL_PAY|FIND_TRANSACTIONS|UPDATE_CONTACT_INFO|REQUEST_LOAN|LOG_OUT', 'meths': ''}
+{'type':'umlshape', 'id':'AdminPageLocator', 'x':1286, 'y':151, 'width':170, 'height':80, 'attrs': 'INITIALIZE_BUTTON|CLEAN_BUTTON', 'meths': ''}
+{'type':'umlshape', 'id':'BasePersonalInfoPageLocator', 'x':43, 'y':147, 'width':280, 'height':336, 'attrs': 'STATE_INPUT|HEADER|CITY_INPUT|LAST_NAME_INPUT|ADDRESS_INPUT|SSN_INPUT|ZIP_CODE_TITLE|ZIP_CODE_INPUT|FIRST_NAME_TITLE|SSN_TITLE|PHONE_INPUT|DESCRIPTION|FIRST_NAME_INPUT|ADDRESS_TITLE|STATE_TITLE|PHONE_TITLE|CITY_TITLE|LAST_NAME_TITLE', 'meths': ''}
+{'type':'umlshape', 'id':'ForgotLoginInfoPageLocator', 'x':531, 'y':400, 'width':270, 'height':64, 'attrs': 'FIND_MY_LOGIN_INFO_BUTTON', 'meths': ''}
+{'type':'umlshape', 'id':'RegisterPageLocator', 'x':526, 'y':147, 'width':200, 'height':160, 'attrs': 'USERNAME_INPUT|CONFIRM_TITLE|REGISTER_BUTTON|PASSWORD_TITLE|USERNAME_TITLE|CONFIRM_INPUT|PASSWORD_INPUT', 'meths': ''}
+{'type':'umlshape', 'id':'ServicesPageLocator', 'x':1270, 'y':724, 'width':200, 'height':28, 'attrs': '', 'meths': ''}
+{'type':'edge', 'id':'HomePageLocator_to_BasePageLocator', 'source':'HomePageLocator', 'target':'BasePageLocator', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'AboutPageLocator_to_BasePageLocator', 'source':'AboutPageLocator', 'target':'BasePageLocator', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'AdminPageLocator_to_BasePageLocator', 'source':'AdminPageLocator', 'target':'BasePageLocator', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'ForgotLoginInfoPageLocator_to_BasePersonalInfoPageLocator', 'source':'ForgotLoginInfoPageLocator', 'target':'BasePersonalInfoPageLocator', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'ForgotLoginInfoPageLocator_to_BasePageLocator', 'source':'ForgotLoginInfoPageLocator', 'target':'BasePageLocator', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'RegisterPageLocator_to_BasePersonalInfoPageLocator', 'source':'RegisterPageLocator', 'target':'BasePersonalInfoPageLocator', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'RegisterPageLocator_to_BasePageLocator', 'source':'RegisterPageLocator', 'target':'BasePageLocator', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'ServicesPageLocator_to_BasePageLocator', 'source':'ServicesPageLocator', 'target':'BasePageLocator', 'uml_edge_type': 'generalisation'}
