@@ -10,7 +10,7 @@ from utils.browser_configuration import browser_configuration
 
 from page_object_models.register_page_model import RegisterPageModel
 from expected_results.page_content.register_page_content import RegisterPageContent
-from tests.content_tests.content_cases.register_page_content_case import RegisterPageContentCase
+from tests.content_tests.content_cases.base_cases.base_content_case import BaseContentCase
 
 
 @allure.epic('Page Content')
@@ -20,7 +20,7 @@ from tests.content_tests.content_cases.register_page_content_case import Registe
 @allure.feature("Base Page")
 @allure.story('Register Content')
 @screenshot_on_fail()
-class TestRegisterBasePageContent(RegisterPageContentCase):
+class TestRegisterBasePageContent(BaseContentCase):
 
 	@classmethod
 	def setUpClass(cls):
@@ -39,6 +39,7 @@ class TestRegisterBasePageContent(RegisterPageContentCase):
 				cls.page.quit()
 				cls.page = None
 
+	'''
 	def test_page_url(self):
 
 		allure.dynamic.description("""
@@ -62,6 +63,7 @@ class TestRegisterBasePageContent(RegisterPageContentCase):
 
 		# Verify Page Title
 		self.verify_page_title()
+	'''
 
 	# Base Page Content
 	@allure.feature("Base Page")
