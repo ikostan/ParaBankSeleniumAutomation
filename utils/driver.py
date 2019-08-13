@@ -43,7 +43,7 @@ class Driver:
                 path = self._get_driver_path()
 
                 if self._is_debug:
-                    print('Trying to look for a \'chromedriver\' under:\n{}'.format(path))
+                    print('\nTrying to look for a \'chromedriver\' under:\n{}'.format(path))
 
                 driver = webdriver.Chrome(executable_path=path)
 
@@ -56,7 +56,7 @@ class Driver:
                     print('\nPlease note:', e.msg)
                 path = self._get_driver_path()
                 if self._is_debug:
-                    print('Trying to look for a \'geckodriver\' under:\n{}'.format(path))
+                    print('\nTrying to look for a \'geckodriver\' under:\n{}'.format(path))
                 driver = webdriver.Firefox(executable_path=path)
 
         if self._browser == 'edge':
