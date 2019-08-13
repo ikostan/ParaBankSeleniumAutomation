@@ -1,4 +1,15 @@
-## Content Testing
+## Tests Folder
+
+<div align="right"> 
+<img width="100%" height="100%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/iconfinder_Browserwithwebsite_1140315.png" hspace="10">
+</div>
+
+Contains ParaBank online banking content tests.<br/>
+
+### Table of Contents:<br/>
+1. [Base Cases](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_cases)<br/>
+2. [Base Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_content_tests)<br/>
+3. [Unique Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_content_tests)<br/>
 
 The main objective of content testing is to validate User Experience, i.e., the purpose is not to check whether the reader ‘likes’ the written content, but to ensure that it provides them appropriate and suitable information, which is written accurately and is readable, understandable, and helpful.
 
