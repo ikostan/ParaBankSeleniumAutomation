@@ -3,6 +3,7 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import allure
+import unittest
 
 from utils.register_user import register_user
 from utils.clean_database import clean_database
@@ -24,7 +25,7 @@ from tests.content_tests.content_cases.home_page_content_case import HomePageCon
 @allure.feature("Home Page")
 @allure.story('Login/Logout Functionality')
 @screenshot_on_fail()
-class TestUserLoginFromHomePage(HomePageContentCase):
+class TestUserLoginFromHomePage(unittest.TestCase):
 
 	@classmethod
 	def setUpClass(cls):
@@ -73,10 +74,10 @@ class TestUserLoginFromHomePage(HomePageContentCase):
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		# test url
-		self.verify_page_url()
+		#self.verify_page_url()
 
 		# Verify Page Title
-		self.verify_page_title()
+		#self.verify_page_title()
 
 		with allure.step('Type Username'):
 			expected = self.user.USERNAME
@@ -163,4 +164,8 @@ class TestUserLoginFromHomePage(HomePageContentCase):
 			                                                                                    actual))
 
 		# Verify Page Title
-		self.verify_page_title()
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
+		with allure.step("Verify web page title. Expected result: {}".format(HomePageContent.TITLE)):
+			self.assertEqual(HomePageContent.TITLE,
+			                 self.page.title)
