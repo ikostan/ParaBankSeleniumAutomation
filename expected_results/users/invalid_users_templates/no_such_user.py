@@ -23,3 +23,6 @@ class NoSuchUser:
 	PASSWORD = 'nopassword'
 
 	SSN = ''
+
+	INIT_BALANCE = 0.00
+	MIN_BALANCE = 0.00
