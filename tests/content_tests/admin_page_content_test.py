@@ -3,6 +3,7 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import allure
+import unittest
 
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
@@ -10,7 +11,6 @@ from utils.browser_configuration import browser_configuration
 
 from page_object_models.admin_page_model import AdminPageModel
 from expected_results.page_content.admin_page_content import AdminPageContent
-from tests.content_tests.content_cases.admin_page_content_case import AdminPageContentCase
 
 
 @allure.epic('Page Content')
@@ -20,7 +20,7 @@ from tests.content_tests.content_cases.admin_page_content_case import AdminPageC
 @allure.feature("Admin Page")
 @allure.story('Admin Content')
 @screenshot_on_fail()
-class TestAdminPageContent(AdminPageContentCase):
+class TestAdminPageContent(unittest.TestCase):
 
 	@classmethod
 	def setUpClass(cls):
@@ -48,7 +48,10 @@ class TestAdminPageContent(AdminPageContentCase):
 		allure.dynamic.title("Web page URL test")
 
 		# verify web page url
-		self.verify_page_url()
+		allure.dynamic.severity(allure.severity_level.CRITICAL)
+		with allure.step("Admin page URL test"):
+			self.assertEqual(AdminPageContent.URL,
+			                 self.page.url)
 
 	def test_page_title(self):
 		allure.dynamic.description("""
@@ -59,4 +62,7 @@ class TestAdminPageContent(AdminPageContentCase):
 		allure.dynamic.title("Web page Title test")
 
 		# verify web page url
-		self.verify_page_title()
+		allure.dynamic.severity(allure.severity_level.MINOR)
+		with allure.step("Admin page title test"):
+			self.assertEqual(AdminPageContent.TITLE,
+			                 self.page.title)
