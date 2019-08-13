@@ -1,7 +1,7 @@
 ## Tests Folder
 
 <div align="right"> 
-<img width="7%" height="7%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/iconfinder_Browserwithwebsite_1140315.png" hspace="10">
+<img width="5%" height="5%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/iconfinder_Browserwithwebsite_1140315.png" hspace="10">
 </div>
 
 Contains ParaBank online banking content tests.<br/>
