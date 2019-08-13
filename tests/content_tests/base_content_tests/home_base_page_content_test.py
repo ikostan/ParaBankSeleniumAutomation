@@ -10,7 +10,7 @@ from utils.browser_configuration import browser_configuration
 
 from page_object_models.home_page_model import HomePageModel
 from expected_results.page_content.home_page_content import HomePageContent
-from tests.content_tests.content_cases.home_page_content_case import HomePageContentCase
+from tests.content_tests.content_cases.base_cases.base_content_case import BaseContentCase
 
 
 @allure.epic('Page Content')
@@ -20,7 +20,7 @@ from tests.content_tests.content_cases.home_page_content_case import HomePageCon
 @allure.feature("Base Page")
 @allure.story('Home Content')
 @screenshot_on_fail()
-class TestHomeBasePageContent(HomePageContentCase):
+class TestHomeBasePageContent(BaseContentCase):
 
 	@classmethod
 	def setUpClass(cls):
@@ -39,6 +39,7 @@ class TestHomeBasePageContent(HomePageContentCase):
 				cls.page.quit()
 				cls.page = None
 
+	'''
 	def test_page_url(self):
 
 		allure.dynamic.description("""
@@ -62,6 +63,7 @@ class TestHomeBasePageContent(HomePageContentCase):
 
 		# Verify Page Title
 		self.verify_page_title()
+	'''
 
 	# Base Page Content
 	@allure.feature("Base Page")
