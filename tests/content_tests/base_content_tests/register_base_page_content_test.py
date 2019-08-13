@@ -10,7 +10,7 @@ from utils.browser_configuration import browser_configuration
 
 from page_object_models.register_page_model import RegisterPageModel
 from expected_results.page_content.register_page_content import RegisterPageContent
-from tests.content_tests.content_cases.base_cases.base_content_case import BaseContentCase
+from tests.content_tests.base_cases.base_content_case import BaseContentCase
 
 
 @allure.epic('Page Content')
