@@ -53,6 +53,7 @@ Full list of dependencies see [here.](https://github.com/ikostan/ParaBankSeleniu
 1. [Fiddler](https://www.telerik.com/fiddler)
 2. [Kite](https://kite.com/)
 3. [ChroPath](https://chrome.google.com/webstore/detail/chropath/ljngjbnaijcbncmcnjfhigebomdlkcjo?hl=en)
+4. [Pynsource](https://www.pynsource.com/index.html)
 
 **Note:** In order to instantiate webdriver I use Driver class of my own. For more info please look [here](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils).<br/>
 
