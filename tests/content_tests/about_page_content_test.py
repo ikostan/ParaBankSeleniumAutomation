@@ -3,6 +3,7 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import allure
+import unittest
 
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
@@ -10,7 +11,6 @@ from utils.browser_configuration import browser_configuration
 
 from page_object_models.about_page_model import AboutPageModel
 from expected_results.page_content.about_page_content import AboutPageContent
-from tests.content_tests.content_cases.about_page_content_case import AboutPageContentCase
 
 
 @allure.epic('Page Content')
@@ -20,7 +20,10 @@ from tests.content_tests.content_cases.about_page_content_case import AboutPageC
 @allure.feature("About Page")
 @allure.story('About Content')
 @screenshot_on_fail()
-class TestAboutPageContent(AboutPageContentCase):
+class TestAboutPageContent(unittest.TestCase):
+	'''
+	Test unique "About" web page content
+	'''
 
 	@classmethod
 	def setUpClass(cls):
@@ -48,7 +51,11 @@ class TestAboutPageContent(AboutPageContentCase):
 		allure.dynamic.title("Web page URL test")
 
 		# Verify Web Page URL
-		self.verify_page_url()
+		allure.dynamic.severity(allure.severity_level.CRITICAL)
+
+		with allure.step("About Web Page URL test"):
+			self.assertEqual(AboutPageContent.URL,
+			                 self.page.url)
 
 	def test_page_title(self):
 		allure.dynamic.description("""
@@ -59,7 +66,11 @@ class TestAboutPageContent(AboutPageContentCase):
 		allure.dynamic.title("Web page title test")
 
 		# Verify Web Page Title
-		self.verify_page_title()
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
+		with allure.step("About Web Page Title test"):
+			self.assertEqual(AboutPageContent.TITLE,
+			                 self.page.title)
 
 	def test_description_title_text(self):
 		allure.dynamic.description("""
@@ -70,7 +81,11 @@ class TestAboutPageContent(AboutPageContentCase):
 		allure.dynamic.title("Web page description title test")
 
 		# verify description title text
-		self.verify_description_title()
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
+		# Context About page elements validation:
+		with allure.step("Description header test"):
+			self.assertEqual(AboutPageContent.DESCRIPTION['title'], self.page.description_title)
 
 	def test_description_text(self):
 		allure.dynamic.description("""
@@ -81,4 +96,17 @@ class TestAboutPageContent(AboutPageContentCase):
 		allure.dynamic.title("Web page description test")
 
 		# verify description text
-		self.verify_description_text()
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
+		# Context About page elements validation:
+		with allure.step("Description text (first paragraph) test"):
+			self.assertEqual(AboutPageContent.DESCRIPTION['text'][0], self.page.description_first_line)
+
+		with allure.step("Description text (second paragraph) test"):
+			self.assertEqual(AboutPageContent.DESCRIPTION['text'][1], self.page.description_second_line)
+
+		with allure.step("Description text (third paragraph) test"):
+			self.assertEqual(AboutPageContent.DESCRIPTION['text'][2], self.page.description_third_line)
+
+		with allure.step("Description text (fourth paragraph) test"):
+			self.assertEqual(AboutPageContent.LINK, self.page.description_link)
