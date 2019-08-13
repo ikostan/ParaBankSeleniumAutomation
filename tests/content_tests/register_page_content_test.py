@@ -10,7 +10,7 @@ from utils.browser_configuration import browser_configuration
 
 from page_object_models.register_page_model import RegisterPageModel
 from expected_results.page_content.register_page_content import RegisterPageContent
-from tests.content_tests.content_cases.register_page_content_case import RegisterPageContentCase
+from tests.content_tests.content_cases.base_cases.base_personal_info_content_case import BasePersonalInfoContentCase
 
 
 @allure.epic('Page Content')
@@ -20,7 +20,7 @@ from tests.content_tests.content_cases.register_page_content_case import Registe
 @allure.feature("Register Page")
 @allure.story('Register Content')
 @screenshot_on_fail()
-class TestRegisterPageContent(RegisterPageContentCase):
+class TestRegisterPageContent(BasePersonalInfoContentCase):
 
 	@classmethod
 	def setUpClass(cls):
@@ -50,7 +50,9 @@ class TestRegisterPageContent(RegisterPageContentCase):
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
 		# Verify web page url
-		self.verify_page_url()
+		with allure.step('Verify "Register" web page URL. Expected result: {}'.format(RegisterPageContent.URL)):
+			self.assertEqual(RegisterPageContent.URL,
+			                 self.page.url)
 
 	def test_page_title(self):
 		allure.dynamic.description("""
@@ -62,7 +64,9 @@ class TestRegisterPageContent(RegisterPageContentCase):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# Verify web page title
-		self.verify_page_title()
+		with allure.step('Verify "Register" web page title. Expected result: {}'.format(RegisterPageContent.TITLE)):
+			self.assertEqual(RegisterPageContent.TITLE,
+			                 self.page.title)
 
 	# Registration page context - Personal Info Content base elements validation
 	def test_first_name_title(self):
@@ -180,7 +184,9 @@ class TestRegisterPageContent(RegisterPageContentCase):
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
 		# Register web page elements validation:
-		self.verify_username_title()
+		expected = RegisterPageContent.FORM['username']['title']
+		with allure.step('Verify "Username" title. Expected result: {}'.format(expected)):
+			self.assertEqual(expected, self.page.username_title)
 
 	@allure.feature("Register Page")
 	def test_password_title(self):
@@ -193,7 +199,9 @@ class TestRegisterPageContent(RegisterPageContentCase):
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
 		# Register web page elements validation:
-		self.verify_password_title()
+		expected = RegisterPageContent.FORM['password']['title']
+		with allure.step('Verify "Password" title. Expected result: {}'.format(expected)):
+			self.assertEqual(expected, self.page.password_title)
 
 	@allure.feature("Register Page")
 	def test_confirm_title(self):
@@ -206,7 +214,9 @@ class TestRegisterPageContent(RegisterPageContentCase):
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
 		# Register web page elements validation:
-		self.verify_confirm_title()
+		expected = RegisterPageContent.FORM['confirm']['title']
+		with allure.step('Verify "Confirm" title. Expected result: {}'.format(expected)):
+			self.assertEqual(expected, self.page.confirm_title)
 
 	@allure.feature("Register Page")
 	def test_register_button(self):
@@ -219,4 +229,15 @@ class TestRegisterPageContent(RegisterPageContentCase):
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
 		# Register web page elements validation:
-		self.verify_register_button()
+		with allure.step('Verify "Register" button label. Expected result: {}'.format(
+				RegisterPageContent.REGISTER_BUTTON['value'])):
+			self.assertEqual(RegisterPageContent.REGISTER_BUTTON['value'], self.page.register_btn_label)
+
+		with allure.step('Verify "Register" button class. Expected result: {}'.format(
+				RegisterPageContent.REGISTER_BUTTON['class'])):
+			self.assertEqual(RegisterPageContent.REGISTER_BUTTON['class'], self.page.register_btn_class)
+
+		with allure.step('Verify "Register" button type. Expected result: {}'.format(
+				RegisterPageContent.REGISTER_BUTTON['type'])):
+			self.assertEqual(RegisterPageContent.REGISTER_BUTTON['type'], self.page.register_btn_type)
+
