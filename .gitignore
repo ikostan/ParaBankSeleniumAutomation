@@ -131,3 +131,5 @@ dmypy.json
 .idea/dictionaries/superadmin.xml
 .idea/copyright/Egor_Kostan.xml
 .idea/copyright/profiles_settings.xml
+tests/allure-report/
+tests/allure-results/
