@@ -13,7 +13,7 @@ def browser_configuration():
 	            2: 'edge',
 	            3: 'mozilla'}
 
-	browser = browsers[2]
+	browser = browsers[1]
 	print('Run configuration: {}'.format(browser))
 
 	return browser
