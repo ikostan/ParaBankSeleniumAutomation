@@ -5,6 +5,7 @@ UML is an acronym that stands for Unified Modeling Language. Simply put, UML is 
 <div align="center"> 
 <img width="30%" height="30%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/relationships-between-classes.png" hspace="10">
 </div>
+<br/>
 
 **Pynsource** - reverse engineer Python source code into UML<br/>
 Generate UML class diagrams from Python 3 or Python 2 source code. The only UML tool that recognises Python instance attributes (not just class attributes).<br/>
