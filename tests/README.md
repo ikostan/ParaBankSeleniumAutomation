@@ -4,6 +4,8 @@
 <img width="7%" height="7%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/iconfinder_stock_task_24333.png" hspace="10">
 </div>
 
+Contains ParaBank online banking tests.<br/>
+
 ### Table of Contents:<br/>
 1. [Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests)<br/>
    - [Base Cases](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_cases)<br/>
@@ -13,7 +15,6 @@
    - [Log In / Log Out](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests/login_logout)<br/>
    - [User Registration](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests/user_registration)<br/>
 
-Contains ParaBank online banking tests.
 The general guideline for the tests is based on following resources:
 
 - [How To Test Banking Domain Applications: A Complete BFSI Testing Guide](https://www.softwaretestinghelp.com/testing-banking-applications/)
