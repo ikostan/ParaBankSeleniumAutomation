@@ -3,14 +3,15 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import allure
+import unittest
 
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.browser_configuration import browser_configuration
+from utils.step_definition import step_definition
 
 from page_object_models.services_page_model import ServicesPageModel
 from expected_results.page_content.services_page_content import ServicesPageContent
-from tests.content_tests.content_cases.services_page_content_case import ServicesPageContentCase
 
 
 @allure.epic('Page Content')
@@ -20,7 +21,7 @@ from tests.content_tests.content_cases.services_page_content_case import Service
 @allure.feature("Services Page")
 @allure.story('Services Content')
 @screenshot_on_fail()
-class TestServicesPageContent(ServicesPageContentCase):
+class TestServicesPageContent(unittest.TestCase):
 
 	@classmethod
 	def setUpClass(cls):
@@ -50,7 +51,12 @@ class TestServicesPageContent(ServicesPageContentCase):
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
 		# Verify web page url
-		self.verify_page_url()
+		expected = ServicesPageContent.URL
+		actual = self.page.url
+		step_description = 'Verify "Services" web page URL'
+		severity = allure.severity_level.BLOCKER
+
+		step_definition(self, expected, actual, step_description, severity)
 
 	@allure.feature("Services Page")
 	def test_page_title(self):
@@ -63,7 +69,9 @@ class TestServicesPageContent(ServicesPageContentCase):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# Verify web page title
-		self.verify_page_title()
+		allure.dynamic.severity(allure.severity_level.MINOR)
+		with allure.step('Verify "Services" web page title. Expected result: {}'.format(ServicesPageContent.TITLE)):
+			self.assertEqual(ServicesPageContent.TITLE, self.page.title)
 
 	# Services Content Testing
 
