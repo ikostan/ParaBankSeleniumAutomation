@@ -13,12 +13,12 @@ from expected_results.page_content.register_page_content import RegisterPageCont
 from tests.content_tests.content_cases.register_page_content_case import RegisterPageContentCase
 
 
-@allure.epic('Page Context')
-@allure.parent_suite('Page Unique Context')
-@allure.suite('Register Page Context')
-@allure.sub_suite("Register Page Unique Context")
+@allure.epic('Page Content')
+@allure.parent_suite('Page Unique Content')
+@allure.suite('Register Page Content')
+@allure.sub_suite("Register Page Unique Content")
 @allure.feature("Register Page")
-@allure.story('Register Context')
+@allure.story('Register Content')
 @screenshot_on_fail()
 class TestRegisterPageContent(RegisterPageContentCase):
 
@@ -54,7 +54,7 @@ class TestRegisterPageContent(RegisterPageContentCase):
 
 	def test_page_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Register page title:
+		Content base elements validation > Register page title:
 			1. Open Register page web page
 			2. Do Register page title verification
 		""")
@@ -64,115 +64,115 @@ class TestRegisterPageContent(RegisterPageContentCase):
 		# Verify web page title
 		self.verify_page_title()
 
-	# Registration page context - Personal Info Context base elements validation
+	# Registration page context - Personal Info Content base elements validation
 	def test_first_name_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Register Form:
+		Content base elements validation > Register Form:
 			1. Open Register web page
 			2. Do First Name title verification
 		""")
 		allure.dynamic.title("First Name title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
-		# Personal Info Context base elements validation:
+		# Personal Info Content base elements validation:
 		self.verify_first_name_title()
 
-	@allure.feature("Base Personal Info Context")
+	@allure.feature("Base Personal Info Content")
 	def test_last_name_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Register Form:
+		Content base elements validation > Register Form:
 			1. Open Register web page
 			2. Do Last Name title verification
 		""")
 		allure.dynamic.title("Last Name title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
-		# Personal Info Context base elements validation:
+		# Personal Info Content base elements validation:
 		self.verify_last_name_title()
 
-	@allure.feature("Base Personal Info Context")
+	@allure.feature("Base Personal Info Content")
 	def test_address_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Register Form:
+		Content base elements validation > Register Form:
 			1. Open Register web page
 			2. Do Address title verification
 		""")
 		allure.dynamic.title("Address title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
-		# Personal Info Context base elements validation:
+		# Personal Info Content base elements validation:
 		self.verify_address_title()
 
-	@allure.feature("Base Personal Info Context")
+	@allure.feature("Base Personal Info Content")
 	def test_city_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Register Form:
+		Content base elements validation > Register Form:
 			1. Open Register web page
 			2. Do City title verification
 		""")
 		allure.dynamic.title("City title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
-		# Personal Info Context base elements validation:
+		# Personal Info Content base elements validation:
 		self.verify_city_title()
 
-	@allure.feature("Base Personal Info Context")
+	@allure.feature("Base Personal Info Content")
 	def test_state_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Register Form:
+		Content base elements validation > Register Form:
 			1. Open Register web page
 			2. Do State title verification
 		""")
 		allure.dynamic.title("State title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
-		# Personal Info Context base elements validation:
+		# Personal Info Content base elements validation:
 		self.verify_state_title()
 
-	@allure.feature("Base Personal Info Context")
+	@allure.feature("Base Personal Info Content")
 	def test_zip_code_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Register Form:
+		Content base elements validation > Register Form:
 			1. Open Register web page
 			2. Do Zip Code title verification
 		""")
 		allure.dynamic.title("Zip Code title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
-		# Personal Info Context base elements validation:
+		# Personal Info Content base elements validation:
 		self.verify_zip_code_title()
 
-	@allure.feature("Base Personal Info Context")
+	@allure.feature("Base Personal Info Content")
 	def test_phone_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Register Form:
+		Content base elements validation > Register Form:
 			1. Open Register web page
 			2. Do Phone title verification
 		""")
 		allure.dynamic.title("Phone title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
-		# Personal Info Context base elements validation:
+		# Personal Info Content base elements validation:
 		self.verify_phone_title()
 
-	@allure.feature("Base Personal Info Context")
+	@allure.feature("Base Personal Info Content")
 	def test_ssn_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Register Form:
+		Content base elements validation > Register Form:
 			1. Open Register web page
 			2. Do SSN title verification
 		""")
 		allure.dynamic.title("SSN title test")
 		allure.dynamic.severity(allure.severity_level.NORMAL)
 
-		# Personal Info Context base elements validation:
+		# Personal Info Content base elements validation:
 		self.verify_ssn_title()
 
 	# Registration page context - Register web page context base elements validation
 	@allure.feature("Register Page")
 	def test_username_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Register Form:
+		Content base elements validation > Register Form:
 			1. Open Register web page
 			2. Do Username title verification
 		""")
@@ -185,7 +185,7 @@ class TestRegisterPageContent(RegisterPageContentCase):
 	@allure.feature("Register Page")
 	def test_password_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Register Form:
+		Content base elements validation > Register Form:
 			1. Open Register web page
 			2. Do Password title verification
 		""")
@@ -198,7 +198,7 @@ class TestRegisterPageContent(RegisterPageContentCase):
 	@allure.feature("Register Page")
 	def test_confirm_title(self):
 		allure.dynamic.description("""
-		Context base elements validation > Register Form:
+		Content base elements validation > Register Form:
 			1. Open Register web page
 			2. Do Confirm title verification
 		""")
@@ -211,7 +211,7 @@ class TestRegisterPageContent(RegisterPageContentCase):
 	@allure.feature("Register Page")
 	def test_register_button(self):
 		allure.dynamic.description("""
-		Context base elements validation > Register Form:
+		Content base elements validation > Register Form:
 			1. Open Register web page
 			2. Do "Register" button verification
 		""")
