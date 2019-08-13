@@ -15,7 +15,6 @@ from expected_results.users.jane_doe import JaneDoe
 from page_object_models.home_page_model import HomePageModel
 from expected_results.page_content.home_page_content import HomePageContent
 from expected_results.page_content.bank_account_content import BankAccountContent
-from tests.content_tests.content_cases.home_page_content_case import HomePageContentCase
 
 
 @allure.epic('Page Functionality')
