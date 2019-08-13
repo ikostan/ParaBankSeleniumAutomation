@@ -3,7 +3,8 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import time
-from utils.http_status_code import get_http_status_code
+import allure
+
 from utils.open_web_browser import open_web_browser
 from page_object_models.admin_page_model import AdminPageModel
 from expected_results.page_content.admin_page_content import AdminPageContent
@@ -25,13 +26,15 @@ def clean_database():
 	                        page_model=page_model,
 	                        page_content=page_context)
 
-	print("\nCleaning database...")
-	page.hit_clean_button()
-	time.sleep(2)
+	with allure.step("Press 'CLEAN' button"):
+		print("\nCleaning database...")
+		page.hit_clean_button()
+		time.sleep(2)
 
-	print("\nInitializing database...")
-	page.hit_initialize_button()
-	time.sleep(2)
+	with allure.step("Press 'INITIALIZE' button"):
+		print("\nInitializing database...")
+		page.hit_initialize_button()
+		time.sleep(2)
 
-	print("\nClose web browser")
-	page.quit()
+	with allure.step("Close web browser"):
+		page.quit()
