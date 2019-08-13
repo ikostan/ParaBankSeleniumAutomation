@@ -3,7 +3,7 @@
 UML is an acronym that stands for Unified Modeling Language. Simply put, UML is a modern approach to modeling and documenting software.<br/>
 
 <div align="center"> 
-<img width="100%" height="100%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/relationships-between-classes.png" hspace="10">
+<img width="30%" height="30%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/relationships-between-classes.png" hspace="10">
 </div>
 
 **Pynsource** - reverse engineer Python source code into UML<br/>
