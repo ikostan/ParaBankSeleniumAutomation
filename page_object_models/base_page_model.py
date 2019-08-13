@@ -7,6 +7,8 @@ from utils.driver import Driver
 from elements.element import Element
 from page_locators.base_page_locator import BasePageLocator
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from expected_results.page_content.base_page_content import BasePageContent
 from page_locators.account_services_menu_locator import AccountServicesMenuLocator
 
@@ -149,10 +151,6 @@ class BasePageModel:
 				url = url[:url.index(';')] + '?_wadl&_type=xml'
 			else:
 				url = url[:url.index(';')]
-
-		# if '/' in url:
-		#	if url.index('/') == 0:
-		#		url = url.replace('/', '')
 
 		return url
 
@@ -954,9 +952,18 @@ class BasePageModel:
 
 	def log_out(self):
 		'''
-		Click on "Log Out"
+		1. Click on "Log Out"
+		2. Wait until URL changes
+
+		An expectation for checking the current url.
+        url is the expected url, which must not be an exact match
+        returns True if the url is different, false otherwise.
+
+        Source: https://seleniumhq.github.io/selenium/docs/api/py/_modules/selenium/webdriver/support/expected_conditions.html#url_changes
 		:return:
 		'''
+		current_url = self.driver.current_url
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.LOG_OUT)
 		element.press_button()
+		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
 		return None
