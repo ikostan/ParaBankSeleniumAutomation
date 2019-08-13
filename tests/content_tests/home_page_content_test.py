@@ -3,6 +3,7 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import allure
+import unittest
 
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
@@ -10,7 +11,6 @@ from utils.browser_configuration import browser_configuration
 
 from page_object_models.home_page_model import HomePageModel
 from expected_results.page_content.home_page_content import HomePageContent
-from tests.content_tests.content_cases.home_page_content_case import HomePageContentCase
 
 
 @allure.epic('Page Content')
@@ -20,7 +20,7 @@ from tests.content_tests.content_cases.home_page_content_case import HomePageCon
 @allure.feature("Home Page")
 @allure.story('Home Content')
 @screenshot_on_fail()
-class TestHomePageContent(HomePageContentCase):
+class TestHomePageContent(unittest.TestCase):
 
 	@classmethod
 	def setUpClass(cls):
@@ -50,7 +50,10 @@ class TestHomePageContent(HomePageContentCase):
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		# test url
-		self.verify_page_url()
+		expected_url = HomePageContent.URL
+		with allure.step("Verify web page URL. Expected result: {}".format(expected_url)):
+			actual = self.page.url
+			self.assertEqual(expected_url, actual, msg='\nExpected: {}. Actual: {}\n'.format(expected_url, actual))
 
 	def test_page_title(self):
 		allure.dynamic.description("""
@@ -61,7 +64,11 @@ class TestHomePageContent(HomePageContentCase):
 		allure.dynamic.title("Web page title test")
 
 		# Verify Page Title
-		self.verify_page_title()
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
+		with allure.step("Verify web page title. Expected result: {}".format(HomePageContent.TITLE)):
+			self.assertEqual(HomePageContent.TITLE,
+			                 self.page.title)
 
 	def test_atm_services_context(self):
 		allure.dynamic.description("""
@@ -73,7 +80,42 @@ class TestHomePageContent(HomePageContentCase):
 
 		# Verify ATM Services Content
 		# allure.step
-		self.verify_atm_services_context()
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
+		with allure.step("Verify ATM services title. Expected result: {}".format(
+				HomePageContent.ATM_SERVICES['title'])):
+			self.assertEqual(HomePageContent.ATM_SERVICES['title'],
+			                 self.page.atm_title)
+
+		with allure.step("Verify ATM services > Withdraw Funds > text. Expected result: {}".format(
+				HomePageContent.ATM_SERVICES['Withdraw Funds']['text'])):
+			self.assertEqual(HomePageContent.ATM_SERVICES['Withdraw Funds']['text'],
+			                 self.page.atm_withdraw_funds_text)
+
+		with allure.step("Verify ATM services > Withdraw Funds > href. Expected result: {}".format(
+				HomePageContent.ATM_SERVICES['Withdraw Funds']['href'])):
+			self.assertEqual(HomePageContent.ATM_SERVICES['Withdraw Funds']['href'],
+			                 self.page.atm_withdraw_funds_formated_href)
+
+		with allure.step("Verify ATM services > Check Balances > text. Expected result: {}".format(
+				HomePageContent.ATM_SERVICES['Check Balances']['text'])):
+			self.assertEqual(HomePageContent.ATM_SERVICES['Check Balances']['text'],
+			                 self.page.atm_check_balances_text)
+
+		with allure.step("Verify ATM services > Check Balances > href. Expected result: {}".format(
+				HomePageContent.ATM_SERVICES['Check Balances']['href'])):
+			self.assertEqual(HomePageContent.ATM_SERVICES['Check Balances']['href'],
+			                 self.page.atm_check_balances_formated_href)
+
+		with allure.step("Verify ATM services > Make Deposits > text. Expected result: {}".format(
+				HomePageContent.ATM_SERVICES['Make Deposits']['text'])):
+			self.assertEqual(HomePageContent.ATM_SERVICES['Make Deposits']['text'],
+			                 self.page.atm_make_deposits_text)
+
+		with allure.step("Verify ATM services > Make Deposits > href. Expected result: {}".format(
+				HomePageContent.ATM_SERVICES['Make Deposits']['href'])):
+			self.assertEqual(HomePageContent.ATM_SERVICES['Make Deposits']['href'],
+			                 self.page.atm_make_deposits_formated_href)
 
 	def test_online_services_context(self):
 		allure.dynamic.description("""
@@ -84,7 +126,42 @@ class TestHomePageContent(HomePageContentCase):
 		allure.dynamic.title("Online services context test")
 
 		# Verify Online Services Content
-		self.verify_online_services_context()
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
+		with allure.step("Verify Online Services title. Expected result: {}".format(
+				HomePageContent.ONLINE_SERVICES['title'])):
+			self.assertEqual(HomePageContent.ONLINE_SERVICES['title'],
+			                 self.page.online_services_title)
+
+		with allure.step("Verify Bill Pay text. Expected result: {}".format(
+				HomePageContent.ONLINE_SERVICES['Bill Pay']['text'])):
+			self.assertEqual(HomePageContent.ONLINE_SERVICES['Bill Pay']['text'],
+			                 self.page.bill_pay_title)
+
+		with allure.step("Verify Bill Pay href. Expected result: {}".format(
+				HomePageContent.ONLINE_SERVICES['Bill Pay']['href'])):
+			self.assertEqual(HomePageContent.ONLINE_SERVICES['Bill Pay']['href'],
+			                 self.page.bill_pay_formated_href)
+
+		with allure.step("Verify Account History text. Expected result: {}".format(
+				HomePageContent.ONLINE_SERVICES['Account History']['text'])):
+			self.assertEqual(HomePageContent.ONLINE_SERVICES['Account History']['text'],
+			                 self.page.account_history_title)
+
+		with allure.step("Verify Account History href. Expected result: {}".format(
+				HomePageContent.ONLINE_SERVICES['Account History']['href'])):
+			self.assertEqual(HomePageContent.ONLINE_SERVICES['Account History']['href'],
+			                 self.page.account_history_formated_href)
+
+		with allure.step("Verify Transfer Funds text. Expected result: {}".format(
+				HomePageContent.ONLINE_SERVICES['Transfer Funds']['text'])):
+			self.assertEqual(HomePageContent.ONLINE_SERVICES['Transfer Funds']['text'],
+			                 self.page.online_transfer_funds_title)
+
+		with allure.step("Verify Transfer Funds href. Expected result: {}".format(
+				HomePageContent.ONLINE_SERVICES['Transfer Funds']['href'])):
+			self.assertEqual(HomePageContent.ONLINE_SERVICES['Transfer Funds']['href'],
+			                 self.page.online_transfer_funds_formated_href)
 
 	def test_read_more_services_button(self):
 		allure.dynamic.description("""
@@ -95,7 +172,17 @@ class TestHomePageContent(HomePageContentCase):
 		allure.dynamic.title("'Read More' (services) button test")
 
 		# Verify Read More Services button
-		self.verify_read_more_services_button()
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
+		with allure.step("Verify Read More Services text. Expected result: {}".format(
+				HomePageContent.READ_MORE_SERVICES['text'])):
+			self.assertEqual(HomePageContent.READ_MORE_SERVICES['text'],
+			                 self.page.read_more_services_title)
+
+		with allure.step("Verify Read More Services href. Expected result: {}".format(
+				HomePageContent.READ_MORE_SERVICES['href'])):
+			self.assertEqual(HomePageContent.READ_MORE_SERVICES['href'],
+			                 self.page.read_more_services_formated_href)
 
 	def test_read_more_news_button(self):
 		allure.dynamic.description("""
@@ -107,8 +194,18 @@ class TestHomePageContent(HomePageContentCase):
 
 		# Verify Read More News button
 		with allure.step("Verify Read More News button attributes:"):
-			self.verify_read_more_news_button_text()
-			self.verify_read_more_news_button_href()
+
+			allure.dynamic.severity(allure.severity_level.MINOR)
+			with allure.step("Verify Read More News text. Expected result: {}".format(
+					HomePageContent.READ_MORE_NEWS['text'])):
+				self.assertEqual(HomePageContent.READ_MORE_NEWS['text'],
+				                 self.page.read_more_news_title)
+
+			allure.dynamic.severity(allure.severity_level.NORMAL)
+			with allure.step("Verify Read More News href. Expected result: {}".format(
+					HomePageContent.READ_MORE_NEWS['href'])):
+				self.assertEqual(HomePageContent.READ_MORE_NEWS['href'],
+				                 self.page.read_more_news_formated_href)
 
 	def test_latest_news_title(self):
 		allure.dynamic.description("""
@@ -119,4 +216,9 @@ class TestHomePageContent(HomePageContentCase):
 		allure.dynamic.title("'Latest News' title test")
 
 		# Verify Last News title
-		self.verify_latest_news_title()
+		allure.dynamic.severity(allure.severity_level.MINOR)
+
+		with allure.step("Verify Latest News title. Expected result: {}".format(
+				HomePageContent.LATEST_NEWS)):
+			self.assertEqual(HomePageContent.LATEST_NEWS,
+			                 self.page.latest_news_title)
