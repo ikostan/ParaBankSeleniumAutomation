@@ -5,7 +5,8 @@
 
 class BasePersonalInfoContent:
 	'''
-	Holds shared fields/data from "Forgot Login Info" and "Register" forms
+	Holds shared fields/data from "Forgot Login Info" and "Register" forms.
+	Error messages also included (fields validation).
 	'''
 
 	FORM = {
@@ -15,7 +16,8 @@ class BasePersonalInfoContent:
 				'name': "customer.firstName",
 				'class': 'input',
 				'type': 'text'
-			}
+			},
+			'error': 'First name is required.',
 		},
 		'last_name': {
 			'title': 'Last Name:',
@@ -23,7 +25,8 @@ class BasePersonalInfoContent:
 				'name': "customer.lastName",
 				'class': 'input',
 				'type': 'text'
-			}
+			},
+			'error': 'Last name is required.'
 		},
 		'address': {
 			'title': 'Address:',
@@ -31,7 +34,8 @@ class BasePersonalInfoContent:
 				'name': "customer.address.street",
 				'class': 'input',
 				'type': 'text'
-			}
+			},
+			'error': 'Address is required.'
 		},
 		'city': {
 			'title': 'City:',
@@ -39,7 +43,8 @@ class BasePersonalInfoContent:
 				'name': "customer.address.city",
 				'class': 'input',
 				'type': 'text'
-			}
+			},
+			'error': 'City is required.'
 		},
 		'state': {
 			'title': 'State:',
@@ -47,7 +52,8 @@ class BasePersonalInfoContent:
 				'name': "customer.address.state",
 				'class': 'input',
 				'type': 'text'
-			}
+			},
+			'error': 'State is required.'
 		},
 		'zip_code': {
 			'title': 'Zip Code:',
@@ -55,7 +61,8 @@ class BasePersonalInfoContent:
 				'name': "customer.address.zipCode",
 				'class': 'input',
 				'type': 'text'
-			}
+			},
+			'error': 'Zip Code is required.'
 		},
 		'phone': {
 			'title': 'Phone #:',
@@ -71,7 +78,8 @@ class BasePersonalInfoContent:
 				'name': "customer.ssn",
 				'class': 'input',
 				'type': 'text'
-			}
+			},
+			'error': 'Social Security Number is required.'
 		},
 		'username': {
 			'title': 'Username:',
@@ -79,7 +87,8 @@ class BasePersonalInfoContent:
 				'name': "customer.username",
 				'class': 'input',
 				'type': 'text'
-			}
+			},
+			'error': 'Username is required.'
 		},
 		'password': {
 			'title': 'Password:',
@@ -87,7 +96,8 @@ class BasePersonalInfoContent:
 				'name': "customer.password",
 				'class': 'input',
 				'type': 'password'
-			}
+			},
+			'error': 'Password is required.'
 		},
 		'confirm': {
 			'title': 'Confirm:',
@@ -95,6 +105,7 @@ class BasePersonalInfoContent:
 				'name': "repeatedPassword",
 				'class': 'input',
 				'type': 'password'
-			}
+			},
+			'error': 'Password confirmation is required.'
 		},
 	}
