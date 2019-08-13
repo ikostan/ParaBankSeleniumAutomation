@@ -10,7 +10,7 @@ from utils.browser_configuration import browser_configuration
 
 from page_object_models.admin_page_model import AdminPageModel
 from expected_results.page_content.admin_page_content import AdminPageContent
-from tests.content_tests.content_cases.admin_page_content_case import AdminPageContentCase
+from tests.content_tests.content_cases.base_cases.base_content_case import BaseContentCase
 
 
 @allure.epic('Page Content')
@@ -20,7 +20,7 @@ from tests.content_tests.content_cases.admin_page_content_case import AdminPageC
 @allure.feature("Base Page")
 @allure.story('Admin Content')
 @screenshot_on_fail()
-class TestAdminBasePageContent(AdminPageContentCase):
+class TestAdminBasePageContent(BaseContentCase):
 
 	@classmethod
 	def setUpClass(cls):
@@ -39,6 +39,7 @@ class TestAdminBasePageContent(AdminPageContentCase):
 				cls.page.quit()
 				cls.page = None
 
+	'''
 	def test_page_url(self):
 
 		allure.dynamic.description("""
@@ -62,6 +63,7 @@ class TestAdminBasePageContent(AdminPageContentCase):
 
 		# Verify Page Title
 		self.verify_page_title()
+	'''
 
 	# Base Page Content
 	@allure.feature("Base Page")
