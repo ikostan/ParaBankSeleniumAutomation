@@ -10,7 +10,8 @@ from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.browser_configuration import browser_configuration
 
-from expected_results.users.no_such_user import NoOne
+from expected_results.users.base_user import BaseUser
+from expected_results.users.invalid_users_templates.no_such_user import NoSuchUser
 from page_object_models.home_page_model import HomePageModel
 from expected_results.page_content.home_page_content import HomePageContent
 
@@ -18,7 +19,7 @@ from expected_results.page_content.home_page_content import HomePageContent
 @allure.epic('Page Functionality')
 @allure.parent_suite('End To End')
 @allure.suite("User Login/Logout")
-@allure.sub_suite('Positive Tests')
+@allure.sub_suite('Negative Tests')
 @allure.feature("Home Page")
 @allure.story('Login/Logout Functionality')
 @screenshot_on_fail()
@@ -26,7 +27,7 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 
 	@classmethod
 	def setUpClass(cls):
-		cls.user = NoOne
+		cls.user = BaseUser(NoSuchUser)
 		cls.browser = browser_configuration()
 		cls.page_model = HomePageModel
 		cls.page_context = HomePageContent
@@ -71,7 +72,7 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 		#self.verify_page_title()
 
 		with allure.step('Type Username'):
-			expected = self.user.USERNAME
+			expected = self.user.username
 			self.page.enter_username(expected)
 
 			with allure.step('Verify Username value'):
@@ -85,7 +86,7 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 				                                                                                    actual))
 
 		with allure.step('Type Password'):
-			expected = self.user.PASSWORD
+			expected = self.user.password
 			self.page.enter_password(expected)
 
 			with allure.step('Verify Password value'):
