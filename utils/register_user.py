@@ -3,6 +3,8 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import time
+import allure
+
 from utils.open_web_browser import open_web_browser
 
 from page_object_models.register_page_model import RegisterPageModel
@@ -23,41 +25,42 @@ def register_user(client):
 	page_context = RegisterPageContent
 	browser = 'chrome'
 
-	print("Open web browser")
+	print("\nOpen web browser")
 	page = open_web_browser(browser=browser,
 	                        page_model=page_model,
 	                        page_content=page_context)
 
-	print("Filling out user data...")
-	page.type_first_name(client.first_name)
+	with allure.step("Fill out Register web form"):
+		print("\nFilling out user data...")
+		page.type_first_name(client.first_name)
 
-	page.type_last_name(client.last_name)
+		page.type_last_name(client.last_name)
 
-	page.type_address(client.address)
+		page.type_address(client.address)
 
-	page.type_city(client.city)
+		page.type_city(client.city)
 
-	page.type_state(client.state)
+		page.type_state(client.state)
 
-	page.type_zip_code(client.zip_code)
+		page.type_zip_code(client.zip_code)
 
-	page.type_phone(client.phone)
+		page.type_phone(client.phone)
 
-	page.type_ssn(client.ssn)
+		page.type_ssn(client.ssn)
 
-	page.type_username(client.username)
+		page.type_username(client.username)
 
-	page.type_password(client.password)
+		page.type_password(client.password)
 
-	page.type_confirm(client.password)
+		page.type_confirm(client.password)
 
-	print("Clicking on Register button")
-	page.click_register_btn()
-	time.sleep(3)
+	with allure.step("Hit 'REGISTER' button"):
+		page.click_register_btn()
+		time.sleep(3)
 
-	print("Log out")
-	page.log_out()
-	time.sleep(3)
+	with allure.step("Do Log Out"):
+		page.log_out()
+		time.sleep(3)
 
-	print("\nClose web browser")
-	page.quit()
+	with allure.step("Close web browser"):
+		page.quit()
