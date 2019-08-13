@@ -35,9 +35,8 @@ class TestServicesBasePageContent(BaseContentCase):
 	@classmethod
 	def tearDownClass(cls):
 		with allure.step("Close web browser"):
-			if cls.page:
-				cls.page.quit()
-				cls.page = None
+			cls.page.quit()
+			cls.page = None
 
 	'''
 	def test_page_url(self):
