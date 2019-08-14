@@ -74,7 +74,7 @@ class TestAboutPageContent(unittest.TestCase):
 
 		with allure.step("About Web Page Title test"):
 			self.assertEqual(AboutPageContent.TITLE,
-			                 self.page.title)
+			                 self.page.title())
 
 	def test_description_title_text(self):
 		allure.dynamic.description("""
