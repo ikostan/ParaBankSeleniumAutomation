@@ -12,8 +12,8 @@ from expected_results.users.base_user import BaseUser
 from expected_results.users.invalid_users_templates.empty_fields import EmptyFields
 
 from page_object_models.register_page_model import RegisterPageModel
+from tests.e2e_tests.base_case.user_registration_case import UserRegistrationCase
 from expected_results.page_content.register_page_content import RegisterPageContent
-from tests.e2e_tests.base_case.user_personal_info_case import UserPersonalInfoCase
 
 
 @allure.epic('Page Functionality')
@@ -23,7 +23,7 @@ from tests.e2e_tests.base_case.user_personal_info_case import UserPersonalInfoCa
 @allure.feature("Register Page")
 @allure.story('Register Functionality')
 @screenshot_on_fail()
-class TestUserRegistrationAllFieldsEmpty(UserPersonalInfoCase):
+class TestUserRegistrationAllFieldsEmpty(UserRegistrationCase):
 
 	@classmethod
 	def setUpClass(cls):
@@ -91,19 +91,6 @@ class TestUserRegistrationAllFieldsEmpty(UserPersonalInfoCase):
 		self.verify_state_error()
 
 		self.verify_zip_code_error()
-
-		with allure.step('Type phone'):
-			expected = self.client.phone
-			self.page.type_phone(expected)
-			actual = self.page.phone
-			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type phone\'',
-			                                                    expected,
-			                                                    actual))
-			with allure.step('Verify "Phone" field value'):
-				self.assertEqual(expected,
-				                 actual,
-				                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
-				                                                                                    actual))
 
 		self.verify_ssn_error()
 
