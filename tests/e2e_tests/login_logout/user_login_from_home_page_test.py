@@ -83,7 +83,7 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 			self.page.enter_username(expected)
 
 			with allure.step('Verify Username value'):
-				actual = self.page.username
+				actual = self.page.username()
 				print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify Username value',
 				                                                    expected,
 				                                                    actual))
@@ -97,7 +97,7 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 			self.page.enter_password(expected)
 
 			with allure.step('Verify Password value'):
-				actual = self.page.password
+				actual = self.page.password()
 				print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify Password value',
 				                                                    expected,
 				                                                    actual))
