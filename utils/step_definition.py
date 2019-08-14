@@ -5,9 +5,8 @@
 import allure
 
 
-def step_definition(self, expected, actual, step_description='N/A', severity=allure.severity_level.NORMAL):
+def step_definition(self, expected, actual, step_description='N/A'):
 
-	allure.dynamic.severity(severity)
 	with allure.step(step_description):
 		print('\nStep: {}\nExpected: {}\nActual: {}'.format(step_description,
 		                                                    expected,
