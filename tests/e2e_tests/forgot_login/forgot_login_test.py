@@ -96,8 +96,7 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 		                                             ForgotLoginInfoPageContent.PASSWORD,
 		                                             self.client.password),
 		                actual=self.page.username_password,
-		                step_description='Verify "Username/Password" data',
-		                severity=allure.severity_level.CRITICAL)
+		                step_description='Verify "Username/Password" data')
 
 		# Verify "Welcome" message
 		with allure.step('Verify "Welcome" message'):
