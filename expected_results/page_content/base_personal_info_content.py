@@ -10,7 +10,7 @@ class BasePersonalInfoContent:
 	'''
 
 	FORM = {
-		'first_name': {
+		'first name': {
 			'title': 'First Name:',
 			'input': {
 				'name': "customer.firstName",
@@ -19,7 +19,7 @@ class BasePersonalInfoContent:
 			},
 			'error': 'First name is required.',
 		},
-		'last_name': {
+		'last name': {
 			'title': 'Last Name:',
 			'input': {
 				'name': "customer.lastName",
@@ -55,7 +55,7 @@ class BasePersonalInfoContent:
 			},
 			'error': 'State is required.'
 		},
-		'zip_code': {
+		'zip code': {
 			'title': 'Zip Code:',
 			'input': {
 				'name': "customer.address.zipCode",
