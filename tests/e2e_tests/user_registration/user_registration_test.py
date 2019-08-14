@@ -18,7 +18,7 @@ from expected_results.users.valid_users_templates.jane_doe import JaneDoe
 from page_locators.register_page_locator import RegisterPageLocator
 from page_object_models.register_page_model import RegisterPageModel
 from expected_results.page_content.register_page_content import RegisterPageContent
-from tests.e2e_tests.user_registration.base_case.user_registration_case import UserRegistrationCase
+from tests.e2e_tests.base_case.user_personal_info_case import UserPersonalInfoCase
 
 
 @allure.epic('Page Functionality')
@@ -28,7 +28,7 @@ from tests.e2e_tests.user_registration.base_case.user_registration_case import U
 @allure.feature("Register Page")
 @allure.story('Register Functionality')
 @screenshot_on_fail()
-class TestUserRegistration(UserRegistrationCase):
+class TestUserRegistration(UserPersonalInfoCase):
 
 	@classmethod
 	def setUpClass(cls):
@@ -78,6 +78,19 @@ class TestUserRegistration(UserRegistrationCase):
 
 		# Register a new user:
 		self.fill_out_user_data()
+
+		with allure.step('Type phone'):
+			expected = self.client.phone
+			self.page.type_phone(expected)
+			actual = self.page.phone
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type phone\'',
+			                                                    expected,
+			                                                    actual))
+			with allure.step('Verify "Phone" field value'):
+				self.assertEqual(expected,
+				                 actual,
+				                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
+				                                                                                    actual))
 
 		with allure.step('Hit "Register" button'):
 			print('Hit "Register" button')
