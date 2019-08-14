@@ -35,3 +35,5 @@ def step_definition(self, expected, actual, act=None, step_description='N/A'):
 		                 actual_result,
 		                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 		                                                                                    actual_result))
+
+		return None
