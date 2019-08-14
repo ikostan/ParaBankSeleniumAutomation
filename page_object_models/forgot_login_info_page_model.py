@@ -38,7 +38,7 @@ class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
 		element.press_button()
 		return None
 
-	@property
+	# @property
 	def username_password(self):
 		'''
 		Returns Username/Password.
