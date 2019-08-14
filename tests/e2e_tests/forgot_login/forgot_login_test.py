@@ -97,7 +97,7 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 		                expected='{}{}\n{}{}'.format(ForgotLoginInfoPageContent.USERNAME,
 		                                             self.client.username,
 		                                             ForgotLoginInfoPageContent.PASSWORD,
-		                                             self.client.password()),
+		                                             self.client.password),
 		                actual=self.page.username_password,
 		                act=self.page.click_find_info_btn,
 		                step_description='Hit "FIND MY LOGIN INFO" button > Verify "Username/Password" data')
@@ -105,8 +105,8 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 		# Verify "Welcome" message
 		step_definition(self,
 		                expected='{}{} {}'.format(BankAccountContent.ACCOUNT_SERVICES_MENU['welcome_message'],
-		                                          self.client.first_name(),
-		                                          self.client.last_name()),
+		                                          self.client.first_name,
+		                                          self.client.last_name),
 		                actual=self.page.welcome_message,
 		                act=None,
 		                step_description='Verify "Welcome" message')
