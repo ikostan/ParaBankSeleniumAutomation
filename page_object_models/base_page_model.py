@@ -111,7 +111,7 @@ class BasePageModel:
 		'''
 		return self._driver.title
 
-	@property
+	# @property
 	def url(self):
 		'''
 		Returns current URL
@@ -122,7 +122,7 @@ class BasePageModel:
 			url = url[:url.index(';')]
 		return url
 
-	@property
+	# @property
 	def slogan(self):
 		'''
 		Returns slogan text
@@ -154,7 +154,7 @@ class BasePageModel:
 
 		return url
 
-	@property
+	# @property
 	def admin_logo_formated_href(self):
 		'''
 		Returns href value from "Admin Logo" element
@@ -164,7 +164,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def admin_logo_formated_img_src(self):
 		'''
 		Returns admin logo img src value
@@ -174,7 +174,7 @@ class BasePageModel:
 		src = self._formated_url(element.element_src)
 		return src
 
-	@property
+	# @property
 	def admin_logo_img_class(self):
 		'''
 		Returns admin logo img src value
@@ -183,7 +183,7 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ADMIN_LOGO_IMG)
 		return element.element_class
 
-	@property
+	# @property
 	def para_bank_logo_formated_href(self):
 		'''
 		Returns href value from "ParBank Logo" element
@@ -193,7 +193,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def para_bank_logo_formated_img_src(self):
 		'''
 		Returns ParBank logo img src value
@@ -203,7 +203,7 @@ class BasePageModel:
 		src = self._formated_url(element.element_src)
 		return src
 
-	@property
+	# @property
 	def para_bank_logo_img_class(self):
 		'''
 		Returns ParBank logo img class value
@@ -212,7 +212,7 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PARA_BANK_LOGO_IMG)
 		return element.element_class
 
-	@property
+	# @property
 	def para_bank_logo_img_alt(self):
 		'''
 		Returns ParBank logo img alt value
@@ -221,7 +221,7 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PARA_BANK_LOGO_IMG)
 		return element.element_alt
 
-	@property
+	# @property
 	def para_bank_logo_img_title(self):
 		'''
 		Returns ParBank logo img title value
@@ -230,7 +230,7 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.PARA_BANK_LOGO_IMG)
 		return element.element_title
 
-	@property
+	# @property
 	def home_button_formated_href(self):
 		'''
 		Returns formated home button href
@@ -240,7 +240,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def home_button_text(self):
 		'''
 		Returns home button text
@@ -249,7 +249,7 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.HOME_BUTTON)
 		return element.text
 
-	@property
+	# @property
 	def about_button_formated_href(self):
 		'''
 		Returns formated about button href
@@ -259,7 +259,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def about_button_text(self):
 		'''
 		Returns about button text
@@ -268,7 +268,7 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ABOUT_BUTTON)
 		return element.text
 
-	@property
+	# @property
 	def contact_button_formated_href(self):
 		'''
 		Returns formated contact button href
@@ -278,7 +278,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def contact_button_text(self):
 		'''
 		Returns contact button text
@@ -287,7 +287,7 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CONTACT_BUTTON)
 		return element.text
 
-	@property
+	# @property
 	def solutions_menu_text(self):
 		'''
 		Returns SOLUTIONS button text
@@ -296,7 +296,7 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.SOLUTIONS)
 		return element.text
 
-	@property
+	# @property
 	def solutions_menu_class(self):
 		'''
 		Returns SOLUTIONS button text
@@ -305,7 +305,7 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.SOLUTIONS)
 		return element.element_class
 
-	@property
+	# @property
 	def about_us_menu_item_formated_href(self):
 		'''
 		Returns formated about us menu item href
@@ -315,7 +315,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def about_us_menu_item_text(self):
 		'''
 		Returns about us menu item text
@@ -324,7 +324,7 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ABOUT_US_MENU_ITEM)
 		return element.text
 
-	@property
+	# @property
 	def services_us_menu_item_formated_href(self):
 		'''
 		Returns formated services menu item href
@@ -334,7 +334,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def services_us_menu_item_text(self):
 		'''
 		Returns services menu item text
@@ -344,7 +344,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def products_menu_item_formated_href(self):
 		'''
 		Returns formated products menu item href
@@ -354,7 +354,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def products_menu_item_text(self):
 		'''
 		Returns products menu item text
@@ -364,7 +364,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def locations_menu_item_formated_href(self):
 		'''
 		Returns formated locations menu item href
@@ -374,7 +374,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def locations_menu_item_text(self):
 		'''
 		Returns locations menu item text
@@ -384,7 +384,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def admin_page_menu_item_formated_href(self):
 		'''
 		Returns formated admin_page menu item href
@@ -394,7 +394,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def admin_page_menu_item_text(self):
 		'''
 		Returns admin_page menu item text
@@ -404,7 +404,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def customer_login_title(self):
 		'''
 		Returns customer login title
@@ -414,7 +414,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def username_login_title(self):
 		'''
 		Returns username login title
@@ -424,7 +424,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def password_login_title(self):
 		'''
 		Returns password login title
@@ -434,7 +434,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def username_input_class(self):
 		'''
 		Returns Username login Input class
@@ -444,7 +444,7 @@ class BasePageModel:
 		atr = element.element_class
 		return atr
 
-	@property
+	# @property
 	def username(self):
 		'''
 		Returns Username value
@@ -454,7 +454,7 @@ class BasePageModel:
 		value = element.element_value
 		return value
 
-	@property
+	# @property
 	def username_input_type(self):
 		'''
 		Returns Username login Input type
@@ -473,7 +473,7 @@ class BasePageModel:
 		element.write(username)
 		return None
 
-	@property
+	# @property
 	def username_input_name(self):
 		'''
 		Returns Username login Input name
@@ -483,7 +483,7 @@ class BasePageModel:
 		atr = element.element_name
 		return atr
 
-	@property
+	# @property
 	def password(self):
 		'''
 		Returns Password value
@@ -493,7 +493,7 @@ class BasePageModel:
 		value = element.element_value
 		return value
 
-	@property
+	# @property
 	def password_input_class(self):
 		'''
 		Returns password login Input class
@@ -503,7 +503,7 @@ class BasePageModel:
 		atr = element.element_class
 		return atr
 
-	@property
+	# @property
 	def password_input_type(self):
 		'''
 		Returns password login Input type
@@ -513,7 +513,7 @@ class BasePageModel:
 		atr = element.element_type
 		return atr
 
-	@property
+	# @property
 	def password_input_name(self):
 		'''
 		Returns password login Input name
@@ -532,7 +532,7 @@ class BasePageModel:
 		element.write(password)
 		return None
 
-	@property
+	# @property
 	def login_button_class(self):
 		'''
 		Returns login_button class
@@ -542,7 +542,7 @@ class BasePageModel:
 		atr = element.element_class
 		return atr
 
-	@property
+	# @property
 	def login_button_type(self):
 		'''
 		Returns login_button type
@@ -552,7 +552,7 @@ class BasePageModel:
 		atr = element.element_type
 		return atr
 
-	@property
+	# @property
 	def login_button_value(self):
 		'''
 		Returns login_button value
@@ -571,7 +571,7 @@ class BasePageModel:
 		element.press_button()
 		return None
 
-	@property
+	# @property
 	def forgot_login_formated_href(self):
 		'''
 		Returns formated forgot_login href
@@ -581,7 +581,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def forgot_login_text(self):
 		'''
 		Returns forgot_login text
@@ -591,7 +591,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def register_formated_href(self):
 		'''
 		Returns formated register href
@@ -601,7 +601,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def register_text(self):
 		'''
 		Returns register text
@@ -611,7 +611,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def footer_home_formated_href(self):
 		'''
 		Returns formated footer_home href
@@ -621,7 +621,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def footer_home_text(self):
 		'''
 		Returns footer_home text
@@ -631,7 +631,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def footer_about_us_formated_href(self):
 		'''
 		Returns formated about_us href
@@ -641,7 +641,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def footer_about_us_text(self):
 		'''
 		Returns about_us text
@@ -651,7 +651,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def footer_services_formated_href(self):
 		'''
 		Returns formated services href
@@ -661,7 +661,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def footer_services_text(self):
 		'''
 		Returns services text
@@ -671,7 +671,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def footer_products_formated_href(self):
 		'''
 		Returns formated products href
@@ -681,7 +681,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def footer_products_text(self):
 		'''
 		Returns products text
@@ -691,7 +691,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def footer_locations_formated_href(self):
 		'''
 		Returns formated locations href
@@ -701,7 +701,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def footer_locations_text(self):
 		'''
 		Returns products text
@@ -711,7 +711,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def footer_forum_formated_href(self):
 		'''
 		Returns formated forum href
@@ -721,7 +721,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def footer_forum_text(self):
 		'''
 		Returns forum text
@@ -731,7 +731,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def footer_site_map_formated_href(self):
 		'''
 		Returns formated site_map href
@@ -741,7 +741,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def footer_site_map_text(self):
 		'''
 		Returns site_map text
@@ -751,7 +751,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def footer_contact_us_formated_href(self):
 		'''
 		Returns formated contact_us href
@@ -761,7 +761,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def footer_contact_us_text(self):
 		'''
 		Returns contact_us text
@@ -771,7 +771,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def footer_copyright_text(self):
 		'''
 		Returns copyright text
@@ -781,7 +781,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def footer_copyright_class(self):
 		'''
 		Returns copyright class
@@ -791,7 +791,7 @@ class BasePageModel:
 		atr = element.element_class
 		return atr
 
-	@property
+	# @property
 	def footer_visit_link_formated_href(self):
 		'''
 		Returns formated visit link href
@@ -801,7 +801,7 @@ class BasePageModel:
 		href = self._formated_url(element.element_href)
 		return href
 
-	@property
+	# @property
 	def footer_visit_link_text(self):
 		'''
 		Returns visit link text
@@ -811,7 +811,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def footer_visit_link_target(self):
 		'''
 		Returns visit us target
@@ -821,7 +821,7 @@ class BasePageModel:
 		atr = element.element_target
 		return atr
 
-	@property
+	# @property
 	def footer_visit_us_text(self):
 		'''
 		Returns visit us text
@@ -831,7 +831,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def error_title(self):
 		'''
 		Returns error title text
@@ -841,7 +841,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def error_message(self):
 		'''
 		Returns error message text
@@ -852,7 +852,7 @@ class BasePageModel:
 		return txt
 
 	# Account Services Menu - visible only when user logged in
-	@property
+	# @property
 	def welcome_message(self):
 		'''
 		Returns 'welcome' message that appears above "Account Services" menu
@@ -864,7 +864,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def account_services_menu_title(self):
 		'''
 		Returns "Account Services" menu header
@@ -874,7 +874,7 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def account_services_menu_is_visible(self):
 		'''
 		Returns is "Account Services" menu header visible
