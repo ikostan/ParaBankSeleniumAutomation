@@ -27,7 +27,6 @@ class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
 		txt = element.element_value
 		return txt
 
-	@property
 	def click_find_info_btn(self):
 		'''
 		Click on "FIND MY LOGIN INFO" button
