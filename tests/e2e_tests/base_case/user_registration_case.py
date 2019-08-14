@@ -18,7 +18,7 @@ class UserRegistrationCase(UserPersonalInfoCase):
 		with allure.step('Type phone'):
 			expected = self.client.phone
 			self.page.type_phone(expected)
-			actual = self.page.phone
+			actual = self.page.phone()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type phone\'',
 			                                                    expected,
 			                                                    actual))
