@@ -1,6 +1,7 @@
 #  Created by Egor Kostan.
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+from selenium.common.exceptions import NoSuchElementException
 
 from elements.element import Element
 from page_object_models.base_personal_info_page_model import BasePersonalInfoPageModel
@@ -36,4 +37,18 @@ class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
 		element = Element(self.driver, self.explicit_wait_time, ForgotLoginInfoPageLocator.FIND_MY_LOGIN_INFO_BUTTON)
 		element.press_button()
 		return None
+
+	@property
+	def username_password(self):
+		'''
+		Returns Username/Password.
+		Returns None in case of failure.
+		:return:
+		'''
+		try:
+			element = Element(self.driver, self.explicit_wait_time, ForgotLoginInfoPageLocator.USERNAME_PASSWORD)
+			txt = element.text
+			return txt
+		except NoSuchElementException:
+			return None
 
