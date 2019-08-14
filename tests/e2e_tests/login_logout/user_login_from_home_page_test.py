@@ -114,7 +114,7 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 			expected = '{}{} {}'.format(BankAccountContent.ACCOUNT_SERVICES_MENU['welcome_message'],
 			                            self.user.first_name,
 			                            self.user.last_name)
-			actual = self.page.welcome_message
+			actual = self.page.welcome_message()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Welcome" message',
 			                                                    expected,
 			                                                    actual))
@@ -153,7 +153,7 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 
 		with allure.step('Verify that "Account Services" menu is not present'):
 			expected = False
-			actual = self.page.account_services_menu_is_visible
+			actual = self.page.account_services_menu_is_visible()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is not present',
 			                                                    expected,
 			                                                    actual))
