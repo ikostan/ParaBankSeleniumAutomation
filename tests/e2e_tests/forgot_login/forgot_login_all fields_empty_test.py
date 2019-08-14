@@ -10,9 +10,9 @@ from utils.open_web_browser import open_web_browser
 from expected_results.users.base_user import BaseUser
 from expected_results.users.invalid_users_templates.empty_fields import EmptyFields
 
+from tests.e2e_tests.base_case.user_personal_info_case import UserPersonalInfoCase
 from page_object_models.forgot_login_info_page_model import ForgotLoginInfoPageModel
 from expected_results.page_content.forgot_login_info_page_content import ForgotLoginInfoPageContent
-from tests.e2e_tests.base_case.user_personal_info_case import UserPersonalInfoCase
 
 
 @allure.epic('Page Functionality')
@@ -65,7 +65,7 @@ class TestForgotLoginAllFieldsEmpty(UserPersonalInfoCase):
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
 		# Register a new user:
-		self.fill_outuser_data()
+		self.fill_out_user_data()
 
 		with allure.step('Hit "FIND MY LOGIN INFO" button'):
 			print('Hit "Register" button')
