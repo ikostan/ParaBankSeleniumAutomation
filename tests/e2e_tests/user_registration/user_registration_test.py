@@ -129,7 +129,7 @@ class TestUserRegistration(UserRegistrationCase):
 		# Post Logout validation
 		with allure.step('Verify URL'):
 			expected = HomePageContent.URL
-			actual = self.page.url
+			actual = self.page.url()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
 			                                                    expected,
 			                                                    actual))
