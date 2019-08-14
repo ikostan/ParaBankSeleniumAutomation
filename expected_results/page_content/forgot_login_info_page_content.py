@@ -27,3 +27,9 @@ class ForgotLoginInfoPageContent(BasePageContent, BasePersonalInfoContent):
 		'class': "button",
 		'value': "Find My Login Info"
 	}
+
+	USERNAME = "Username: "
+
+	PASSWORD = "Password: "
+
+	SUCCESS_MESSAGE = 'Your login information was located successfully. You are now logged in.'
