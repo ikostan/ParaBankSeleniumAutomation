@@ -2,6 +2,10 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 import allure
 import unittest
 
@@ -48,15 +52,14 @@ class TestServicesPageContent(unittest.TestCase):
 			2. Do URL verification
 		""")
 		allure.dynamic.title("Web page URL test")
-		allure.dynamic.severity(allure.severity_level.CRITICAL)
+		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		# Verify web page url
 		expected = ServicesPageContent.URL
 		actual = self.page.url
 		step_description = 'Verify "Services" web page URL'
-		severity = allure.severity_level.BLOCKER
 
-		step_definition(self, expected, actual, step_description, severity)
+		step_definition(self, expected, actual, step_description)
 
 	@allure.feature("Services Page")
 	def test_page_title(self):
