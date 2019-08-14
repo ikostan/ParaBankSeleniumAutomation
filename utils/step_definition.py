@@ -5,7 +5,7 @@
 import allure
 
 
-def step_definition(self, expected, actual, act=None, step_description='N/A'):
+def step_definition(self, expected, actual, act=None, step_description='N/A', click=False):
 	"""
 	Unit Testing and the Arrange, Act and Assert (AAA) Pattern
 	:param self:
@@ -22,7 +22,10 @@ def step_definition(self, expected, actual, act=None, step_description='N/A'):
 
 		# Act
 		if act:
-			act(expected)
+			if not click:
+				act(expected)
+			else:
+				act()
 
 		# Assert
 		actual_result = actual()
