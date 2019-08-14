@@ -35,6 +35,6 @@ class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
 		'''
 
 		element = Element(self.driver, self.explicit_wait_time, ForgotLoginInfoPageLocator.FIND_MY_LOGIN_INFO_BUTTON)
-		element.click()
+		element.press_button()
 		return None
 
