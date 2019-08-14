@@ -19,7 +19,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test First Name title"):
-			self.assertEqual(BasePersonalInfoContent.FORM['first_name']['title'], self.page.first_name_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['first name']['title'], self.page.first_name_title)
 
 	def verify_last_name_title(self):
 		'''
@@ -28,7 +28,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test Last Name title"):
-			self.assertEqual(BasePersonalInfoContent.FORM['last_name']['title'], self.page.last_name_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['last name']['title'], self.page.last_name_title)
 
 	def verify_address_title(self):
 		'''
@@ -64,7 +64,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test Zip Code title"):
-			self.assertEqual(BasePersonalInfoContent.FORM['zip_code']['title'], self.page.zip_code_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['zip code']['title'], self.page.zip_code_title)
 
 	def verify_phone_title(self):
 		'''
