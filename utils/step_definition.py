@@ -9,7 +9,7 @@ def step_definition(self, expected, actual, step_description='N/A', severity=all
 
 	allure.dynamic.severity(severity)
 	with allure.step(step_description):
-		print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is present',
+		print('\nStep: {}\nExpected: {}\nActual: {}'.format(step_description,
 		                                                    expected,
 		                                                    actual))
 		self.assertEqual(expected,
