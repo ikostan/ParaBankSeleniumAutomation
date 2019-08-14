@@ -4,6 +4,7 @@
 
 import allure
 import unittest
+from utils.step_definition import step_definition
 from expected_results.page_content.base_page_content import BasePageContent
 
 
@@ -23,42 +24,113 @@ class BaseContentCase(unittest.TestCase):
 
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
+		step_definition(self,
+		                expected=BasePageContent.LEFT_MENU_ITEMS['Solutions']['text'],
+		                actual=self.page.solutions_menu_text,
+		                step_description="Test 'Solutions' menu title: text")
+
+		step_definition(self,
+		                expected=BasePageContent.LEFT_MENU_ITEMS['Solutions']['class'],
+		                actual=self.page.solutions_menu_class,
+		                step_description="Test 'Solutions' menu title: class")
+
+		'''
 		with allure.step("Test 'Solutions' menu title: text + css"):
 			self.assertEqual(BasePageContent.LEFT_MENU_ITEMS['Solutions']['text'],
 			                 self.page.solutions_menu_text)
-
 			self.assertEqual(BasePageContent.LEFT_MENU_ITEMS['Solutions']['class'],
 			                 self.page.solutions_menu_class)
+		'''
 
+		step_definition(self,
+		                expected=BasePageContent.LEFT_MENU_ITEMS['About Us']['href'],
+		                actual=self.page.about_us_menu_item_formated_href,
+		                step_description="Test 'Solutions' menu > 'About Us': href")
+
+		step_definition(self,
+		                expected=BasePageContent.LEFT_MENU_ITEMS['About Us']['text'],
+		                actual=self.page.about_us_menu_item_text,
+		                step_description="Test 'Solutions' menu > 'About Us': text")
+
+		'''
 		with allure.step("Test 'Solutions' menu > 'About Us': text + href"):
 			self.assertEqual(BasePageContent.LEFT_MENU_ITEMS['About Us']['href'],
 			                 self.page.about_us_menu_item_formated_href)
 			self.assertEqual(BasePageContent.LEFT_MENU_ITEMS['About Us']['text'],
 			                 self.page.about_us_menu_item_text)
+		'''
 
+		step_definition(self,
+		                expected=BasePageContent.LEFT_MENU_ITEMS['Services']['href'],
+		                actual=self.page.services_us_menu_item_formated_href,
+		                step_description="Test 'Solutions' menu > 'Services': href")
+
+		step_definition(self,
+		                expected=BasePageContent.LEFT_MENU_ITEMS['Services']['text'],
+		                actual=self.page.services_us_menu_item_text,
+		                step_description="Test 'Solutions' menu > 'Services': text")
+
+		'''
 		with allure.step("Test 'Solutions' menu > 'Services': text + href"):
 			self.assertEqual(BasePageContent.LEFT_MENU_ITEMS['Services']['href'],
 			                 self.page.services_us_menu_item_formated_href)
 			self.assertEqual(BasePageContent.LEFT_MENU_ITEMS['Services']['text'],
 			                 self.page.services_us_menu_item_text)
+		'''
 
+		step_definition(self,
+		                expected=BasePageContent.LEFT_MENU_ITEMS['Products']['href'],
+		                actual=self.page.products_menu_item_formated_href,
+		                step_description="Test 'Solutions' menu > 'Products': href")
+
+		step_definition(self,
+		                expected=BasePageContent.LEFT_MENU_ITEMS['Products']['text'],
+		                actual=self.page.products_menu_item_text,
+		                step_description="Test 'Solutions' menu > 'Products': text")
+
+		'''
 		with allure.step("Test 'Solutions' menu > 'Products': text + href"):
 			self.assertEqual(BasePageContent.LEFT_MENU_ITEMS['Products']['href'],
 			                 self.page.products_menu_item_formated_href)
 			self.assertEqual(BasePageContent.LEFT_MENU_ITEMS['Products']['text'],
 			                 self.page.products_menu_item_text)
+		'''
 
+		step_definition(self,
+		                expected=BasePageContent.LEFT_MENU_ITEMS['Locations']['href'],
+		                actual=self.page.locations_menu_item_formated_href,
+		                step_description="Test 'Solutions' menu > 'Locations': href")
+
+		step_definition(self,
+		                expected=BasePageContent.LEFT_MENU_ITEMS['Locations']['text'],
+		                actual=self.page.locations_menu_item_text,
+		                step_description="Test 'Solutions' menu > 'Locations': text")
+
+		'''
 		with allure.step("Test 'Solutions' menu > 'Locations': text + href"):
 			self.assertEqual(BasePageContent.LEFT_MENU_ITEMS['Locations']['href'],
 			                 self.page.locations_menu_item_formated_href)
 			self.assertEqual(BasePageContent.LEFT_MENU_ITEMS['Locations']['text'],
 			                 self.page.locations_menu_item_text)
+		'''
 
+		step_definition(self,
+		                expected=BasePageContent.LEFT_MENU_ITEMS['Admin Page']['href'],
+		                actual=self.page.admin_page_menu_item_formated_href,
+		                step_description="Test 'Solutions' menu > 'Admin Page': href")
+
+		step_definition(self,
+		                expected=BasePageContent.LEFT_MENU_ITEMS['Admin Page']['text'],
+		                actual=self.page.admin_page_menu_item_text,
+		                step_description="Test 'Solutions' menu > 'Admin Page': text")
+
+		'''
 		with allure.step("Test 'Solutions' menu > 'Admin Page': text + href"):
 			self.assertEqual(BasePageContent.LEFT_MENU_ITEMS['Admin Page']['href'],
 			                 self.page.admin_page_menu_item_formated_href)
 			self.assertEqual(BasePageContent.LEFT_MENU_ITEMS['Admin Page']['text'],
 			                 self.page.admin_page_menu_item_text)
+		'''
 
 	def verify_right_menu_home_button(self):
 		allure.dynamic.severity(allure.severity_level.MINOR)
