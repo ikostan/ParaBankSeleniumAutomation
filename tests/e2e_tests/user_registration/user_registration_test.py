@@ -140,7 +140,7 @@ class TestUserRegistration(UserRegistrationCase):
 
 		with allure.step('Verify that "Account Services" menu is not present'):
 			expected = False
-			actual = self.page.account_services_menu_is_visible
+			actual = self.page.account_services_menu_is_visible()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is not present',
 			                                                    expected,
 			                                                    actual))
