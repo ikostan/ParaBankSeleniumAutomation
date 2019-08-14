@@ -1,6 +1,7 @@
 #  Created by Egor Kostan.
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+from selenium.common.exceptions import NoSuchElementException
 
 from elements.element import Element
 from page_locators.register_page_locator import RegisterPageLocator
@@ -50,6 +51,21 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		return value
 
 	@property
+	def username_error(self):
+		'''
+		Returns Username error.
+		Non in case error does not appear.
+		:return:
+		'''
+
+		try:
+			element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.USERNAME_ERROR)
+			txt = element.text
+			return txt
+		except NoSuchElementException:
+			return None
+
+	@property
 	def password_title(self):
 		'''
 		Returns password title text
@@ -83,6 +99,21 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		return value
 
 	@property
+	def password_error(self):
+		'''
+		Returns Username error.
+		Non in case error does not appear.
+		:return:
+		'''
+
+		try:
+			element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.PASSWORD_ERROR)
+			txt = element.text
+			return txt
+		except NoSuchElementException:
+			return None
+
+	@property
 	def confirm_title(self):
 		'''
 		Returns confirm title text
@@ -114,6 +145,21 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.CONFIRM_INPUT)
 		value = element.element_value
 		return value
+
+	@property
+	def confirm_error(self):
+		'''
+		Returns Confirm error.
+		Non in case error does not appear.
+		:return:
+		'''
+
+		try:
+			element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.CONFIRM_ERROR)
+			txt = element.text
+			return txt
+		except NoSuchElementException:
+			return None
 
 	@property
 	def register_btn_label(self):
