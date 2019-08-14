@@ -16,3 +16,9 @@ class ForgotLoginInfoPageLocator(BasePageLocator, BasePersonalInfoPageLocator):
 
 	FIND_MY_LOGIN_INFO_BUTTON = (By.XPATH,
 	                             '//input[contains(@value, "Find My Login Info")]')
+
+	# USERNAME = (By.XPATH, '//*[contains(@b, "Username:")]')
+	# PASSWORD = (By.XPATH, '//*[contains(@b, "Password:")]')
+
+	USERNAME_PASSWORD = (By.XPATH, '//*[@id="rightPanel"]/p[2]')
+
