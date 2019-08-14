@@ -2,6 +2,10 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 import allure
 import unittest
 
@@ -11,6 +15,7 @@ from utils.browser_configuration import browser_configuration
 
 from page_object_models.admin_page_model import AdminPageModel
 from expected_results.page_content.admin_page_content import AdminPageContent
+from utils.step_definition import step_definition
 
 
 @allure.epic('Page Content')
@@ -46,12 +51,19 @@ class TestAdminPageContent(unittest.TestCase):
 			2. Do URL verification
 		""")
 		allure.dynamic.title("Web page URL test")
+		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
 		# verify web page url
-		allure.dynamic.severity(allure.severity_level.CRITICAL)
+		step_definition(self,
+		                expected=AdminPageContent.URL,
+		                actual=self.page.url,
+		                act=None,
+		                step_description='Admin page URL test')
+		'''
 		with allure.step("Admin page URL test"):
 			self.assertEqual(AdminPageContent.URL,
 			                 self.page.url)
+		'''
 
 	def test_page_title(self):
 		allure.dynamic.description("""
@@ -60,9 +72,16 @@ class TestAdminPageContent(unittest.TestCase):
 			2. Do Title verification
 		""")
 		allure.dynamic.title("Web page Title test")
+		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# verify web page url
-		allure.dynamic.severity(allure.severity_level.MINOR)
+		step_definition(self,
+		                expected=AdminPageContent.TITLE,
+		                actual=self.page.title,
+		                act=None,
+		                step_description="Admin page title test")
+		'''
 		with allure.step("Admin page title test"):
 			self.assertEqual(AdminPageContent.TITLE,
 			                 self.page.title)
+		'''
