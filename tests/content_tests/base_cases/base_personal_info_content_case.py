@@ -19,7 +19,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test First Name title"):
-			self.assertEqual(BasePersonalInfoContent.FORM['first name']['title'], self.page.first_name_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['first name']['title'], self.page.first_name_title())
 
 	def verify_last_name_title(self):
 		'''
@@ -28,7 +28,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test Last Name title"):
-			self.assertEqual(BasePersonalInfoContent.FORM['last name']['title'], self.page.last_name_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['last name']['title'], self.page.last_name_title())
 
 	def verify_address_title(self):
 		'''
@@ -37,7 +37,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test Address title"):
-			self.assertEqual(BasePersonalInfoContent.FORM['address']['title'], self.page.address_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['address']['title'], self.page.address_title())
 
 	def verify_city_title(self):
 		'''
@@ -46,7 +46,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test City title"):
-			self.assertEqual(BasePersonalInfoContent.FORM['city']['title'], self.page.city_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['city']['title'], self.page.city_title())
 
 	def verify_state_title(self):
 		'''
@@ -55,7 +55,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test State title"):
-			self.assertEqual(BasePersonalInfoContent.FORM['state']['title'], self.page.state_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['state']['title'], self.page.state_title())
 
 	def verify_zip_code_title(self):
 		'''
@@ -64,7 +64,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test Zip Code title"):
-			self.assertEqual(BasePersonalInfoContent.FORM['zip code']['title'], self.page.zip_code_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['zip code']['title'], self.page.zip_code_title())
 
 	def verify_phone_title(self):
 		'''
@@ -73,7 +73,7 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test Phone title"):
-			self.assertEqual(BasePersonalInfoContent.FORM['phone']['title'], self.page.phone_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['phone']['title'], self.page.phone_title())
 
 	def verify_ssn_title(self):
 		'''
@@ -82,5 +82,5 @@ class BasePersonalInfoContentCase(BaseContentCase):
 		'''
 
 		with allure.step("Test SSN title"):
-			self.assertEqual(BasePersonalInfoContent.FORM['ssn']['title'], self.page.ssn_title)
+			self.assertEqual(BasePersonalInfoContent.FORM['ssn']['title'], self.page.ssn_title())
 
