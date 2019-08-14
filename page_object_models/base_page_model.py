@@ -103,7 +103,7 @@ class BasePageModel:
 		'''
 		return self._driver
 
-	@property
+	# @property
 	def title(self):
 		'''
 		Returns web page title
