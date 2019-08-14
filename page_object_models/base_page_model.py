@@ -962,6 +962,7 @@ class BasePageModel:
         Source: https://seleniumhq.github.io/selenium/docs/api/py/_modules/selenium/webdriver/support/expected_conditions.html#url_changes
 		:return:
 		'''
+
 		current_url = self.driver.current_url
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.LOG_OUT)
 		element.press_button()
