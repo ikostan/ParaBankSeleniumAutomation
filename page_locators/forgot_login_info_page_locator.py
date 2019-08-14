@@ -15,5 +15,4 @@ class ForgotLoginInfoPageLocator(BasePageLocator, BasePersonalInfoPageLocator):
 	'''
 
 	FIND_MY_LOGIN_INFO_BUTTON = (By.XPATH,
-	                             '//*[@id="lookupForm"]/table/tbody/tr[8]/td[2]/'
-	                             'input[contains(@value, "Find My Login Info")])')
+	                             '//input[contains(@value, "Find My Login Info")]')
