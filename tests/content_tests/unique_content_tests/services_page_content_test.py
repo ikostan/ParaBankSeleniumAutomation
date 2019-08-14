@@ -73,7 +73,7 @@ class TestServicesPageContent(unittest.TestCase):
 		# Verify web page title
 		allure.dynamic.severity(allure.severity_level.MINOR)
 		with allure.step('Verify "Services" web page title. Expected result: {}'.format(ServicesPageContent.TITLE)):
-			self.assertEqual(ServicesPageContent.TITLE, self.page.title)
+			self.assertEqual(ServicesPageContent.TITLE, self.page.title())
 
 	# Services Content Testing
 
