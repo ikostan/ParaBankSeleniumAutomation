@@ -125,7 +125,7 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 
 		with allure.step('Verify that "Account Services" menu is present'):
 			expected = True
-			actual = self.page.account_services_menu_is_visible
+			actual = self.page.account_services_menu_is_visible()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is present',
 			                                                    expected,
 			                                                    actual))
@@ -142,7 +142,7 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 		with allure.step('Do URL verification'):
 
 			expected = 'https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC'
-			actual = self.page.url
+			actual = self.page.url()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
 			                                                    expected,
 			                                                    actual))
@@ -167,5 +167,5 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 
 		with allure.step("Verify web page title. Expected result: {}".format(HomePageContent.TITLE)):
 			self.assertEqual(HomePageContent.TITLE,
-			                 self.page.title)
+			                 self.page.title())
 
