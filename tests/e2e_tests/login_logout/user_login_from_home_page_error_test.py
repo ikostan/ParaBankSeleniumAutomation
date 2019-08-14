@@ -104,7 +104,7 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 
 		with allure.step('Verify that "Account Services" menu is not present'):
 			expected = False
-			actual = self.page.account_services_menu_is_visible
+			actual = self.page.account_services_menu_is_visible()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is not present',
 			                                                    expected,
 			                                                    actual))
@@ -116,7 +116,7 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 		# Verify ERROR title
 		with allure.step('Verify Error title'):
 			expected = HomePageContent.ERROR_TITLE
-			actual = self.page.error_title
+			actual = self.page.error_title()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Error" title',
 			                                                    expected,
 			                                                    actual))
@@ -128,7 +128,7 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 		# Verify ERROR message
 		with allure.step('Verify Error message'):
 			expected = HomePageContent.ERROR_MESSAGE
-			actual = self.page.error_message
+			actual = self.page.error_message()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Error" message',
 			                                                    expected,
 			                                                    actual))
@@ -140,7 +140,7 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 		# URL validation
 		with allure.step('Do URL verification'):
 			expected = 'https://parabank.parasoft.com/parabank/login.htm'
-			actual = self.page.url
+			actual = self.page.url()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
 			                                                    expected,
 			                                                    actual))
