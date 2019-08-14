@@ -6,7 +6,6 @@
 import allure
 
 from utils.screenshot import screenshot_on_fail
-from utils.clean_database import clean_database
 from utils.open_web_browser import open_web_browser
 
 from expected_results.users.base_user import BaseUser
@@ -14,7 +13,7 @@ from expected_results.users.invalid_users_templates.empty_fields import EmptyFie
 
 from page_object_models.register_page_model import RegisterPageModel
 from expected_results.page_content.register_page_content import RegisterPageContent
-from tests.e2e_tests.user_registration.base_case.user_registration_case import UserRegistrationCase
+from tests.e2e_tests.base_case.user_personal_info_case import UserPersonalInfoCase
 
 
 @allure.epic('Page Functionality')
@@ -24,16 +23,13 @@ from tests.e2e_tests.user_registration.base_case.user_registration_case import U
 @allure.feature("Register Page")
 @allure.story('Register Functionality')
 @screenshot_on_fail()
-class TestUserRegistrationAllFieldsEmpty(UserRegistrationCase):
+class TestUserRegistrationAllFieldsEmpty(UserPersonalInfoCase):
 
 	@classmethod
 	def setUpClass(cls):
 		cls.client = BaseUser(EmptyFields)
 		cls.browser = 'chrome'
 		cls.page = None
-
-		with allure.step("Initial data setup > clean DB"):
-			clean_database()
 
 	@classmethod
 	def tearDownClass(cls):
@@ -61,15 +57,53 @@ class TestUserRegistrationAllFieldsEmpty(UserRegistrationCase):
 		User registration test case:
 			1. Open 'Register' web page
 			2. Fill out user personal data > Set all fields empty
-			4. Verify that each data item (empty string) appears in relevant field
-			5. Hit 'Register' button
-			6. Verify 'Error' messages
-			9. Verify that "Account Services" menu is not present
-			10. Close web browser
+			3. Verify that each data item (empty string) appears in relevant field
+			4. Hit 'Register' button
+			5. Verify 'Error' messages
+			6. Verify that "Account Services" menu is not present
+			7. Close web browser
 		""")
 		allure.dynamic.title("User registration > Negative test > Empty fields")
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
 		# Register a new user:
 		self.fill_out_user_data()
+
+		with allure.step('Hit "Register" button'):
+			print('Hit "Register" button')
+			self.page.click_register_btn()
+
+		with allure.step('Verify that "Account Services" menu is not present'):
+			expected = False
+			actual = self.page.account_services_menu_is_visible
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is not present',
+			                                                    expected,
+			                                                    actual))
+
+		self.verify_first_name_error()
+
+		self.verify_last_name_error()
+
+		self.verify_address_error()
+
+		self.verify_city_error()
+
+		self.verify_state_error()
+
+		self.verify_zip_code_error()
+
+		with allure.step('Type phone'):
+			expected = self.client.phone
+			self.page.type_phone(expected)
+			actual = self.page.phone
+			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Type phone\'',
+			                                                    expected,
+			                                                    actual))
+			with allure.step('Verify "Phone" field value'):
+				self.assertEqual(expected,
+				                 actual,
+				                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
+				                                                                                    actual))
+
+		self.verify_ssn_error()
 
