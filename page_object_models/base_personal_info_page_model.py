@@ -1,6 +1,7 @@
 #  Created by Egor Kostan.
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+from selenium.common.exceptions import NoSuchElementException
 
 from elements.element import Element
 from page_object_models.base_page_model import BasePageModel
@@ -69,6 +70,21 @@ class BasePersonalInfoPageModel(BasePageModel):
 		return value
 
 	@property
+	def first_name_error(self):
+		'''
+		Returns first name error.
+		Non in case error does not appear.
+		:return:
+		'''
+
+		try:
+			element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.FIRST_NAME_ERROR)
+			txt = element.text
+			return txt
+		except NoSuchElementException:
+			return None
+
+	@property
 	def last_name_title(self):
 		'''
 		Returns last name title text
@@ -100,6 +116,21 @@ class BasePersonalInfoPageModel(BasePageModel):
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.LAST_NAME_INPUT)
 		value = element.element_value
 		return value
+
+	@property
+	def last_name_error(self):
+		'''
+		Returns last name error.
+		Non in case error does not appear.
+		:return:
+		'''
+
+		try:
+			element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.LAST_NAME_ERROR)
+			txt = element.text
+			return txt
+		except NoSuchElementException:
+			return None
 
 	@property
 	def address_title(self):
@@ -135,6 +166,21 @@ class BasePersonalInfoPageModel(BasePageModel):
 		return value
 
 	@property
+	def address_error(self):
+		'''
+		Returns address name error.
+		Non in case error does not appear.
+		:return:
+		'''
+
+		try:
+			element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.ADDRESS_ERROR)
+			txt = element.text
+			return txt
+		except NoSuchElementException:
+			return None
+
+	@property
 	def city_title(self):
 		'''
 		Returns address title text
@@ -166,6 +212,21 @@ class BasePersonalInfoPageModel(BasePageModel):
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.CITY_INPUT)
 		value = element.element_value
 		return value
+
+	@property
+	def city_error(self):
+		'''
+		Returns city name error.
+		Non in case error does not appear.
+		:return:
+		'''
+
+		try:
+			element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.CITY_ERROR)
+			txt = element.text
+			return txt
+		except NoSuchElementException:
+			return None
 
 	@property
 	def state_title(self):
@@ -201,6 +262,21 @@ class BasePersonalInfoPageModel(BasePageModel):
 		return value
 
 	@property
+	def state_error(self):
+		'''
+		Returns state name error.
+		Non in case error does not appear.
+		:return:
+		'''
+
+		try:
+			element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.STATE_ERROR)
+			txt = element.text
+			return txt
+		except NoSuchElementException:
+			return None
+
+	@property
 	def zip_code_title(self):
 		'''
 		Returns zip code title text
@@ -232,6 +308,21 @@ class BasePersonalInfoPageModel(BasePageModel):
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.ZIP_CODE_INPUT)
 		value = element.element_value
 		return value
+
+	@property
+	def zip_code_error(self):
+		'''
+		Returns zip code error.
+		Non in case error does not appear.
+		:return:
+		'''
+
+		try:
+			element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.ZIP_CODE_ERROR)
+			txt = element.text
+			return txt
+		except NoSuchElementException:
+			return None
 
 	@property
 	def phone_title(self):
@@ -302,3 +393,19 @@ class BasePersonalInfoPageModel(BasePageModel):
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.SSN_INPUT)
 		value = element.element_value
 		return value
+
+	@property
+	def ssn_error(self):
+		'''
+		Returns SSN error.
+		Non in case error does not appear.
+		:return:
+		'''
+
+		try:
+			element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.SSN_ERROR)
+			txt = element.text
+			return txt
+		except NoSuchElementException:
+			return None
+
