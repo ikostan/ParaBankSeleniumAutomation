@@ -17,8 +17,7 @@ class UserPersonalInfoCase(unittest.TestCase):
 		step_definition(self,
 		                expected=expected,
 		                actual=actual,
-		                step_description='Verify First Name Error',
-		                severity=allure.severity_level.NORMAL)
+		                step_description='Verify First Name Error')
 
 	def verify_last_name_error(self, expected=RegisterPageContent.FORM['last name']['error']):
 
@@ -26,8 +25,7 @@ class UserPersonalInfoCase(unittest.TestCase):
 		step_definition(self,
 		                expected=expected,
 		                actual=actual,
-		                step_description='Verify Last Name Error',
-		                severity=allure.severity_level.NORMAL)
+		                step_description='Verify Last Name Error')
 
 	def verify_address_error(self, expected=RegisterPageContent.FORM['address']['error']):
 
@@ -35,8 +33,7 @@ class UserPersonalInfoCase(unittest.TestCase):
 		step_definition(self,
 		                expected=expected,
 		                actual=actual,
-		                step_description='Verify Address Error',
-		                severity=allure.severity_level.NORMAL)
+		                step_description='Verify Address Error')
 
 	def verify_city_error(self, expected=RegisterPageContent.FORM['city']['error']):
 
@@ -44,8 +41,7 @@ class UserPersonalInfoCase(unittest.TestCase):
 		step_definition(self,
 		                expected=expected,
 		                actual=actual,
-		                step_description='Verify City Error',
-		                severity=allure.severity_level.NORMAL)
+		                step_description='Verify City Error')
 
 	def verify_state_error(self, expected=RegisterPageContent.FORM['state']['error']):
 
@@ -53,8 +49,7 @@ class UserPersonalInfoCase(unittest.TestCase):
 		step_definition(self,
 		                expected=expected,
 		                actual=actual,
-		                step_description='Verify State Error',
-		                severity=allure.severity_level.NORMAL)
+		                step_description='Verify State Error')
 
 	def verify_zip_code_error(self, expected=RegisterPageContent.FORM['zip code']['error']):
 
@@ -62,8 +57,7 @@ class UserPersonalInfoCase(unittest.TestCase):
 		step_definition(self,
 		                expected=expected,
 		                actual=actual,
-		                step_description='Verify Zip Code Error',
-		                severity=allure.severity_level.NORMAL)
+		                step_description='Verify Zip Code Error')
 
 	def verify_ssn_error(self, expected=RegisterPageContent.FORM['ssn']['error']):
 
@@ -71,8 +65,7 @@ class UserPersonalInfoCase(unittest.TestCase):
 		step_definition(self,
 		                expected=expected,
 		                actual=actual,
-		                step_description='Verify SSN Error',
-		                severity=allure.severity_level.NORMAL)
+		                step_description='Verify SSN Error')
 
 	def fill_out_user_data(self):
 		with allure.step('Type first name'):
