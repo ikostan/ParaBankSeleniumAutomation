@@ -2,6 +2,10 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 import allure
 import unittest
 
@@ -52,7 +56,7 @@ class TestHomePageContent(unittest.TestCase):
 		# test url
 		expected_url = HomePageContent.URL
 		with allure.step("Verify web page URL. Expected result: {}".format(expected_url)):
-			actual = self.page.url
+			actual = self.page.url()
 			self.assertEqual(expected_url, actual, msg='\nExpected: {}. Actual: {}\n'.format(expected_url, actual))
 
 	def test_page_title(self):
@@ -68,7 +72,7 @@ class TestHomePageContent(unittest.TestCase):
 
 		with allure.step("Verify web page title. Expected result: {}".format(HomePageContent.TITLE)):
 			self.assertEqual(HomePageContent.TITLE,
-			                 self.page.title)
+			                 self.page.title())
 
 	def test_atm_services_context(self):
 		allure.dynamic.description("""
