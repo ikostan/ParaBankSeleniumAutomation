@@ -56,7 +56,7 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		# Verify web page url
 		with allure.step('Verify "Register" web page URL. Expected result: {}'.format(RegisterPageContent.URL)):
 			self.assertEqual(RegisterPageContent.URL,
-			                 self.page.url)
+			                 self.page.url())
 
 	def test_page_title(self):
 		allure.dynamic.description("""
@@ -70,7 +70,7 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		# Verify web page title
 		with allure.step('Verify "Register" web page title. Expected result: {}'.format(RegisterPageContent.TITLE)):
 			self.assertEqual(RegisterPageContent.TITLE,
-			                 self.page.title)
+			                 self.page.title())
 
 	# Registration page context - Personal Info Content base elements validation
 	def test_first_name_title(self):
