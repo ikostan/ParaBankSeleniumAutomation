@@ -14,7 +14,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 	By following this technique a layer of separation between the test code and technical implementation is created.
 	'''
 
-	@property
+	# @property
 	def header(self):
 		'''
 		Returns header text
@@ -25,7 +25,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def description(self):
 		'''
 		Returns description text
@@ -36,7 +36,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def first_name_title(self):
 		'''
 		Returns first name title text
@@ -58,7 +58,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		element.write(first_name)
 		return None
 
-	@property
+	# @property
 	def first_name(self):
 		'''
 		Returns first name input field value
@@ -69,7 +69,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		value = element.element_value
 		return value
 
-	@property
+	# @property
 	def first_name_error(self):
 		'''
 		Returns first name error.
@@ -84,7 +84,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		except NoSuchElementException:
 			return None
 
-	@property
+	# @property
 	def last_name_title(self):
 		'''
 		Returns last name title text
@@ -106,7 +106,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		element.write(last_name)
 		return None
 
-	@property
+	# @property
 	def last_name(self):
 		'''
 		Returns last name input field value
@@ -117,7 +117,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		value = element.element_value
 		return value
 
-	@property
+	# @property
 	def last_name_error(self):
 		'''
 		Returns last name error.
@@ -132,7 +132,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		except NoSuchElementException:
 			return None
 
-	@property
+	# @property
 	def address_title(self):
 		'''
 		Returns address title text
@@ -154,7 +154,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		element.write(address)
 		return None
 
-	@property
+	# @property
 	def address(self):
 		'''
 		Returns address input field value
@@ -165,13 +165,13 @@ class BasePersonalInfoPageModel(BasePageModel):
 		value = element.element_value
 		return value
 
-	@property
+	# @property
 	def address_error(self):
-		'''
+		"""
 		Returns address name error.
 		Non in case error does not appear.
 		:return:
-		'''
+		"""
 
 		try:
 			element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.ADDRESS_ERROR)
@@ -180,46 +180,46 @@ class BasePersonalInfoPageModel(BasePageModel):
 		except NoSuchElementException:
 			return None
 
-	@property
+	# @property
 	def city_title(self):
-		'''
+		"""
 		Returns address title text
 		:return:
-		'''
+		"""
 
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.CITY_TITLE)
 		txt = element.text
 		return txt
 
 	def type_city(self, city: str):
-		'''
+		"""
 		Write text into city input field
 		:param city:
 		:return:
-		'''
+		"""
 
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.CITY_INPUT)
 		element.write(city)
 		return None
 
-	@property
+	# @property
 	def city(self):
-		'''
+		"""
 		Returns city input field value
 		:return:
-		'''
+		"""
 
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.CITY_INPUT)
 		value = element.element_value
 		return value
 
-	@property
+	# @property
 	def city_error(self):
-		'''
+		"""
 		Returns city name error.
 		Non in case error does not appear.
 		:return:
-		'''
+		"""
 
 		try:
 			element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.CITY_ERROR)
@@ -228,40 +228,40 @@ class BasePersonalInfoPageModel(BasePageModel):
 		except NoSuchElementException:
 			return None
 
-	@property
+	# @property
 	def state_title(self):
-		'''
+		"""
 		Returns state title text
 		:return:
-		'''
+		"""
 
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.STATE_TITLE)
 		txt = element.text
 		return txt
 
 	def type_state(self, state: str):
-		'''
+		"""
 		Write text into state input field
 		:param state:
 		:return:
-		'''
+		"""
 
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.STATE_INPUT)
 		element.write(state)
 		return None
 
-	@property
+	# @property
 	def state(self):
-		'''
+		"""
 		Returns state input field value
 		:return:
-		'''
+		"""
 
 		element = Element(self.driver, self.explicit_wait_time, BasePersonalInfoPageLocator.STATE_INPUT)
 		value = element.element_value
 		return value
 
-	@property
+	# @property
 	def state_error(self):
 		'''
 		Returns state name error.
@@ -276,7 +276,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		except NoSuchElementException:
 			return None
 
-	@property
+	# @property
 	def zip_code_title(self):
 		'''
 		Returns zip code title text
@@ -298,7 +298,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		element.write(zip_code)
 		return None
 
-	@property
+	# @property
 	def zip_code(self):
 		'''
 		Returns zip code input field value
@@ -309,7 +309,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		value = element.element_value
 		return value
 
-	@property
+	# @property
 	def zip_code_error(self):
 		'''
 		Returns zip code error.
@@ -324,7 +324,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		except NoSuchElementException:
 			return None
 
-	@property
+	# @property
 	def phone_title(self):
 		'''
 		Returns phone title text
@@ -350,7 +350,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		element.write(phone_number)
 		return None
 
-	@property
+	# @property
 	def phone(self):
 		'''
 		Returns phone input field value
@@ -361,7 +361,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		value = element.element_value
 		return value
 
-	@property
+	# @property
 	def ssn_title(self):
 		'''
 		Returns SSN title text
@@ -383,7 +383,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		element.write(ssn)
 		return None
 
-	@property
+	# @property
 	def ssn(self):
 		'''
 		Returns SSN input field value
@@ -394,7 +394,7 @@ class BasePersonalInfoPageModel(BasePageModel):
 		value = element.element_value
 		return value
 
-	@property
+	# @property
 	def ssn_error(self):
 		'''
 		Returns SSN error.
