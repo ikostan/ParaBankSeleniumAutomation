@@ -86,19 +86,31 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 		# Register a new user:
 		self.fill_out_user_data()
 
+		'''
 		with allure.step('Hit "FIND MY LOGIN INFO" button'):
 			print('Hit "Register" button')
 			self.page.click_find_info_btn()
+		'''
 
+		# Verify "Username/Password" data
 		step_definition(self,
 		                expected='{}{}\n{}{}'.format(ForgotLoginInfoPageContent.USERNAME,
 		                                             self.client.username,
 		                                             ForgotLoginInfoPageContent.PASSWORD,
-		                                             self.client.password),
+		                                             self.client.password()),
 		                actual=self.page.username_password,
-		                step_description='Verify "Username/Password" data')
+		                act=self.page.click_find_info_btn,
+		                step_description='Hit "FIND MY LOGIN INFO" button > Verify "Username/Password" data')
 
 		# Verify "Welcome" message
+		step_definition(self,
+		                expected='{}{} {}'.format(BankAccountContent.ACCOUNT_SERVICES_MENU['welcome_message'],
+		                                          self.client.first_name(),
+		                                          self.client.last_name()),
+		                actual=self.page.welcome_message,
+		                act=None,
+		                step_description='Verify "Welcome" message')
+		'''
 		with allure.step('Verify "Welcome" message'):
 			expected = '{}{} {}'.format(BankAccountContent.ACCOUNT_SERVICES_MENU['welcome_message'],
 			                            self.client.first_name,
@@ -111,7 +123,14 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 			                 actual,
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
+		'''
 
+		step_definition(self,
+		                expected=True,
+		                actual=self.page.account_services_menu_is_visible,
+		                act=None,
+		                step_description='Verify that "Account Services" menu is present')
+		'''
 		with allure.step('Verify that "Account Services" menu is present'):
 			expected = True
 			actual = self.page.account_services_menu_is_visible
@@ -122,14 +141,23 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 			                 actual,
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
+		'''
 
 		# Log Out
+		'''
 		with allure.step('Hit "Log Out" link'):
 			print("Log Out..")
 			self.page.log_out()
+		'''
 
-		# Post Logout validation
-		with allure.step('Do URL verification'):
+		# Log Out > Post Logout validation
+		step_definition(self,
+		                expected=HomePageContent.URL,
+		                actual=self.page.url,
+		                act=self.page.log_out,
+		                step_description='Hit "Log Out" link > Do URL verification')
+		'''
+		with allure.step('Hit "Log Out" link > Do URL verification'):
 			expected = HomePageContent.URL
 			actual = self.page.url
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
@@ -139,7 +167,15 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 			                 actual,
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
+		'''
 
+		# Verify that "Account Services" menu is not present
+		step_definition(self,
+		                expected=False,
+		                actual=self.page.account_services_menu_is_visible,
+		                act=None,
+		                step_description='Verify that "Account Services" menu is not present')
+		'''
 		with allure.step('Verify that "Account Services" menu is not present'):
 			expected = False
 			actual = self.page.account_services_menu_is_visible
@@ -150,10 +186,17 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 			                 actual,
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
+		'''
 
 		# Verify Page Title
-		allure.dynamic.severity(allure.severity_level.MINOR)
-
+		step_definition(self,
+		                expected=HomePageContent.TITLE,
+		                actual=self.page.title,
+		                act=None,
+		                step_description='Verify web page title')
+		'''
 		with allure.step("Verify web page title. Expected result: {}".format(HomePageContent.TITLE)):
 			self.assertEqual(HomePageContent.TITLE,
 			                 self.page.title)
+		'''
+
