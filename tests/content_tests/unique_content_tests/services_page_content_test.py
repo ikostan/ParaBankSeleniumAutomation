@@ -2,10 +2,6 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
-#  Created by Egor Kostan.
-#  GitHub: https://github.com/ikostan
-#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
-
 import allure
 import unittest
 
@@ -55,11 +51,14 @@ class TestServicesPageContent(unittest.TestCase):
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		# Verify web page url
-		expected = ServicesPageContent.URL
-		actual = self.page.url
-		step_description = 'Verify "Services" web page URL'
+		# expected = ServicesPageContent.URL
+		# actual = self.page.url
+		# step_description = 'Verify "Services" web page URL'
 
-		step_definition(self, expected, actual, step_description)
+		step_definition(self,
+		                expected=ServicesPageContent.URL,
+		                actual=self.page.url,
+		                step_description='Verify "Services" web page URL')
 
 	@allure.feature("Services Page")
 	def test_page_title(self):
