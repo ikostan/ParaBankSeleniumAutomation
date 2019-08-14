@@ -2,6 +2,10 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
+#  Created by Egor Kostan.
+#  GitHub: https://github.com/ikostan
+#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 import allure
 import unittest
 
@@ -55,7 +59,7 @@ class TestAboutPageContent(unittest.TestCase):
 
 		with allure.step("About Web Page URL test"):
 			self.assertEqual(AboutPageContent.URL,
-			                 self.page.url)
+			                 self.page.url())
 
 	def test_page_title(self):
 		allure.dynamic.description("""
