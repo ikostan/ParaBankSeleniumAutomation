@@ -17,7 +17,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 
 	_url = RegisterPageContent.URL
 
-	@property
+	# @property
 	def username_title(self):
 		'''
 		Returns username title text
@@ -39,7 +39,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		element.write(username)
 		return None
 
-	@property
+	# @property
 	def username(self):
 		'''
 		Return value from username input field
@@ -50,7 +50,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		value = element.element_value
 		return value
 
-	@property
+	# @property
 	def username_error(self):
 		'''
 		Returns Username error.
@@ -65,7 +65,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		except NoSuchElementException:
 			return None
 
-	@property
+	# @property
 	def password_title(self):
 		'''
 		Returns password title text
@@ -87,7 +87,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		element.write(password)
 		return None
 
-	@property
+	# @property
 	def password(self):
 		'''
 		Return value from password input field
@@ -98,7 +98,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		value = element.element_value
 		return value
 
-	@property
+	# @property
 	def password_error(self):
 		'''
 		Returns Username error.
@@ -113,7 +113,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		except NoSuchElementException:
 			return None
 
-	@property
+	# @property
 	def confirm_title(self):
 		'''
 		Returns confirm title text
@@ -135,7 +135,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		element.write(password)
 		return None
 
-	@property
+	# @property
 	def confirm(self):
 		'''
 		Return value from confirm input field
@@ -146,7 +146,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		value = element.element_value
 		return value
 
-	@property
+	# @property
 	def confirm_error(self):
 		'''
 		Returns Confirm error.
@@ -161,7 +161,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		except NoSuchElementException:
 			return None
 
-	@property
+	# @property
 	def register_btn_label(self):
 		'''
 		Returns register button label
@@ -172,7 +172,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		txt = element.element_value
 		return txt
 
-	@property
+	# @property
 	def register_btn_class(self):
 		'''
 		Returns register button class
@@ -183,7 +183,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		txt = element.element_class
 		return txt
 
-	@property
+	# @property
 	def register_btn_type(self):
 		'''
 		Returns register button type
@@ -204,7 +204,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		element.press_button()
 		return None
 
-	@property
+	# @property
 	def welcome_header(self):
 		'''
 		Returns welcome header
@@ -215,7 +215,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		value = element.text
 		return value
 
-	@property
+	# @property
 	def welcome_message(self):
 		'''
 		Returns welcome message
