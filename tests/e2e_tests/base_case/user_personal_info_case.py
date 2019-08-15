@@ -2,7 +2,6 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
-import allure
 import unittest
 
 from expected_results.page_content.register_page_content import RegisterPageContent
