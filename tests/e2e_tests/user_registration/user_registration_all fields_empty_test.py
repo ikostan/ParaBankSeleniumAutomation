@@ -14,6 +14,7 @@ from expected_results.users.invalid_users_templates.empty_fields import EmptyFie
 from page_object_models.register_page_model import RegisterPageModel
 from tests.e2e_tests.base_case.user_registration_case import UserRegistrationCase
 from expected_results.page_content.register_page_content import RegisterPageContent
+from utils.step_definition import step_definition
 
 
 @allure.epic('Page Functionality')
@@ -69,16 +70,32 @@ class TestUserRegistrationAllFieldsEmpty(UserRegistrationCase):
 		# Register a new user:
 		self.fill_out_user_data()
 
+		step_definition(self,
+		                step_description='Hit "Register" button',
+		                expected=True,
+		                actual=True,
+		                act=self.page.click_register_btn,
+		                click=True)
+		'''
 		with allure.step('Hit "Register" button'):
 			print('Hit "Register" button')
 			self.page.click_register_btn()
+		'''
 
+		step_definition(self,
+		                step_description='Verify that "Account Services" menu is not present',
+		                expected=False,
+		                actual=self.page.account_services_menu_is_visible,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step('Verify that "Account Services" menu is not present'):
 			expected = False
 			actual = self.page.account_services_menu_is_visible
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is not present',
 			                                                    expected,
 			                                                    actual))
+		'''
 
 		self.verify_first_name_error()
 
