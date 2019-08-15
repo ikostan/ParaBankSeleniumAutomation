@@ -75,12 +75,12 @@ class TestUserRegistrationAllFieldsEmpty(UserRegistrationCase):
 		                step_description='Hit "Register" button',
 		                expected=True,
 		                actual=True,
-		                act=self.page.click_register_btn,
+		                act=self.page.hit_register_btn,
 		                click=True)
 		'''
 		with allure.step('Hit "Register" button'):
 			print('Hit "Register" button')
-			self.page = self.page.click_register_btn()
+			self.page = self.page.hit_register_btn()
 
 		step_definition(self,
 		                step_description='Verify that "Account Services" menu is not present',
