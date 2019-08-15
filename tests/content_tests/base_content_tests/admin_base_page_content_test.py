@@ -66,7 +66,6 @@ class TestAdminBasePageContent(BaseContentCase):
 	'''
 
 	# Base Page Content
-	@allure.feature("Base Page")
 	def test_parabank_admin_logo(self):
 		allure.dynamic.description("""
 		Content base elements validation > Admin logo:
@@ -78,7 +77,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		# Content base elements validation:
 		self.verify_parabank_admin_logo()
 
-	@allure.feature("Base Page")
 	def test_parabank_logo(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'ParaBank' logo:
@@ -90,7 +88,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		# Content base elements validation:
 		self.verify_parabank_logo()
 
-	@allure.feature("Base Page")
 	def test_right_menu_home_button(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'Home' button:
@@ -102,7 +99,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		# Content base elements validation:
 		self.verify_right_menu_home_button()
 
-	@allure.feature("Base Page")
 	def test_right_menu_about_button(self):
 		"""Content base elements validation > About button:
 		1. Open Home web page
@@ -118,7 +114,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		# Content base elements validation:
 		self.verify_right_menu_about_button()
 
-	@allure.feature("Base Page")
 	def test_right_menu_contact_button(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'Contact' button:
@@ -130,7 +125,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		# Content base elements validation:
 		self.verify_right_menu_contact_button()
 
-	@allure.feature("Base Page")
 	def test_solutions_menu_items(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'Solutions' menu items:
@@ -142,7 +136,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		# Content base elements validation:
 		self.verify_solutions_menu_items()
 
-	@allure.feature("Base Page")
 	def test_customer_login(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'Customer Login':
@@ -154,7 +147,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		# Content base elements validation:
 		self.verify_customer_login()
 
-	@allure.feature("Base Page")
 	def test_footer_home_item(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'Footer':
@@ -165,7 +157,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		allure.dynamic.title("'Footer' > 'Home' item test")
 		self.verify_footer_home_item()
 
-	@allure.feature("Base Page")
 	def test_footer_about_item(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'Footer':
@@ -176,7 +167,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		allure.dynamic.title("'Footer' > 'About Us' item test")
 		self.verify_footer_about_item()
 
-	@allure.feature("Base Page")
 	def test_footer_services_item(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'Footer':
@@ -187,7 +177,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		allure.dynamic.title("'Footer' > 'Services' test")
 		self.verify_footer_services_item()
 
-	@allure.feature("Base Page")
 	def test_footer_products_item(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'Footer':
@@ -198,7 +187,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		allure.dynamic.title("'Footer' > 'Products' item test")
 		self.verify_footer_products_item()
 
-	@allure.feature("Base Page")
 	def test_footer_locations_item(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'Footer':
@@ -209,7 +197,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		allure.dynamic.title("'Footer' > 'Locations' item test")
 		self.verify_footer_locations_item()
 
-	@allure.feature("Base Page")
 	def test_footer_forum_item(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'Footer':
@@ -220,7 +207,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		allure.dynamic.title("'Footer' > 'Forum' test")
 		self.verify_footer_forum_item()
 
-	@allure.feature("Base Page")
 	def test_footer_site_map_item(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'Footer':
@@ -231,7 +217,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		allure.dynamic.title("'Footer' > 'Site Map' item test")
 		self.verify_footer_site_map_item()
 
-	@allure.feature("Base Page")
 	def test_footer_contact_us_item(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'Footer':
@@ -242,7 +227,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		allure.dynamic.title("'Footer' > 'Contact Us' item test")
 		self.verify_footer_contact_us_item()
 
-	@allure.feature("Base Page")
 	def test_footer_copyright_item(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'Footer':
@@ -253,7 +237,6 @@ class TestAdminBasePageContent(BaseContentCase):
 		allure.dynamic.title("'Footer' > copyright item test")
 		self.verify_footer_copyright_item()
 
-	@allure.feature("Base Page")
 	def test_footer_visit_item(self):
 		allure.dynamic.description("""
 		Content base elements validation > 'Footer':
