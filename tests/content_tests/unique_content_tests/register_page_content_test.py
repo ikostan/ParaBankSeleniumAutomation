@@ -85,7 +85,6 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		# Personal Info Content base elements validation:
 		self.verify_first_name_title()
 
-	@allure.feature("Base Personal Info Content")
 	def test_last_name_title(self):
 		allure.dynamic.description("""
 		Content base elements validation > Register Form:
@@ -98,7 +97,6 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		# Personal Info Content base elements validation:
 		self.verify_last_name_title()
 
-	@allure.feature("Base Personal Info Content")
 	def test_address_title(self):
 		allure.dynamic.description("""
 		Content base elements validation > Register Form:
@@ -111,7 +109,6 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		# Personal Info Content base elements validation:
 		self.verify_address_title()
 
-	@allure.feature("Base Personal Info Content")
 	def test_city_title(self):
 		allure.dynamic.description("""
 		Content base elements validation > Register Form:
@@ -124,7 +121,6 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		# Personal Info Content base elements validation:
 		self.verify_city_title()
 
-	@allure.feature("Base Personal Info Content")
 	def test_state_title(self):
 		allure.dynamic.description("""
 		Content base elements validation > Register Form:
@@ -137,7 +133,6 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		# Personal Info Content base elements validation:
 		self.verify_state_title()
 
-	@allure.feature("Base Personal Info Content")
 	def test_zip_code_title(self):
 		allure.dynamic.description("""
 		Content base elements validation > Register Form:
@@ -150,7 +145,6 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		# Personal Info Content base elements validation:
 		self.verify_zip_code_title()
 
-	@allure.feature("Base Personal Info Content")
 	def test_phone_title(self):
 		allure.dynamic.description("""
 		Content base elements validation > Register Form:
@@ -163,7 +157,6 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		# Personal Info Content base elements validation:
 		self.verify_phone_title()
 
-	@allure.feature("Base Personal Info Content")
 	def test_ssn_title(self):
 		allure.dynamic.description("""
 		Content base elements validation > Register Form:
@@ -177,7 +170,6 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		self.verify_ssn_title()
 
 	# Registration page context - Register web page context base elements validation
-	@allure.feature("Register Page")
 	def test_username_title(self):
 		allure.dynamic.description("""
 		Content base elements validation > Register Form:
@@ -192,7 +184,6 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		with allure.step('Verify "Username" title. Expected result: {}'.format(expected)):
 			self.assertEqual(expected, self.page.username_title())
 
-	@allure.feature("Register Page")
 	def test_password_title(self):
 		allure.dynamic.description("""
 		Content base elements validation > Register Form:
@@ -207,7 +198,6 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		with allure.step('Verify "Password" title. Expected result: {}'.format(expected)):
 			self.assertEqual(expected, self.page.password_title())
 
-	@allure.feature("Register Page")
 	def test_confirm_title(self):
 		allure.dynamic.description("""
 		Content base elements validation > Register Form:
@@ -222,7 +212,6 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		with allure.step('Verify "Confirm" title. Expected result: {}'.format(expected)):
 			self.assertEqual(expected, self.page.confirm_title())
 
-	@allure.feature("Register Page")
 	def test_register_button(self):
 		allure.dynamic.description("""
 		Content base elements validation > Register Form:
