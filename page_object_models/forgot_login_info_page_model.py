@@ -40,20 +40,22 @@ class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
 		                                implicit_wait_time=5,
 		                                explicit_wait_time=5)
 
+	'''
 	def hit_log_out_button(self):
-		'''
+		"""
 		1. Click on "Log Out"
 		2. Wait until URL changes
 		3. Returns HomePageModel object on success
 
 		:return:
-		'''
+		"""
 
 		super().hit_log_out_button()
 		from page_object_models.home_page_model import HomePageModel
 		return HomePageModel(driver=self.driver,
 		                     implicit_wait_time=5,
 		                     explicit_wait_time=10)
+	'''
 
 	# @property
 	def username_password(self):
