@@ -11,13 +11,13 @@ from page_object_models.register_page_model import RegisterPageModel
 from expected_results.page_content.register_page_content import RegisterPageContent
 
 
-def register_user(client):
+def register_user(user):
 	'''
 	Registers a new user.
 	Does not check for any errors.
 	Using Selenium webdriver + chrome browser by default
 	:param page:
-	:param client:
+	:param user:
 	:return:
 	'''
 
@@ -32,27 +32,27 @@ def register_user(client):
 
 	with allure.step("Fill out Register web form"):
 		print("\nFilling out user data...")
-		page.type_first_name(client.first_name)
+		page.type_first_name(user.first_name)
 
-		page.type_last_name(client.last_name)
+		page.type_last_name(user.last_name)
 
-		page.type_address(client.address)
+		page.type_address(user.address)
 
-		page.type_city(client.city)
+		page.type_city(user.city)
 
-		page.type_state(client.state)
+		page.type_state(user.state)
 
-		page.type_zip_code(client.zip_code)
+		page.type_zip_code(user.zip_code)
 
-		page.type_phone(client.phone)
+		page.type_phone(user.phone)
 
-		page.type_ssn(client.ssn)
+		page.type_ssn(user.ssn)
 
-		page.type_username(client.username)
+		page.type_username(user.username)
 
-		page.type_password(client.password)
+		page.type_password(user.password)
 
-		page.type_confirm(client.password)
+		page.type_confirm(user.password)
 
 	with allure.step("Hit 'REGISTER' button"):
 		page.click_register_btn()
