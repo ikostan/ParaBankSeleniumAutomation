@@ -86,11 +86,9 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 		# Register a new user:
 		self.fill_out_user_data()
 
-		'''
 		with allure.step('Hit "FIND MY LOGIN INFO" button'):
 			print('Hit "Register" button')
-			self.page.click_find_info_btn()
-		'''
+			self.page = self.page.click_find_info_btn()
 
 		# Verify "Username/Password" data
 		step_definition(self,
@@ -99,9 +97,9 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 		                                             ForgotLoginInfoPageContent.PASSWORD,
 		                                             self.client.password),
 		                actual=self.page.username_password,
-		                act=self.page.click_find_info_btn,
-		                step_description='Hit "FIND MY LOGIN INFO" button > Verify "Username/Password" data',
-		                click=True)
+		                act=None,
+		                step_description='Verify "Username/Password" data',
+		                click=False)
 
 		# Verify "Welcome" message
 		step_definition(self,
@@ -145,19 +143,17 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 		'''
 
 		# Log Out
-		'''
 		with allure.step('Hit "Log Out" link'):
 			print("Log Out..")
-			self.page.log_out()
-		'''
+			self.page = self.page.hit_log_out_button()
 
 		# Log Out > Post Logout validation
 		step_definition(self,
 		                expected=HomePageContent.URL,
 		                actual=self.page.url,
-		                act=self.page.log_out,
-		                step_description='Hit "Log Out" link > Do URL verification',
-		                click=True)
+		                act=None,
+		                step_description='Do URL verification',
+		                click=False)
 		'''
 		with allure.step('Hit "Log Out" link > Do URL verification'):
 			expected = HomePageContent.URL
