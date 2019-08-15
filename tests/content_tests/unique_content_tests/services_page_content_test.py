@@ -40,7 +40,6 @@ class TestServicesPageContent(unittest.TestCase):
 				cls.page.quit()
 				cls.page = None
 
-	@allure.feature("Services Page")
 	def test_page_url(self):
 		allure.dynamic.description("""
 		Content base elements validation > Services page URL:
@@ -51,16 +50,11 @@ class TestServicesPageContent(unittest.TestCase):
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		# Verify web page url
-		# expected = ServicesPageContent.URL
-		# actual = self.page.url
-		# step_description = 'Verify "Services" web page URL'
-
 		step_definition(self,
 		                expected=ServicesPageContent.URL,
 		                actual=self.page.url,
 		                step_description='Verify "Services" web page URL')
 
-	@allure.feature("Services Page")
 	def test_page_title(self):
 		allure.dynamic.description("""
 		Content base elements validation > Services page title:
@@ -71,9 +65,16 @@ class TestServicesPageContent(unittest.TestCase):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		# Verify web page title
-		allure.dynamic.severity(allure.severity_level.MINOR)
+		step_definition(self,
+		                expected=ServicesPageContent.TITLE,
+		                actual=self.page.title,
+		                step_description='Verify "Services" web page title',
+		                act=None,
+		                click=False)
+		'''
 		with allure.step('Verify "Services" web page title. Expected result: {}'.format(ServicesPageContent.TITLE)):
 			self.assertEqual(ServicesPageContent.TITLE, self.page.title())
+		'''
 
 	# Services Content Testing
 
