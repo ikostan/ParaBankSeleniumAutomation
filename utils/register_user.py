@@ -59,7 +59,7 @@ def register_user(user):
 		time.sleep(3)
 
 	with allure.step("Do Log Out"):
-		page.log_out()
+		page.hit_log_out_button()
 		time.sleep(3)
 
 	with allure.step("Close web browser"):
