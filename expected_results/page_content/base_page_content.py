@@ -13,9 +13,6 @@ class BasePageContent:
 
 	TITLE = 'ParaBank | '
 
-	ERROR_TITLE = 'Error!'
-	ERROR_MESSAGE = 'The username and password could not be verified.'
-
 	SLOGAN = 'Experience the difference'
 
 	ADMIN_LOGO = {
