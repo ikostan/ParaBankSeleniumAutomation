@@ -9,11 +9,12 @@ from utils.register_user import register_user
 from utils.clean_database import clean_database
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
+from utils.step_definition import step_definition
 from utils.browser_configuration import browser_configuration
 
+from page_object_models.home_page_model import HomePageModel
 from expected_results.users.base_user import BaseUser
 from expected_results.users.valid_users_templates.jane_doe import JaneDoe
-from page_object_models.home_page_model import HomePageModel
 from expected_results.page_content.home_page_content import HomePageContent
 from expected_results.page_content.bank_account_content import BankAccountContent
 
@@ -73,11 +74,18 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		# test url
-		#self.verify_page_url()
+		# self.verify_page_url()
 
 		# Verify Page Title
-		#self.verify_page_title()
+		# self.verify_page_title()
 
+		step_definition(self,
+		                step_description='Type Username > Verify Username value',
+		                expected=self.user.username,
+		                actual=self.page.username,
+		                act=self.page.enter_username,
+		                click=False)
+		'''
 		with allure.step('Type Username'):
 			expected = self.user.username
 			self.page.enter_username(expected)
@@ -91,7 +99,15 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 				                 actual,
 				                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 				                                                                                    actual))
+		'''
 
+		step_definition(self,
+		                step_description='Type Password > Verify Password value',
+		                expected=self.user.password,
+		                actual=self.page.password,
+		                act=self.page.enter_password,
+		                click=False)
+		'''
 		with allure.step('Type Password'):
 			expected = self.user.password
 			self.page.enter_password(expected)
@@ -105,7 +121,20 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 				                 actual,
 				                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 				                                                                                    actual))
+		'''
 
+		with allure.step('Hit Log In button'):
+			self.page = self.page.hit_login_button()
+
+		step_definition(self,
+		                step_description='Verify "Welcome" message',
+		                expected='{}{} {}'.format(BankAccountContent.ACCOUNT_SERVICES_MENU['welcome_message'],
+		                                          self.user.first_name,
+		                                          self.user.last_name),
+		                actual=self.page.welcome_message,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step('Hit Log In button'):
 			self.page.hit_login_button()
 
@@ -122,7 +151,15 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 			                 actual,
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
+		'''
 
+		step_definition(self,
+		                step_description='Verify that "Account Services" menu is present',
+		                expected=True,
+		                actual=self.page.account_services_menu_is_visible,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step('Verify that "Account Services" menu is present'):
 			expected = True
 			actual = self.page.account_services_menu_is_visible()
@@ -133,12 +170,23 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 			                 actual,
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
+		'''
 
 		# Log Out
 		with allure.step('Hit "Log Out" link'):
-			self.page.log_out()
+			self.page = self.page.hit_log_out_button()
 
 		# Post Logout validation
+		step_definition(self,
+		                step_description='Do URL verification',
+		                expected=HomePageContent.URL,
+		                actual=self.page.url,
+		                act=None,
+		                click=False)
+		'''
+		with allure.step('Hit "Log Out" link'):
+			self.page.hit_log_out_button()
+
 		with allure.step('Do URL verification'):
 
 			expected = 'https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC'
@@ -150,7 +198,15 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 			                 actual,
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
+		'''
 
+		step_definition(self,
+		                step_description='Verify that "Account Services" menu is not shown',
+		                expected=False,
+		                actual=self.page.account_services_menu_is_visible,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step('Verify that "Account Services" menu is not present'):
 			expected = False
 			actual = self.page.account_services_menu_is_visible()
@@ -161,11 +217,17 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 			                 actual,
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
+		'''
 
 		# Verify Page Title
-		allure.dynamic.severity(allure.severity_level.MINOR)
-
+		step_definition(self,
+		                step_description='Verify web page title',
+		                expected=HomePageContent.TITLE,
+		                actual=self.page.title,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step("Verify web page title. Expected result: {}".format(HomePageContent.TITLE)):
 			self.assertEqual(HomePageContent.TITLE,
 			                 self.page.title())
-
+		'''
