@@ -101,11 +101,11 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 
 	# @property
 	def password_error(self):
-		'''
+		"""
 		Returns Username error.
 		Non in case error does not appear.
 		:return:
-		'''
+		"""
 
 		try:
 			element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.PASSWORD_ERROR)
@@ -195,7 +195,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		txt = element.element_type
 		return txt
 
-	def click_register_btn(self):
+	def hit_register_btn(self):
 		'''
 		Click on register button
 		:return:
