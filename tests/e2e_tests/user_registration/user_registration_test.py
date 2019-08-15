@@ -90,7 +90,7 @@ class TestUserRegistration(UserRegistrationCase):
 
 		with allure.step('Verify "Welcome" header'):
 			expected = RegisterPageContent.WELCOME_MESSAGE['header'] + self.client.username
-			actual = self.page.welcome_header
+			actual = self.page.welcome_header()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify "Welcome" header\'',
 			                                                    expected,
 			                                                    actual))
@@ -101,7 +101,7 @@ class TestUserRegistration(UserRegistrationCase):
 
 		with allure.step('Verify "Welcome" message'):
 			expected = RegisterPageContent.WELCOME_MESSAGE['message']
-			actual = self.page.welcome_message
+			actual = self.page.welcome_message()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify "Welcome" header\'',
 			                                                    expected,
 			                                                    actual))
