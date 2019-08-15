@@ -15,6 +15,21 @@ class BasePersonalInfoPageModel(BasePageModel):
 	By following this technique a layer of separation between the test code and technical implementation is created.
 	'''
 
+	'''
+	def hit_log_out_button(self):
+		"""
+		1. Click on "Log Out"
+		2. Wait until URL changes
+		3. Returns HomePageModel object on success
+		4. Return TimeoutException on failure
+		"""
+		super().hit_log_out_button()
+		from page_object_models.home_page_model import HomePageModel
+		return HomePageModel(driver=self.driver,
+		                     implicit_wait_time=5,
+		                     explicit_wait_time=10)
+	'''
+
 	# @property
 	def header(self):
 		'''
