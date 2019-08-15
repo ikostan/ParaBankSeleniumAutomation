@@ -16,7 +16,7 @@ class AboutPageModel(BasePageModel):
 
 	_url = AboutPageContent.URL
 
-	@property
+	# @property
 	def description_title(self):
 		'''
 		Returns title from about text
@@ -26,7 +26,7 @@ class AboutPageModel(BasePageModel):
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def description_first_line(self):
 		'''
 		Returns text from description_first_line
@@ -36,7 +36,7 @@ class AboutPageModel(BasePageModel):
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def description_second_line(self):
 		'''
 		Returns text from description_second_line
@@ -46,7 +46,7 @@ class AboutPageModel(BasePageModel):
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def description_third_line(self):
 		'''
 		Returns text from description_third_linet
@@ -56,7 +56,7 @@ class AboutPageModel(BasePageModel):
 		txt = element.text
 		return txt
 
-	@property
+	# @property
 	def description_link(self):
 		'''
 		Returns href from description text
