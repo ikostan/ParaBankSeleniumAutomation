@@ -128,8 +128,13 @@ class BasePageModel:
 		:return:
 		'''
 		url = self._driver.current_url
+
 		if ';' in url:
 			url = url[:url.index(';')]
+
+		if '?ConnType=JDBC' in url:
+			url = url[:url.index('?ConnType=JDBC')]
+
 		return url
 
 	# @property
@@ -944,7 +949,7 @@ class BasePageModel:
 		element.press_button()
 		return None
 
-	def log_out(self):
+	def hit_log_out_button(self):
 		'''
 		1. Click on "Log Out"
 		2. Wait until URL changes
