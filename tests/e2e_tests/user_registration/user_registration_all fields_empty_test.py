@@ -70,6 +70,7 @@ class TestUserRegistrationAllFieldsEmpty(UserRegistrationCase):
 		# Register a new user:
 		self.fill_out_user_data()
 
+		'''
 		step_definition(self,
 		                step_description='Hit "Register" button',
 		                expected=True,
@@ -79,8 +80,7 @@ class TestUserRegistrationAllFieldsEmpty(UserRegistrationCase):
 		'''
 		with allure.step('Hit "Register" button'):
 			print('Hit "Register" button')
-			self.page.click_register_btn()
-		'''
+			self.page = self.page.click_register_btn()
 
 		step_definition(self,
 		                step_description='Verify that "Account Services" menu is not present',
