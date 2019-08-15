@@ -80,17 +80,17 @@ class TestUserRegistration(UserRegistrationCase):
 		# Register a new user:
 		self.fill_out_user_data()
 
+		'''
 		step_definition(self,
 		                expected=True,
 		                actual=True,
-		                act=self.page.click_register_btn,
+		                act=self.page.hit_register_btn,
 		                step_description='Hit "Register" button',
 		                click=True)
 		'''
 		with allure.step('Hit "Register" button'):
 			print('Hit "Register" button')
-			self.page.click_register_btn()
-		'''
+			self.page = self.page.hit_register_btn()
 
 		with allure.step('Wait for "Welcome" message'):
 			WebDriverWait(self.page.driver,
