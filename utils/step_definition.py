@@ -1,13 +1,12 @@
 #  Created by Egor Kostan.
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
-import collections
-from unittest.test.testmock.testpatch import function
 
+import collections
 import allure
 
 
-def step_definition(self, expected, actual, act=None, step_description='N/A', click=False):
+def step_definition(self, step_description, expected, actual, act=None, click=False):
 	"""
 	Unit Testing and the Arrange, Act and Assert (AAA) Pattern
 	:param click:
@@ -20,6 +19,7 @@ def step_definition(self, expected, actual, act=None, step_description='N/A', cl
 	"""
 
 	with allure.step(step_description):
+
 		# Arrange
 		expected = expected
 
