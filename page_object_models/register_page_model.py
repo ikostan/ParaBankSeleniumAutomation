@@ -1,12 +1,13 @@
 #  Created by Egor Kostan.
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
-from selenium.common.exceptions import NoSuchElementException
 
 from elements.element import Element
+from selenium.common.exceptions import NoSuchElementException
+
 from page_locators.register_page_locator import RegisterPageLocator
-from page_object_models.base_personal_info_page_model import BasePersonalInfoPageModel
 from expected_results.page_content.register_page_content import RegisterPageContent
+from page_object_models.base_personal_info_page_model import BasePersonalInfoPageModel
 
 
 class RegisterPageModel(BasePersonalInfoPageModel):
