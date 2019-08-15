@@ -953,7 +953,7 @@ class BasePageModel:
 		'''
 		1. Click on "Log Out"
 		2. Wait until URL changes
-		3. Returns HomePageModel object on success
+		3. Returns None on success
 		4. Return TimeoutException on failure
 
 		An expectation for checking the current url.
@@ -968,4 +968,5 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.LOG_OUT)
 		element.press_button()
 		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
+		return None
 
