@@ -1,9 +1,8 @@
 #  Created by Egor Kostan.
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
-
-import selenium.webdriver
-
+from expected_results.page_content.login_page_content import LoginPageContent
+from expected_results.page_content.overview_page_content import OverviewPageContent
 from utils.driver import Driver
 from elements.element import Element
 
@@ -577,7 +576,7 @@ class BasePageModel:
 		atr = element.element_value
 		return atr
 
-	def hit_login_button(self):
+	def hit_login_button(self, ErrorPageModel=None):
 		"""
 		1. Click on Log In button
 		2. Wait until URL changes
@@ -586,9 +585,23 @@ class BasePageModel:
 		:return:
 		"""
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CUSTOMER_LOGIN_BUTTON)
-		current_url = self.driver.current_url
+		current_url = self.url()
 		element.press_button()
 		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
+
+		if self.url() == OverviewPageContent.URL:
+			from page_object_models.overview_page_model import OverviewPageModel
+			return OverviewPageModel(driver=self.driver,
+			                         implicit_wait_time=5,
+			                         explicit_wait_time=10)
+
+		if self.url() == LoginPageContent.URL:
+			from page_object_models.login_page_model import LoginPageModel
+			return LoginPageModel(driver=self.driver,
+			                      implicit_wait_time=5,
+			                      explicit_wait_time=10)
+
+		raise Exception("Unknown URL: {} > Flow is not implemented".format(self.driver.current_url))
 
 	# @property
 	def forgot_login_formated_href(self):
@@ -953,7 +966,7 @@ class BasePageModel:
 		'''
 		1. Click on "Log Out"
 		2. Wait until URL changes
-		3. Returns None on success
+		3. Returns HomePageModel on success
 		4. Return TimeoutException on failure
 
 		An expectation for checking the current url.
@@ -968,5 +981,7 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.LOG_OUT)
 		element.press_button()
 		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
-		return None
-
+		from page_object_models.home_page_model import HomePageModel
+		return HomePageModel(driver=self.driver,
+		                     implicit_wait_time=5,
+		                     explicit_wait_time=10)
