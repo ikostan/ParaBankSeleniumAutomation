@@ -203,7 +203,9 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 
 		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.REGISTER_BUTTON)
 		element.press_button()
-		return None
+		return RegisterPageModel(driver=self.driver,
+		                         implicit_wait_time=5,
+		                         explicit_wait_time=10)
 
 	# @property
 	def welcome_header(self):
