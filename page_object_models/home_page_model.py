@@ -3,12 +3,12 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 from elements.element import Element
-from expected_results.page_content.overview_page_content import OverviewPageContent
+
 from page_locators.home_page_locator import HomePageLocator
 from page_object_models.base_page_model import BasePageModel
+
 from expected_results.page_content.home_page_content import HomePageContent
-from page_object_models.login_page_model import LoginPageModel
-from page_object_models.overview_page_model import OverviewPageModel
+from expected_results.page_content.overview_page_content import OverviewPageContent
 
 
 class HomePageModel(BasePageModel):
@@ -29,10 +29,12 @@ class HomePageModel(BasePageModel):
 		"""
 		super().hit_login_button()
 		if self.url() == OverviewPageContent.URL:
+			from page_object_models.overview_page_model import OverviewPageModel
 			return OverviewPageModel(driver=self.driver,
 			                         implicit_wait_time=5,
 			                         explicit_wait_time=10)
 		else:
+			from page_object_models.login_page_model import LoginPageModel
 			return LoginPageModel(driver=self.driver,
 			                      implicit_wait_time=5,
 			                      explicit_wait_time=10)
