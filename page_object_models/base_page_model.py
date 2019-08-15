@@ -3,12 +3,15 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import selenium.webdriver
+
 from utils.driver import Driver
 from elements.element import Element
-from page_locators.base_page_locator import BasePageLocator
+
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
+from page_locators.base_page_locator import BasePageLocator
 from expected_results.page_content.base_page_content import BasePageContent
 from page_locators.account_services_menu_locator import AccountServicesMenuLocator
 
@@ -27,16 +30,19 @@ class BasePageModel:
 		self._explicit_wait_time = self._set_explicit_wait(explicit_wait_time)
 
 	@staticmethod
-	def _set_driver(driver: selenium.webdriver):
+	def _set_driver(driver):
 		'''
 		Check if driver of type: selenium.webdriver
 		:param driver:
 		:return:
 		'''
-		if type(driver) != Driver:
-			raise TypeError('\nERROR: please instantiate selenium webdriver using custom Driver class.\n')
 
-		return driver.get_driver()
+		print('\nDriver type: {}'.format(type(driver)))  # debug only
+
+		if isinstance(driver, Driver):
+			return driver.get_driver()
+
+		return driver
 
 	def _set_implicit_wait(self, implicit_wait_time: int):
 		'''
@@ -66,6 +72,10 @@ class BasePageModel:
 	@property
 	def explicit_wait_time(self):
 		return self._explicit_wait_time
+
+	@property
+	def implicit_wait_time(self):
+		return self._implicit_wait_time
 
 	def go(self):
 		'''
@@ -544,49 +554,53 @@ class BasePageModel:
 
 	# @property
 	def login_button_type(self):
-		'''
+		"""
 		Returns login_button type
 		:return:
-		'''
+		"""
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CUSTOMER_LOGIN_BUTTON)
 		atr = element.element_type
 		return atr
 
 	# @property
 	def login_button_value(self):
-		'''
+		"""
 		Returns login_button value
 		:return:
-		'''
+		"""
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CUSTOMER_LOGIN_BUTTON)
 		atr = element.element_value
 		return atr
 
 	def hit_login_button(self):
-		'''
-		Click on Log In button
+		"""
+		1. Click on Log In button
+		2. Wait until URL changes
+		3. Returns OverviewPageModel object on success
+		4. Return TimeOut exception on failure
 		:return:
-		'''
+		"""
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CUSTOMER_LOGIN_BUTTON)
+		current_url = self.driver.current_url
 		element.press_button()
-		return None
+		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
 
 	# @property
 	def forgot_login_formated_href(self):
-		'''
+		"""
 		Returns formated forgot_login href
 		:return:
-		'''
+		"""
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FORGOT_LOGIN)
 		href = self._formated_url(element.element_href)
 		return href
 
 	# @property
 	def forgot_login_text(self):
-		'''
+		"""
 		Returns forgot_login text
 		:return:
-		'''
+		"""
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.FORGOT_LOGIN)
 		txt = element.text
 		return txt
@@ -831,26 +845,6 @@ class BasePageModel:
 		txt = element.text
 		return txt
 
-	# @property
-	def error_title(self):
-		'''
-		Returns error title text
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ERROR_TITLE)
-		txt = element.text
-		return txt
-
-	# @property
-	def error_message(self):
-		'''
-		Returns error message text
-		:return:
-		'''
-		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ERROR_MESSAGE)
-		txt = element.text
-		return txt
-
 	# Account Services Menu - visible only when user logged in
 	# @property
 	def welcome_message(self):
@@ -954,6 +948,8 @@ class BasePageModel:
 		'''
 		1. Click on "Log Out"
 		2. Wait until URL changes
+		3. Returns HomePageModel object on success
+		4. Return TimeoutException on failure
 
 		An expectation for checking the current url.
         url is the expected url, which must not be an exact match
@@ -967,4 +963,4 @@ class BasePageModel:
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.LOG_OUT)
 		element.press_button()
 		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
-		return None
+
