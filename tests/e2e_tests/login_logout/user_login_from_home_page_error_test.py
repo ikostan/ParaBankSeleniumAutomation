@@ -8,12 +8,14 @@ import unittest
 from utils.clean_database import clean_database
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
+from utils.step_definition import step_definition
 from utils.browser_configuration import browser_configuration
 
 from expected_results.users.base_user import BaseUser
-from expected_results.users.invalid_users_templates.no_such_user import NoSuchUser
 from page_object_models.home_page_model import HomePageModel
 from expected_results.page_content.home_page_content import HomePageContent
+from expected_results.page_content.login_page_content import LoginPageContent
+from expected_results.users.invalid_users_templates.no_such_user import NoSuchUser
 
 
 @allure.epic('Page Functionality')
@@ -71,6 +73,13 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 		# Verify Page Title
 		#self.verify_page_title()
 
+		step_definition(self,
+		                step_description='Type Username > Verify Username value',
+		                expected=self.user.username,
+		                actual=self.page.username,
+		                act=self.page.enter_username,
+		                click=False)
+		'''
 		with allure.step('Type Username'):
 			expected = self.user.username
 			self.page.enter_username(expected)
@@ -84,7 +93,15 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 				                 actual,
 				                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 				                                                                                    actual))
+		'''
 
+		step_definition(self,
+		                step_description='Type Password > Verify Password value',
+		                expected=self.user.password,
+		                actual=self.page.password,
+		                act=self.page.enter_password,
+		                click=False)
+		'''
 		with allure.step('Type Password'):
 			expected = self.user.password
 			self.page.enter_password(expected)
@@ -98,10 +115,18 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 				                 actual,
 				                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 				                                                                                    actual))
+		'''
 
 		with allure.step('Hit Log In button'):
-			self.page.hit_login_button()
+			self.page = self.page.hit_login_button()
 
+		step_definition(self,
+		                step_description='Verify that "Account Services" menu is not present',
+		                expected=False,
+		                actual=self.page.account_services_menu_is_visible,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step('Verify that "Account Services" menu is not present'):
 			expected = False
 			actual = self.page.account_services_menu_is_visible()
@@ -112,10 +137,18 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 			                 actual,
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
+		'''
 
 		# Verify ERROR title
+		step_definition(self,
+		                step_description='Verify Error title',
+		                expected=LoginPageContent.ERROR_TITLE,
+		                actual=self.page.error_title,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step('Verify Error title'):
-			expected = HomePageContent.ERROR_TITLE
+			expected = LoginPageContent.ERROR_TITLE
 			actual = self.page.error_title()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Error" title',
 			                                                    expected,
@@ -124,10 +157,18 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 			                 actual,
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
+		'''
 
 		# Verify ERROR message
+		step_definition(self,
+		                step_description='Verify Error message',
+		                expected=LoginPageContent.ERROR_MESSAGE,
+		                actual=self.page.error_message,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step('Verify Error message'):
-			expected = HomePageContent.ERROR_MESSAGE
+			expected = LoginPageContent.ERROR_MESSAGE
 			actual = self.page.error_message()
 			print('\nStep: {}\nExpected: {}\nActual: {}'.format('Verify "Error" message',
 			                                                    expected,
@@ -136,8 +177,16 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 			                 actual,
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
+		'''
 
 		# URL validation
+		step_definition(self,
+		                step_description='Do URL verification',
+		                expected=LoginPageContent.URL,
+		                actual=self.page.url,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step('Do URL verification'):
 			expected = 'https://parabank.parasoft.com/parabank/login.htm'
 			actual = self.page.url()
@@ -148,3 +197,5 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 			                 actual,
 			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
 			                                                                                    actual))
+		'''
+
