@@ -55,7 +55,7 @@ def register_user(user):
 		page.type_confirm(user.password)
 
 	with allure.step("Hit 'REGISTER' button"):
-		page.click_register_btn()
+		page.hit_register_btn()
 		time.sleep(3)
 
 	with allure.step("Do Log Out"):
