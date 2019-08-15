@@ -155,16 +155,12 @@ class TestUserRegistration(UserRegistrationCase):
 		'''
 
 		# Logout
-		step_definition(self,
-		                expected=True,
-		                actual=True,
-		                act=self.page.log_out,
-		                step_description='Hit "Log Out" link',
-		                click=True)
+		with allure.step('Hit "Log Out" link'):
+			self.page = self.page.hit_log_out_button()
 		'''
 		with allure.step('Hit "Log Out" link'):
 			print('Hit "Log Out" link')
-			self.page.log_out()
+			self.page.hit_log_out_button()
 			WebDriverWait(self.page.driver, self.page.explicit_wait_time).until(EC.url_contains('index.htm'))
 		'''
 
