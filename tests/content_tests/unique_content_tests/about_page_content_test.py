@@ -7,6 +7,7 @@ import unittest
 
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
+from utils.step_definition import step_definition
 from utils.browser_configuration import browser_configuration
 
 from page_object_models.about_page_model import AboutPageModel
@@ -49,13 +50,20 @@ class TestAboutPageContent(unittest.TestCase):
 			2. Do URL verification
 		""")
 		allure.dynamic.title("Web page URL test")
-
-		# Verify Web Page URL
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
+		# Verify Web Page URL
+		step_definition(self,
+		                step_description="About Web Page URL test",
+		                expected=AboutPageContent.URL,
+		                actual=self.page.url,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step("About Web Page URL test"):
 			self.assertEqual(AboutPageContent.URL,
 			                 self.page.url())
+		'''
 
 	def test_page_title(self):
 		allure.dynamic.description("""
@@ -64,28 +72,41 @@ class TestAboutPageContent(unittest.TestCase):
 			2. Do Title verification
 		""")
 		allure.dynamic.title("Web page title test")
-
-		# Verify Web Page Title
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
+		# Verify Web Page Title
+		step_definition(self,
+		                step_description="About Web Page Title test",
+		                expected=AboutPageContent.TITLE,
+		                actual=self.page.title,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step("About Web Page Title test"):
 			self.assertEqual(AboutPageContent.TITLE,
 			                 self.page.title())
+		'''
 
 	def test_description_title_text(self):
 		allure.dynamic.description("""
 		Content base elements validation > About page > description title:
 			1. Open About web page
-			2. Do URL verification
+			2. Do Description Title verification
 		""")
 		allure.dynamic.title("Web page description title test")
-
-		# verify description title text
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
-		# Context About page elements validation:
+		# verify description title text
+		step_definition(self,
+		                step_description="Description header test",
+		                expected=AboutPageContent.DESCRIPTION['title'],
+		                actual=self.page.description_title,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step("Description header test"):
 			self.assertEqual(AboutPageContent.DESCRIPTION['title'], self.page.description_title)
+		'''
 
 	def test_description_text(self):
 		allure.dynamic.description("""
@@ -94,19 +115,50 @@ class TestAboutPageContent(unittest.TestCase):
 			2. Do URL verification
 		""")
 		allure.dynamic.title("Web page description test")
-
-		# verify description text
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
+		# verify description text
 		# Context About page elements validation:
+		step_definition(self,
+		                step_description="Description text (first paragraph) test",
+		                expected=AboutPageContent.DESCRIPTION['text'][0],
+		                actual=self.page.description_first_line,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step("Description text (first paragraph) test"):
 			self.assertEqual(AboutPageContent.DESCRIPTION['text'][0], self.page.description_first_line)
+		'''
 
+		step_definition(self,
+		                step_description="Description text (second paragraph) test",
+		                expected=AboutPageContent.DESCRIPTION['text'][1],
+		                actual=self.page.description_second_line,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step("Description text (second paragraph) test"):
 			self.assertEqual(AboutPageContent.DESCRIPTION['text'][1], self.page.description_second_line)
+		'''
 
+		step_definition(self,
+		                step_description="Description text (third paragraph) test",
+		                expected=AboutPageContent.DESCRIPTION['text'][2],
+		                actual=self.page.description_third_line,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step("Description text (third paragraph) test"):
 			self.assertEqual(AboutPageContent.DESCRIPTION['text'][2], self.page.description_third_line)
+		'''
 
+		step_definition(self,
+		                step_description="Description text (fourth paragraph) test",
+		                expected=AboutPageContent.LINK,
+		                actual=self.page.description_link,
+		                act=None,
+		                click=False)
+		'''
 		with allure.step("Description text (fourth paragraph) test"):
 			self.assertEqual(AboutPageContent.LINK, self.page.description_link)
+		'''
