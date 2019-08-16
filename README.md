@@ -44,6 +44,7 @@ In other words: ParaBank is not a real bank!<br/>
 - [Parasoft Virtualize Community Edition](https://software.parasoft.com/virtualize/community-edition/)<br/>
 
 ### Official Documentation:<br/>
+<a id="doc"></a>
 
 - [Selenium Documentation](https://seleniumhq.github.io/selenium/docs/api/py/api.html)<br/>
 - [Full Pytest documentation](http://doc.pytest.org/en/latest/contents.html)<br/>
@@ -53,6 +54,8 @@ In other words: ParaBank is not a real bank!<br/>
 - [Parasoft Documentation and Resources](https://docs.parasoft.com/)
 
 ### Dev Environment:<br/>
+<a id="dev"></a>
+
 1. [Python 3.7.4](https://www.python.org/downloads/release/python-374/)<br/>
 2. [Selenium 3.141.0](https://pypi.org/project/selenium/)<br/>
 3. [PyTest 5.0.0](https://pypi.org/project/pytest/)<br/>
@@ -81,6 +84,7 @@ Full list of dependencies see [here.](https://github.com/ikostan/ParaBankSeleniu
 - Edge: v17 and above
 
 ### Tech Issues and Problem Solving:<br/>
+<a id="tech_issues"></a>
 
 <details>
   <summary><b>Changing the project interpreter in the PyCharm project settings</b></summary>
