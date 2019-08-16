@@ -1,7 +1,7 @@
 #  Created by Egor Kostan.
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
-
+from tests.config import Config
 from utils.path_config import DriverPath
 from selenium.common.exceptions import WebDriverException
 from selenium import webdriver
@@ -34,7 +34,12 @@ class Driver:
 
         if self._browser == 'chrome':
             try:
-                driver = webdriver.Chrome()
+                if Config().is_headless:
+                    chrome_options = webdriver.ChromeOptions()
+                    chrome_options.add_argument('headless')
+                    driver = webdriver.Chrome(options=chrome_options)
+                else:
+                    driver = webdriver.Chrome()
 
             except WebDriverException as e:
                 if self._is_debug:
