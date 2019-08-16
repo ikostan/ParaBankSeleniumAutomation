@@ -7,22 +7,22 @@
 
 ### Table of Contents:<br/>
 1. <a href="#about">About the project</a>
-1. <a href="#parabank">PARA BANK ParaSoft Demo App</a>
-2. <a href="#doc">Official Documentation</a>
-3. <a href="#dev">Dev Environment</a>
-4. <a href="#tech_issues">Tech Issues and Problem Solving</a>
-5. [Docs](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/docs):<br/>
+2. <a href="#parabank">PARA BANK ParaSoft Demo App</a>
+3. <a href="#doc">Official Documentation</a>
+4. <a href="#dev">Dev Environment</a>
+5. <a href="#tech_issues">Tech Issues and Problem Solving</a>
+6. [Docs](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/docs):<br/>
     - [Parasoft: Setting Up ParaBank](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/docs/Setting_Up_ParaBank.pdf)
-6. [Selenium Webdriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers):<br/>
+7. [Selenium Webdriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers):<br/>
     - [ChromeDriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers/chrome)<br/>
     - [Microsoft WebDriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers/microsoft_edge)<br/>
     - [geckodriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers/mozilla_geckodriver)<br/>
-7. [Web Element](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/elements)<br/>
-8. [Expected Results](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/expected_results)<br/>
-9. [Page/Element Locators](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_locators)<br/>
+8. [Web Element](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/elements)<br/>
+9. [Expected Results](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/expected_results)<br/>
+10. [Page/Element Locators](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_locators)<br/>
     - [UML diagram](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_locators/uml)
-10. [Page Object Model (POM)](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_object_models)<br/>
-11. [Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests)<br/>   
+11. [Page Object Model (POM)](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_object_models)<br/>
+12. [Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests)<br/>   
     i. [Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests)<br/>
     - [Base Cases](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_cases)<br/>
     - [Base Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_content_tests)<br/>
@@ -31,7 +31,7 @@
     ii. [End To End Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests)<br/>
     - [Log In / Log Out](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests/login_logout)<br/>
     - [User Registration](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests/user_registration)<br/>
-12. [Utils](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils)<br/>
+13. [Utils](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils)<br/>
 
 ### <a id="about"></a>About the project:<br/>
 The main purpose is to demonstrate the professional abilities of writing browser automation using the Python language with Selenium.<br/>
