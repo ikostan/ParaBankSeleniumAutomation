@@ -4,7 +4,10 @@
 
 
 class Config:
-
+	"""
+	Environment Configuration
+	Source: https://www.udemy.com/elegant-automation-frameworks-with-python-and-pytest
+	"""
 	def __init__(self, env="system", browser="chrome"):
 
 		self.base_url = {
@@ -16,4 +19,7 @@ class Config:
 			'edge': 'edge',
 			'firefox': 'mozilla'
 		}[browser.lower()]
+
+		print('Run configurations -> Browser: {}\n'
+		      'Run configurations -> Environment: {}\n'.format(self.browser, self.base_url))
 
