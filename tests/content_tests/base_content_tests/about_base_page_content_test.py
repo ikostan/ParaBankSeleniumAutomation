@@ -6,7 +6,7 @@ import allure
 
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
-from utils.browser_configuration import browser_configuration
+from tests.config import Config
 
 from page_object_models.about_page_model import AboutPageModel
 from expected_results.page_content.about_page_content import AboutPageContent
@@ -25,10 +25,11 @@ class TestAboutBasePageContent(BaseContentCase):
 	@classmethod
 	def setUpClass(cls):
 		with allure.step("Open web browser"):
-			cls.browser = browser_configuration()
+			# cls.browser = browser_configuration()
+			cls.app_config = Config()
 			cls.page_model = AboutPageModel
 			cls.page_content = AboutPageContent
-			cls.page = open_web_browser(browser=cls.browser,
+			cls.page = open_web_browser(browser=cls.app_config.browser,
 			                            page_model=cls.page_model,
 			                            page_content=cls.page_content)
 
