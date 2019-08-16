@@ -32,14 +32,14 @@
 
 ### [PARA BANK ParaSoft Demo Website](https://parabank.parasoft.com/parabank/index.htm)<br/>
 <a id="parabank"></a>ParaBank is a demo site used for demonstration of Parasoft software solutions. 
-All materials herein are used solely for simulating a realistic online banking website.
+All materials herein are used solely for simulating a realistic online banking website.<br/>
 
-In other words: ParaBank is not a real bank!
+In other words: ParaBank is not a real bank!<br/>
 
 - [Demo Website](https://parabank.parasoft.com/parabank/index.htm)<br/>
 - [Read more about Para Bank demo website available services](https://parabank.parasoft.com/parabank/services.htm)<br/>
 - [The ParaBank demo application from Parasoft](https://github.com/parasoft/parabank)<br/>
-- [Parasoft Virtualize Community Edition](https://software.parasoft.com/virtualize/community-edition/)
+- [Parasoft Virtualize Community Edition](https://software.parasoft.com/virtualize/community-edition/)<br/>
 
 ### Official Documentation:<br/>
 
