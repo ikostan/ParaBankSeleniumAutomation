@@ -25,7 +25,7 @@
     - [Base Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_content_tests)<br/>
     - [Unique Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_content_tests)
    
-   ii. [End To End Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests)
+   ii. [End To End Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests)<br/>
     - [Log In / Log Out](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests/login_logout)<br/>
     - [User Registration](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests/user_registration)<br/>
 11. [Utils](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils)<br/>
