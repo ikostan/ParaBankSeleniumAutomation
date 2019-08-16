@@ -2,14 +2,17 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
+from tests.config import Config
+
 
 class BasePageContent:
 	'''
 	Holds expected context values for any relevant page items
 	'''
 
-	ROOT_URL = 'https://parabank.parasoft.com'
-	URL = ROOT_URL +'/parabank/'
+	# ROOT_URL = 'https://parabank.parasoft.com'
+	# URL = ROOT_URL +'/parabank/'
+	URL = Config().base_url + '/parabank/'
 
 	TITLE = 'ParaBank | '
 
