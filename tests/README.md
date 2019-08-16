@@ -7,16 +7,17 @@
 Contains ParaBank online banking tests.<br/>
 
 ### Table of Contents:<br/>
-1. <a href="#example">General Guidelines</a>
-2. [Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests)<br/>
+1. <a href="#guidelines">General Guidelines</a>
+2. <a href="#config">Environment Configuration</a>
+3. [Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests)<br/>
    - [Base Cases](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_cases)<br/>
    - [Base Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_content_tests)<br/>
    - [Unique Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_content_tests)<br/>
-3. [End To End Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests)<br/>
+4. [End To End Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests)<br/>
    - [Log In / Log Out](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests/login_logout)<br/>
    - [User Registration](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests/user_registration)<br/>
 
-### <a id="example"></a>General Guidelines:<br/>
+### <a id="guidelines"></a>General Guidelines:<br/>
 
 The general guidelines for the tests are based on following resources:<br/>
 
@@ -29,7 +30,7 @@ The general guidelines for the tests are based on following resources:<br/>
 </div>
 
 <details>
-  <summary><b>Environment Configuration: Config class</b></summary>
+  <summary><b><a id="config"></a>Environment Configuration: Config class</b></summary>
 
 <br/>
 
