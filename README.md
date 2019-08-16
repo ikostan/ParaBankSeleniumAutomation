@@ -44,8 +44,10 @@ In other words: ParaBank is not a real bank!<br/>
 - [Read more about Para Bank demo website available services](https://parabank.parasoft.com/parabank/services.htm)<br/>
 - [The ParaBank demo application from Parasoft](https://github.com/parasoft/parabank)<br/>
 - [Parasoft Virtualize Community Edition](https://software.parasoft.com/virtualize/community-edition/)<br/>
-- ['SOAtest & Virtualize' System Requirements](https://docs.parasoft.com/display/SOAVIRT9104CTP311/System+Requirements)
+- ['SOAtest & Virtualize' System Requirements](https://docs.parasoft.com/display/SOAVIRT9104CTP311/Windows+Standalone+Installation)
+- [SOAtest Desktop Installation](https://docs.parasoft.com/display/SOAVIRT9104CTP311/SOAtest+Desktop+Installation)
 - [Video: how to install Parasoft 'SOAtest & Virtualize' software](https://fast.wistia.com/embed/iframe/8c9iur4w0r)<br/>
+- [How To Videos](https://docs.parasoft.com/display/SOAVIRT9107/Video+Tutorials)
 - [SOAtest Videos](https://docs.parasoft.com/display/SOA9106/Video+Tutorials)
 - [API Testing How-to Videos](https://www.parasoft.com/tutorial/soatest-how-to-videos)
 - [FAQs](https://forums.parasoft.com/discussion/2797?_hsenc=p2ANqtz-9OlPgT9U7LIa94hEEyPsZosYJ1j9Tb1wI5KlUFiy4OXZ67UJHyAuLjwRdNgemdCwziXX9rxmby63LPqTO2DLHIhuMZvg&_hsmi=40626961&utm_content=40626961&utm_medium=email&utm_source=hs_automation)<br/>
