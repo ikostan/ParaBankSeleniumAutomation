@@ -6,7 +6,7 @@
 </div>
 
 ### Table of Contents:<br/>
-1. <a href="#parabank">PARA BANK ParaSoft Demo Website</a>
+1. <a href="#parabank">PARA BANK ParaSoft Demo App</a>
 2. <a href="#doc">Official Documentation</a>
 3. <a href="#dev">Dev Environment</a>
 4. <a href="#tech_issues">Tech Issues and Problem Solving</a>
