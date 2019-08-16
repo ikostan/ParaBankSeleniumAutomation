@@ -39,10 +39,10 @@ The main purpose is to demonstrate the professional abilities of writing browser
 **Main Objectives:**<br/>
 - Build fast and readable automation using minimal code<br/>
 - Showcase with effective way to identify web elements<br/>
-- Page Objects and Element Objects implementation<br/>
+- Page Objects and Element Objects implementation (see [Page Object Model (POM)](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_object_models))<br/>
 - Arrange, Act and Assert (AAA) Pattern implementation (see [step_definition](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils))<br/>
 - Industry-ready test structure<br/>
-- Cross-browsing testing<br/>
+- Cross-browsing testing (see [Config](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/tests/config.py) class)<br/>
 - Using real-like web app (ParaBank Demo Website) in order to accomplish all the above<br/>
 - Build readable test report using Allure Framework<br/>
 
