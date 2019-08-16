@@ -33,7 +33,6 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.client = BaseUser(JohnDoe)
-		# cls.browser = browser_configuration()
 		cls.browser = Config().browser
 		cls.page = None
 		cls.page_model = ForgotLoginInfoPageModel
