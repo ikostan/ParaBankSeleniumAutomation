@@ -36,6 +36,8 @@ All materials herein are used solely for simulating a realistic online banking w
 
 In other words: ParaBank is not a real bank!<br/>
 
+**Parasoft Resources:**<br/>
+
 - [Demo Website](https://parabank.parasoft.com/parabank/index.htm)<br/>
 - [Read more about Para Bank demo website available services](https://parabank.parasoft.com/parabank/services.htm)<br/>
 - [The ParaBank demo application from Parasoft](https://github.com/parasoft/parabank)<br/>
