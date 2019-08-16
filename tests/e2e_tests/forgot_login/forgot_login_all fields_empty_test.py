@@ -4,6 +4,7 @@
 
 import allure
 
+from tests.config import Config
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 
@@ -27,7 +28,7 @@ class TestForgotLoginAllFieldsEmpty(UserPersonalInfoCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.client = BaseUser(EmptyFields)
-		cls.browser = 'chrome'
+		cls.browser = Config().browser
 		cls.page = None
 
 	@classmethod
