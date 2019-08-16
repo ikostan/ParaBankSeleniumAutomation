@@ -4,7 +4,7 @@
 <img width="7%" height="7%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/iconfinder_stock_task_24333.png" hspace="10">
 </div>
 
-Contains ParaBank online banking tests.<br/>
+Contains ParaBank online banking automated tests.<br/>
 
 ### Table of Contents:<br/>
 1. <a href="#guidelines">General Guidelines</a>
