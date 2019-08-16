@@ -25,13 +25,14 @@ def register_user(user):
 	page_context = RegisterPageContent
 	browser = 'chrome'
 
-	print("\nOpen web browser")
+	print("\nUser registration procedure...")
+	print("\n1. Open web browser...")
 	page = open_web_browser(browser=browser,
 	                        page_model=page_model,
 	                        page_content=page_context)
 
 	with allure.step("Fill out Register web form"):
-		print("\nFilling out user data...")
+		print("\n2. Filling out user data...")
 		page.type_first_name(user.first_name)
 
 		page.type_last_name(user.last_name)
@@ -55,12 +56,15 @@ def register_user(user):
 		page.type_confirm(user.password)
 
 	with allure.step("Hit 'REGISTER' button"):
+		print("\n3. Hit 'REGISTER' button...")
 		page.hit_register_btn()
 		time.sleep(3)
 
 	with allure.step("Do Log Out"):
+		print("\n4. Do Log Out...")
 		page.hit_log_out_button()
 		time.sleep(3)
 
 	with allure.step("Close web browser"):
+		print("\n5. Close web browser...")
 		page.quit()
