@@ -8,10 +8,11 @@ class Config:
 	Environment Configuration
 	Source: https://www.udemy.com/elegant-automation-frameworks-with-python-and-pytest
 	"""
-	def __init__(self, env="system", browser="chrome"):
+	def __init__(self, env="local", browser="chrome"):
 
 		self.base_url = {
-			'system': 'https://parabank.parasoft.com'
+			'production': 'https://parabank.parasoft.com',
+			'local': 'http://localhost:8080'
 		}[env.lower()]
 
 		self.browser = {
