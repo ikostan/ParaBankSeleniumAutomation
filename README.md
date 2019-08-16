@@ -44,6 +44,7 @@ In other words: ParaBank is not a real bank!<br/>
 - [Read more about Para Bank demo website available services](https://parabank.parasoft.com/parabank/services.htm)<br/>
 - [The ParaBank demo application from Parasoft](https://github.com/parasoft/parabank)<br/>
 - [Parasoft Virtualize Community Edition](https://software.parasoft.com/virtualize/community-edition/)<br/>
+- ['SOAtest & Virtualize' System Requirements](https://docs.parasoft.com/display/SOAVIRT9104CTP311/System+Requirements)
 - [Video: how to install Parasoft 'SOAtest & Virtualize' software](https://fast.wistia.com/embed/iframe/8c9iur4w0r)<br/>
 - [SOAtest Videos](https://docs.parasoft.com/display/SOA9106/Video+Tutorials)
 - [API Testing How-to Videos](https://www.parasoft.com/tutorial/soatest-how-to-videos)
