@@ -5,11 +5,11 @@
 import allure
 import unittest
 
+from tests.config import Config
 from utils.clean_database import clean_database
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.step_definition import step_definition
-from utils.browser_configuration import browser_configuration
 
 from expected_results.users.base_user import BaseUser
 from page_object_models.home_page_model import HomePageModel
@@ -30,7 +30,8 @@ class TestUserLoginFromHomePageError(unittest.TestCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.user = BaseUser(NoSuchUser)
-		cls.browser = browser_configuration()
+		# cls.browser = browser_configuration()
+		cls.browser = Config().browser
 		cls.page_model = HomePageModel
 		cls.page_context = HomePageContent
 
