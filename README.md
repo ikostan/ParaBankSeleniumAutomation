@@ -44,7 +44,9 @@ In other words: ParaBank is not a real bank!<br/>
 - [Read more about Para Bank demo website available services](https://parabank.parasoft.com/parabank/services.htm)<br/>
 - [The ParaBank demo application from Parasoft](https://github.com/parasoft/parabank)<br/>
 - [Parasoft Virtualize Community Edition](https://software.parasoft.com/virtualize/community-edition/)<br/>
-- [Video Tutorials](https://fast.wistia.com/embed/iframe/8c9iur4w0r)<br/>
+- [Video: how to obtain and validate you license](https://fast.wistia.com/embed/iframe/8c9iur4w0r)<br/>
+- [SOAtest Videos](https://docs.parasoft.com/display/SOA9106/Video+Tutorials)
+- [API Testing How-to Videos](https://www.parasoft.com/tutorial/soatest-how-to-videos)
 - [FAQs](https://forums.parasoft.com/discussion/2797?_hsenc=p2ANqtz-9OlPgT9U7LIa94hEEyPsZosYJ1j9Tb1wI5KlUFiy4OXZ67UJHyAuLjwRdNgemdCwziXX9rxmby63LPqTO2DLHIhuMZvg&_hsmi=40626961&utm_content=40626961&utm_medium=email&utm_source=hs_automation)<br/>
 
 ### Official Documentation:<br/>
@@ -77,7 +79,7 @@ Full list of dependencies see [here.](https://github.com/ikostan/ParaBankSeleniu
 ### Nice to have tools:
 1. [Fiddler](https://www.telerik.com/fiddler)
 2. [Kite](https://kite.com/)
-3. [ChroPath](https://chrome.google.com/webstore/detail/chropath/ljngjbnaijcbncmcnjfhigebomdlkcjo?hl=en)
+3. [Ragnorex: Smart Selector Generator](https://www.ranorex.com/selocity/browser-extension)
 4. [Pynsource](https://www.pynsource.com/index.html)
 
 **Note:** In order to instantiate webdriver I use Driver class of my own. For more info please look [here](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils).<br/>
