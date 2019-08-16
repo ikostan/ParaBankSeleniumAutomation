@@ -2,7 +2,7 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
-from elements.element import Element
+from element_object_models.element import Element
 from page_locators.login_page_locator import LoginPageLocator
 from page_object_models.base_page_model import BasePageModel
 from expected_results.page_content.login_page_content import LoginPageContent
