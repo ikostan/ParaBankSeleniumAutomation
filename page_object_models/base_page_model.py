@@ -5,7 +5,7 @@
 from expected_results.page_content.login_page_content import LoginPageContent
 from expected_results.page_content.overview_page_content import OverviewPageContent
 from utils.driver import Driver
-from elements.element import Element
+from element_object_models.element import Element
 
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.wait import WebDriverWait
