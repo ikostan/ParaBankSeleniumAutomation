@@ -8,12 +8,14 @@ class Config:
 	Environment Configuration
 	Source: https://www.udemy.com/elegant-automation-frameworks-with-python-and-pytest
 	"""
-	def __init__(self, env="local", browser="chrome"):
+	def __init__(self, env="localhost", browser="chrome", is_headless=True):
 
 		self.base_url = {
 			'production': 'https://parabank.parasoft.com',
-			'local': 'http://localhost:8080'
+			'localhost': 'http://localhost:8080',
 		}[env.lower()]
+
+		self.is_headless = is_headless
 
 		self.browser = {
 			'chrome': 'chrome',
@@ -22,5 +24,6 @@ class Config:
 		}[browser.lower()]
 
 		print('Run configurations -> Browser: {}\n'
-		      'Run configurations -> Environment: {}\n'.format(self.browser, self.base_url))
+		      'Run configurations -> Environment: {}\n'
+		      'Run configurations -> Is Headless: {}'.format(self.browser, self.base_url, self.is_headless))
 
