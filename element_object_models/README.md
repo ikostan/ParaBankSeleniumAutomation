@@ -1,5 +1,9 @@
 ## Element Object (WebElement)
 
+<div align="right"> 
+<img width="7%" height="7%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/iconfinder_availability-items_3018516.png" hspace="10">
+</div>
+
 Selenium Web Driver encapsulates a simple form element as an object of WebElement. It provides API to find the elements and take action on them like entering text into text boxes, clicking the buttons, etc.<br/>
 
 ### What is WebElement?<br/>
