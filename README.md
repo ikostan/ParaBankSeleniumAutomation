@@ -90,8 +90,9 @@ In other words: ParaBank is not a real bank!<br/>
 6. [PyCharm 2019.2 (Community Edition)](https://www.jetbrains.com/pycharm/download/#section=windows)<br/>
 7. [GitHub Desktop 2.1.0](https://desktop.github.com/)<br/>
 8. [GIT 2.22.0.windows.1](https://git-scm.com/download/win)<br/>
-9. [Java SE 8](https://www.oracle.com/technetwork/java/javase/overview/index.html)
-10. [Scoop](https://scoop.sh/)
+9. [Java SE 8](https://www.oracle.com/technetwork/java/javase/overview/index.html)<br/>
+10. [Scoop](https://scoop.sh/)<br/>
+11. [Parasoft Virtualize Community Edition](http://software.parasoft.com/virtualize/community-edition/?utm_source=hs_automation&utm_medium=email&utm_content=40627965&_hsenc=p2ANqtz-__MrNZOVUb7FTgvv1M6qTinpy3c0c9N_prIec6-nzSU5oHZ7PUaskdGYgTY0UjG50V-sCTOqLmqSiJUREowy_dMYyaqQ&_hsmi=40627965)<br/>
 
 ### Python Packages:<br/>
 Full list of dependencies see [here.](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/requirements.txt)
