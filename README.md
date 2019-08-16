@@ -98,10 +98,10 @@ In other words: ParaBank is not a real bank!<br/>
 Full list of dependencies see [here.](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/requirements.txt)
 
 ### Nice to have tools:
-1. [Fiddler](https://www.telerik.com/fiddler)
-2. [Kite](https://kite.com/)
+1. [Fiddler: The free web debugging proxy](https://www.telerik.com/fiddler)
+2. [Kite: Code Faster in Python](https://kite.com/)
 3. [Ragnorex: Smart Selector Generator](https://www.ranorex.com/selocity/browser-extension)
-4. [Pynsource](https://www.pynsource.com/index.html)
+4. [Pynsource: Python source code into UML diagrams](https://www.pynsource.com/index.html)
 
 **Note:** In order to instantiate webdriver I use Driver class of my own. For more info please look [here](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils).<br/>
 
