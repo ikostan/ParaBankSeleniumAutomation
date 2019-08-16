@@ -6,6 +6,7 @@
 </div>
 
 ### Table of Contents:<br/>
+1. <a href="#about">About the project</a>
 1. <a href="#parabank">PARA BANK ParaSoft Demo App</a>
 2. <a href="#doc">Official Documentation</a>
 3. <a href="#dev">Dev Environment</a>
@@ -31,6 +32,15 @@
     - [Log In / Log Out](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests/login_logout)<br/>
     - [User Registration](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests/user_registration)<br/>
 12. [Utils](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils)<br/>
+
+### <a id="about"></a>About the project:<br/>
+The main purpose is to demonstrate the professional abilities of writing browser automation using the Python language with Selenium.<br/>
+
+**Main Objectives:**<br/>
+- Build fast and readable automation using minimal code<br/>
+- Showcase with effective way to identify web elements<br/>
+- Page Objects and Element Objects implementation<br/>
+- Industry-ready test structure<br/>
 
 ### [PARA BANK ParaSoft Demo Website](https://parabank.parasoft.com/parabank/index.htm)<br/>
 <a id="parabank"></a>ParaBank is a demo site used for demonstration of Parasoft software solutions. 
