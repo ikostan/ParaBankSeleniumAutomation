@@ -7,15 +7,18 @@
 Contains ParaBank online banking tests.<br/>
 
 ### Table of Contents:<br/>
-1. [Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests)<br/>
+1. <a href="#example">General Guidelines</a>
+2. [Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests)<br/>
    - [Base Cases](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_cases)<br/>
    - [Base Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_content_tests)<br/>
    - [Unique Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_content_tests)<br/>
-2. [End To End Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests)<br/>
+3. [End To End Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests)<br/>
    - [Log In / Log Out](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests/login_logout)<br/>
    - [User Registration](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests/user_registration)<br/>
 
-The general guideline for the tests is based on following resources:
+### <a id="example"></a>General Guidelines:<br/>
+
+The general guidelines for the tests are based on following resources:<br/>
 
 - [How To Test Banking Domain Applications: A Complete BFSI Testing Guide](https://www.softwaretestinghelp.com/testing-banking-applications/)
 - [How To Test Retail Banking System](https://www.softwaretestinghelp.com/how-to-test-retail-banking-system/)
