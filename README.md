@@ -10,16 +10,18 @@
 2. <a href="#doc">Official Documentation</a>
 3. <a href="#dev">Dev Environment</a>
 4. <a href="#tech_issues">Tech Issues and Problem Solving</a>
-5. [Selenium Webdriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers):<br/>
+5. [Docs](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/docs):<br/>
+    - [Parasoft: Setting Up ParaBank](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/docs/Setting_Up_ParaBank.pdf)
+6. [Selenium Webdriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers):<br/>
     - [ChromeDriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers/chrome)<br/>
     - [Microsoft WebDriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers/microsoft_edge)<br/>
     - [geckodriver](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/drivers/mozilla_geckodriver)<br/>
-6. [Web Element](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/elements)<br/>
-7. [Expected Results](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/expected_results)<br/>
-8. [Page/Element Locators](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_locators)<br/>
+7. [Web Element](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/elements)<br/>
+8. [Expected Results](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/expected_results)<br/>
+9. [Page/Element Locators](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_locators)<br/>
     - [UML diagram](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_locators/uml)
-9. [Page Object Model (POM)](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_object_models)<br/>
-10. [Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests)<br/>   
+10. [Page Object Model (POM)](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_object_models)<br/>
+11. [Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests)<br/>   
     i. [Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests)<br/>
     - [Base Cases](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_cases)<br/>
     - [Base Content Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/content_tests/base_content_tests)<br/>
@@ -28,7 +30,7 @@
     ii. [End To End Tests](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests)<br/>
     - [Log In / Log Out](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests/login_logout)<br/>
     - [User Registration](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/tests/e2e_tests/user_registration)<br/>
-11. [Utils](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils)<br/>
+12. [Utils](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils)<br/>
 
 ### [PARA BANK ParaSoft Demo Website](https://parabank.parasoft.com/parabank/index.htm)<br/>
 <a id="parabank"></a>ParaBank is a demo site used for demonstration of Parasoft software solutions. 
