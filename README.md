@@ -42,6 +42,8 @@ In other words: ParaBank is not a real bank!<br/>
 - [Read more about Para Bank demo website available services](https://parabank.parasoft.com/parabank/services.htm)<br/>
 - [The ParaBank demo application from Parasoft](https://github.com/parasoft/parabank)<br/>
 - [Parasoft Virtualize Community Edition](https://software.parasoft.com/virtualize/community-edition/)<br/>
+- [Video Tutorials](https://fast.wistia.com/embed/iframe/8c9iur4w0r)<br/>
+- [FAQs](https://forums.parasoft.com/discussion/2797?_hsenc=p2ANqtz-9OlPgT9U7LIa94hEEyPsZosYJ1j9Tb1wI5KlUFiy4OXZ67UJHyAuLjwRdNgemdCwziXX9rxmby63LPqTO2DLHIhuMZvg&_hsmi=40626961&utm_content=40626961&utm_medium=email&utm_source=hs_automation)<br/>
 
 ### Official Documentation:<br/>
 <a id="doc"></a>
