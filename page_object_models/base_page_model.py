@@ -37,8 +37,7 @@ class BasePageModel:
 		:return:
 		'''
 
-		print('\nDriver type: {}'.format(type(driver)))  # debug only
-
+		# print('\nDriver type: {}'.format(type(driver)))  # debug only
 		if isinstance(driver, Driver):
 			return driver.get_driver()
 
