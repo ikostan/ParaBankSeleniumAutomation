@@ -32,6 +32,32 @@ In order to create webdriver object you just do the following:<br/>
 </details>
 
 <details>
+  <summary><b>step_definition function</b></summary>
+
+<br/>
+
+**"Arrange-Act-Assert"** a pattern for arranging and formatting code in UnitTest methods.<br/>
+The function is grouping following functional sections:<br/>
+
+1. Arrange all necessary preconditions and inputs.
+2. Act on the object or method under test.
+3. Assert that the expected results have occurred.
+
+**Benefits:**<br/>
+1. Clearly separates what is being tested from the setup and verification steps.<br/>
+2. Clarifies and focuses attention on a historically successful and generally necessary set of test steps.<br/>
+3. Makes some TestSmells more obvious:<br/>
+    - Assertions intermixed with "Act" code.<br/>
+    - Test methods that try to test too many different things at once.<br/>
+
+Source:<br/>
+- [Unit Testing and the Arrange, Act and Assert (AAA) Pattern](https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80)<br/>
+- [Arrange Act Assert](http://wiki.c2.com/?ArrangeActAssert)<br/>
+<br/>
+
+</details>
+
+<details>
   <summary><b>screenshot_on_fail wrapper</b></summary>
 
 <br/>Is a solution using a decorator that wrapps every method on a class that starts test_ with a wrapper that takes a screenshot if the method raises and Exception. 
