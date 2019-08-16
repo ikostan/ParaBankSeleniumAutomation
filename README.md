@@ -42,6 +42,7 @@ The main purpose is to demonstrate the professional abilities of writing browser
 - Page Objects and Element Objects implementation<br/>
 - Arrange, Act and Assert (AAA) Pattern implementation (see [step_definition](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils))<br/>
 - Industry-ready test structure<br/>
+- Cross-browsing testing<br/>
 - Using real-like web app (ParaBank Demo Website) in order to accomplish all the above<br/>
 - Build readable test report using Allure Framework<br/>
 
