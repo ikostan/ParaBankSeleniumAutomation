@@ -7,6 +7,7 @@ import allure
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from tests.config import Config
 from utils.screenshot import screenshot_on_fail
 from utils.clean_database import clean_database
 from utils.open_web_browser import open_web_browser
@@ -34,7 +35,8 @@ class TestUserRegistration(UserRegistrationCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.client = BaseUser(JaneDoe)
-		cls.browser = 'chrome'
+		# cls.browser = browser_configuration()
+		cls.browser = Config().browser
 		cls.page = None
 
 		with allure.step("Initial data setup > clean DB"):
