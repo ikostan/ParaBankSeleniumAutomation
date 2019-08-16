@@ -38,6 +38,9 @@ All materials herein are used solely for simulating a realistic online banking w
 
 In other words: ParaBank is not a real bank!<br/>
 
+### Official Documentation:<br/>
+<a id="doc"></a>
+
 **Parasoft Resources:**<br/>
 
 - [Demo Website](https://parabank.parasoft.com/parabank/index.htm)<br/>
@@ -47,21 +50,20 @@ In other words: ParaBank is not a real bank!<br/>
 - ['SOAtest & Virtualize' System Requirements](https://docs.parasoft.com/display/SOAVIRT9104CTP311/Windows+Standalone+Installation)
 - [SOAtest Desktop Installation](https://docs.parasoft.com/display/SOAVIRT9104CTP311/SOAtest+Desktop+Installation)
 - [Video: how to install Parasoft 'SOAtest & Virtualize' software](https://fast.wistia.com/embed/iframe/8c9iur4w0r)<br/>
-- [Setting Up ParaBank](https://docs.parasoft.com/display/SOAVIRT9103CTP310/About+this+Tutorial)
-- [How To Videos](https://docs.parasoft.com/display/SOAVIRT9107/Video+Tutorials)
-- [SOAtest Videos](https://docs.parasoft.com/display/SOA9106/Video+Tutorials)
-- [API Testing How-to Videos](https://www.parasoft.com/tutorial/soatest-how-to-videos)
+- [Setting Up ParaBank](https://docs.parasoft.com/display/SOAVIRT9103CTP310/About+this+Tutorial)<br/>
+- [How To Videos](https://docs.parasoft.com/display/SOAVIRT9107/Video+Tutorials)<br/>
+- [SOAtest Videos](https://docs.parasoft.com/display/SOA9106/Video+Tutorials)<br/>
+- [API Testing How-to Videos](https://www.parasoft.com/tutorial/soatest-how-to-videos)<br/>
 - [FAQs](https://forums.parasoft.com/discussion/2797?_hsenc=p2ANqtz-9OlPgT9U7LIa94hEEyPsZosYJ1j9Tb1wI5KlUFiy4OXZ67UJHyAuLjwRdNgemdCwziXX9rxmby63LPqTO2DLHIhuMZvg&_hsmi=40626961&utm_content=40626961&utm_medium=email&utm_source=hs_automation)<br/>
+- [Parasoft Documentation and Resources](https://docs.parasoft.com/)<br/>
 
-### Official Documentation:<br/>
-<a id="doc"></a>
+**Additional Resources:**<br/>
 
 - [Selenium Documentation](https://seleniumhq.github.io/selenium/docs/api/py/api.html)<br/>
 - [Full Pytest documentation](http://doc.pytest.org/en/latest/contents.html)<br/>
 - ['Selenium with Python' official documentation webpage](https://selenium-python.readthedocs.io)<br/>
 - [PyCharm - Manage dependencies using requirements.txt](https://www.jetbrains.com/help/pycharm/managing-dependencies.html)<br/>
 - [Allure Framework](https://docs.qameta.io/allure/)<br/>
-- [Parasoft Documentation and Resources](https://docs.parasoft.com/)
 
 ### Dev Environment:<br/>
 <a id="dev"></a>
