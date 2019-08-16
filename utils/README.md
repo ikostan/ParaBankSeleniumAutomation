@@ -59,32 +59,6 @@ Source: https://stackoverflow.com/questions/12024848/automatic-screenshots-when-
 <br/>
 </details>
 
-<details>
-  <summary><b>browser_configuration() function</b></summary>
-
-<br/>
-
-- Simplifies cross browser testing.<br/>
-- Returns browser name from from predefined dictionary.<br/>
-- By default it returns 'chrome' value.<br/>
-- Provides following log (simple type function): 'Run configuration: chrome'<br/>
-- Every Test class has it by default as part of setUpClass definition.<br/>
-- See example bellow:<br/>
-<br/>
- 
-```python
-@classmethod
-    def setUpClass(cls):
-        with allure.step("Open web browser"):
-            cls.browser = browser_configuration()
-            cls.page_model = AboutPageModel
-            cls.page_context = AboutPageContext
-            cls.page = open_web_browser(browser=cls.browser, 
-                                        page_model=cls.page_model, 
-                                        page_context=cls.page_context)
-```
-<br/>
-</details>
 
 <details>
   <summary><b>clean_database() method</b></summary>
