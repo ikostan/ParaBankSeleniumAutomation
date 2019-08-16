@@ -9,6 +9,13 @@ import allure
 def step_definition(self, step_description, expected, actual, act=None, click=False):
 	"""
 	Unit Testing and the Arrange, Act and Assert (AAA) Pattern
+
+	The function is grouping following functional sections:
+
+	1. Arrange all necessary preconditions and inputs.
+	2. Act on the object or method under test.
+	3. Assert that the expected results have occurred.
+
 	:param click:
 	:param self:
 	:param expected:
