@@ -42,6 +42,7 @@ The main purpose is to demonstrate the professional abilities of writing browser
 - Page Objects and Element Objects implementation<br/>
 - Industry-ready test structure<br/>
 - Using real-like web app (ParaBank Demo Website) in order to accomplish all the above<br/>
+- Build readable test report using Allure Framework<br/>
 
 ### [PARA BANK ParaSoft Demo Website](https://parabank.parasoft.com/parabank/index.htm)<br/>
 <a id="parabank"></a>ParaBank is a demo site used for demonstration of Parasoft software solutions. 
