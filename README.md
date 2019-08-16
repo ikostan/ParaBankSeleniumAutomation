@@ -39,12 +39,13 @@ The main purpose is to demonstrate the professional abilities of writing browser
 **Main Objectives:**<br/>
 - Build fast and readable automation using minimal code<br/>
 - Showcase with effective way to identify web elements<br/>
-- Page Objects and Element Objects implementation (see [Page Object Model (POM)](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_object_models))<br/>
+- [Page Objects](https://github.com/SeleniumHQ/selenium/wiki/PageObjects) and [Element Objects](https://www.tutorialspoint.com/dom/dom_element_object) implementation (see [Page Object Model (POM)](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/page_object_models) and [Element Object](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/elements))<br/>
 - Arrange, Act and Assert (AAA) Pattern implementation (see [step_definition](https://github.com/ikostan/ParaBankSeleniumAutomation/tree/master/utils))<br/>
 - Industry-ready test structure<br/>
 - Cross-browsing testing (see [Config](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/tests/config.py) class)<br/>
 - Using real-like web app (ParaBank Demo Website) in order to accomplish all the above<br/>
 - Build readable test report using Allure Framework<br/>
+- Test code should avoid violating principles like [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle) and [KISS](https://en.wikipedia.org/wiki/KISS_principle).
 
 ### [PARA BANK ParaSoft Demo Website](https://parabank.parasoft.com/parabank/index.htm)<br/>
 <a id="parabank"></a>ParaBank is a demo site used for demonstration of Parasoft software solutions. 
