@@ -24,3 +24,34 @@ The general guideline for the tests is based on following resources:
 <div align="center"> 
 <img width="100%" height="100%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/agile-process-plan-wits.png" hspace="10">
 </div>
+
+<details>
+  <summary><b>Environment Configuration: Config class</b></summary>
+
+<br/>
+
+[Config Class](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/tests/config.py):<br/>
+
+- Simplifies cross browser testing.<br/>
+- Returns browser name from from predefined dictionary.<br/>
+- By default it returns 'chrome' value.<br/>
+- Provides following log (simple type function): 'Run configuration: chrome....'<br/>
+- Every Test class has it by default as part of setUpClass definition.<br/>
+- See example bellow:<br/>
+<br/>
+ 
+```python
+class TestHomeBasePageContent(BaseContentCase):
+
+	@classmethod
+	def setUpClass(cls):
+		with allure.step("Open web browser"):
+			cls.app_config = Config()
+			cls.page_model = HomePageModel
+			cls.page_content = HomePageContent
+			cls.page = open_web_browser(browser=cls.app_config.browser,
+			                            page_model=cls.page_model,
+			                            page_content=cls.page_content)
+```
+<br/>
+</details>
