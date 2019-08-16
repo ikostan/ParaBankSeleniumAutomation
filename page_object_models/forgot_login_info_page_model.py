@@ -3,7 +3,7 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 from selenium.common.exceptions import NoSuchElementException
 
-from elements.element import Element
+from element_object_models.element import Element
 from page_object_models.base_personal_info_page_model import BasePersonalInfoPageModel
 from page_locators.forgot_login_info_page_locator import ForgotLoginInfoPageLocator
 from expected_results.page_content.forgot_login_info_page_content import ForgotLoginInfoPageContent
