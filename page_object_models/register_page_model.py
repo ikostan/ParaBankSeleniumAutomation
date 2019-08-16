@@ -2,8 +2,8 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
-from elements.element import Element
 from selenium.common.exceptions import NoSuchElementException
+from element_object_models.element import Element
 
 from page_locators.register_page_locator import RegisterPageLocator
 from expected_results.page_content.register_page_content import RegisterPageContent
