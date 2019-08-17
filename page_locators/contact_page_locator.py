@@ -16,20 +16,20 @@ class ContactPageLocator(BasePageLocator):
 	"""
 
 	NAME_TITLE = (By.XPATH, '//b[@innertext=\'{}\']'.format(ContactPageContent.CONTACT_FORM['name']['title']))
-	NAME_INPUT = (By.XPATH, '/html//input[@id=\'{}\']'.format(ContactPageContent.CONTACT_FORM['name']['id']))  # /html//input[@id='name']
-	NAME_ERROR = (By.XPATH, '//span[#\'name.errors\']')
+	NAME_INPUT = (By.XPATH, '/html//input[@id=\'{}\']'.format(ContactPageContent.CONTACT_FORM['name']['id']))
+	NAME_ERROR = (By.XPATH, '/html//span[@id=\'name.errors\']')  # /html//span[@id='name.errors']
 
 	EMAIL_TITLE = (By.XPATH, '//b[@innertext=\'{}\']'.format(ContactPageContent.CONTACT_FORM['email']['title']))
 	EMAIL_INPUT = (By.XPATH, '/html//input[@id=\'{}\']'.format(ContactPageContent.CONTACT_FORM['email']['id']))
-	EMAIL_ERROR = (By.XPATH, '//span[#\'email.errors\']')
+	EMAIL_ERROR = (By.XPATH, '/html//span[@id=\'email.errors\']')
 
 	PHONE_TITLE = (By.XPATH, '//b[@innertext=\'Phone:\']'.format(ContactPageContent.CONTACT_FORM['phone']['title']))
 	PHONE_INPUT = (By.XPATH, '/html//input[@id=\'{}\']'.format(ContactPageContent.CONTACT_FORM['phone']['id']))
-	PHONE_ERROR = (By.XPATH, '//span[#\'phone.errors\']')
+	PHONE_ERROR = (By.XPATH, '/html//span[@id=\'phone.errors\']')
 
 	MESSAGE_TITLE = (By.XPATH, '///b[@innertext=\'Message:\']'.format(ContactPageContent.CONTACT_FORM['message']['title']))
 	MESSAGE_INPUT = (By.XPATH, '/html//textarea[@id=\'{}\']'.format(ContactPageContent.CONTACT_FORM['message']['id']))
-	MESSAGE_ERROR = (By.XPATH, '//span[#\'message.errors\']')
+	MESSAGE_ERROR = (By.XPATH, '/html//span[@id=\'message.errors\']')
 
 	SEND_BUTTON = (By.XPATH, '//input[@value=\'{}\']'.format(ContactPageContent.CONTACT_FORM['button']['value']))
 
