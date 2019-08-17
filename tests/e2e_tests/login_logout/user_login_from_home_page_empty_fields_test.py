@@ -64,7 +64,7 @@ class TestUserLoginFromHomePageEmptyFieldsError(unittest.TestCase):
 					11. Verify web page title
 					12. Close web browser
 				""")
-		allure.dynamic.title("User Log In validation > Negative test > No such user")
+		allure.dynamic.title("Home page > User Log In validation > Negative test > No such user")
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		step_definition(self,
