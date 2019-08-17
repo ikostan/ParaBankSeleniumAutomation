@@ -36,7 +36,8 @@ install:
 script:
    - "whereis google-chrome-stable"
    - "whereis chromedriver"
-   - "python tests/e2e_tests/forgot_login/forgot_login_all_fields_empty_test.py"
+   - "whereis forgot_login_all_fields_empty_test.py"
+   - "pytest tests/e2e_tests/forgot_login/forgot_login_all_fields_empty_test.py"
 
 after_script:
   - "sh -e /etc/init.d/xvfb stop"
