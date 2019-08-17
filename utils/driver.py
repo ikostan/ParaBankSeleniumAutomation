@@ -42,7 +42,7 @@ class Driver:
 
                     current_platform = platform.system()
                     if current_platform == "Linux":
-                        path = '/home/travis/'
+                        path = '/home/travis/build/ikostan/ParaBankSeleniumAutomation/drivers/chrome/'
                         driver = webdriver.Chrome(path, options=chrome_options)
                     elif current_platform == "Windows":
                         driver = webdriver.Chrome(options=chrome_options)
