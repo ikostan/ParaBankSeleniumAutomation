@@ -32,6 +32,7 @@ install:
     - "pip install selenium"
     - "pip install allure-pytest"
     - "pip install allure-python-commons"
+    - "pip install requests"
 
 script:
    - "whereis google-chrome-stable"
