@@ -13,7 +13,6 @@ before_install:
   - wget https://chromedriver.storage.googleapis.com/2.43/chromedriver_linux64.zip
   - sudo unzip chromedriver_linux64.zip -d /usr/local/bin/
   - rm chromedriver_linux64.zip
-  #- export CHROME_BIN=chromium-browser
 
 install:
     - "pip install -r requirements.txt"
@@ -21,12 +20,7 @@ install:
 script:
    - "whereis google-chrome-stable"
    - "whereis chromedriver"
-   - "whereis forgot_login_all_fields_empty_test.py"
    - "pytest tests/"
 
 # Source:
-# https://flatmap:it/2017/11/16/starting-selenium-server-inside-travis/:
 # https://www.youtube.com/watch?v=kxEKygtd2eM
-# https://www.amihaiemil.com/2017/07/14/selenium-headless-chrome-travis.html
-# https://docs.travis-ci.com/user/reference/trusty/
-# https://docs.travis-ci.com/user/languages/python/
