@@ -24,6 +24,8 @@ from utils.step_definition import step_definition
 @allure.sub_suite('Negative Tests')
 @allure.feature("Register Page")
 @allure.story('Register Functionality')
+@pytest.mark.skipif(Config().base_url == 'https://parabank.parasoft.com',
+                    reason="This is demo test that will have negative effect on Travis CI status")
 @screenshot_on_fail()
 class TestUserRegistrationInvalidData(UserRegistrationCase):
 
@@ -59,7 +61,7 @@ class TestUserRegistrationInvalidData(UserRegistrationCase):
 		User registration test case:
 			1. Open 'Register' web page
 			2. Fill out user personal data > Set all fields with invalid data
-			3. Verify that each data item (empty string) appears in relevant field
+			3. Verify that each data item (invalid data string) appears in relevant field
 			4. Hit 'Register' button
 			5. Verify 'Error' messages
 			6. Verify that "Account Services" menu is not present
