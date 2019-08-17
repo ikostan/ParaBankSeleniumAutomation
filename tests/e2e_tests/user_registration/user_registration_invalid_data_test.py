@@ -3,6 +3,7 @@
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
 import allure
+import pytest
 
 from tests.config import Config
 from utils.screenshot import screenshot_on_fail
@@ -64,7 +65,7 @@ class TestUserRegistrationInvalidData(UserRegistrationCase):
 			6. Verify that "Account Services" menu is not present
 			7. Close web browser
 		""")
-		allure.dynamic.title("User registration > Negative test > Empty fields")
+		allure.dynamic.title("User registration > Negative test > Invalid data")
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
 		# Register a new user:
