@@ -10,9 +10,12 @@ addons:
   chrome: stable
 
 before_install:
-  - "wget https://chromedriver.storage.googleapis.com/2.43/chromedriver_linux64.zip"
-  - "sudo unzip chromedriver_linux64.zip -d /usr/local/bin/"
-  - "rm chromedriver_linux64.zip"
+  - wget https://chromedriver.storage.googleapis.com/2.43/chromedriver_linux64.zip -P ~/
+  - unzip ~/chromedriver_linux64.zip -d ~/
+  - rm ~/chromedriver_linux64.zip
+  - sudo mv -f ~/chromedriver /usr/local/share/
+  - sudo chmod +x /usr/local/share/chromedriver
+  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 
 # command to install dependencies
 install:
