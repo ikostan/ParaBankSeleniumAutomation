@@ -1,7 +1,5 @@
-sudo: required
-
 dist: trusty
-
+sudo: false
 language: python
 
 python:
@@ -16,14 +14,13 @@ env:
 
 # installing Chrome for e2e tests
 addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+  chrome: stable
 
 # the following step should start the virtual X frame buffer: Xvfb process
 before_script:
+  - "wget https://chromedriver.storage.googleapis.com/77.0.3865.10/chromedriver_linux64.zip"
+  - "unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.6/"
+  - "export CHROME_BIN=chromium-browser"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 #wait a while before xvfb to start
 
