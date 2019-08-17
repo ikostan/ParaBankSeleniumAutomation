@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ikostan/ParaBankSeleniumAutomation.svg?branch=master)](https://travis-ci.org/ikostan/ParaBankSeleniumAutomation)
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 # Selenium Automation for Para Bank Web App
 
