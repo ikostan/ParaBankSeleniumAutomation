@@ -1,9 +1,9 @@
-dist: Xenial
+dist: trusty
 language: python
 sudo: required
 
 python:
-  - "3.7"
+  - "3.6"
 
 # Installing Chrome for e2e tests
 addons:
