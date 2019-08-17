@@ -10,18 +10,19 @@ addons:
   chrome: stable
 
 before_install:
-  - wget -N http://chromedriver.storage.googleapis.com/2.43/chromedriver_linux64.zip -P ~/
-  - unzip ~/chromedriver_linux64.zip -d /home/travis/virtualenv/python3.6/
-  - rm ~/chromedriver_linux64.zip
+  #- wget -N http://chromedriver.storage.googleapis.com/2.43/chromedriver_linux64.zip -P ~/
+  #- unzip ~/chromedriver_linux64.zip -d /home/travis/virtualenv/python3.6/
+  #- rm ~/chromedriver_linux64.zip
 
 install:
     - "pip install -r requirements.txt"
 
 script:
    - "whereis google-chrome-stable"
-   - "pytest tests/"
+   #- "pytest tests/"
 
 # Source:
 # https://www.youtube.com/watch?v=kxEKygtd2eM
 # https://www.amihaiemil.com/2017/07/14/selenium-headless-chrome-travis.html
 # https://docs.travis-ci.com/user/reference/trusty/
+# https://docs.travis-ci.com/user/languages/python/
