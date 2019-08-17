@@ -34,7 +34,7 @@ script:
    - "whereis google-chrome-stable"
    - "whereis chromedriver"
    - "whereis forgot_login_all_fields_empty_test.py"
-   - "pytest"
+   - "pytest tests/content_tests"
 
 after_script:
   - "sh -e /etc/init.d/xvfb stop"
