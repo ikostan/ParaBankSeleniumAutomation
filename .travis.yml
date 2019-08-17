@@ -7,16 +7,26 @@ python:
   - "3.6"
   - "3.7"
 
+sudo: required
+
+addons:
+  chrome: stable
+
+before_install:
+
+  - "wget && sudo unzip chromedriver_linux64.zip -d /usr/local/bin/ &&
+  mv -f chromedriver /usr/local/share/chromedriver &&
+  ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver &&
+  ln -s /usr/local/share/chromedriver /usr/bin/chromedriver"
+
 install:
     - "pip install pytest"
     - "pip install selenium"
     - "pip install allure-pytest"
     - "pip install allure-python-commons"
-    # - "pip install pytest-cov" #This plugin produces coverage reports
-    # - "pip install codecov" #install codecov
 
 script:
-  # - pytest --cov-config=.coveragerc --cov-report term-missing --cov  # check test coverage with pytest-cov
+   - "python tests/e2e_tests/forgot_login/forgot_login_all_fields_empty_test.py"
 
 env:
   #- CODECOV_TOKEN=<token>#IF ONLY YOU HAVE A PRIVATE REPOSITORY
