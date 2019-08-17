@@ -12,6 +12,8 @@ class LoginPageContent(BasePageContent):
 	URL = BasePageContent.URL + 'login.htm'
 
 	ERROR_TITLE = 'Error!'
-	ERROR_MESSAGE = 'The username and password could not be verified.'
+	NO_SUCH_USER_ERROR_MESSAGE = 'The username and password could not be verified.'
+	EMPTY_FIELDS_ERROR_MESSAGE = 'Please enter a username and password.'
+
 
 
