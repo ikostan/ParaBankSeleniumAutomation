@@ -10,23 +10,23 @@ addons:
   chrome: stable
 
 before_install:
-  - wget https://chromedriver.storage.googleapis.com/2.43/chromedriver_linux64.zip -P ~/
+  - wget -N http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip -P ~/
   - unzip ~/chromedriver_linux64.zip -d ~/
   - rm ~/chromedriver_linux64.zip
-  - sudo mv -f ~/chromedriver /usr/local/share/
-  - sudo chmod +x /usr/local/share/chromedriver
-  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+  - mv -f ~/chromedriver /usr/local/share/
+  - chmod +x /usr/local/share/chromedriver
+  - ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
 
-# command to install dependencies
 install:
     - "pip install -r requirements.txt"
 
-# command to run tests
 script:
+   - "whereis google-chrome-stable"
+   - "whereis chromedriver"
+   - "whereis forgot_login_all_fields_empty_test.py"
    - "pytest tests/"
 
+after_script:
+  - "sh -e /etc/init.d/xvfb stop"
 
-# Source:
-# https://www.youtube.com/watch?v=kxEKygtd2eM
-# https://docs.travis-ci.com/user/languages/python/
-# https://www.amihaiemil.com/2017/07/14/selenium-headless-chrome-travis.html
+# Source: https://flatmap.it/2017/11/16/starting-selenium-server-inside-travis/
