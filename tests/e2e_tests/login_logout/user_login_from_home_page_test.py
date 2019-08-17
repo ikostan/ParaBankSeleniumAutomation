@@ -71,7 +71,7 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 					12. Verify web page title
 					13. Close web browser
 				""")
-		allure.dynamic.title("User Log In validation > Positive test")
+		allure.dynamic.title("Home page > User Log In validation > Positive test")
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
 
 		# test url
