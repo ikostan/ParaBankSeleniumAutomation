@@ -38,17 +38,9 @@ class Driver:
             try:
                 if Config().is_headless:
                     chrome_options = webdriver.ChromeOptions()
-                    chrome_options.binary_location = '/usr/bin/chromium-browser'
                     chrome_options.add_argument('headless')
-
-                    # All the arguments added for chromium to work on selenium
-                    chrome_options.add_argument("--no-sandbox")  # This make Chromium reachable
-                    chrome_options.add_argument("--no-default-browser-check")  # Overrides default choices
-                    chrome_options.add_argument("--no-first-run")
-                    chrome_options.add_argument("--disable-default-apps")
-
                     path = '/home/travis/virtualenv/python3.6/chromedriver'
-                    driver = webdriver.Chrome(path, chrome_options=chrome_options)
+                    driver = webdriver.Chrome(path, options=chrome_options)
 
                 else:
                     driver = webdriver.Chrome()
