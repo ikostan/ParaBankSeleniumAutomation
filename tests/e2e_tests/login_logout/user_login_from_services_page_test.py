@@ -2,14 +2,9 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
-#  Created by Egor Kostan.
-#  GitHub: https://github.com/ikostan
-#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
-
 import allure
 import unittest
 
-from expected_results.page_content.home_page_content import HomePageContent
 from tests.config import Config
 from utils.register_user import register_user
 from utils.clean_database import clean_database
@@ -17,11 +12,12 @@ from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.step_definition import step_definition
 
-from page_object_models.services_page_model import ServicesPageModel
 from expected_results.users.base_user import BaseUser
+from page_object_models.services_page_model import ServicesPageModel
 from expected_results.users.valid_users_templates.jane_doe import JaneDoe
 from expected_results.page_content.services_page_content import ServicesPageContent
 from expected_results.page_content.bank_account_content import BankAccountContent
+from expected_results.page_content.home_page_content import HomePageContent
 
 
 @allure.epic('Page Functionality')
