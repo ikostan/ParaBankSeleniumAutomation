@@ -1,25 +1,31 @@
-dist: xenial   # required for Python >= 3.7
+sudo: required
+
+dist: trusty
 
 language: python
 
 python:
-  #- "3.5"
   - "3.6"
-  #- "3.7"
 
-sudo: required
+# setting up environment variables
+env:
+  global:
+    - CXX=g++-4.8
+    - DISPLAY=:99.0
+    - CHROME_BIN=/usr/bin/google-chrome
 
+# installing Chrome for e2e tests
 addons:
-  chrome: stable
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 
-before_install:
-
-  - "wget https://chromedriver.storage.googleapis.com/77.0.3865.10/chromedriver_linux64.zip -P ~/"
-  - "unzip ~/chromedriver_linux64.zip -d ~/"
-  - "rm ~/chromedriver_linux64.zip"
-  - "sudo mv -f ~/chromedriver /usr/local/share/"
-  - "sudo chmod +x /usr/local/share/chromedriver"
-  - "sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver"
+# the following step should start the virtual X frame buffer: Xvfb process
+before_script:
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 #wait a while before xvfb to start
 
 install:
     - "pip install pytest"
@@ -30,12 +36,7 @@ install:
 script:
    - "whereis google-chrome-stable"
    - "whereis chromedriver"
-   - "python tests/e2e_tests/forgot_login/forgot_login_all_fields_empty_test.py"
+   - "pytest tests/e2e_tests/forgot_login/forgot_login_all_fields_empty_test.py"
 
-env:
-  #- CODECOV_TOKEN=<token>#IF ONLY YOU HAVE A PRIVATE REPOSITORY
-
-after_success:
-  # Generates coverage report, public repo using Travis:
-  # Source: https://dev.to/j0nimost/using-codecov-with-travis-ci-pytest-cov-1dfj
-  # - codecov
+after_script:
+  - "sh -e /etc/init.d/xvfb stop"
