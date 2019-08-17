@@ -1,29 +1,29 @@
-dist: trusty
+dist: Xenial
 language: python
 sudo: required
 
 python:
-  - "3.6"
+  - "3.7"
 
 # Installing Chrome for e2e tests
 addons:
   chrome: stable
 
 before_install:
-  #- "wget https://chromedriver.storage.googleapis.com/77.0.3865.10/chromedriver_linux64.zip"
   - "wget https://chromedriver.storage.googleapis.com/2.43/chromedriver_linux64.zip"
-  - "sudo unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.6/"
+  - "sudo unzip chromedriver_linux64.zip -d /usr/local/bin/"
+  - "rm chromedriver_linux64.zip"
 
+# command to install dependencies
 install:
     - "pip install -r requirements.txt"
 
+# command to run tests
 script:
-   - "whereis google-chrome-stable"
-   - "whereis chromedriver"
-   - "whereis forgot_login_all_fields_empty_test.py"
    - "pytest tests/"
 
-after_script:
-  - "sh -e /etc/init.d/xvfb stop"
 
-# Source: https://flatmap.it/2017/11/16/starting-selenium-server-inside-travis/
+# Source:
+# https://www.youtube.com/watch?v=kxEKygtd2eM
+# https://docs.travis-ci.com/user/languages/python/
+# https://www.amihaiemil.com/2017/07/14/selenium-headless-chrome-travis.html
