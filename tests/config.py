@@ -23,7 +23,14 @@ class Config:
 			'firefox': 'mozilla'
 		}[browser.lower()]
 
-		print('Run configurations -> Browser: {}\n'
+		self._print_run_config()
+
+	def _print_run_config(self):
+		"""
+		Prints run configurations
+		:return:
+		"""
+		print('\nRun configurations -> Browser: {}\n'
 		      'Run configurations -> Environment: {}\n'
 		      'Run configurations -> Is Headless: {}'.format(self.browser, self.base_url, self.is_headless))
 
