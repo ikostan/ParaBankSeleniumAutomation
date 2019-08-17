@@ -1,12 +1,14 @@
 #  Created by Egor Kostan.
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
+import os
+import platform
+
+from selenium import webdriver
 from tests.config import Config
 from utils.path_config import DriverPath
 from selenium.common.exceptions import WebDriverException
-from selenium import webdriver
-import platform
-import os
 
 
 class Driver:
@@ -36,8 +38,18 @@ class Driver:
             try:
                 if Config().is_headless:
                     chrome_options = webdriver.ChromeOptions()
+                    chrome_options.binary_location = '/usr/bin/chromium-browser'
                     chrome_options.add_argument('headless')
-                    driver = webdriver.Chrome(options=chrome_options)
+
+                    # All the arguments added for chromium to work on selenium
+                    chrome_options.add_argument("--no-sandbox")  # This make Chromium reachable
+                    chrome_options.add_argument("--no-default-browser-check")  # Overrides default choices
+                    chrome_options.add_argument("--no-first-run")
+                    chrome_options.add_argument("--disable-default-apps")
+
+                    path = '/home/travis/virtualenv/python3.6/chromedriver'
+                    driver = webdriver.Chrome(path, chrome_options=chrome_options)
+
                 else:
                     driver = webdriver.Chrome()
 
