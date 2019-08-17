@@ -39,15 +39,8 @@ class Driver:
                 if Config().is_headless:
                     chrome_options = webdriver.ChromeOptions()
                     chrome_options.add_argument('headless')
-
-                    current_platform = platform.system()
-                    if current_platform == "Linux":
-                        path = '/home/travis/virtualenv/python3.6/'
-                        driver = webdriver.Chrome(path, options=chrome_options)
-                    elif current_platform == "Windows":
-                        driver = webdriver.Chrome(options=chrome_options)
-                    else:
-                        raise Exception("ERROR: unsupported platform -> {}".format(current_platform))
+                    path = '/home/travis/virtualenv/python3.6/'
+                    driver = webdriver.Chrome(path, options=chrome_options)
                 else:
                     driver = webdriver.Chrome()
 
