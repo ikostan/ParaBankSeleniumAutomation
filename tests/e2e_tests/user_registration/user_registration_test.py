@@ -35,7 +35,6 @@ class TestUserRegistration(UserRegistrationCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.client = BaseUser(JaneDoe)
-		# cls.browser = browser_configuration()
 		cls.browser = Config().browser
 		cls.page = None
 
