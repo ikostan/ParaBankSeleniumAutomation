@@ -2,19 +2,16 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
-import unittest
-
 import pytest
-
-from expected_results.page_content.register_page_content import RegisterPageContent
+import unittest
 from tests.config import Config
 from utils.step_definition import step_definition
+
+from expected_results.page_content.register_page_content import RegisterPageContent
 
 
 class UserPersonalInfoCase(unittest.TestCase):
 
-	@pytest.mark.skipif(Config().base_url == 'https://parabank.parasoft.com',
-	                    reason="This is demo test that will have negative effect on Travis CI status")
 	def verify_first_name_error(self, expected=RegisterPageContent.FORM['first name']['error']):
 
 		# actual = self.page.first_name_error
@@ -23,8 +20,6 @@ class UserPersonalInfoCase(unittest.TestCase):
 		                actual=self.page.first_name_error,
 		                step_description='Verify First Name Error')
 
-	@pytest.mark.skipif(Config().base_url == 'https://parabank.parasoft.com',
-	                    reason="This is demo test that will have negative effect on Travis CI status")
 	def verify_last_name_error(self, expected=RegisterPageContent.FORM['last name']['error']):
 
 		# actual = self.page.last_name_error
@@ -33,8 +28,6 @@ class UserPersonalInfoCase(unittest.TestCase):
 		                actual=self.page.last_name_error,
 		                step_description='Verify Last Name Error')
 
-	@pytest.mark.skipif(Config().base_url == 'https://parabank.parasoft.com',
-	                    reason="This is demo test that will have negative effect on Travis CI status")
 	def verify_address_error(self, expected=RegisterPageContent.FORM['address']['error']):
 
 		# actual = self.page.address_error
@@ -43,8 +36,6 @@ class UserPersonalInfoCase(unittest.TestCase):
 		                actual=self.page.address_error,
 		                step_description='Verify Address Error')
 
-	@pytest.mark.skipif(Config().base_url == 'https://parabank.parasoft.com',
-	                    reason="This is demo test that will have negative effect on Travis CI status")
 	def verify_city_error(self, expected=RegisterPageContent.FORM['city']['error']):
 
 		# actual = self.page.city_error
@@ -53,8 +44,6 @@ class UserPersonalInfoCase(unittest.TestCase):
 		                actual=self.page.city_error,
 		                step_description='Verify City Error')
 
-	@pytest.mark.skipif(Config().base_url == 'https://parabank.parasoft.com',
-	                    reason="This is demo test that will have negative effect on Travis CI status")
 	def verify_state_error(self, expected=RegisterPageContent.FORM['state']['error']):
 
 		# actual = self.page.state_error
@@ -63,8 +52,6 @@ class UserPersonalInfoCase(unittest.TestCase):
 		                actual=self.page.state_error,
 		                step_description='Verify State Error')
 
-	@pytest.mark.skipif(Config().base_url == 'https://parabank.parasoft.com',
-	                    reason="This is demo test that will have negative effect on Travis CI status")
 	def verify_zip_code_error(self, expected=RegisterPageContent.FORM['zip code']['error']):
 
 		# actual = self.page.zip_code_error
@@ -73,8 +60,6 @@ class UserPersonalInfoCase(unittest.TestCase):
 		                actual=self.page.zip_code_error,
 		                step_description='Verify Zip Code Error')
 
-	@pytest.mark.skipif(Config().base_url == 'https://parabank.parasoft.com',
-	                    reason="This is demo test that will have negative effect on Travis CI status")
 	def verify_ssn_error(self, expected=RegisterPageContent.FORM['ssn']['error']):
 
 		step_definition(self,
