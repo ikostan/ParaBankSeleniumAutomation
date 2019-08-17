@@ -6,12 +6,11 @@
 class BaseUser:
 
 	def __init__(self, user_template):
-
 		self._first_name = user_template.FIRST_NAME
 		self._last_name = user_template.LAST_NAME
 
-		self.address = user_template.ADDRESS
-		self.city = user_template.CITY
+		self._address = user_template.ADDRESS
+		self._city = user_template.CITY
 		self._state = user_template.STATE
 		self._zip_code = user_template.ZIP_CODE
 		self._phone = user_template.PHONE
@@ -23,6 +22,8 @@ class BaseUser:
 
 		self._init_balance = user_template.INIT_BALANCE
 		self._min_balance = user_template.MIN_BALANCE
+
+		self._email = "{}_{}@mail.com".format(self.first_name, self.last_name)
 
 		self._print_user_data()
 
@@ -41,16 +42,18 @@ class BaseUser:
 		      'Phone #: {}\n'
 		      'SSN: {}\n'
 		      'Username: {}\n'
-		      'Password: {}\n'.format(self.first_name,
-		                              self.last_name,
-		                              self.address,
-		                              self.city,
-		                              self.state,
-		                              self.zip_code,
-		                              self.phone,
-		                              self.ssn,
-		                              self.username,
-		                              self.password))
+		      'Password: {}\n'
+		      'Email: {}\n'.format(self.first_name,
+		                           self.last_name,
+		                           self.address,
+		                           self.city,
+		                           self.state,
+		                           self.zip_code,
+		                           self.phone,
+		                           self.ssn,
+		                           self.username,
+		                           self.password,
+		                           self.email))
 
 	@property
 	def first_name(self):
@@ -222,3 +225,19 @@ class BaseUser:
 		'''
 		self._password = password
 
+	@property
+	def email(self):
+		"""
+		Returns Email value
+		:return:
+		"""
+		return self._password
+
+	@email.setter
+	def email(self, email: str):
+		"""
+		Set Email value
+		:param email:
+		:return:
+		"""
+		self._email = email
