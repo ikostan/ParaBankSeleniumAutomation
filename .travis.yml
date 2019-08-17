@@ -9,10 +9,11 @@ python:
 addons:
   chrome: stable
 
-before_script:
+before_install:
   - wget https://chromedriver.storage.googleapis.com/2.43/chromedriver_linux64.zip
-  - unzip chromedriver_linux64.zip -d home/travis/virtualenv/python3.6/
-  - export CHROME_BIN=chromium-browser
+  - sudo unzip chromedriver_linux64.zip -d /usr/local/bin/
+  - rm chromedriver_linux64.zip
+  #- export CHROME_BIN=chromium-browser
 
 install:
     - "pip install -r requirements.txt"
