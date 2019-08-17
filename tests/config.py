@@ -8,7 +8,7 @@ class Config:
 	Environment Configuration
 	Source: https://www.udemy.com/elegant-automation-frameworks-with-python-and-pytest
 	"""
-	def __init__(self, env="localhost", browser="chrome", is_headless=True):
+	def __init__(self, env="production", browser="chrome", is_headless=True):
 
 		self.base_url = {
 			'production': 'https://parabank.parasoft.com',
