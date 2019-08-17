@@ -39,10 +39,7 @@ class Driver:
                 if Config().is_headless:
                     chrome_options = webdriver.ChromeOptions()
                     chrome_options.add_argument('headless')
-                    path = '/home/travis/virtualenv/python3.6/'
-                    driver = webdriver.Chrome(path, options=chrome_options)
-                else:
-                    driver = webdriver.Chrome()
+                    driver = webdriver.Chrome(options=chrome_options)
 
             except WebDriverException as e:
                 if self._is_debug:
