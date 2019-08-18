@@ -6,7 +6,6 @@ import time
 import allure
 
 from utils.open_web_browser import open_web_browser
-
 from page_object_models.register_page_model import RegisterPageModel
 from expected_results.page_content.register_page_content import RegisterPageContent
 
@@ -23,12 +22,10 @@ def register_user(user):
 
 	page_model = RegisterPageModel
 	page_context = RegisterPageContent
-	browser = 'chrome'
 
 	print("\nUser registration procedure...")
 	print("\n1. Open web browser...")
-	page = open_web_browser(browser=browser,
-	                        page_model=page_model,
+	page = open_web_browser(page_model=page_model,
 	                        page_content=page_context)
 
 	with allure.step("Fill out Register web form"):
