@@ -6,7 +6,6 @@ import allure
 
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
-from tests.config import Config
 
 from page_object_models.about_page_model import AboutPageModel
 from expected_results.page_content.about_page_content import AboutPageContent
@@ -25,12 +24,9 @@ class TestAboutBasePageContent(BaseContentCase):
 	@classmethod
 	def setUpClass(cls):
 		with allure.step("Open web browser"):
-			# cls.browser = browser_configuration()
-			cls.app_config = Config()
 			cls.page_model = AboutPageModel
 			cls.page_content = AboutPageContent
-			cls.page = open_web_browser(browser=cls.app_config.browser,
-			                            page_model=cls.page_model,
+			cls.page = open_web_browser(page_model=cls.page_model,
 			                            page_content=cls.page_content)
 
 	@classmethod
@@ -39,30 +35,6 @@ class TestAboutBasePageContent(BaseContentCase):
 			if cls.page:
 				cls.page.quit()
 				cls.page = None
-
-	'''
-	def test_page_url(self):
-		allure.dynamic.description("""
-		Content base elements validation > About page URL:
-			1. Open About web page
-			2. Do URL verification
-		""")
-		allure.dynamic.title("Web page URL test")
-
-		# Verify Web Page URL
-		self.verify_page_url()
-
-	def test_page_title(self):
-		allure.dynamic.description("""
-		Content base elements validation > About page URL:
-			1. Open About web page
-			2. Do Title verification
-		""")
-		allure.dynamic.title("Web page title test")
-
-		# Verify Web Page Title
-		self.verify_page_title()
-	'''
 
 	# Base Page Content
 	def test_parabank_admin_logo(self):
