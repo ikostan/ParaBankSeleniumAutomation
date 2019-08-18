@@ -9,7 +9,6 @@ from utils.open_web_browser import open_web_browser
 from utils.clean_database import clean_database
 from utils.register_user import register_user
 from utils.step_definition import step_definition
-from tests.config import Config
 
 from expected_results.users.base_user import BaseUser
 from expected_results.users.valid_users_templates.john_doe import JohnDoe
@@ -33,7 +32,6 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.client = BaseUser(JohnDoe)
-		cls.browser = Config().browser
 		cls.page = None
 		cls.page_model = ForgotLoginInfoPageModel
 		cls.page_context = ForgotLoginInfoPageContent
@@ -53,10 +51,9 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 		with allure.step("Initial data setup > register test user"):
 			register_user(self.client)
 
-		with allure.step("Initial data setup: {}, {}".format(self.browser, ForgotLoginInfoPageContent.URL)):
+		with allure.step("Initial data setup: {}".format(ForgotLoginInfoPageContent.URL)):
 			with allure.step("Open web browser"):
-				self.page = open_web_browser(browser=self.browser,
-				                             page_model=self.page_model,
+				self.page = open_web_browser(page_model=self.page_model,
 				                             page_content=self.page_context)
 
 	def tearDown(self):
