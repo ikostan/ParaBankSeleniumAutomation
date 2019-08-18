@@ -10,20 +10,32 @@ class Config:
 	"""
 	def __init__(self, env="production", browser="chrome", is_headless=True):
 
-		self.base_url = {
+		self._base_url = {
 			'production': 'https://parabank.parasoft.com',
 			'localhost': 'http://localhost:8080',
 		}[env.lower()]
 
-		self.is_headless = is_headless
+		self._is_headless = is_headless
 
-		self.browser = {
+		self._browser = {
 			'chrome': 'chrome',
 			'edge': 'edge',
 			'firefox': 'mozilla'
 		}[browser.lower()]
 
 		self._print_run_config()
+
+	@property
+	def browser(self):
+		return self._browser
+
+	@property
+	def base_url(self):
+		return self._base_url
+
+	@property
+	def is_headless(self):
+		return self._is_headless
 
 	def _print_run_config(self):
 		"""
