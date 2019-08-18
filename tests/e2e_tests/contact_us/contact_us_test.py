@@ -5,7 +5,6 @@
 import allure
 import unittest
 
-from tests.config import Config
 from utils.screenshot import screenshot_on_fail
 from utils.step_definition import step_definition
 from utils.open_web_browser import open_web_browser
@@ -29,17 +28,14 @@ class TestCustomerCareCase(unittest.TestCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.client = BaseUser(JohnDoe)
-		cls.browser = Config().browser
 		cls.page = None
 		cls.page_model = ContactPageModel
 		cls.page_content = ContactPageContent
 		cls.message = "Hello there. This is test message. Thanks"
 
-		with allure.step("Initial data setup: {}, {}".format(cls.browser,
-		                                                     ContactPageContent.URL)):
+		with allure.step("Initial data setup: {}".format(ContactPageContent.URL)):
 			with allure.step("Open web browser"):
-				cls.page = open_web_browser(browser=cls.browser,
-				                            page_model=cls.page_model,
+				cls.page = open_web_browser(page_model=cls.page_model,
 				                            page_content=cls.page_content)
 
 	@classmethod
