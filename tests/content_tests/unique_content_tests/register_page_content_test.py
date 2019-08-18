@@ -4,14 +4,13 @@
 
 import allure
 
-from tests.config import Config
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
+from utils.step_definition import step_definition
 
 from page_object_models.register_page_model import RegisterPageModel
 from expected_results.page_content.register_page_content import RegisterPageContent
 from tests.content_tests.base_cases.base_personal_info_content_case import BasePersonalInfoContentCase
-from utils.step_definition import step_definition
 
 
 @allure.epic('Page Content')
@@ -26,12 +25,9 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 	@classmethod
 	def setUpClass(cls):
 		with allure.step("Open web browser"):
-			# cls.browser = browser_configuration()
-			cls.app_config = Config()
 			cls.page_model = RegisterPageModel
 			cls.page_content = RegisterPageContent
-			cls.page = open_web_browser(browser=cls.app_config.browser,
-			                            page_model=cls.page_model,
+			cls.page = open_web_browser(page_model=cls.page_model,
 			                            page_content=cls.page_content)
 
 	@classmethod
