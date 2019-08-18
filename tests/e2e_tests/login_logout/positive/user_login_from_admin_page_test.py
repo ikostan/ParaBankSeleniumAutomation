@@ -5,7 +5,6 @@
 import allure
 import unittest
 
-from tests.config import Config
 from utils.register_user import register_user
 from utils.clean_database import clean_database
 from utils.screenshot import screenshot_on_fail
@@ -32,7 +31,6 @@ class TestUserLoginFromAdminPage(unittest.TestCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.user = BaseUser(JaneDoe)
-		cls.browser = Config().browser
 		cls.page_model = AdminPageModel
 		cls.page_context = AdminPageContent
 
@@ -43,8 +41,7 @@ class TestUserLoginFromAdminPage(unittest.TestCase):
 			register_user(cls.user)
 
 		with allure.step("Open web browser"):
-			cls.page = open_web_browser(browser=cls.browser,
-			                            page_model=cls.page_model,
+			cls.page = open_web_browser(page_model=cls.page_model,
 			                            page_content=cls.page_context)
 
 	@classmethod
