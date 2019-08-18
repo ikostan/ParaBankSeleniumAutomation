@@ -31,8 +31,6 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.user = BaseUser(JaneDoe)
-		# cls.browser = browser_configuration()
-		cls.browser = Config().browser
 		cls.page_model = HomePageModel
 		cls.page_context = HomePageContent
 
@@ -43,8 +41,7 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 			register_user(cls.user)
 
 		with allure.step("Open web browser"):
-			cls.page = open_web_browser(browser=cls.browser,
-			                            page_model=cls.page_model,
+			cls.page = open_web_browser(page_model=cls.page_model,
 			                            page_content=cls.page_context)
 
 	@classmethod
