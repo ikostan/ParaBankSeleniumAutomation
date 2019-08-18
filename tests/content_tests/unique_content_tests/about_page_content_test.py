@@ -5,7 +5,6 @@
 import allure
 import unittest
 
-from tests.config import Config
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.step_definition import step_definition
@@ -29,11 +28,9 @@ class TestAboutPageContent(unittest.TestCase):
 	@classmethod
 	def setUpClass(cls):
 		with allure.step("Open web browser"):
-			cls.app_config = Config()
 			cls.page_model = AboutPageModel
 			cls.page_content = AboutPageContent
-			cls.page = open_web_browser(browser=cls.app_config.browser,
-			                            page_model=cls.page_model,
+			cls.page = open_web_browser(page_model=cls.page_model,
 			                            page_content=cls.page_content)
 
 	@classmethod
