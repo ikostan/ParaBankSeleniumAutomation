@@ -20,14 +20,10 @@ class Driver:
         'edge': DriverPath.EDGE_WEB_DRIVER_PATH
     }
 
-    def __init__(self, browser: str, is_debug=False):
+    def __init__(self, is_debug=False):
+        self._config = Config()
         self._is_debug = is_debug
-        if browser not in self._driver_path.keys():
-            raise NameError("\nInvalid browser name: {}."
-                            "\nOnly following browsers supported: {}\n".format(browser,
-                                                                             ', '.join([key for key in self._driver_path.keys()])))
-
-        self._browser = browser
+        self._browser = self._config.browser
         self._driver = self._set_driver()
 
     def _set_driver(self):
@@ -36,7 +32,7 @@ class Driver:
 
         if self._browser == 'chrome':
             try:
-                if Config().is_headless:
+                if self._config.is_headless:
                     chrome_options = webdriver.ChromeOptions()
                     chrome_options.add_argument('headless')
                     driver = webdriver.Chrome(options=chrome_options)
