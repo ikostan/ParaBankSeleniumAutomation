@@ -4,7 +4,6 @@
 
 import allure
 
-from tests.config import Config
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 
@@ -25,11 +24,9 @@ class TestHomeBasePageContent(BaseContentCase):
 	@classmethod
 	def setUpClass(cls):
 		with allure.step("Open web browser"):
-			cls.app_config = Config()
 			cls.page_model = HomePageModel
 			cls.page_content = HomePageContent
-			cls.page = open_web_browser(browser=cls.app_config.browser,
-			                            page_model=cls.page_model,
+			cls.page = open_web_browser(page_model=cls.page_model,
 			                            page_content=cls.page_content)
 
 	@classmethod
@@ -38,32 +35,6 @@ class TestHomeBasePageContent(BaseContentCase):
 			if cls.page:
 				cls.page.quit()
 				cls.page = None
-
-	'''
-	def test_page_url(self):
-
-		allure.dynamic.description("""
-		Content base elements validation > Home page URL:
-			1. Open Home web page
-			2. Do URL verification
-		""")
-		allure.dynamic.title("Web page URL test")
-		allure.dynamic.severity(allure.severity_level.BLOCKER)
-
-		# test url
-		self.verify_page_url()
-
-	def test_page_title(self):
-		allure.dynamic.description("""
-		Content base elements validation > Home page title:
-			1. Open Home web page
-			2. Do web page title verification
-		""")
-		allure.dynamic.title("Web page title test")
-
-		# Verify Page Title
-		self.verify_page_title()
-	'''
 
 	# Base Page Content
 	@allure.feature("Base Page")
