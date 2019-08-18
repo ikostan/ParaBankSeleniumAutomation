@@ -7,6 +7,7 @@ import pytest
 
 from tests.config import Config
 from utils.screenshot import screenshot_on_fail
+from utils.step_definition import step_definition
 from utils.open_web_browser import open_web_browser
 
 from expected_results.users.base_user import BaseUser
@@ -15,7 +16,6 @@ from expected_results.users.invalid_users_templates.invalid_data import InvalidD
 from page_object_models.register_page_model import RegisterPageModel
 from tests.e2e_tests.base_case.user_registration_case import UserRegistrationCase
 from expected_results.page_content.register_page_content import RegisterPageContent
-from utils.step_definition import step_definition
 
 
 @allure.epic('Page Functionality')
@@ -32,7 +32,6 @@ class TestUserRegistrationInvalidData(UserRegistrationCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.client = BaseUser(InvalidData)
-		cls.browser = Config().browser
 		cls.page = None
 
 	@classmethod
@@ -43,12 +42,11 @@ class TestUserRegistrationInvalidData(UserRegistrationCase):
 				cls.page = None
 
 	def setUp(self):
-		with allure.step("Initial data setup: {}, {}".format(self.browser, RegisterPageContent.URL)):
+		with allure.step("Initial data setup: {}".format(RegisterPageContent.URL)):
 			self.page_model = RegisterPageModel
 			self.page_context = RegisterPageContent
 			with allure.step("Open web browser"):
-				self.page = open_web_browser(browser=self.browser,
-				                             page_model=self.page_model,
+				self.page = open_web_browser(page_model=self.page_model,
 				                             page_content=self.page_context)
 
 	def tearDown(self):
@@ -113,4 +111,3 @@ class TestUserRegistrationInvalidData(UserRegistrationCase):
 		self.verify_zip_code_error()
 
 		self.verify_ssn_error()
-
