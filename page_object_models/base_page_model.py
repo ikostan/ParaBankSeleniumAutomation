@@ -576,7 +576,7 @@ class BasePageModel:
 		atr = element.element_value
 		return atr
 
-	def hit_login_button(self, ErrorPageModel=None):
+	def hit_login_button(self):
 		"""
 		1. Click on Log In button
 		2. Wait until URL changes
