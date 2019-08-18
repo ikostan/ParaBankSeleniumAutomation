@@ -2,11 +2,16 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
-from tests.config import Config
 from pytest import fixture
 
 
 def pytest_addoption(parser):
+	"""
+	Pass different values to a test function, depending on command line options
+	Source: https://docs.pytest.org/en/latest/example/simple.html
+	:param parser:
+	:return:
+	"""
 
 	parser.addoption('--env',
 	                 action="store",
@@ -15,6 +20,10 @@ def pytest_addoption(parser):
 	parser.addoption('--browser',
 	                 action="store",
 	                 help="Web browser name")
+
+	parser.addoption('--is_headless',
+	                 action="store",
+	                 help="Headless browser run without a UI")
 
 
 @fixture(scope='session')
@@ -28,7 +37,6 @@ def browser(request):
 
 
 @fixture(scope='session')
-def app_config():
-	cfg = Config(env, browser)
-	return cfg
+def is_headless(request):
+	return request.config.getoption("--is_headless")
 
