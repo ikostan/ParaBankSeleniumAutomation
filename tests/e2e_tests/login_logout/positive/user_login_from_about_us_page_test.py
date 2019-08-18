@@ -5,7 +5,6 @@
 import allure
 import unittest
 
-from expected_results.page_content.home_page_content import HomePageContent
 from tests.config import Config
 from utils.register_user import register_user
 from utils.clean_database import clean_database
@@ -13,11 +12,12 @@ from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.step_definition import step_definition
 
-from page_object_models.about_page_model import AboutPageModel
 from expected_results.users.base_user import BaseUser
+from page_object_models.about_page_model import AboutPageModel
 from expected_results.users.valid_users_templates.jane_doe import JaneDoe
 from expected_results.page_content.about_page_content import AboutPageContent
 from expected_results.page_content.bank_account_content import BankAccountContent
+from expected_results.page_content.home_page_content import HomePageContent
 
 
 @allure.epic('Page Functionality')
@@ -43,8 +43,7 @@ class TestUserLoginFromAboutUsPage(unittest.TestCase):
 			register_user(cls.user)
 
 		with allure.step("Open web browser"):
-			cls.page = open_web_browser(browser=cls.browser,
-			                            page_model=cls.page_model,
+			cls.page = open_web_browser(page_model=cls.page_model,
 			                            page_content=cls.page_context)
 
 	@classmethod
