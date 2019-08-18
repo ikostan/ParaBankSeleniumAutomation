@@ -22,14 +22,13 @@ from expected_results.page_content.about_page_content import AboutPageContent
 @allure.story('About Content')
 @screenshot_on_fail()
 class TestAboutPageContent(unittest.TestCase):
-	'''
+	"""
 	Test unique "About" web page content
-	'''
+	"""
 
 	@classmethod
 	def setUpClass(cls):
 		with allure.step("Open web browser"):
-			# cls.browser = browser_configuration()
 			cls.app_config = Config()
 			cls.page_model = AboutPageModel
 			cls.page_content = AboutPageContent
@@ -60,11 +59,6 @@ class TestAboutPageContent(unittest.TestCase):
 		                actual=self.page.url,
 		                act=None,
 		                click=False)
-		'''
-		with allure.step("About Web Page URL test"):
-			self.assertEqual(AboutPageContent.URL,
-			                 self.page.url())
-		'''
 
 	def test_page_title(self):
 		allure.dynamic.description("""
@@ -82,11 +76,6 @@ class TestAboutPageContent(unittest.TestCase):
 		                actual=self.page.title,
 		                act=None,
 		                click=False)
-		'''
-		with allure.step("About Web Page Title test"):
-			self.assertEqual(AboutPageContent.TITLE,
-			                 self.page.title())
-		'''
 
 	def test_description_title_text(self):
 		allure.dynamic.description("""
@@ -104,10 +93,6 @@ class TestAboutPageContent(unittest.TestCase):
 		                actual=self.page.description_title,
 		                act=None,
 		                click=False)
-		'''
-		with allure.step("Description header test"):
-			self.assertEqual(AboutPageContent.DESCRIPTION['title'], self.page.description_title)
-		'''
 
 	def test_description_text(self):
 		allure.dynamic.description("""
@@ -118,7 +103,7 @@ class TestAboutPageContent(unittest.TestCase):
 		allure.dynamic.title("Web page description test")
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
-		# verify description text
+		# Verify description text
 		# Context About page elements validation:
 		step_definition(self,
 		                step_description="Description text (first paragraph) test",
@@ -126,10 +111,6 @@ class TestAboutPageContent(unittest.TestCase):
 		                actual=self.page.description_first_line,
 		                act=None,
 		                click=False)
-		'''
-		with allure.step("Description text (first paragraph) test"):
-			self.assertEqual(AboutPageContent.DESCRIPTION['text'][0], self.page.description_first_line)
-		'''
 
 		step_definition(self,
 		                step_description="Description text (second paragraph) test",
@@ -137,10 +118,6 @@ class TestAboutPageContent(unittest.TestCase):
 		                actual=self.page.description_second_line,
 		                act=None,
 		                click=False)
-		'''
-		with allure.step("Description text (second paragraph) test"):
-			self.assertEqual(AboutPageContent.DESCRIPTION['text'][1], self.page.description_second_line)
-		'''
 
 		step_definition(self,
 		                step_description="Description text (third paragraph) test",
@@ -148,10 +125,6 @@ class TestAboutPageContent(unittest.TestCase):
 		                actual=self.page.description_third_line,
 		                act=None,
 		                click=False)
-		'''
-		with allure.step("Description text (third paragraph) test"):
-			self.assertEqual(AboutPageContent.DESCRIPTION['text'][2], self.page.description_third_line)
-		'''
 
 		step_definition(self,
 		                step_description="Description text (fourth paragraph) test",
@@ -159,7 +132,4 @@ class TestAboutPageContent(unittest.TestCase):
 		                actual=self.page.description_link,
 		                act=None,
 		                click=False)
-		'''
-		with allure.step("Description text (fourth paragraph) test"):
-			self.assertEqual(AboutPageContent.LINK, self.page.description_link)
-		'''
+
