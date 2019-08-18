@@ -2,11 +2,8 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
-import pytest
 import unittest
-from tests.config import Config
 from utils.step_definition import step_definition
-
 from expected_results.page_content.register_page_content import RegisterPageContent
 
 
