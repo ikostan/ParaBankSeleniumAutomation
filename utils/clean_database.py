@@ -19,11 +19,9 @@ def clean_database():
 
 	page_model = AdminPageModel
 	page_context = AdminPageContent
-	browser = 'chrome'
 
 	print("Open web browser")
-	page = open_web_browser(browser=browser,
-	                        page_model=page_model,
+	page = open_web_browser(page_model=page_model,
 	                        page_content=page_context)
 
 	with allure.step("Press 'CLEAN' button"):
