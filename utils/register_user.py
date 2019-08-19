@@ -10,7 +10,7 @@ from page_object_models.register_page_model import RegisterPageModel
 from expected_results.page_content.register_page_content import RegisterPageContent
 
 
-def register_user(user):
+def register_user(user, config):
 	'''
 	Registers a new user.
 	Does not check for any errors.
@@ -25,7 +25,8 @@ def register_user(user):
 
 	print("\nUser registration procedure...")
 	print("\n1. Open web browser...")
-	page = open_web_browser(page_model=page_model,
+	page = open_web_browser(config=config,
+	                        page_model=page_model,
 	                        page_content=page_context)
 
 	with allure.step("Fill out Register web form"):
