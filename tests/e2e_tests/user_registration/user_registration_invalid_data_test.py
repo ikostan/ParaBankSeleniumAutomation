@@ -6,6 +6,8 @@ import allure
 import pytest
 
 from tests.config import Config
+from utils.clean_database import clean_database
+from utils.get_args_from_cli import get_args
 from utils.screenshot import screenshot_on_fail
 from utils.step_definition import step_definition
 from utils.open_web_browser import open_web_browser
@@ -24,7 +26,7 @@ from expected_results.page_content.register_page_content import RegisterPageCont
 @allure.sub_suite('Negative Tests')
 @allure.feature("Register Page")
 @allure.story('Register Functionality')
-@pytest.mark.skipif(Config().base_url == 'https://parabank.parasoft.com',
+@pytest.mark.skipif(get_args()['env'] == 'production',
                     reason="This is demo test that will have negative effect on Travis CI status")
 @screenshot_on_fail()
 class TestUserRegistrationInvalidData(UserRegistrationCase):
@@ -33,6 +35,10 @@ class TestUserRegistrationInvalidData(UserRegistrationCase):
 	def setUpClass(cls):
 		cls.client = BaseUser(InvalidData)
 		cls.page = None
+		cls.config = Config()
+
+		with allure.step("Initial data setup > clean DB"):
+			clean_database(cls.config)
 
 	@classmethod
 	def tearDownClass(cls):
@@ -46,7 +52,8 @@ class TestUserRegistrationInvalidData(UserRegistrationCase):
 			self.page_model = RegisterPageModel
 			self.page_context = RegisterPageContent
 			with allure.step("Open web browser"):
-				self.page = open_web_browser(page_model=self.page_model,
+				self.page = open_web_browser(config=self.config,
+				                             page_model=self.page_model,
 				                             page_content=self.page_context)
 
 	def tearDown(self):
@@ -89,14 +96,6 @@ class TestUserRegistrationInvalidData(UserRegistrationCase):
 		                actual=self.page.account_services_menu_is_visible,
 		                act=None,
 		                click=False)
-		'''
-		with allure.step('Verify that "Account Services" menu is not present'):
-			expected = False
-			actual = self.page.account_services_menu_is_visible
-			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is not present',
-			                                                    expected,
-			                                                    actual))
-		'''
 
 		self.verify_first_name_error()
 
