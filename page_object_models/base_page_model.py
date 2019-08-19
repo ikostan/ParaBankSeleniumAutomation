@@ -4,6 +4,7 @@
 
 from expected_results.page_content.login_page_content import LoginPageContent
 from expected_results.page_content.overview_page_content import OverviewPageContent
+from tests.config import Config
 from utils.driver import Driver
 from element_object_models.element import Element
 
@@ -22,9 +23,11 @@ class BasePageModel:
 	By following this technique a layer of separation between the test code and technical implementation is created.
 	'''
 
-	_url = BasePageContent.URL
+	# _url = BasePageContent.URL
 
-	def __init__(self, driver: Driver, implicit_wait_time=5, explicit_wait_time=10):
+	def __init__(self, config: Config, driver: Driver, implicit_wait_time, explicit_wait_time):
+		self._config = config
+		self._url = config.base_url + BasePageContent.URL
 		self._driver = self._set_driver(driver)
 		self._set_implicit_wait(implicit_wait_time)
 		self._explicit_wait_time = self._set_explicit_wait(explicit_wait_time)
@@ -589,15 +592,17 @@ class BasePageModel:
 		element.press_button()
 		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
 
-		if self.url() == OverviewPageContent.URL:
+		if self.url() == self._config.base_url + OverviewPageContent.URL:
 			from page_object_models.overview_page_model import OverviewPageModel
-			return OverviewPageModel(driver=self.driver,
+			return OverviewPageModel(config=self._config,
+			                         driver=self.driver,
 			                         implicit_wait_time=5,
 			                         explicit_wait_time=10)
 
-		if self.url() == LoginPageContent.URL:
+		if self.url() == self._config.base_url + LoginPageContent.URL:
 			from page_object_models.login_page_model import LoginPageModel
-			return LoginPageModel(driver=self.driver,
+			return LoginPageModel(config=self._config,
+			                      driver=self.driver,
 			                      implicit_wait_time=5,
 			                      explicit_wait_time=10)
 
@@ -982,6 +987,7 @@ class BasePageModel:
 		element.press_button()
 		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
 		from page_object_models.home_page_model import HomePageModel
-		return HomePageModel(driver=self.driver,
+		return HomePageModel(config=self._config,
+		                     driver=self.driver,
 		                     implicit_wait_time=5,
 		                     explicit_wait_time=10)
