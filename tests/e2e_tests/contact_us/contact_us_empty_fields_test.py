@@ -5,6 +5,7 @@
 import allure
 import unittest
 
+from tests.config import Config
 from utils.screenshot import screenshot_on_fail
 from utils.step_definition import step_definition
 from utils.open_web_browser import open_web_browser
@@ -32,10 +33,12 @@ class TestCustomerCareEmptyFieldsCase(unittest.TestCase):
 		cls.page_model = ContactPageModel
 		cls.page_content = ContactPageContent
 		cls.message = ""
+		cls.config = Config()
 
-		with allure.step("Initial data setup: {}".format(ContactPageContent.URL)):
+		with allure.step("Initial data setup: {}".format(cls.config.base_url + ContactPageContent.URL)):
 			with allure.step("Open web browser"):
-				cls.page = open_web_browser(page_model=cls.page_model,
+				cls.page = open_web_browser(config=cls.config,
+				                            page_model=cls.page_model,
 				                            page_content=cls.page_content)
 
 	@classmethod
@@ -147,7 +150,7 @@ class TestCustomerCareEmptyFieldsCase(unittest.TestCase):
 
 		# Verify Page URL
 		step_definition(self,
-		                expected=ContactPageContent.URL,
+		                expected=self.config.base_url + ContactPageContent.URL,
 		                actual=self.page.url,
 		                act=None,
 		                step_description='Verify web page URL',
