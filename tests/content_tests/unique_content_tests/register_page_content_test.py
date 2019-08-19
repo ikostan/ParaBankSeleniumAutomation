@@ -4,6 +4,7 @@
 
 import allure
 
+from tests.config import Config
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.step_definition import step_definition
@@ -27,7 +28,9 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		with allure.step("Open web browser"):
 			cls.page_model = RegisterPageModel
 			cls.page_content = RegisterPageContent
-			cls.page = open_web_browser(page_model=cls.page_model,
+			cls.config = Config()
+			cls.page = open_web_browser(config=cls.config,
+			                            page_model=cls.page_model,
 			                            page_content=cls.page_content)
 
 	@classmethod
@@ -50,7 +53,7 @@ class TestRegisterPageContent(BasePersonalInfoContentCase):
 		# Verify web page url
 		step_definition(self,
 		                step_description='Verify "Register" web page URL',
-		                expected=RegisterPageContent.URL,
+		                expected=self.config.base_url + RegisterPageContent.URL,
 		                actual=self.page.url,
 		                act=None,
 		                click=False)
