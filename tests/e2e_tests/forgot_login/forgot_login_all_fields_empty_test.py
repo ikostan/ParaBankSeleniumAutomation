@@ -4,6 +4,7 @@
 
 import allure
 
+from tests.config import Config
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 
@@ -28,6 +29,7 @@ class TestForgotLoginAllFieldsEmpty(UserPersonalInfoCase):
 	def setUpClass(cls):
 		cls.client = BaseUser(EmptyFields)
 		cls.page = None
+		cls.config = Config()
 
 	@classmethod
 	def tearDownClass(cls):
@@ -41,7 +43,8 @@ class TestForgotLoginAllFieldsEmpty(UserPersonalInfoCase):
 			self.page_model = ForgotLoginInfoPageModel
 			self.page_context = ForgotLoginInfoPageContent
 			with allure.step("Open web browser"):
-				self.page = open_web_browser(page_model=self.page_model,
+				self.page = open_web_browser(config=self.config,
+				                             page_model=self.page_model,
 				                             page_content=self.page_context)
 
 	def tearDown(self):
