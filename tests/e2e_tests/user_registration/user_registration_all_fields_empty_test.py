@@ -32,6 +32,7 @@ class TestUserRegistrationAllFieldsEmpty(UserRegistrationCase):
 		cls.client = BaseUser(EmptyFields)
 		cls.browser = Config().browser
 		cls.page = None
+		cls.config = Config()
 
 	@classmethod
 	def tearDownClass(cls):
@@ -45,7 +46,8 @@ class TestUserRegistrationAllFieldsEmpty(UserRegistrationCase):
 			self.page_model = RegisterPageModel
 			self.page_context = RegisterPageContent
 			with allure.step("Open web browser"):
-				self.page = open_web_browser(page_model=self.page_model,
+				self.page = open_web_browser(config=self.config,
+				                             page_model=self.page_model,
 				                             page_content=self.page_context)
 
 	def tearDown(self):
