@@ -1,12 +1,15 @@
 #  Created by Egor Kostan.
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+
 from selenium.common.exceptions import NoSuchElementException
 
 from element_object_models.element import Element
 from page_object_models.base_personal_info_page_model import BasePersonalInfoPageModel
 from page_locators.forgot_login_info_page_locator import ForgotLoginInfoPageLocator
 from expected_results.page_content.forgot_login_info_page_content import ForgotLoginInfoPageContent
+from tests.config import Config
+from utils.driver import Driver
 
 
 class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
@@ -15,7 +18,11 @@ class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
 	By following this technique a layer of separation between the test code and technical implementation is created.
 	'''
 
-	_url = ForgotLoginInfoPageContent.URL
+	#_url = ForgotLoginInfoPageContent.URL
+
+	def __init__(self, config: Config, driver: Driver, implicit_wait_time, explicit_wait_time):
+		super().__init__(config, driver, implicit_wait_time, explicit_wait_time)
+		self._url = config.base_url + ForgotLoginInfoPageContent.URL
 
 	# @property
 	def find_info_btn_label(self):
@@ -36,7 +43,8 @@ class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
 
 		element = Element(self.driver, self.explicit_wait_time, ForgotLoginInfoPageLocator.FIND_MY_LOGIN_INFO_BUTTON)
 		element.press_button()
-		return ForgotLoginInfoPageModel(driver=self.driver,
+		return ForgotLoginInfoPageModel(config=self._config,
+		                                driver=self.driver,
 		                                implicit_wait_time=5,
 		                                explicit_wait_time=5)
 
