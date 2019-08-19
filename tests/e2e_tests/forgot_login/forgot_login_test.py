@@ -81,7 +81,7 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 		self.fill_out_user_data()
 
 		with allure.step('Hit "FIND MY LOGIN INFO" button'):
-			print('Hit "Register" button')
+			print('Hit "FIND MY LOGIN INFO" button')
 			self.page = self.page.click_find_info_btn()
 
 		# Verify "Username/Password" data
