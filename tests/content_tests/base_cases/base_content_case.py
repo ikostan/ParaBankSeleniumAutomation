@@ -43,7 +43,7 @@ class BaseContentCase(unittest.TestCase):
 		'''
 
 		step_definition(self,
-		                expected=BasePageContent.LEFT_MENU_ITEMS['About Us']['href'],
+		                expected=self.config.base_url + BasePageContent.LEFT_MENU_ITEMS['About Us']['href'],
 		                actual=self.page.about_us_menu_item_formated_href,
 		                step_description="Test 'Solutions' menu > 'About Us': href")
 
@@ -61,7 +61,7 @@ class BaseContentCase(unittest.TestCase):
 		'''
 
 		step_definition(self,
-		                expected=BasePageContent.LEFT_MENU_ITEMS['Services']['href'],
+		                expected=self.config.base_url + BasePageContent.LEFT_MENU_ITEMS['Services']['href'],
 		                actual=self.page.services_us_menu_item_formated_href,
 		                step_description="Test 'Solutions' menu > 'Services': href")
 
@@ -115,7 +115,7 @@ class BaseContentCase(unittest.TestCase):
 		'''
 
 		step_definition(self,
-		                expected=BasePageContent.LEFT_MENU_ITEMS['Admin Page']['href'],
+		                expected=self.config.base_url + BasePageContent.LEFT_MENU_ITEMS['Admin Page']['href'],
 		                actual=self.page.admin_page_menu_item_formated_href,
 		                step_description="Test 'Solutions' menu > 'Admin Page': href")
 
@@ -136,7 +136,7 @@ class BaseContentCase(unittest.TestCase):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		step_definition(self,
-		                expected=BasePageContent.MENU_BUTTONS['home']['href'],
+		                expected=self.config.base_url + BasePageContent.MENU_BUTTONS['home']['href'],
 		                actual=self.page.home_button_formated_href,
 		                act=None,
 		                step_description='Do "Home" button verification > verify button href')
@@ -163,7 +163,7 @@ class BaseContentCase(unittest.TestCase):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		step_definition(self,
-		                expected=BasePageContent.MENU_BUTTONS['about']['href'],
+		                expected=self.config.base_url + BasePageContent.MENU_BUTTONS['about']['href'],
 		                actual=self.page.about_button_formated_href,
 		                act=None,
 		                step_description='Do "About" button verification > verify button href')
@@ -190,7 +190,7 @@ class BaseContentCase(unittest.TestCase):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		step_definition(self,
-		                expected=BasePageContent.MENU_BUTTONS['contact']['href'],
+		                expected=self.config.base_url + BasePageContent.MENU_BUTTONS['contact']['href'],
 		                actual=self.page.contact_button_formated_href,
 		                act=None,
 		                step_description='Do "Contact" button verification > verify button href')
@@ -228,7 +228,7 @@ class BaseContentCase(unittest.TestCase):
 		'''
 
 		step_definition(self,
-		                expected=BasePageContent.PARA_BANK_LOGO['href'],
+		                expected=self.config.base_url + BasePageContent.PARA_BANK_LOGO['href'],
 		                actual=self.page.para_bank_logo_formated_href,
 		                act=None,
 		                step_description="Test 'ParaBank' logo > href")
@@ -250,7 +250,7 @@ class BaseContentCase(unittest.TestCase):
 		'''
 
 		step_definition(self,
-		                expected=BasePageContent.PARA_BANK_LOGO['src'],
+		                expected=self.config.base_url + BasePageContent.PARA_BANK_LOGO['src'],
 		                actual=self.page.para_bank_logo_formated_img_src,
 		                act=None,
 		                step_description="Test 'ParaBank' logo > src")
@@ -286,7 +286,7 @@ class BaseContentCase(unittest.TestCase):
 		allure.dynamic.severity(allure.severity_level.MINOR)
 
 		step_definition(self,
-		                expected=BasePageContent.ADMIN_LOGO['href'],
+		                expected=self.config.base_url + BasePageContent.ADMIN_LOGO['href'],
 		                actual=self.page.admin_logo_formated_href,
 		                act=None,
 		                step_description="Test 'Admin' logo > href")
@@ -308,7 +308,7 @@ class BaseContentCase(unittest.TestCase):
 		'''
 
 		step_definition(self,
-		                expected=BasePageContent.ADMIN_LOGO['src'],
+		                expected=self.config.base_url + BasePageContent.ADMIN_LOGO['src'],
 		                actual=self.page.admin_logo_formated_img_src,
 		                act=None,
 		                step_description="Test 'Admin' logo > src")
@@ -459,7 +459,7 @@ class BaseContentCase(unittest.TestCase):
 
 		# Forgot Login
 		step_definition(self,
-		                expected=BasePageContent.FORGOT_LOGIN['href'],
+		                expected=self.config.base_url + BasePageContent.FORGOT_LOGIN['href'],
 		                actual=self.page.forgot_login_formated_href,
 		                act=None,
 		                step_description="Test 'Customer Login' > Forgot Login > href")
@@ -482,7 +482,7 @@ class BaseContentCase(unittest.TestCase):
 
 		# Register
 		step_definition(self,
-		                expected=BasePageContent.REGISTER['href'],
+		                expected=self.config.base_url + BasePageContent.REGISTER['href'],
 		                actual=self.page.register_formated_href,
 		                act=None,
 		                step_description="Test 'Customer Login' > Register > href")
@@ -509,7 +509,7 @@ class BaseContentCase(unittest.TestCase):
 
 		# 'Home' > href
 		step_definition(self,
-		                expected=BasePageContent.FOOTER['footer menu']['home']['href'],
+		                expected=self.config.base_url + BasePageContent.FOOTER['footer menu']['home']['href'],
 		                actual=self.page.footer_home_formated_href,
 		                act=None,
 		                step_description="Test 'Footer' items > 'Home' > href")
@@ -540,7 +540,7 @@ class BaseContentCase(unittest.TestCase):
 
 		# About Us
 		step_definition(self,
-		                expected=BasePageContent.FOOTER['footer menu']['about us']['href'],
+		                expected=self.config.base_url + BasePageContent.FOOTER['footer menu']['about us']['href'],
 		                actual=self.page.footer_about_us_formated_href,
 		                act=None,
 		                step_description="Test 'Footer' items > 'About Us' > href")
@@ -566,7 +566,7 @@ class BaseContentCase(unittest.TestCase):
 
 		# Services
 		step_definition(self,
-		                expected=BasePageContent.FOOTER['footer menu']['services']['href'],
+		                expected=self.config.base_url + BasePageContent.FOOTER['footer menu']['services']['href'],
 		                actual=self.page.footer_services_formated_href,
 		                act=None,
 		                step_description="Test 'Footer' items > 'Services' > href")
@@ -670,7 +670,7 @@ class BaseContentCase(unittest.TestCase):
 
 		# Site Map
 		step_definition(self,
-		                expected=BasePageContent.FOOTER['footer menu']['site map']['href'],
+		                expected=self.config.base_url + BasePageContent.FOOTER['footer menu']['site map']['href'],
 		                actual=self.page.footer_site_map_formated_href,
 		                act=None,
 		                step_description="Test 'Footer' items > 'Site Map' > href")
@@ -696,7 +696,7 @@ class BaseContentCase(unittest.TestCase):
 
 		# Contact Us
 		step_definition(self,
-		                expected=BasePageContent.FOOTER['footer menu']['contact us']['href'],
+		                expected=self.config.base_url + BasePageContent.FOOTER['footer menu']['contact us']['href'],
 		                actual=self.page.footer_contact_us_formated_href,
 		                act=None,
 		                step_description="Test 'Footer' items > 'Contact Us' > href")
