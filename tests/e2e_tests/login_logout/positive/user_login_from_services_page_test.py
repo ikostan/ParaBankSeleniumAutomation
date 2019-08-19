@@ -32,18 +32,20 @@ class TestUserLoginFromServicesPage(unittest.TestCase):
 	@classmethod
 	def setUpClass(cls):
 		cls.user = BaseUser(JaneDoe)
-		cls.browser = Config().browser
+		cls.config = Config()
 		cls.page_model = ServicesPageModel
 		cls.page_context = ServicesPageContent
 
 		with allure.step("Initial data setup > clean DB"):
-			clean_database()
+			clean_database(config=cls.config)
 
 		with allure.step("Initial data setup > register test user"):
-			register_user(cls.user)
+			register_user(user=cls.user,
+			              config=cls.config)
 
 		with allure.step("Open web browser"):
-			cls.page = open_web_browser(page_model=cls.page_model,
+			cls.page = open_web_browser(config=cls.config,
+			                            page_model=cls.page_model,
 			                            page_content=cls.page_context)
 
 	@classmethod
@@ -113,7 +115,7 @@ class TestUserLoginFromServicesPage(unittest.TestCase):
 		# Post Logout validation
 		step_definition(self,
 		                step_description='Do URL verification',
-		                expected=HomePageContent.URL,
+		                expected=self.config.base_url + HomePageContent.URL,
 		                actual=self.page.url,
 		                act=None,
 		                click=False)
