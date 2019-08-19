@@ -8,6 +8,8 @@ from element_object_models.element import Element
 from page_locators.register_page_locator import RegisterPageLocator
 from expected_results.page_content.register_page_content import RegisterPageContent
 from page_object_models.base_personal_info_page_model import BasePersonalInfoPageModel
+from tests.config import Config
+from utils.driver import Driver
 
 
 class RegisterPageModel(BasePersonalInfoPageModel):
@@ -16,7 +18,9 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 	By following this technique a layer of separation between the test code and technical implementation is created.
 	'''
 
-	_url = RegisterPageContent.URL
+	def __init__(self, config: Config, driver: Driver, implicit_wait_time, explicit_wait_time):
+		super().__init__(config, driver, implicit_wait_time, explicit_wait_time)
+		self._url = config.base_url + RegisterPageContent.URL
 
 	# @property
 	def username_title(self):
@@ -203,7 +207,8 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 
 		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.REGISTER_BUTTON)
 		element.press_button()
-		return RegisterPageModel(driver=self.driver,
+		return RegisterPageModel(config=self._config,
+		                         driver=self.driver,
 		                         implicit_wait_time=5,
 		                         explicit_wait_time=10)
 
