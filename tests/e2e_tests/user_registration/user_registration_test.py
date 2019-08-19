@@ -7,6 +7,7 @@ import allure
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from utils.step_definition import step_definition
 from utils.screenshot import screenshot_on_fail
 from utils.clean_database import clean_database
 from utils.open_web_browser import open_web_browser
@@ -19,7 +20,6 @@ from page_locators.register_page_locator import RegisterPageLocator
 from page_object_models.register_page_model import RegisterPageModel
 from tests.e2e_tests.base_case.user_registration_case import UserRegistrationCase
 from expected_results.page_content.register_page_content import RegisterPageContent
-from utils.step_definition import step_definition
 
 
 @allure.epic('Page Functionality')
@@ -78,14 +78,6 @@ class TestUserRegistration(UserRegistrationCase):
 		# Register a new user:
 		self.fill_out_user_data()
 
-		'''
-		step_definition(self,
-		                expected=True,
-		                actual=True,
-		                act=self.page.hit_register_btn,
-		                step_description='Hit "Register" button',
-		                click=True)
-		'''
 		with allure.step('Hit "Register" button'):
 			print('Hit "Register" button')
 			self.page = self.page.hit_register_btn()
@@ -101,18 +93,6 @@ class TestUserRegistration(UserRegistrationCase):
 		                act=None,
 		                step_description='Verify "Welcome" header',
 		                click=False)
-		'''
-		with allure.step('Verify "Welcome" header'):
-			expected = RegisterPageContent.WELCOME_MESSAGE['header'] + self.client.username
-			actual = self.page.welcome_header()
-			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify "Welcome" header\'',
-			                                                    expected,
-			                                                    actual))
-			self.assertEqual(expected,
-			                 actual,
-			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
-			                                                                                    actual))
-		'''
 
 		step_definition(self,
 		                expected=RegisterPageContent.WELCOME_MESSAGE['message'],
@@ -120,18 +100,6 @@ class TestUserRegistration(UserRegistrationCase):
 		                act=None,
 		                step_description='Verify "Welcome" message',
 		                click=False)
-		'''
-		with allure.step('Verify "Welcome" message'):
-			expected = RegisterPageContent.WELCOME_MESSAGE['message']
-			actual = self.page.welcome_message()
-			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify "Welcome" header\'',
-			                                                    expected,
-			                                                    actual))
-			self.assertEqual(expected,
-			                 actual,
-			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
-			                                                                                    actual))
-		'''
 
 		step_definition(self,
 		                expected=True,
@@ -139,28 +107,10 @@ class TestUserRegistration(UserRegistrationCase):
 		                act=None,
 		                step_description='Verify that "Account Services" menu is present',
 		                click=False)
-		'''
-		with allure.step('Verify that "Account Services" menu is present'):
-			expected = True
-			actual = self.page.account_services_menu_is_visible()
-			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is present',
-			                                                    expected,
-			                                                    actual))
-			self.assertEqual(expected,
-			                 actual,
-			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
-			                                                                                    actual))
-		'''
 
 		# Logout
 		with allure.step('Hit "Log Out" link'):
 			self.page = self.page.hit_log_out_button()
-		'''
-		with allure.step('Hit "Log Out" link'):
-			print('Hit "Log Out" link')
-			self.page.hit_log_out_button()
-			WebDriverWait(self.page.driver, self.page.explicit_wait_time).until(EC.url_contains('index.htm'))
-		'''
 
 		# Post Logout validation
 		step_definition(self,
@@ -169,18 +119,6 @@ class TestUserRegistration(UserRegistrationCase):
 		                act=None,
 		                step_description='Verify URL',
 		                click=False)
-		'''
-		with allure.step('Verify URL'):
-			expected = HomePageContent.URL
-			actual = self.page.url()
-			print('\nStep: {}\nExpected: {}\nActual: {}'.format('\'Verify URL\'',
-			                                                    expected,
-			                                                    actual))
-			self.assertEqual(expected,
-			                 actual,
-			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
-			                                                                                    actual))
-		'''
 
 		step_definition(self,
 		                expected=False,
@@ -188,17 +126,6 @@ class TestUserRegistration(UserRegistrationCase):
 		                act=None,
 		                step_description='Verify that "Account Services" menu is not present',
 		                click=False)
-		'''
-		with allure.step('Verify that "Account Services" menu is not present'):
-			expected = False
-			actual = self.page.account_services_menu_is_visible()
-			print('\nStep: {}\nExpected: {}\nActual: {}'.format('"Account Services" menu is not present',
-			                                                    expected,
-			                                                    actual))
-			self.assertEqual(expected,
-			                 actual,
-			                 msg="Expected <{}> value does not equal actual <{}> result".format(expected,
-			                                                                                    actual))
-		'''
+
 
 
