@@ -5,6 +5,7 @@
 import allure
 import unittest
 
+from tests.config import Config
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.step_definition import step_definition
@@ -27,7 +28,9 @@ class TestHomePageContent(unittest.TestCase):
 		with allure.step("Open web browser"):
 			cls.page_model = HomePageModel
 			cls.page_content = HomePageContent
-			cls.page = open_web_browser(page_model=cls.page_model,
+			cls.config = Config()
+			cls.page = open_web_browser(config=cls.config,
+			                            page_model=cls.page_model,
 			                            page_content=cls.page_content)
 
 	@classmethod
@@ -50,7 +53,7 @@ class TestHomePageContent(unittest.TestCase):
 		# test url
 		step_definition(self,
 		                step_description="Verify web page URL",
-		                expected=HomePageContent.URL,
+		                expected=self.config.base_url + HomePageContent.URL,
 		                actual=self.page.url,
 		                act=None,
 		                click=False)
@@ -122,7 +125,7 @@ class TestHomePageContent(unittest.TestCase):
 
 		step_definition(self,
 		                step_description="Verify ATM services > Withdraw Funds > href",
-		                expected=HomePageContent.ATM_SERVICES['Withdraw Funds']['href'],
+		                expected=self.config.base_url + HomePageContent.ATM_SERVICES['Withdraw Funds']['href'],
 		                actual=self.page.atm_withdraw_funds_formated_href,
 		                act=None,
 		                click=False)
@@ -148,7 +151,7 @@ class TestHomePageContent(unittest.TestCase):
 
 		step_definition(self,
 		                step_description="Verify ATM services > Check Balances > href",
-		                expected=HomePageContent.ATM_SERVICES['Check Balances']['href'],
+		                expected=self.config.base_url + HomePageContent.ATM_SERVICES['Check Balances']['href'],
 		                actual=self.page.atm_check_balances_formated_href,
 		                act=None,
 		                click=False)
@@ -174,7 +177,7 @@ class TestHomePageContent(unittest.TestCase):
 
 		step_definition(self,
 		                step_description="Verify ATM services > Make Deposits > href",
-		                expected=HomePageContent.ATM_SERVICES['Make Deposits']['href'],
+		                expected=self.config.base_url + HomePageContent.ATM_SERVICES['Make Deposits']['href'],
 		                actual=self.page.atm_make_deposits_formated_href,
 		                act=None,
 		                click=False)
@@ -223,7 +226,7 @@ class TestHomePageContent(unittest.TestCase):
 
 		step_definition(self,
 		                step_description="Verify Bill Pay href",
-		                expected=HomePageContent.ONLINE_SERVICES['Bill Pay']['href'],
+		                expected=self.config.base_url + HomePageContent.ONLINE_SERVICES['Bill Pay']['href'],
 		                actual=self.page.bill_pay_formated_href,
 		                act=None,
 		                click=False)
@@ -249,7 +252,7 @@ class TestHomePageContent(unittest.TestCase):
 
 		step_definition(self,
 		                step_description="Verify Account History href",
-		                expected=HomePageContent.ONLINE_SERVICES['Account History']['href'],
+		                expected=self.config.base_url + HomePageContent.ONLINE_SERVICES['Account History']['href'],
 		                actual=self.page.account_history_formated_href,
 		                act=None,
 		                click=False)
@@ -275,7 +278,7 @@ class TestHomePageContent(unittest.TestCase):
 
 		step_definition(self,
 		                step_description="Verify Transfer Funds href",
-		                expected=HomePageContent.ONLINE_SERVICES['Transfer Funds']['href'],
+		                expected=self.config.base_url + HomePageContent.ONLINE_SERVICES['Transfer Funds']['href'],
 		                actual=self.page.online_transfer_funds_formated_href,
 		                act=None,
 		                click=False)
@@ -311,7 +314,7 @@ class TestHomePageContent(unittest.TestCase):
 
 		step_definition(self,
 		                step_description="Verify Read More Services href",
-		                expected=HomePageContent.READ_MORE_SERVICES['href'],
+		                expected=self.config.base_url + HomePageContent.READ_MORE_SERVICES['href'],
 		                actual=self.page.read_more_services_formated_href,
 		                act=None,
 		                click=False)
@@ -350,7 +353,7 @@ class TestHomePageContent(unittest.TestCase):
 
 			step_definition(self,
 			                step_description="Verify Read More News href",
-			                expected=HomePageContent.READ_MORE_NEWS['href'],
+			                expected=self.config.base_url + HomePageContent.READ_MORE_NEWS['href'],
 			                actual=self.page.read_more_news_formated_href,
 			                act=None,
 			                click=False)
