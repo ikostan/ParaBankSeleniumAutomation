@@ -4,6 +4,7 @@
 
 import allure
 
+from tests.config import Config
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.clean_database import clean_database
@@ -35,6 +36,7 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 		cls.page = None
 		cls.page_model = ForgotLoginInfoPageModel
 		cls.page_context = ForgotLoginInfoPageContent
+		cls.config = Config()
 
 	@classmethod
 	def tearDownClass(cls):
@@ -46,14 +48,15 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 	def setUp(self):
 
 		with allure.step("Initial data setup > clean DB"):
-			clean_database()
+			clean_database(self.config)
 
 		with allure.step("Initial data setup > register test user"):
-			register_user(self.client)
+			register_user(user=self.client, config=self.config)
 
-		with allure.step("Initial data setup: {}".format(ForgotLoginInfoPageContent.URL)):
+		with allure.step("Initial data setup: {}".format(self.config.base_url + ForgotLoginInfoPageContent.URL)):
 			with allure.step("Open web browser"):
-				self.page = open_web_browser(page_model=self.page_model,
+				self.page = open_web_browser(config=self.config,
+				                             page_model=self.page_model,
 				                             page_content=self.page_context)
 
 	def tearDown(self):
@@ -143,7 +146,7 @@ class TestForgotLoginCase(UserPersonalInfoCase):
 
 		# Log Out > Post Logout validation
 		step_definition(self,
-		                expected=HomePageContent.URL,
+		                expected=self.config.base_url + HomePageContent.URL,
 		                actual=self.page.url,
 		                act=None,
 		                step_description='Do URL verification',
