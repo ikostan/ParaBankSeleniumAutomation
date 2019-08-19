@@ -1,6 +1,7 @@
 #  Created by Egor Kostan.
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
+from utils.get_args_from_cli import get_args
 
 
 class Config:
@@ -8,20 +9,22 @@ class Config:
 	Environment Configuration
 	Source: https://www.udemy.com/elegant-automation-frameworks-with-python-and-pytest
 	"""
-	def __init__(self, env="production", browser="chrome", is_headless=True):
+	def __init__(self):
+
+		params = get_args()
 
 		self._base_url = {
 			'production': 'https://parabank.parasoft.com',
 			'localhost': 'http://localhost:8080',
-		}[env.lower()]
+		}[params['env'].lower()]
 
-		self._is_headless = is_headless
+		self._is_headless = params['is_headless']
 
 		self._browser = {
 			'chrome': 'chrome',
 			'edge': 'edge',
 			'firefox': 'mozilla'
-		}[browser.lower()]
+		}[params['browser'].lower()]
 
 		self._print_run_config()
 
