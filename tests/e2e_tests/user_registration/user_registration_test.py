@@ -2,11 +2,13 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
+import sys
 import allure
 
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from tests.config import Config
 from utils.step_definition import step_definition
 from utils.screenshot import screenshot_on_fail
 from utils.clean_database import clean_database
@@ -33,11 +35,13 @@ class TestUserRegistration(UserRegistrationCase):
 
 	@classmethod
 	def setUpClass(cls):
+
+		cls.config = Config()
 		cls.client = BaseUser(JaneDoe)
 		cls.page = None
 
 		with allure.step("Initial data setup > clean DB"):
-			clean_database()
+			clean_database(cls.config)
 
 	@classmethod
 	def tearDownClass(cls):
@@ -49,29 +53,31 @@ class TestUserRegistration(UserRegistrationCase):
 	def setUp(self):
 		with allure.step("Initial data setup: {}".format(RegisterPageContent.URL)):
 			self.page_model = RegisterPageModel
-			self.page_context = RegisterPageContent
+			self.page_content = RegisterPageContent
 			with allure.step("Open web browser"):
-				self.page = open_web_browser(page_model=self.page_model,
-				                             page_content=self.page_context)
+				self.page = open_web_browser(config=self.config,
+				                             page_model=self.page_model,
+				                             page_content=self.page_content)
 
 	def tearDown(self):
 		with allure.step("Close current tab"):
 			if self.page:
-				self.page.close()
+				self.page.quit()
+				self.page = None
 
 	def test_user_registration(self):
 		allure.dynamic.description("""
-		User registration test case:
-			1. Open 'Register' web page
-			2. Fill out user personal data
-			4. Verify that each data item appears in relevant field
-			5. Hit 'Register' button
-			6. Verify 'Welcome' message
-			7. Verify that "Account Services" menu is present
-			8. Log Out
-			9. Verify that "Account Services" menu is not present
-			10. Close web browser
-		""")
+        User registration test case:
+            1. Open 'Register' web page
+            2. Fill out user personal data
+            4. Verify that each data item appears in relevant field
+            5. Hit 'Register' button
+            6. Verify 'Welcome' message
+            7. Verify that "Account Services" menu is present
+            8. Log Out
+            9. Verify that "Account Services" menu is not present
+            10. Close web browser
+        """)
 		allure.dynamic.title("User registration > Positive test")
 		allure.dynamic.severity(allure.severity_level.CRITICAL)
 
@@ -114,7 +120,7 @@ class TestUserRegistration(UserRegistrationCase):
 
 		# Post Logout validation
 		step_definition(self,
-		                expected=HomePageContent.URL,
+		                expected=self.config.base_url + HomePageContent.URL,
 		                actual=self.page.url,
 		                act=None,
 		                step_description='Verify URL',
@@ -126,6 +132,3 @@ class TestUserRegistration(UserRegistrationCase):
 		                act=None,
 		                step_description='Verify that "Account Services" menu is not present',
 		                click=False)
-
-
-
