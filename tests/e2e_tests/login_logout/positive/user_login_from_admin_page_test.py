@@ -89,6 +89,7 @@ class TestUserLoginFromAdminPage(unittest.TestCase):
 		                click=False)
 
 		with allure.step('Hit Log In button'):
+			print('Hit Log In button...')
 			self.page = self.page.hit_login_button()
 
 		step_definition(self,
