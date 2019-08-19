@@ -4,6 +4,7 @@
 
 import allure
 
+from tests.config import Config
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 
@@ -26,7 +27,9 @@ class TestServicesBasePageContent(BaseContentCase):
 		with allure.step("Open web browser"):
 			cls.page_model = ServicesPageModel
 			cls.page_content = ServicesPageContent
-			cls.page = open_web_browser(page_model=cls.page_model,
+			cls.config = Config()
+			cls.page = open_web_browser(config=cls.config,
+			                            page_model=cls.page_model,
 			                            page_content=cls.page_content)
 
 	@classmethod
@@ -34,32 +37,6 @@ class TestServicesBasePageContent(BaseContentCase):
 		with allure.step("Close web browser"):
 			cls.page.quit()
 			cls.page = None
-
-	'''
-	def test_page_url(self):
-
-		allure.dynamic.description("""
-		Content base elements validation > Home page URL:
-			1. Open Services web page
-			2. Do URL verification
-		""")
-		allure.dynamic.title("Web page URL test")
-		allure.dynamic.severity(allure.severity_level.BLOCKER)
-
-		# test url
-		self.verify_page_url()
-
-	def test_page_title(self):
-		allure.dynamic.description("""
-		Content base elements validation > Home page title:
-			1. Open Services web page
-			2. Do web page title verification
-		""")
-		allure.dynamic.title("Web page title test")
-
-		# Verify Page Title
-		self.verify_page_title()
-	'''
 
 	# Base Page Content
 	@allure.feature("Base Page")
