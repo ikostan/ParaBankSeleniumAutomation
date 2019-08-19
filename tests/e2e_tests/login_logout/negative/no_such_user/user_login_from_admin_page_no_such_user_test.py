@@ -2,10 +2,6 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
-#  Created by Egor Kostan.
-#  GitHub: https://github.com/ikostan
-#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
-
 import allure
 import unittest
 
@@ -36,12 +32,14 @@ class TestUserLoginFromAdminPageNoSuchUserError(unittest.TestCase):
 		cls.user = BaseUser(EmptyFields)
 		cls.page_model = AdminPageModel
 		cls.page_context = AdminPageContent
+		cls.config = Config()
 
 		with allure.step("Initial data setup > clean DB"):
-			clean_database()
+			clean_database(cls.config)
 
 		with allure.step("Open web browser"):
-			cls.page = open_web_browser(page_model=cls.page_model,
+			cls.page = open_web_browser(config=cls.config,
+			                            page_model=cls.page_model,
 			                            page_content=cls.page_context)
 
 	@classmethod
@@ -112,7 +110,7 @@ class TestUserLoginFromAdminPageNoSuchUserError(unittest.TestCase):
 		# URL validation
 		step_definition(self,
 		                step_description='Do URL verification',
-		                expected=LoginPageContent.URL,
+		                expected=self.config.base_url + LoginPageContent.URL,
 		                actual=self.page.url,
 		                act=None,
 		                click=False)
