@@ -5,6 +5,7 @@
 import allure
 import unittest
 
+from tests.config import Config
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.step_definition import step_definition
@@ -30,7 +31,9 @@ class TestAboutPageContent(unittest.TestCase):
 		with allure.step("Open web browser"):
 			cls.page_model = AboutPageModel
 			cls.page_content = AboutPageContent
-			cls.page = open_web_browser(page_model=cls.page_model,
+			cls.config = Config()
+			cls.page = open_web_browser(config=cls.config,
+			                            page_model=cls.page_model,
 			                            page_content=cls.page_content)
 
 	@classmethod
@@ -52,7 +55,7 @@ class TestAboutPageContent(unittest.TestCase):
 		# Verify Web Page URL
 		step_definition(self,
 		                step_description="About Web Page URL test",
-		                expected=AboutPageContent.URL,
+		                expected=self.config.base_url + AboutPageContent.URL,
 		                actual=self.page.url,
 		                act=None,
 		                click=False)
