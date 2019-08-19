@@ -5,6 +5,7 @@
 import allure
 import unittest
 
+from tests.config import Config
 from utils.clean_database import clean_database
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
@@ -31,12 +32,14 @@ class TestUserLoginFromServicesPageEmptyFieldsError(unittest.TestCase):
 		cls.user = BaseUser(NoSuchUser)
 		cls.page_model = ServicesPageModel
 		cls.page_content = ServicesPageContent
+		cls.config = Config()
 
 		with allure.step("Initial data setup > clean DB"):
-			clean_database()
+			clean_database(cls.config)
 
 		with allure.step("Open web browser"):
-			cls.page = open_web_browser(page_model=cls.page_model,
+			cls.page = open_web_browser(config=cls.config,
+			                            page_model=cls.page_model,
 			                            page_content=cls.page_content)
 
 	@classmethod
@@ -107,7 +110,7 @@ class TestUserLoginFromServicesPageEmptyFieldsError(unittest.TestCase):
 		# URL validation
 		step_definition(self,
 		                step_description='Do URL verification',
-		                expected=LoginPageContent.URL,
+		                expected=self.config.base_url + LoginPageContent.URL,
 		                actual=self.page.url,
 		                act=None,
 		                click=False)
