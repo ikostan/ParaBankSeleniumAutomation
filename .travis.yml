@@ -20,7 +20,7 @@ install:
 script:
    - "whereis google-chrome-stable"
    - "whereis chromedriver"
-   - "pytest -v tests/"
+   - "pytest tests/"
 
 # Source:
 # https://www.youtube.com/watch?v=kxEKygtd2eM
