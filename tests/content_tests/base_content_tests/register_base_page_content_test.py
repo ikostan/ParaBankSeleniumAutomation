@@ -4,6 +4,7 @@
 
 import allure
 
+from tests.config import Config
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 
@@ -26,7 +27,9 @@ class TestRegisterBasePageContent(BaseContentCase):
 		with allure.step("Open web browser"):
 			cls.page_model = RegisterPageModel
 			cls.page_content = RegisterPageContent
-			cls.page = open_web_browser(page_model=cls.page_model,
+			cls.config = Config()
+			cls.page = open_web_browser(config=cls.config,
+			                            page_model=cls.page_model,
 			                            page_content=cls.page_content)
 
 	@classmethod
