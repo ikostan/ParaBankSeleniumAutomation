@@ -33,15 +33,17 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 		cls.user = BaseUser(JaneDoe)
 		cls.page_model = HomePageModel
 		cls.page_context = HomePageContent
+		cls.config = Config()
 
 		with allure.step("Initial data setup > clean DB"):
-			clean_database()
+			clean_database(config=cls.config)
 
 		with allure.step("Initial data setup > register test user"):
-			register_user(cls.user)
+			register_user(user=cls.user, config=cls.config)
 
 		with allure.step("Open web browser"):
-			cls.page = open_web_browser(page_model=cls.page_model,
+			cls.page = open_web_browser(config=cls.config,
+			                            page_model=cls.page_model,
 			                            page_content=cls.page_context)
 
 	@classmethod
@@ -70,12 +72,6 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 				""")
 		allure.dynamic.title("Home page > User Log In validation > Positive test")
 		allure.dynamic.severity(allure.severity_level.BLOCKER)
-
-		# test url
-		# self.verify_page_url()
-
-		# Verify Page Title
-		# self.verify_page_title()
 
 		step_definition(self,
 		                step_description='Type Username > Verify Username value',
@@ -177,7 +173,7 @@ class TestUserLoginFromHomePage(unittest.TestCase):
 		# Post Logout validation
 		step_definition(self,
 		                step_description='Do URL verification',
-		                expected=HomePageContent.URL,
+		                expected= self.config.base_url + HomePageContent.URL,
 		                actual=self.page.url,
 		                act=None,
 		                click=False)
