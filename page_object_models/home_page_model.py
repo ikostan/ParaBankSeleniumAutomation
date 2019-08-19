@@ -2,6 +2,9 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
+from tests.config import Config
+from utils.driver import Driver
+
 from element_object_models.element import Element
 
 from page_locators.home_page_locator import HomePageLocator
@@ -16,7 +19,11 @@ class HomePageModel(BasePageModel):
 	By following this technique a layer of separation between the test code and technical implementation is created.
 	'''
 
-	_url = HomePageContent.URL
+	#_url = HomePageContent.URL
+
+	def __init__(self, config: Config, driver: Driver, implicit_wait_time, explicit_wait_time):
+		super().__init__(config, driver, implicit_wait_time, explicit_wait_time)
+		self._url = config.base_url + HomePageContent.URL
 
 	'''
 	def hit_login_button(self):
