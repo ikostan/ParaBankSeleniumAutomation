@@ -6,6 +6,8 @@ import os
 import platform
 
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+
 from tests.config import Config
 from utils.path_config import DriverPath
 from selenium.common.exceptions import WebDriverException
@@ -21,7 +23,6 @@ class Driver:
     }
 
     def __init__(self, config: Config, is_debug=False):
-        # self._config = Config()
         self._config = config
         self._is_debug = is_debug
         self._browser = self._config.browser
@@ -53,7 +54,13 @@ class Driver:
 
         if self._browser == 'mozilla':
             try:
-                driver = webdriver.Firefox()
+                if self._config.is_headless:
+                    # Set the MOZ_HEADLESS environment variable which casues Firefox to start in headless mode.
+                    # Source: https://intoli.com/blog/running-selenium-with-headless-firefox/
+                    os.environ['MOZ_HEADLESS'] = '1'
+                    driver = webdriver.Firefox()
+                else:
+                    driver = webdriver.Firefox()
 
             except WebDriverException as e:
                 if self._is_debug:
