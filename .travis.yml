@@ -8,7 +8,7 @@ python:
 # Installing web browsers for e2e tests
 addons:
   chrome: stable
-  firefox: latest 
+  firefox: latest
 
 os:
   - linux
