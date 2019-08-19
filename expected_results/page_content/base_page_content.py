@@ -12,7 +12,8 @@ class BasePageContent:
 
 	# ROOT_URL = 'https://parabank.parasoft.com'
 	# URL = ROOT_URL +'/parabank/'
-	URL = Config().base_url + '/parabank/'
+	#URL = Config().base_url + '/parabank/'
+	URL = '/parabank/'
 
 	TITLE = 'ParaBank | '
 
