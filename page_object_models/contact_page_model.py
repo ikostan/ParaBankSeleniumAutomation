@@ -2,6 +2,10 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
+
+from tests.config import Config
+from utils.driver import Driver
+
 from selenium.common.exceptions import NoSuchElementException
 
 from element_object_models.element import Element
@@ -17,7 +21,10 @@ class ContactPageModel(BasePageModel):
 	test code and technical implementation is created.
 	"""
 
-	_url = ContactPageContent.URL
+	# _url = ContactPageContent.URL
+	def __init__(self, config: Config, driver: Driver, implicit_wait_time, explicit_wait_time):
+		super().__init__(config, driver, implicit_wait_time, explicit_wait_time)
+		self._url = config.base_url + ContactPageContent.URL
 
 	def send_btn_label(self):
 		"""
