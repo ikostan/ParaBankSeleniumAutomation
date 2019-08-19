@@ -3,24 +3,37 @@ language: python
 sudo: required
 
 python:
-  - "3.6"
+  - 3.6
 
-# Installing Chrome for e2e tests
+# Installing web browsers for e2e tests
 addons:
   chrome: stable
+  firefox: latest 
+
+os:
+  - linux
 
 before_install:
+  # Source:
+  # https://www.youtube.com/watch?v=kxEKygtd2eM
   - wget https://chromedriver.storage.googleapis.com/2.43/chromedriver_linux64.zip
   - sudo unzip chromedriver_linux64.zip -d /usr/local/bin/
   - rm chromedriver_linux64.zip
+  # Source:
+  # https://travis-ci.com/s0md3v/XSStrike/jobs/214772625/config
+  - wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
+  - mkdir geckodriver
+  - tar -xzf geckodriver-v0.24.0-linux64.tar.gz -C geckodriver
+  - export PATH=$PATH:$PWD/geckodriver
 
 install:
-    - "pip install -r requirements.txt"
+    - pip install -r requirements.txt
 
 script:
-   - "whereis google-chrome-stable"
-   - "whereis chromedriver"
-   - "pytest --env=production --browser=chrome --is_headless=True tests/"
+   - whereis google-chrome-stable
+   - whereis chromedriver
+   - whereis geckodriver
+   - pytest --env=production --browser=chrome --is_headless=True tests/
+   - pytest --env=production --browser=firefox --is_headless=True tests/
 
-# Source:
-# https://www.youtube.com/watch?v=kxEKygtd2eM
+
