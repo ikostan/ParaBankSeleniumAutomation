@@ -1,8 +1,0 @@
-
-Step: Do "About" button verification > verify button href
-Expected: about.htm
-Actual: about.htm
-
-Step: Do "About" button verification > verify button label
-Expected: about
-Actual: about
