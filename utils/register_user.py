@@ -64,9 +64,9 @@ def register_user(user, config):
         expected = RegisterPageContent.WELCOME_MESSAGE['message']
         actual = page.welcome_message
         if expected == actual:
-            print("Welcome message detected")
+            print("OK: Welcome message detected")
         else:
-            print("Welcome message does not appear")
+            print("ERROR: Welcome message does not appear")
 
     with allure.step("Do Log Out"):
         print("\n4. Do Log Out...")
