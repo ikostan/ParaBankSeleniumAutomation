@@ -230,7 +230,7 @@ You can also install a standalone version of WebDriver in one of two ways:<br/>
     * Install via DISM by running the following command in an elevated command prompt:
     <br/>```DISM.exe /Online /Add-Capability /CapabilityName:Microsoft.WebDriver~~~~0.0.1.0```<br/>
     
-This also means that we will no longer be providing standalone downloads for Microsoft WebDriver going forward<br/>
+This also means that MS will no longer be providing standalone downloads for Microsoft WebDriver going forward<br/>
 Source: https://blogs.windows.com/msedgedev/2018/06/14/webdriver-w3c-recommendation-feature-on-demand/#Rg8g2hRfjBQQVRXy.97
 
 </details>
