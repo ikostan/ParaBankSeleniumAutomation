@@ -2,27 +2,23 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
-#  Created by Egor Kostan.
-#  GitHub: https://github.com/ikostan
-#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
-
 
 class NoSuchUser:
 
-	FIRST_NAME = ''
-	LAST_NAME = ''
+	FIRST_NAME = 'None'
+	LAST_NAME = 'Anonymous'
 
-	ADDRESS = ''
-	CITY = ''
-	STATE = ''
-	ZIP_CODE = ''
+	ADDRESS = 'Nowhere'
+	CITY = 'Narnia'
+	STATE = 'Whoops'
+	ZIP_CODE = '000000'
 
-	PHONE = ''
+	PHONE = '000000'
 
 	USERNAME = 'noname'
 	PASSWORD = 'nopassword'
 
-	SSN = ''
+	SSN = '000000000'
 
 	INIT_BALANCE = 0.00
 	MIN_BALANCE = 0.00
