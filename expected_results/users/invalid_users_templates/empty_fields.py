@@ -2,16 +2,12 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
-#  Created by Egor Kostan.
-#  GitHub: https://github.com/ikostan
-#  LinkedIn: https://www.linkedin.com/in/egor-kostan/
-
 
 class EmptyFields:
-	'''
+	"""
 	Fake Person Generator:
 	Source: https://www.fakepersongenerator.com/random-los-angeles-address-generator
-	'''
+	"""
 
 	FIRST_NAME = ''
 	LAST_NAME = ''
