@@ -33,3 +33,7 @@ class ForgotLoginInfoPageContent(BasePageContent, BasePersonalInfoContent):
 	PASSWORD = "Password: "
 
 	SUCCESS_MESSAGE = 'Your login information was located successfully. You are now logged in.'
+
+	ERROR_TITLE = 'Error!'
+
+	ERROR_MESSAGE = 'The customer information provided could not be found.'
