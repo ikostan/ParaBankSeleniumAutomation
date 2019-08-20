@@ -2,14 +2,14 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
-from selenium.common.exceptions import NoSuchElementException
-
-from element_object_models.element import Element
-from page_object_models.base_personal_info_page_model import BasePersonalInfoPageModel
-from page_locators.forgot_login_info_page_locator import ForgotLoginInfoPageLocator
-from expected_results.page_content.forgot_login_info_page_content import ForgotLoginInfoPageContent
 from tests.config import Config
 from utils.driver import Driver
+
+from element_object_models.element import Element
+from selenium.common.exceptions import NoSuchElementException
+from page_locators.forgot_login_info_page_locator import ForgotLoginInfoPageLocator
+from page_object_models.base_personal_info_page_model import BasePersonalInfoPageModel
+from expected_results.page_content.forgot_login_info_page_content import ForgotLoginInfoPageContent
 
 
 class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
@@ -35,7 +35,7 @@ class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
 		txt = element.element_value
 		return txt
 
-	def click_find_info_btn(self):
+	def hit_find_info_btn(self):
 		'''
 		Click on "FIND MY LOGIN INFO" button
 		:return:
@@ -74,6 +74,30 @@ class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
 		'''
 		try:
 			element = Element(self.driver, self.explicit_wait_time, ForgotLoginInfoPageLocator.USERNAME_PASSWORD)
+			txt = element.text
+			return txt
+		except NoSuchElementException:
+			return None
+
+	def error_title(self):
+		"""
+		Return error title or None
+		:return:
+		"""
+		try:
+			element = Element(self.driver, self.explicit_wait_time, ForgotLoginInfoPageLocator.ERROR_TITLE)
+			txt = element.text
+			return txt
+		except NoSuchElementException:
+			return None
+
+	def error_message(self):
+		"""
+		Returns error message or None
+		:return:
+		"""
+		try:
+			element = Element(self.driver, self.explicit_wait_time, ForgotLoginInfoPageLocator.ERROR_MESSAGE)
 			txt = element.text
 			return txt
 		except NoSuchElementException:
