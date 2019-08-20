@@ -69,8 +69,8 @@ class TestForgotLoginAllFieldsEmpty(UserPersonalInfoCase):
 		self.fill_out_user_data()
 
 		with allure.step('Hit "FIND MY LOGIN INFO" button'):
-			print('Hit "Register" button')
-			self.page.click_find_info_btn()
+			print('Hit "FIND MY LOGIN INFO" button')
+			self.page.hit_find_info_btn()
 
 		self.verify_first_name_error()
 
