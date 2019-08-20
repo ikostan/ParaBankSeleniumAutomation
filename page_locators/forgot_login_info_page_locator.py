@@ -22,3 +22,7 @@ class ForgotLoginInfoPageLocator(BasePageLocator, BasePersonalInfoPageLocator):
 
 	USERNAME_PASSWORD = (By.XPATH, '//*[@id="rightPanel"]/p[2]')
 
+	ERROR_TITLE = (By.XPATH, '//*[@id="rightPanel"]/h1')
+
+	ERROR_MESSAGE = (By.XPATH, '//*[@id="rightPanel"]/p')
+
