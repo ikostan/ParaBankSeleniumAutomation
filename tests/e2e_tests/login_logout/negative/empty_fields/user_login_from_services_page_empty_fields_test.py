@@ -4,6 +4,7 @@
 
 import allure
 import unittest
+import pytest
 
 from tests.config import Config
 from utils.clean_database import clean_database
