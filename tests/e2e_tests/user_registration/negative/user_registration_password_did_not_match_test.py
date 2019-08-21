@@ -6,7 +6,6 @@ import allure
 import pytest
 
 from tests.config import Config
-from utils.get_args_from_cli import get_args
 from utils.screenshot import screenshot_on_fail
 from utils.step_definition import step_definition
 from utils.open_web_browser import open_web_browser
@@ -25,8 +24,8 @@ from expected_results.page_content.register_page_content import RegisterPageCont
 @allure.sub_suite('Negative Tests')
 @allure.feature("Register Page")
 @allure.story('Register Functionality')
-@pytest.mark.skipif(get_args()['env'] == 'production',
-                    reason="This is demo test that will have negative effect on Travis CI status")
+#@pytest.mark.skipif(get_args()['env'] == 'production',
+#                    reason="This is demo test that will have negative effect on Travis CI status")
 @screenshot_on_fail()
 class TestUserRegistrationPasswordDidNotMatch(UserRegistrationCase):
 
