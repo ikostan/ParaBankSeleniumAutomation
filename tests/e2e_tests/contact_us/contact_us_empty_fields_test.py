@@ -48,10 +48,10 @@ class TestCustomerCareEmptyFieldsCase(unittest.TestCase):
 				cls.page.quit()
 				cls.page = None
 
-	def test_user_registration(self):
+	def test_contact_us_empty_form(self):
 		allure.dynamic.description("""
 		Forgot Login Info test case:
-			1. Open 'Forgot Customer Care' web page
+			1. Open 'Customer Care' web page
 			2. Fill out user personal data > Empty Fields
 			3. Verify that each data item (empty string) appears in relevant field
 			4. Hit 'SEND TO CUSTOMER CARE' button
