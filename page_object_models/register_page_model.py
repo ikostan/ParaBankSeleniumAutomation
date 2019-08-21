@@ -2,14 +2,15 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
+from tests.config import Config
+from utils.driver import Driver
+
 from selenium.common.exceptions import NoSuchElementException
 from element_object_models.element import Element
 
 from page_locators.register_page_locator import RegisterPageLocator
 from expected_results.page_content.register_page_content import RegisterPageContent
 from page_object_models.base_personal_info_page_model import BasePersonalInfoPageModel
-from tests.config import Config
-from utils.driver import Driver
 
 
 class RegisterPageModel(BasePersonalInfoPageModel):
