@@ -4,6 +4,7 @@
 
 import allure
 import unittest
+import pytest
 
 from tests.config import Config
 from utils.get_args_from_cli import get_args
