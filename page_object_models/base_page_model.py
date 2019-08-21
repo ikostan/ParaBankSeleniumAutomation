@@ -2,8 +2,6 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
-from expected_results.page_content.login_page_content import LoginPageContent
-from expected_results.page_content.overview_page_content import OverviewPageContent
 from tests.config import Config
 from utils.driver import Driver
 from element_object_models.element import Element
@@ -15,6 +13,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from page_locators.base_page_locator import BasePageLocator
 from expected_results.page_content.base_page_content import BasePageContent
 from page_locators.account_services_menu_locator import AccountServicesMenuLocator
+from expected_results.page_content.login_page_content import LoginPageContent
+from expected_results.page_content.overview_page_content import OverviewPageContent
 
 
 class BasePageModel:
