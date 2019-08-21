@@ -21,6 +21,7 @@ class BaseUser:
 		self._ssn = user_template.SSN
 
 		self._init_balance = user_template.INIT_BALANCE
+		self._balance = user_template.INIT_BALANCE
 		self._min_balance = user_template.MIN_BALANCE
 
 		self._email = "{}_{}@mail.com".format(self.first_name, self.last_name)
@@ -241,3 +242,20 @@ class BaseUser:
 		:return:
 		"""
 		self._email = email
+
+	@property
+	def balance(self):
+		"""
+		Returns account balance
+		:return:
+		"""
+		return self._balance
+
+	@balance.setter
+	def balance(self, new_balance):
+		"""
+		Set account balance
+		:return:
+		"""
+		self._balance = new_balance
+
