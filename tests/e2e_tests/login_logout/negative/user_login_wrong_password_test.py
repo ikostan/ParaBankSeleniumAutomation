@@ -6,18 +6,18 @@ import allure
 import unittest
 
 from tests.config import Config
-from utils.clean_database import clean_database
 from utils.get_args_from_cli import get_args
 from utils.register_user import register_user
 from utils.screenshot import screenshot_on_fail
-from utils.open_web_browser import open_web_browser
+from utils.clean_database import clean_database
 from utils.step_definition import step_definition
+from utils.open_web_browser import open_web_browser
 
 from expected_results.users.base_user import BaseUser
 from page_object_models.home_page_model import HomePageModel
+from expected_results.users.valid_users_templates.john_doe import JohnDoe
 from expected_results.page_content.home_page_content import HomePageContent
 from expected_results.page_content.login_page_content import LoginPageContent
-from expected_results.users.valid_users_templates.john_doe import JohnDoe
 
 
 @allure.epic('Page Functionality')
