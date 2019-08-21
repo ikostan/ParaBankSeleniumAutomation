@@ -7,6 +7,7 @@ import unittest
 
 from tests.config import Config
 from utils.clean_database import clean_database
+from utils.get_args_from_cli import get_args
 from utils.screenshot import screenshot_on_fail
 from utils.open_web_browser import open_web_browser
 from utils.step_definition import step_definition
@@ -25,7 +26,7 @@ from expected_results.users.invalid_users_templates.no_such_user import NoSuchUs
 @allure.feature("Services Page")
 @allure.story('Login/Logout Functionality')
 @pytest.mark.skipif(get_args()['env'] == 'production',
-                   reason="This is demo test that will have negative effect on Travis CI status")
+                    reason="This is demo test that will have negative effect on Travis CI status")
 @screenshot_on_fail()
 class TestUserLoginFromServicesPageEmptyFieldsError(unittest.TestCase):
 
@@ -116,5 +117,3 @@ class TestUserLoginFromServicesPageEmptyFieldsError(unittest.TestCase):
 		                actual=self.page.url,
 		                act=None,
 		                click=False)
-
-
