@@ -57,7 +57,7 @@ class TestForgotLoginAllFieldsEmpty(UserPersonalInfoCase):
 			if self.page:
 				self.page.close()
 
-	def test_user_registration(self):
+	def test_user_registration_no_such_user(self):
 		allure.dynamic.description("""
 		Forgot Login Info test case:
 			1. Open 'Forgot Login Info' web page
@@ -76,7 +76,7 @@ class TestForgotLoginAllFieldsEmpty(UserPersonalInfoCase):
 
 		with allure.step('Hit "FIND MY LOGIN INFO" button'):
 			print('Hit "FIND MY LOGIN INFO" button')
-			self.page.hit_find_info_btn()
+			self.page = self.page.hit_find_info_btn()
 
 		step_definition(self,
 		                step_description="Verify Error title",
