@@ -88,7 +88,8 @@ class BasePersonalInfoContent:
 				'class': 'input',
 				'type': 'text'
 			},
-			'error': 'Username is required.'
+			'error': 'Username is required.',
+			'error_duplicate': "This username already exists."
 		},
 		'password': {
 			'title': 'Password:',
@@ -106,6 +107,7 @@ class BasePersonalInfoContent:
 				'class': 'input',
 				'type': 'password'
 			},
-			'error': 'Password confirmation is required.'
+			'error': 'Password confirmation is required.',
+			'no_match': 'Passwords did not match.'
 		},
 	}
