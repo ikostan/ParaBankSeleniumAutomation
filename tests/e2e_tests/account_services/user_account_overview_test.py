@@ -102,7 +102,7 @@ class TestAccountsOverviewPage(unittest.TestCase):
 		                click=False)
 
 		with allure.step("Go to \"Bill Pay\""):
-			print("Opening Bill Payment Service web page...")
+			print("\nOpening Bill Payment Service web page...")
 			self.page = self.page.hit_bill_pay()
 
 		with allure.step("Fill out Bill Payment form"):
