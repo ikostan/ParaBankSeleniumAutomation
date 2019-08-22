@@ -47,7 +47,7 @@ The main purpose is to demonstrate the professional abilities of writing browser
 - Ability to pass arguments from CLI (see [get_args_from_cli](https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/utils/get_args_from_cli.py) file)
 - Build readable test report using Allure Framework<br/>
 - Test code should avoid violating principles like [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it), [SRP](https://en.wikipedia.org/wiki/Single_responsibility_principle) and [KISS](https://en.wikipedia.org/wiki/KISS_principle).
-- Continuous Integration with [Travis CI](https://travis-ci.org/)
+- Integration with [Travis CI](https://travis-ci.org/)
 - Using real-like web app ([ParaBank Demo Web App](https://parabank.parasoft.com/parabank/index.htm)) in order to accomplish all the above<br/>
 
 ### [PARA BANK ParaSoft Demo Website](https://parabank.parasoft.com/parabank/index.htm)<br/>
