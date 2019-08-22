@@ -145,3 +145,11 @@ class BasePageLocator:
 	                                  'ul[contains(@class, "visit")]/li/'
 	                                  'a[contains(@href, "http://www.parasoft.com/")]')
 
+	# Account Services
+	BILL_PAY = (By.XPATH,
+	            '//a[contains(text(), "Bill Pay")]')
+
+	ACCOUNTS_OVERVIEW = (By.XPATH,
+	                     '//a[contains(text(), "Accounts Overview")]')
+
+
