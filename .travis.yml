@@ -33,7 +33,7 @@ script:
    - whereis google-chrome-stable
    - whereis chromedriver
    - whereis geckodriver
-   - pytest --env=production --browser=chrome --is_headless=True tests/
+   #- pytest --env=production --browser=chrome --is_headless=True tests/
    - pytest --env=production --browser=firefox --is_headless=True tests/
 
 
