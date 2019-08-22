@@ -13,3 +13,5 @@ class AccountsOverviewPageLocator(BasePageLocator):
 
 	TOTAL_VALUE = (By.XPATH, '//b[contains(text(), \'$\')]')
 
+	
+
