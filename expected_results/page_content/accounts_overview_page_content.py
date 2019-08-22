@@ -5,7 +5,7 @@
 from expected_results.page_content.base_page_content import BasePageContent
 
 
-class OverviewPageContent(BasePageContent):
+class AccountsOverviewPageContent(BasePageContent):
 
 	TITLE = BasePageContent.TITLE + 'Accounts Overview'
 
