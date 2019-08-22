@@ -11,7 +11,7 @@ class BillPayPageLocator(BasePageLocator):
 	PAYEE_NAME_TITLE = (By.XPATH, '//b[contains(text(), \'{}\')]'.
 	                    format(BillPayContent.FORM['payee name']['title']))
 	PAYEE_NAME_INPUT = (By.XPATH, '//input[@name=\'payee.name\']')
-	PAYEE_NAME_ERROR = (By.XPATH, '')
+	PAYEE_NAME_ERROR = (By.XPATH, ';-)')
 
 	ADDRESS_TITLE = (By.XPATH,
 	                 '//*[contains(text(), "{}")]'.
