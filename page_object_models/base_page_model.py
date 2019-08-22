@@ -14,7 +14,7 @@ from page_locators.base_page_locator import BasePageLocator
 from expected_results.page_content.base_page_content import BasePageContent
 from page_locators.account_services_menu_locator import AccountServicesMenuLocator
 from expected_results.page_content.login_page_content import LoginPageContent
-from expected_results.page_content.overview_page_content import OverviewPageContent
+from expected_results.page_content.accounts_overview_page_content import AccountsOverviewPageContent
 
 
 class BasePageModel:
@@ -28,9 +28,23 @@ class BasePageModel:
 	def __init__(self, config: Config, driver: Driver, implicit_wait_time, explicit_wait_time):
 		self._config = config
 		self._url = config.base_url + BasePageContent.URL
+		self._implicit_wait_time = implicit_wait_time
+		self._explicit_wait_time = explicit_wait_time
 		self._driver = self._set_driver(driver)
 		self._set_implicit_wait(implicit_wait_time)
 		self._explicit_wait_time = self._set_explicit_wait(explicit_wait_time)
+
+	@property
+	def config(self):
+		return self._config
+
+	@property
+	def implicit_wait_time(self):
+		return self._implicit_wait_time
+
+	@property
+	def explicit_wait_time(self):
+		return self._explicit_wait_time
 
 	@staticmethod
 	def _set_driver(driver):
@@ -592,16 +606,16 @@ class BasePageModel:
 		element.press_button()
 		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
 
-		if self.url() == self._config.base_url + OverviewPageContent.URL:
-			from page_object_models.overview_page_model import OverviewPageModel
-			return OverviewPageModel(config=self._config,
-			                         driver=self.driver,
-			                         implicit_wait_time=5,
-			                         explicit_wait_time=10)
+		if self.url() == self.config.base_url + AccountsOverviewPageContent.URL:
+			from page_object_models.accounts_overview_page_model import AccountsOverviewPageModel
+			return AccountsOverviewPageModel(config=self.config,
+			                                 driver=self.driver,
+			                                 implicit_wait_time=5,
+			                                 explicit_wait_time=10)
 
-		if self.url() == self._config.base_url + LoginPageContent.URL:
+		if self.url() == self.config.base_url + LoginPageContent.URL:
 			from page_object_models.login_page_model import LoginPageModel
-			return LoginPageModel(config=self._config,
+			return LoginPageModel(config=self.config,
 			                      driver=self.driver,
 			                      implicit_wait_time=5,
 			                      explicit_wait_time=10)
@@ -987,7 +1001,44 @@ class BasePageModel:
 		element.press_button()
 		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
 		from page_object_models.home_page_model import HomePageModel
-		return HomePageModel(config=self._config,
+		return HomePageModel(config=self.config,
 		                     driver=self.driver,
 		                     implicit_wait_time=5,
 		                     explicit_wait_time=10)
+
+	def hit_bill_pay(self):
+		"""
+		Press on "Bill Pay" menu item
+		Returns "Bill Payment Service" page object on success
+
+		:return:
+		"""
+		current_url = self.driver.current_url
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.BILL_PAY)
+		element.press_button()
+		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
+		from page_object_models.bill_pay_page_model import BillPayPageModel
+		return BillPayPageModel(config=self.config,
+		                        driver=self.driver,
+		                        implicit_wait_time=self.implicit_wait_time,
+		                        explicit_wait_time=10)
+
+	def hit_accounts_overview(self):
+		"""
+		Press on "Accounts Overview" menu item
+		Returns "Accounts Overview" page object on success
+
+		:return:
+
+		"""
+		current_url = self.driver.current_url
+		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ACCOUNTS_OVERVIEW)
+		element.press_button()
+		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
+		from page_object_models.accounts_overview_page_model import AccountsOverviewPageModel
+		return AccountsOverviewPageModel(config=self.config,
+		                                 driver=self.driver,
+		                                 implicit_wait_time=self.implicit_wait_time,
+		                                 explicit_wait_time=10)
+
+
