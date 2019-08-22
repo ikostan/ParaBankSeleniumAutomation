@@ -12,6 +12,3 @@ class AccountsOverviewPageLocator(BasePageLocator):
 	HEADER = (By.XPATH, '//h1[@innertext=\'{}\']'.format(AccountOverviewContent.HEADER))
 
 	TOTAL_VALUE = (By.XPATH, '//b[contains(text(), \'$\')]')
-
-	
-
