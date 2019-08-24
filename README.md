@@ -293,7 +293,7 @@ Use them, alongside the @contextmanager decorator and the magical-but-slightly-s
   <summary><b>error: RPC failed; curl 56 Recv failure: Connection was reset</b></summary>
   <br/>
   1. Open Git Bash<br/>
-  2. Run: "git config --global http.postBuffer 157286400" > Enter<br/>
+  2. Run: "git config --global http.postBuffer 157286400" 
   
   <br/>Source: https://stackoverflow.com/questions/36940425/gitlab-push-failed-error
   
