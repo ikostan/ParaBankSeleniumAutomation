@@ -174,6 +174,22 @@ virtualenv venv --python=python
 
 
 <details>
+  
+  <summary><b>Activate Virtual Environment</b></summary>
+
+  <br/>
+  In a newly created virtualenv there will be a bin/activate shell script. For Windows systems, activation scripts are provided for CMD.exe and Powershell.
+  <br/><br/>
+
+  1. Open Terminal<br/>
+  2. Run: \path\to\env\Scripts\activate 
+  
+  <br/>Source: https://pypi.org/project/virtualenv/1.8.2/
+  
+</details>
+
+
+<details>
   <summary><b>Auto generate requirements.txt</b></summary>
 
 <br/>Any application typically has a set of dependencies that are required for that application to work. The requirements file is a way to specify and install specific set of package dependencies at once.<br/>
