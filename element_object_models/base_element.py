@@ -1,3 +1,5 @@
+"""Base Element Class"""
+
 #  Created by Egor Kostan.
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
@@ -86,17 +88,17 @@ class BaseElement:
 
 		# print('\nDRIVER TYPE: {}, {}\n'.format(type(driver), driver.capabilities['browserName']))  # Debug only
 		if driver.capabilities['browserName'] == 'chrome':
-			if type(driver) != selenium.webdriver.chrome.webdriver.WebDriver:
+			if not isinstance(driver, selenium.webdriver.chrome.webdriver.WebDriver):
 				raise TypeError('\nERROR: driver must be of type "selenium.webdriver.chrome_tests.webdriver.WebDriver"\n')
 			return None
 
 		if driver.capabilities['browserName'] == 'firefox':
-			if type(driver) != selenium.webdriver.firefox.webdriver.WebDriver:
+			if not isinstance(driver, selenium.webdriver.firefox.webdriver.WebDriver):
 				raise TypeError('\nERROR: driver must be of type "selenium.webdriver.firefox.webdriver.WebDriver"\n')
 			return None
 
 		if driver.capabilities['browserName'] == 'MicrosoftEdge':
-			if type(driver) != selenium.webdriver.edge.webdriver.WebDriver:
+			if not isinstance(driver, selenium.webdriver.edge.webdriver.WebDriver):
 				raise TypeError('\nERROR: driver must be of type "selenium.webdriver.edge.webdriver.WebDriver"\n')
 			return None
 
@@ -110,6 +112,6 @@ class BaseElement:
 		:param locator:
 		:return:
 		'''
-		if type(locator) != tuple:
+		if not isinstance(locator, tuple):
 			raise TypeError('\nERROR: locator must be of type TUPLE\n')
 		return locator
