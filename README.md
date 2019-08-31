@@ -6,6 +6,10 @@
 <img width="50%" height="50%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/selenium-python-logo.png" hspace="10">
 </div>
 
+<div align="center"> 
+<img width="80%" height="80%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/ezgif.com-video-to-gif.gif" hspace="10">
+</div>
+
 ### Table of Contents:<br/>
 1. <a href="#about">About the project</a>
 2. <a href="#parabank">PARA BANK ParaSoft Demo App</a>
