@@ -43,7 +43,7 @@ class ContactPageModel(BasePageModel):
 		"""
 
 		element = Element(self.driver, self.explicit_wait_time, ContactPageLocator.SEND_BUTTON)
-		element.press_button()
+		element.click_on()
 		return None
 
 	def type_name(self, value: str):
