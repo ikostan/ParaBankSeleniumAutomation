@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/ikostan/ParaBankSeleniumAutomation.svg?branch=master)](https://travis-ci.org/ikostan/ParaBankSeleniumAutomation)
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
-# Selenium Automation for Para Bank Web App
+# Selenium (Python) Automation for Para Bank Web App
 
 <div align="center"> 
 <img width="50%" height="50%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/selenium-python-logo.png" hspace="10">
