@@ -1,13 +1,14 @@
 [![Build Status](https://travis-ci.org/ikostan/ParaBankSeleniumAutomation.svg?branch=master)](https://travis-ci.org/ikostan/ParaBankSeleniumAutomation)
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
-# Selenium (Python) Automation for Para Bank Web App
 
 <div align="center"> 
 <img width="50%" height="50%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/selenium-python-logo.png" hspace="10">
 </div>
 
+# Selenium (Python) Automation for Para Bank Web App
+
 <div align="center"> 
-<img width="80%" height="80%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/ezgif.com-video-to-gif.gif" hspace="10">
+<img width="90%" height="90%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/ezgif.com-video-to-gif.gif" hspace="10">
 </div>
 
 ### Table of Contents:<br/>
