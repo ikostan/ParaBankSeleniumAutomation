@@ -109,7 +109,7 @@ class Element(BaseElement):
 				'\nERROR: The element has no attribute "text".\n'
 				'LOCATOR: {}\n'.format(self.locator))
 
-	def press_button(self):
+	def click_on(self):
 		'''
 		Clicks on web element or returns InvalidElementStateException
 		in case the element is invisible or not clickable.
