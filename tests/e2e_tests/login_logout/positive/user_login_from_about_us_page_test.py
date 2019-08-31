@@ -4,8 +4,10 @@
 
 import allure
 import unittest
+import pytest
 
 from tests.config import Config
+from utils.get_args_from_cli import get_args
 from utils.register_user import register_user
 from utils.clean_database import clean_database
 from utils.screenshot import screenshot_on_fail
@@ -26,6 +28,8 @@ from expected_results.page_content.home_page_content import HomePageContent
 @allure.sub_suite("Positive Tests")
 @allure.feature("About Page")
 @allure.story('Login/Logout Functionality')
+@pytest.mark.skipif(get_args()['env'] == 'production',
+                    reason="This is demo test that will have negative effect on Travis CI status")
 @screenshot_on_fail()
 class TestUserLoginFromAboutUsPage(unittest.TestCase):
 
