@@ -603,7 +603,7 @@ class BasePageModel:
 		"""
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.CUSTOMER_LOGIN_BUTTON)
 		current_url = self.url()
-		element.press_button()
+		element.click_on()
 		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
 
 		if self.url() == self.config.base_url + AccountsOverviewPageContent.URL:
@@ -924,7 +924,7 @@ class BasePageModel:
 		:return:
 		'''
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.OPEN_NEW_ACCOUNT)
-		element.press_button()
+		element.click_on()
 		return None
 
 	def accounts_overview(self):
@@ -933,7 +933,7 @@ class BasePageModel:
 		:return:
 		'''
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.ACCOUNTS_OVERVIEW)
-		element.press_button()
+		element.click_on()
 		return None
 
 	def transfer_funds(self):
@@ -942,7 +942,7 @@ class BasePageModel:
 		:return:
 		'''
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.TRANSFER_FUNDS)
-		element.press_button()
+		element.click_on()
 		return None
 
 	def bill_pay(self):
@@ -951,7 +951,7 @@ class BasePageModel:
 		:return:
 		'''
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.BILL_PAY)
-		element.press_button()
+		element.click_on()
 		return None
 
 	def find_transactions(self):
@@ -960,7 +960,7 @@ class BasePageModel:
 		:return:
 		'''
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.FIND_TRANSACTIONS)
-		element.press_button()
+		element.click_on()
 		return None
 
 	def update_contact_info(self):
@@ -969,7 +969,7 @@ class BasePageModel:
 		:return:
 		'''
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.UPDATE_CONTACT_INFO)
-		element.press_button()
+		element.click_on()
 		return None
 
 	def request_loan(self):
@@ -978,7 +978,7 @@ class BasePageModel:
 		:return:
 		'''
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.REQUEST_LOAN)
-		element.press_button()
+		element.click_on()
 		return None
 
 	def hit_log_out_button(self):
@@ -998,7 +998,7 @@ class BasePageModel:
 
 		current_url = self.driver.current_url
 		element = Element(self.driver, self.explicit_wait_time, AccountServicesMenuLocator.LOG_OUT)
-		element.press_button()
+		element.click_on()
 		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
 		from page_object_models.home_page_model import HomePageModel
 		return HomePageModel(config=self.config,
@@ -1015,7 +1015,7 @@ class BasePageModel:
 		"""
 		current_url = self.driver.current_url
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.BILL_PAY)
-		element.press_button()
+		element.click_on()
 		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
 		from page_object_models.bill_pay_page_model import BillPayPageModel
 		return BillPayPageModel(config=self.config,
@@ -1033,7 +1033,7 @@ class BasePageModel:
 		"""
 		current_url = self.driver.current_url
 		element = Element(self.driver, self.explicit_wait_time, BasePageLocator.ACCOUNTS_OVERVIEW)
-		element.press_button()
+		element.click_on()
 		WebDriverWait(self.driver, self.explicit_wait_time).until(EC.url_changes(current_url))
 		from page_object_models.accounts_overview_page_model import AccountsOverviewPageModel
 		return AccountsOverviewPageModel(config=self.config,
