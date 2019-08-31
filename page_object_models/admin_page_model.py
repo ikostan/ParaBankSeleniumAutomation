@@ -2,13 +2,13 @@
 #  GitHub: https://github.com/ikostan
 #  LinkedIn: https://www.linkedin.com/in/egor-kostan/
 
+from tests.config import Config
+from utils.driver import Driver
+
 from element_object_models.element import Element
-from expected_results.page_content.base_page_content import BasePageContent
 from page_object_models.base_page_model import BasePageModel
 from page_locators.admin_page_locator import AdminPageLocator
 from expected_results.page_content.admin_page_content import AdminPageContent
-from tests.config import Config
-from utils.driver import Driver
 
 
 class AdminPageModel(BasePageModel):
@@ -27,7 +27,7 @@ class AdminPageModel(BasePageModel):
 		:return:
 		'''
 		element = Element(self.driver, self.explicit_wait_time, AdminPageLocator.INITIALIZE_BUTTON)
-		element.press_button()
+		element.click_on()
 		return None
 
 	def hit_clean_button(self):
@@ -36,5 +36,5 @@ class AdminPageModel(BasePageModel):
 		:return:
 		'''
 		element = Element(self.driver, self.explicit_wait_time, AdminPageLocator.CLEAN_BUTTON)
-		element.press_button()
+		element.click_on()
 		return None
