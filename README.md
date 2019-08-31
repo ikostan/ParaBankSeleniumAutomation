@@ -8,7 +8,7 @@
 # Selenium (Python) Automation for Para Bank Web App
 
 <div align="center"> 
-<img width="90%" height="90%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/ezgif.com-crop.gif" hspace="10">
+<img width="90%" height="90%" src="https://github.com/ikostan/ParaBankSeleniumAutomation/blob/master/images/ezgif.com-video-to-gif.gif" hspace="10">
 </div>
 
 ### Table of Contents:<br/>
