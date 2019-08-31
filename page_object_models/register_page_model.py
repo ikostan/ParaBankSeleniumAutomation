@@ -207,7 +207,7 @@ class RegisterPageModel(BasePersonalInfoPageModel):
 		'''
 
 		element = Element(self.driver, self.explicit_wait_time, RegisterPageLocator.REGISTER_BUTTON)
-		element.press_button()
+		element.click_on()
 		return RegisterPageModel(config=self._config,
 		                         driver=self.driver,
 		                         implicit_wait_time=5,
