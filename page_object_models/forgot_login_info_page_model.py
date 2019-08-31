@@ -42,7 +42,7 @@ class ForgotLoginInfoPageModel(BasePersonalInfoPageModel):
 		'''
 
 		element = Element(self.driver, self.explicit_wait_time, ForgotLoginInfoPageLocator.FIND_MY_LOGIN_INFO_BUTTON)
-		element.press_button()
+		element.click_on()
 		return ForgotLoginInfoPageModel(config=self._config,
 		                                driver=self.driver,
 		                                implicit_wait_time=5,
