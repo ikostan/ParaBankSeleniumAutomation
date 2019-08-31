@@ -345,7 +345,7 @@ class BillPayPageModel(BasePageModel):
 		element = Element(driver=self.driver,
 		                  explicit_wait_time=self.explicit_wait_time,
 		                  locator=BillPayPageLocator.SEND_PAYMENT_BUTTON)
-		element.press_button()
+		element.click_on()
 		return None
 
 	def bill_payment_complete_title(self):
