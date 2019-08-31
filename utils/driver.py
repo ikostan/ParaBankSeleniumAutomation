@@ -6,7 +6,6 @@ import os
 import platform
 
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
 
 from tests.config import Config
 from utils.path_config import DriverPath
