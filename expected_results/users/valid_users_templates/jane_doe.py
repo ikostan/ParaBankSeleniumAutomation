@@ -43,6 +43,6 @@ class JaneDoe:
 	'''
 	SSN = '563-04-0995'
 
-	INIT_BALANCE = 515.50
+	INIT_BALANCE = 5125.00
 	MIN_BALANCE = 100.00
 
